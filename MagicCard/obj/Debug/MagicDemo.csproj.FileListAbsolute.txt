@@ -1,0 +1,4 @@
+E:\WorkSpace\CSharp\GPMagic\MagicCard\obj\Debug\ResolveAssemblyReference.cache
+E:\WorkSpace\CSharp\GPMagic\MagicCard\obj\Debug\MagicCard.FormMain.resources
+E:\WorkSpace\CSharp\GPMagic\MagicCard\obj\Debug\GP.GPMagic.GPMagic.MagicDemo.Properties.Resources.resources
+E:\WorkSpace\CSharp\GPMagic\MagicCard\obj\Debug\MagicDemo.csproj.GenerateResource.Cache

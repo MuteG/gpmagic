@@ -1,0 +1,5 @@
+E:\WorkSpace\CSharp\GPMagic\Helper\bin\Debug\Helper.dll
+E:\WorkSpace\CSharp\GPMagic\Helper\bin\Debug\Helper.pdb
+E:\WorkSpace\CSharp\GPMagic\Helper\obj\Debug\ResolveAssemblyReference.cache
+E:\WorkSpace\CSharp\GPMagic\Helper\obj\Debug\Helper.dll
+E:\WorkSpace\CSharp\GPMagic\Helper\obj\Debug\Helper.pdb

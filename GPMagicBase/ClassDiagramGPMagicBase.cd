@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GP.GPMagic.GPMagicBase.MagicCardConst">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MagicCardConst.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="GP.GPMagic.GPMagicBase.IUpgradeSite">
+    <Position X="2.25" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IUpgradeSite.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GP.GPMagic.GPMagicBase.IMagicCardAction">
+    <Position X="6.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EAAIQAAAAAAAAAAAABAAAAAAACAAAAIAAQACAAAAABA=</HashCode>
+      <FileName>IMagicCard.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GP.GPMagic.GPMagicBase.ICanFight">
+    <Position X="2.25" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IOrganismCardAction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GP.GPMagic.GPMagicBase.ICanTrigger">
+    <Position X="2.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>ICanTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GP.GPMagic.GPMagicBase.ICanRotate">
+    <Position X="4.25" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAACAAAAAAAAEAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>IMagicAction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="GP.GPMagic.GPMagicBase.CardSubType">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MagicCardConst.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GP.GPMagic.GPMagicBase.CardType">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MagicCardConst.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GP.GPMagic.GPMagicBase.CardStatus">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAIAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>MagicCardConst.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

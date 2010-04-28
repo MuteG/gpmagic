@@ -1,0 +1,16 @@
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\obj\Release\ResolveAssemblyReference.cache
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\obj\Release\GP.GPMagic.GPMagic.FormMain.resources
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\obj\Release\GP.GPMagic.GPMagic.UI.MagicCardBase.resources
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\obj\Release\GP.GPMagic.GPMagic.UI.OrganismCard.resources
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\obj\Release\GP.GPMagic.GPMagic.Properties.Resources.resources
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\obj\Release\GP.GPMagic.GPMagic.UI.CountPanel.resources
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\obj\Release\GP.GPMagic.GPMagic.UI.WindowPanel.resources
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\obj\Release\GPMagic.csproj.GenerateResource.Cache
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\bin\Release\GPMagic.exe
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\bin\Release\GPMagic.pdb
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\bin\Release\GPMagicBase.dll
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\bin\Release\System.Data.SQLite.dll
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\bin\Release\System.Data.SQLite.xml
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\bin\Release\GPMagicBase.pdb
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\obj\Release\GPMagic.exe
+E:\Work\wordspace\CSharp\GPMagic\GPMagic\obj\Release\GPMagic.pdb

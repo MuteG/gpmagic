@@ -1,0 +1,5 @@
+E:\Work\wordspace\CSharp\GPMagic\PlugInCore\bin\Release\PlugInCore.dll
+E:\Work\wordspace\CSharp\GPMagic\PlugInCore\bin\Release\PlugInCore.pdb
+E:\Work\wordspace\CSharp\GPMagic\PlugInCore\obj\Release\ResolveAssemblyReference.cache
+E:\Work\wordspace\CSharp\GPMagic\PlugInCore\obj\Release\PlugInCore.dll
+E:\Work\wordspace\CSharp\GPMagic\PlugInCore\obj\Release\PlugInCore.pdb
