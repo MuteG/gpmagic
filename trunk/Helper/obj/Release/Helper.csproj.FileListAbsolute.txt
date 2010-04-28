@@ -1,0 +1,5 @@
+D:\WORK\WorkSpace\CSharp\Mission\Helper\Helper\bin\Release\Helper.dll
+D:\WORK\WorkSpace\CSharp\Mission\Helper\Helper\bin\Release\Helper.pdb
+D:\WORK\WorkSpace\CSharp\Mission\Helper\Helper\obj\Release\ResolveAssemblyReference.cache
+D:\WORK\WorkSpace\CSharp\Mission\Helper\Helper\obj\Release\Helper.dll
+D:\WORK\WorkSpace\CSharp\Mission\Helper\Helper\obj\Release\Helper.pdb
