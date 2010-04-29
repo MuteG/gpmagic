@@ -34,6 +34,7 @@
             // 
             // pbxCardImage
             // 
+            this.pbxCardImage.BackColor = System.Drawing.Color.Black;
             this.pbxCardImage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pbxCardImage.Location = new System.Drawing.Point(0, 0);
             this.pbxCardImage.Name = "pbxCardImage";

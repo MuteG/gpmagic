@@ -45,6 +45,7 @@
     <Compile Include="IOrganismCardAction.cs" />
     <Compile Include="IUpgradeSite.cs" />
     <Compile Include="MagicCardConst.cs" />
+    <Compile Include="Model\CardRarity.cs" />
     <Compile Include="Model\ConstClass.cs" />
     <Compile Include="Model\ListCardTotal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -53,7 +54,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="SQLite\DBOperator.cs" />
+    <Compile Include="SQLite\DatabaseOperator.cs" />
+    <Compile Include="Model\CardLibrary.cs" />
     <Compile Include="SQLite\IDBOperate.cs" />
     <Compile Include="UI\CheckValuesDialog.cs">
       <SubType>Form</SubType>

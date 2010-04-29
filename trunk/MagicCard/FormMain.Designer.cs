@@ -1,4 +1,4 @@
-﻿namespace MagicCard
+﻿namespace GPSoft.GPMagic.MagicDemo
 {
     partial class FormMain
     {
@@ -31,7 +31,7 @@
             this.btnLoadCard = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
-            this.countPanel1 = new GP.GPMagic.GPMagicBase.Window.CountPanel();
+            this.countPanel1 = new GPSoft.GPMagic.GPMagic.UI.CountPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +47,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::MagicCard.Properties.Resources._0119_MTGWWK_CS_LR;
             this.pictureBox1.Location = new System.Drawing.Point(50, 84);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(275, 383);
@@ -96,6 +95,7 @@
         private System.Windows.Forms.Button btnLoadCard;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnClose;
+        private GPMagic.UI.CountPanel countPanel1;
     }
 }
 

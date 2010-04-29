@@ -35,10 +35,10 @@ D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\obj\Debug\GPSoft.GPMagic.GPSearch
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\obj\Debug\GPSoft.GPMagic.GPSearch.UI.FormCardImage.resources
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\obj\Debug\GPSoft.GPMagic.GPSearch.Properties.Resources.resources
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\obj\Debug\GPSearch.csproj.GenerateResource.Cache
-D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\GPMagic.db3
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\GPSearch.exe
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\GPSearch.pdb
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\GPMagicBase.dll
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\System.Data.SQLite.dll
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\System.Data.SQLite.xml
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\GPMagicBase.pdb
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\obj\Debug\GPSoft.GPMagic.GPSearch.UI.AboutBox.resources

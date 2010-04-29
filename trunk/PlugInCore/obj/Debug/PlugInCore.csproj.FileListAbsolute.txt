@@ -8,3 +8,8 @@ D:\WorkPlace\GPMagic\PlugInCore\bin\Debug\PlugInCore.pdb
 D:\WorkPlace\GPMagic\PlugInCore\obj\Debug\ResolveAssemblyReference.cache
 D:\WorkPlace\GPMagic\PlugInCore\obj\Debug\PlugInCore.dll
 D:\WorkPlace\GPMagic\PlugInCore\obj\Debug\PlugInCore.pdb
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\PlugInCore\bin\Debug\PlugInCore.dll
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\PlugInCore\bin\Debug\PlugInCore.pdb
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\PlugInCore\obj\Debug\ResolveAssemblyReference.cache
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\PlugInCore\obj\Debug\PlugInCore.dll
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\PlugInCore\obj\Debug\PlugInCore.pdb

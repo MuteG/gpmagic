@@ -22,8 +22,8 @@ namespace GPSoft.GPMagic.GPMagic
         private void button1_Click(object sender, EventArgs e)
         {
             string connstr = "Data Source=";
-            GPMagicBase.SQLite.DBOperator dbop =
-                new GPSoft.GPMagic.GPMagicBase.SQLite.DBOperator(connstr);
+            GPMagicBase.SQLite.DatabaseOperator dbop =
+                new GPSoft.GPMagic.GPMagicBase.SQLite.DatabaseOperator(connstr);
         }
     }
 }

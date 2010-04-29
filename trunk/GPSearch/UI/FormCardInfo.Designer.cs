@@ -95,7 +95,7 @@
             // 
             this.tbxCardName.Location = new System.Drawing.Point(71, 6);
             this.tbxCardName.Name = "tbxCardName";
-            this.tbxCardName.Size = new System.Drawing.Size(158, 21);
+            this.tbxCardName.Size = new System.Drawing.Size(158, 19);
             this.tbxCardName.TabIndex = 1;
             // 
             // lblImageType
@@ -132,9 +132,9 @@
             // pbxCardImage
             // 
             this.pbxCardImage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pbxCardImage.Location = new System.Drawing.Point(3, 17);
+            this.pbxCardImage.Location = new System.Drawing.Point(3, 15);
             this.pbxCardImage.Name = "pbxCardImage";
-            this.pbxCardImage.Size = new System.Drawing.Size(265, 370);
+            this.pbxCardImage.Size = new System.Drawing.Size(265, 372);
             this.pbxCardImage.TabIndex = 9;
             this.pbxCardImage.TabStop = false;
             // 
@@ -142,7 +142,7 @@
             // 
             this.tbxManaCost.Location = new System.Drawing.Point(71, 60);
             this.tbxManaCost.Name = "tbxManaCost";
-            this.tbxManaCost.Size = new System.Drawing.Size(158, 21);
+            this.tbxManaCost.Size = new System.Drawing.Size(158, 19);
             this.tbxManaCost.TabIndex = 12;
             // 
             // lblManaCost
@@ -173,7 +173,7 @@
             // 
             this.tbxCardImage.Location = new System.Drawing.Point(71, 87);
             this.tbxCardImage.Name = "tbxCardImage";
-            this.tbxCardImage.Size = new System.Drawing.Size(120, 21);
+            this.tbxCardImage.Size = new System.Drawing.Size(120, 19);
             this.tbxCardImage.TabIndex = 16;
             // 
             // lblCardImage
@@ -222,7 +222,7 @@
             this.tbxCardSubType.Location = new System.Drawing.Point(71, 166);
             this.tbxCardSubType.Name = "tbxCardSubType";
             this.tbxCardSubType.ReadOnly = true;
-            this.tbxCardSubType.Size = new System.Drawing.Size(120, 21);
+            this.tbxCardSubType.Size = new System.Drawing.Size(120, 19);
             this.tbxCardSubType.TabIndex = 21;
             this.tbxCardSubType.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
@@ -276,8 +276,9 @@
             this.tbxAbilities.Location = new System.Drawing.Point(71, 219);
             this.tbxAbilities.Name = "tbxAbilities";
             this.tbxAbilities.ReadOnly = true;
-            this.tbxAbilities.Size = new System.Drawing.Size(120, 21);
+            this.tbxAbilities.Size = new System.Drawing.Size(120, 19);
             this.tbxAbilities.TabIndex = 26;
+            this.tbxAbilities.WordWrap = false;
             this.tbxAbilities.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
             // lblAbilities
@@ -306,7 +307,7 @@
             this.tbxAbilitiesText.Location = new System.Drawing.Point(71, 246);
             this.tbxAbilitiesText.Name = "tbxAbilitiesText";
             this.tbxAbilitiesText.ReadOnly = true;
-            this.tbxAbilitiesText.Size = new System.Drawing.Size(120, 21);
+            this.tbxAbilitiesText.Size = new System.Drawing.Size(120, 19);
             this.tbxAbilitiesText.TabIndex = 26;
             this.tbxAbilitiesText.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
@@ -340,7 +341,7 @@
             this.tbxFlavorText.Location = new System.Drawing.Point(71, 273);
             this.tbxFlavorText.Name = "tbxFlavorText";
             this.tbxFlavorText.ReadOnly = true;
-            this.tbxFlavorText.Size = new System.Drawing.Size(120, 21);
+            this.tbxFlavorText.Size = new System.Drawing.Size(120, 19);
             this.tbxFlavorText.TabIndex = 29;
             this.tbxFlavorText.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
@@ -366,7 +367,7 @@
             // 
             this.tbxPower.Location = new System.Drawing.Point(71, 300);
             this.tbxPower.Name = "tbxPower";
-            this.tbxPower.Size = new System.Drawing.Size(49, 21);
+            this.tbxPower.Size = new System.Drawing.Size(49, 19);
             this.tbxPower.TabIndex = 26;
             // 
             // lblToughness
@@ -382,7 +383,7 @@
             // 
             this.tbxToughness.Location = new System.Drawing.Point(182, 300);
             this.tbxToughness.Name = "tbxToughness";
-            this.tbxToughness.Size = new System.Drawing.Size(47, 21);
+            this.tbxToughness.Size = new System.Drawing.Size(47, 19);
             this.tbxToughness.TabIndex = 26;
             // 
             // lblRarity
@@ -422,7 +423,7 @@
             this.tbxPainterName.Location = new System.Drawing.Point(71, 353);
             this.tbxPainterName.Name = "tbxPainterName";
             this.tbxPainterName.ReadOnly = true;
-            this.tbxPainterName.Size = new System.Drawing.Size(120, 21);
+            this.tbxPainterName.Size = new System.Drawing.Size(120, 19);
             this.tbxPainterName.TabIndex = 29;
             this.tbxPainterName.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
@@ -435,6 +436,7 @@
             this.btnPainterName.TabIndex = 30;
             this.btnPainterName.Text = "...";
             this.btnPainterName.UseVisualStyleBackColor = true;
+            this.btnPainterName.Click += new System.EventHandler(this.btnPainterName_Click);
             // 
             // lblCardPrice
             // 
@@ -449,7 +451,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(71, 380);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 21);
+            this.textBox1.Size = new System.Drawing.Size(158, 19);
             this.textBox1.TabIndex = 26;
             // 
             // lblFAQ
@@ -457,7 +459,7 @@
             this.lblFAQ.AutoSize = true;
             this.lblFAQ.Location = new System.Drawing.Point(3, 411);
             this.lblFAQ.Name = "lblFAQ";
-            this.lblFAQ.Size = new System.Drawing.Size(23, 12);
+            this.lblFAQ.Size = new System.Drawing.Size(28, 12);
             this.lblFAQ.TabIndex = 28;
             this.lblFAQ.Text = "FAQ";
             // 
@@ -469,7 +471,7 @@
             this.tbxFAQ.Location = new System.Drawing.Point(71, 407);
             this.tbxFAQ.Name = "tbxFAQ";
             this.tbxFAQ.ReadOnly = true;
-            this.tbxFAQ.Size = new System.Drawing.Size(120, 21);
+            this.tbxFAQ.Size = new System.Drawing.Size(120, 19);
             this.tbxFAQ.TabIndex = 29;
             this.tbxFAQ.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
@@ -494,7 +496,7 @@
             // 
             this.tbxCollectorNumber.Location = new System.Drawing.Point(71, 434);
             this.tbxCollectorNumber.Name = "tbxCollectorNumber";
-            this.tbxCollectorNumber.Size = new System.Drawing.Size(158, 21);
+            this.tbxCollectorNumber.Size = new System.Drawing.Size(158, 19);
             this.tbxCollectorNumber.TabIndex = 32;
             // 
             // lblCollectorNumber
@@ -539,7 +541,7 @@
             // 
             this.tbxCardEnglishName.Location = new System.Drawing.Point(71, 33);
             this.tbxCardEnglishName.Name = "tbxCardEnglishName";
-            this.tbxCardEnglishName.Size = new System.Drawing.Size(158, 21);
+            this.tbxCardEnglishName.Size = new System.Drawing.Size(158, 19);
             this.tbxCardEnglishName.TabIndex = 12;
             // 
             // FormCardInfo

@@ -12,11 +12,11 @@ namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormCardInfo : Form
     {
-        private EditStatus _EditStatus;
+        private DataOperateType _EditStatus;
         /// <summary>
         /// 获取或者设置当前编辑状态
         /// </summary>
-        public EditStatus EditStatus
+        public DataOperateType EditStatus
         {
             get { return _EditStatus; }
             set
@@ -30,18 +30,22 @@ namespace GPSoft.GPMagic.GPSearch.UI
             InitializeComponent();
         }
 
-        private void ChangeFormTitle(EditStatus editStatus)
+        private void ChangeFormTitle(DataOperateType editStatus)
         {
             switch (editStatus)
             {
-                case EditStatus.Insert:
+                case DataOperateType.Insert:
                     {
-                        Text = string.Format(ConstClass.TITLE_CARDINFO, ConstClass.EDITSTATUS_INSERT);
+                        Text = string.Format("{0} - {1}", ConstClass.TitleOfCardInfomationForm,
+                                    DataOperateTypeDisplayWrods.Insert);
+                        btnSubmit.Text = DataOperateTypeDisplayWrods.Insert;
                         break;
                     }
-                case EditStatus.Update:
+                case DataOperateType.Update:
                     {
-                        Text = string.Format(ConstClass.TITLE_CARDINFO, ConstClass.EDITSTATUS_UPDATE);
+                        Text = string.Format("{0} - {1}", ConstClass.TitleOfCardInfomationForm,
+                                    DataOperateTypeDisplayWrods.Update);
+                        btnSubmit.Text = DataOperateTypeDisplayWrods.Update;
                         break;
                     }
             }
@@ -91,7 +95,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void btnCardSubType_Click(object sender, EventArgs e)
         {
-            //
+            tbxCardSubType.Text = CheckValuesDialog.Show(lblCardSubType.Text, tbxCardSubType.Text, "/");
         }
 
         private void tbxCardSubType_TextChanged(object sender, EventArgs e)
@@ -101,7 +105,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void btnAbilities_Click(object sender, EventArgs e)
         {
-            //
+            tbxAbilities.Text = CheckValuesDialog.Show(lblAbilities.Text, tbxAbilities.Text, ",");
         }
 
         private void btnAbilitiesText_Click(object sender, EventArgs e)
@@ -117,6 +121,11 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private void btnFAQ_Click(object sender, EventArgs e)
         {
             tbxFAQ.Text = InputTextDialog.Show(lblFAQ.Text, tbxFAQ.Text);
+        }
+
+        private void btnPainterName_Click(object sender, EventArgs e)
+        {
+            tbxPainterName.Text = InputTextDialog.Show(lblPainterName.Text, tbxPainterName.Text);
         }
     }
 }
