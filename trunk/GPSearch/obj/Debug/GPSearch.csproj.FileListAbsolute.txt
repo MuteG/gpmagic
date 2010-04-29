@@ -27,3 +27,5 @@ E:\WorkSpace\CSharp\GPMagic\GPSearch\obj\Debug\GP.GPMagic.GPSearch.Properties.Re
 E:\WorkSpace\CSharp\GPMagic\GPSearch\obj\Debug\GP.GPMagic.GPSearch.UI.FormCardInfo.resources
 E:\WorkSpace\CSharp\GPMagic\GPSearch\obj\Debug\GP.GPMagic.GPSearch.UI.FormMain.resources
 E:\WorkSpace\CSharp\GPMagic\GPSearch\obj\Debug\GP.GPMagic.GPSearch.UI.FormCardImage.resources
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\obj\Debug\GPSearch.exe
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\obj\Debug\GPSearch.pdb
