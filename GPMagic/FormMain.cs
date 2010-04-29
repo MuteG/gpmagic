@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using GP.GPMagic.GPMagic.UI;
+using GPSoft.GPMagic.GPMagic.UI;
 
-namespace GP.GPMagic.GPMagic
+namespace GPSoft.GPMagic.GPMagic
 {
     public partial class FormMain : Form
     {
@@ -22,8 +22,8 @@ namespace GP.GPMagic.GPMagic
         private void button1_Click(object sender, EventArgs e)
         {
             string connstr = "Data Source=";
-            GPMagicBase.SQLite.DBOperator dbop = 
-                new GP.GPMagic.GPMagicBase.SQLite.DBOperator(connstr);
+            GPMagicBase.SQLite.DBOperator dbop =
+                new GPSoft.GPMagic.GPMagicBase.SQLite.DBOperator(connstr);
         }
     }
 }

@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("PlugInCore")]
 [assembly: AssemblyDescription("GPMagic插件核心模块")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("G.P.")]
+[assembly: AssemblyCompany("GPSoft")]
 [assembly: AssemblyProduct("PlugInCore")]
-[assembly: AssemblyCopyright("Copyright © G.P. 2010")]
+[assembly: AssemblyCopyright("Copyright © GPSoft 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

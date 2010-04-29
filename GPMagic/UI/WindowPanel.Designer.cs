@@ -1,4 +1,4 @@
-﻿namespace GP.GPMagic.GPMagic.UI
+﻿namespace GPSoft.GPMagic.GPMagic.UI
 {
     partial class WindowPanel
     {

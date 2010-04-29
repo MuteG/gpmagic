@@ -8,7 +8,7 @@
     <ProjectGuid>{B8BFA7CA-1F22-4658-A600-762A4EC8AA58}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GP.GPMagic.PlugInCore</RootNamespace>
+    <RootNamespace>GPSoft.GPMagic.PlugInCore</RootNamespace>
     <AssemblyName>PlugInCore</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,7 +40,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ClassDiagramGPMagicPlugInCore.cd" />
+    <None Include="ClassDiagramPlugInCore.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

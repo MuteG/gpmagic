@@ -20,7 +20,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
-namespace ORID.Helper.LogHelper
+namespace GPSoft.Helper.LogHelper
 {
     public enum LogInstance
     {

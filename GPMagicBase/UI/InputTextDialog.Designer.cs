@@ -1,4 +1,4 @@
-﻿namespace GP.GPMagic.GPMagicBase.UI
+﻿namespace GPSoft.GPMagic.GPMagicBase.UI
 {
     partial class InputTextDialog
     {

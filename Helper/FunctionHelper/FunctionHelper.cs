@@ -19,7 +19,7 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
 
-namespace ORID.Helper.FunctionHelper
+namespace GPSoft.Helper.FunctionHelper
 {
     public class FunctionHelper
     {

@@ -1,4 +1,4 @@
-﻿namespace GP.GPMagic.GPMagic
+﻿namespace GPSoft.GPMagic.GPMagic
 {
     partial class FormMain
     {

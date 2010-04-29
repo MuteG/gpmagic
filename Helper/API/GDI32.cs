@@ -15,7 +15,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Runtime.InteropServices;
 
-namespace ORID.Helper.API
+namespace GPSoft.Helper.API
 {
     public class GDI32
     {

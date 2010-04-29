@@ -5,10 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using GP.GPMagic.GPSearch.Command;
-using GP.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPSearch.Command;
+using GPSoft.GPMagic.GPMagicBase.Model;
 
-namespace GP.GPMagic.GPSearch.UI
+namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormMain : Form
     {
@@ -49,14 +49,14 @@ namespace GP.GPMagic.GPSearch.UI
         private void mnuAddCard_Click(object sender, EventArgs e)
         {
             FormCardInfo frmInfo = new FormCardInfo();
-            frmInfo.EditStatus = GP.GPMagic.GPMagicBase.Model.EditStatus.Insert;
+            frmInfo.EditStatus = GPSoft.GPMagic.GPMagicBase.Model.EditStatus.Insert;
             frmInfo.Show();
         }
 
         private void mnuEditCard_Click(object sender, EventArgs e)
         {
             FormCardInfo frmInfo = new FormCardInfo();
-            frmInfo.EditStatus = GP.GPMagic.GPMagicBase.Model.EditStatus.Update;
+            frmInfo.EditStatus = GPSoft.GPMagic.GPMagicBase.Model.EditStatus.Update;
             frmInfo.Show();
         }
 

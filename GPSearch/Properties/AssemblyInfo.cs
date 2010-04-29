@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("GPSearch")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("微软中国")]
+[assembly: AssemblyCompany("GPSoft")]
 [assembly: AssemblyProduct("GPSearch")]
-[assembly: AssemblyCopyright("Copyright © 微软中国 2010")]
+[assembly: AssemblyCopyright("Copyright © GPSoft 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

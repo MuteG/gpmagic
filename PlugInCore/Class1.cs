@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace PlugInCore
+namespace GPSoft.GPMagic.PlugInCore
 {
     public class Class1
     {

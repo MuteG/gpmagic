@@ -4,7 +4,7 @@ using System.Text;
 using System.Drawing;
 using System.IO;
 
-namespace GP.GPMagic.GPMagic.Model
+namespace GPSoft.GPMagic.GPMagic.Model
 {
     public class CardProperties
     {
