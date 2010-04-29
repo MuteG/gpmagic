@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace GP.GPMagic.GPMagicBase.UI
+namespace GPSoft.GPMagic.GPMagicBase.UI
 {
     public partial class CheckValuesDialog : Form
     {
@@ -30,7 +30,7 @@ namespace GP.GPMagic.GPMagicBase.UI
             if (cvd.ShowDialog() == DialogResult.OK)
             {
                 List<string> list = new List<string>();
-                foreach (object item in cvd.lbxResults.Items)
+                foreach (object item in cvd.lvwResults.Items)
                 {
                     list.Add(item.ToString());
                 }

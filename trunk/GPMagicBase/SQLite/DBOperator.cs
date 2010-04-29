@@ -5,7 +5,7 @@ using System.Data.SQLite;
 using System.Reflection;
 using System.Data;
 
-namespace GP.GPMagic.GPMagicBase.SQLite
+namespace GPSoft.GPMagic.GPMagicBase.SQLite
 {
     public class DBOperator : IDBOperate
     {

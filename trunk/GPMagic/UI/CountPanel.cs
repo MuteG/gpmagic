@@ -6,7 +6,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace GP.GPMagic.GPMagic.UI
+namespace GPSoft.GPMagic.GPMagic.UI
 {
     public partial class CountPanel : UserControl
     {

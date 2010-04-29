@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GP.GPMagic.GPMagic.Model
+namespace GPSoft.GPMagic.GPMagic.Model
 {
     public sealed class ConstClass
     {

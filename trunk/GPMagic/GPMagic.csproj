@@ -8,11 +8,11 @@
     <ProjectGuid>{25344B70-003B-457D-93A0-68B30DC03BB5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GP.GPMagic.GPMagic</RootNamespace>
+    <RootNamespace>GPSoft.GPMagic.GPMagic</RootNamespace>
     <AssemblyName>GPMagic</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <StartupObject>GP.GPMagic.GPMagic.Program</StartupObject>
+    <StartupObject>GPSoft.GPMagic.GPMagic.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

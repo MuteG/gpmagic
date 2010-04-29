@@ -1,4 +1,4 @@
-﻿namespace GP.GPMagic.GPMagicBase.UI
+﻿namespace GPSoft.GPMagic.GPMagicBase.UI
 {
     partial class CheckValuesDialog
     {
@@ -32,13 +32,13 @@
             this.colCheckBox = new System.Windows.Forms.ColumnHeader();
             this.colValues = new System.Windows.Forms.ColumnHeader();
             this.pnlBottom = new System.Windows.Forms.Panel();
+            this.lvwResults = new System.Windows.Forms.ListView();
+            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.lblSearch = new System.Windows.Forms.Label();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.pnlContnet = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.btnSearch = new System.Windows.Forms.Button();
             this.pnlBottom.SuspendLayout();
             this.pnlContnet.SuspendLayout();
@@ -74,11 +74,29 @@
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlBottom.Controls.Add(this.lvwValues);
-            this.pnlBottom.Controls.Add(this.listView1);
+            this.pnlBottom.Controls.Add(this.lvwResults);
             this.pnlBottom.Location = new System.Drawing.Point(0, 30);
             this.pnlBottom.Name = "pnlBottom";
             this.pnlBottom.Size = new System.Drawing.Size(307, 243);
             this.pnlBottom.TabIndex = 3;
+            // 
+            // lvwResults
+            // 
+            this.lvwResults.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.lvwResults.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.lvwResults.Location = new System.Drawing.Point(0, 0);
+            this.lvwResults.Name = "lvwResults";
+            this.lvwResults.Size = new System.Drawing.Size(153, 243);
+            this.lvwResults.TabIndex = 0;
+            this.lvwResults.UseCompatibleStateImageBehavior = false;
+            this.lvwResults.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "";
+            this.columnHeader1.Width = 120;
             // 
             // lblSearch
             // 
@@ -93,7 +111,7 @@
             // 
             this.tbxSearch.Location = new System.Drawing.Point(47, 5);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(166, 21);
+            this.tbxSearch.Size = new System.Drawing.Size(166, 19);
             this.tbxSearch.TabIndex = 2;
             // 
             // btnCancel
@@ -131,24 +149,6 @@
             this.pnlContnet.Name = "pnlContnet";
             this.pnlContnet.Size = new System.Drawing.Size(307, 273);
             this.pnlContnet.TabIndex = 6;
-            // 
-            // listView1
-            // 
-            this.listView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(153, 243);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "";
-            this.columnHeader1.Width = 120;
             // 
             // btnSearch
             // 
@@ -191,7 +191,7 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Panel pnlContnet;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lvwResults;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Button btnSearch;
     }

@@ -5,10 +5,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using GP.GPMagic.GPMagicBase.Model;
-using GP.GPMagic.GPMagicBase.UI;
+using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.UI;
 
-namespace GP.GPMagic.GPSearch.UI
+namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormCardInfo : Form
     {

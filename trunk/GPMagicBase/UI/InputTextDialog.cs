@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace GP.GPMagic.GPMagicBase.UI
+namespace GPSoft.GPMagic.GPMagicBase.UI
 {
     public partial class InputTextDialog : Form
     {

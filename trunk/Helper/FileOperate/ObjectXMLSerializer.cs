@@ -4,7 +4,7 @@ using System.IO.IsolatedStorage; // For accessing user isolated data.
 using System.Runtime.Serialization.Formatters.Binary; // For serialization of an object to an XML Binary file.
 using System.Xml.Serialization;	 // For serialization of an object to an XML Document file.
 
-namespace ORID.Helper.FileOperate
+namespace GPSoft.Helper.FileOperate
 {
     /// <summary>
     /// 序列化类型（格式）

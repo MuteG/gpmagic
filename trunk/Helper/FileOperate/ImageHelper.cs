@@ -11,6 +11,7 @@
  * 2009-11-17   高云鹏  1.0.0.8     添加    添加画像旋转功能函数
  * 2009-12-10   高云鹏  1.0.0.10    添加    添加BitmapManipulator、ManagerImage两个类（来源于网络）
  * 2010-03-01   高云鹏  1.0.0.12    添加    添加TiffManager类（来源于网络）
+ * 2010-03-05   高云鹏  1.0.0.13    修改    修改MergeImageToBitmap方法，使合并前后的画像DPI一致，否则容易引起错误
  *********************************************************************
  */
 using System;
@@ -21,7 +22,7 @@ using System.Collections;
 using System.Drawing.Drawing2D; 
 using System.Net; 
 
-namespace ORID.Helper.FileOperate
+namespace GPSoft.Helper.FileOperate
 {
     public class ImageHelper
     {
@@ -68,6 +69,8 @@ namespace ORID.Helper.FileOperate
                         }
                 }
                 result = new Bitmap(resultWidth, resultHeight);
+                result.SetResolution(Math.Min(firstImage.HorizontalResolution, secondImage.HorizontalResolution),
+                        Math.Min(firstImage.VerticalResolution, secondImage.VerticalResolution));  //1.0.0.13
                 Graphics g = Graphics.FromImage(result);
                 g.FillRectangle(new Pen(Color.White).Brush, 0, 0, result.Width, result.Height);
                 g.DrawImage(firstImage, 0, 0, firstImage.Width, firstImage.Height);

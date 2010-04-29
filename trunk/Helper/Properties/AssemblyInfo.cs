@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // 控制。更改这些属性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("Helper")]
-[assembly: AssemblyDescription("O-RID機能DLL")]
+[assembly: AssemblyDescription("辅助功能DLL")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("O-RID")]
 [assembly: AssemblyProduct("Helper")]
-[assembly: AssemblyCopyright("Copyright © O-RID 2009")]
+[assembly: AssemblyCopyright("Copyright © GPSoft 2008-2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // 如果此项目向 COM 公开，则下列 GUID 用于类型库的 ID
-[assembly: Guid("792d5348-783b-41a1-878e-5a0315097f14")]
+[assembly: Guid("6EC799AB-52D8-4e2a-94BC-BBEC79D61AE9")]
 
 // 程序集的版本信息由下面四个值组成:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // 可以指定所有这些值，也可以使用“内部版本号”和“修订号”的默认值，
 // 方法是按如下所示使用“*”:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.12")]
-[assembly: AssemblyFileVersion("1.0.0.12")]
+[assembly: AssemblyVersion("1.0.0.13")]
+[assembly: AssemblyFileVersion("1.0.0.13")]

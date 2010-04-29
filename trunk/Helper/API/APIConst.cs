@@ -14,7 +14,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ORID.Helper.API
+namespace GPSoft.Helper.API
 {
     /// <summary>
     /// API函数用到的常量

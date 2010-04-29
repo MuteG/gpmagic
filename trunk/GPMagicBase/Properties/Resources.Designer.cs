@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GP.GPMagic.GPMagicBase.Properties {
+namespace GPSoft.GPMagic.GPMagicBase.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace GP.GPMagic.GPMagicBase.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GP.GPMagic.GPMagicBase.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GPSoft.GPMagic.GPMagicBase.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

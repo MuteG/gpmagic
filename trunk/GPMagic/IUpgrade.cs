@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GP.GPMagic.GPMagic
+namespace GPSoft.GPMagic.GPMagic
 {
     public interface IUpgrade
     {

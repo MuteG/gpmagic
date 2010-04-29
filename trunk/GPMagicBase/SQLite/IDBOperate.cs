@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 
-namespace GP.GPMagic.GPMagicBase.SQLite
+namespace GPSoft.GPMagic.GPMagicBase.SQLite
 {
     internal interface IDBOperate
     {

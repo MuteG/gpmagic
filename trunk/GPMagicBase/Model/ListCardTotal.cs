@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GP.GPMagic.GPMagicBase.Model
+namespace GPSoft.GPMagic.GPMagicBase.Model
 {
     public sealed class ListCardTotal
     {

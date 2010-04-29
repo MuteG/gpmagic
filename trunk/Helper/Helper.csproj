@@ -8,7 +8,7 @@
     <ProjectGuid>{30D7ADD5-193B-4C32-B473-61BD5E64130A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ORID.Helper</RootNamespace>
+    <RootNamespace>GPSoft.Helper</RootNamespace>
     <AssemblyName>Helper</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

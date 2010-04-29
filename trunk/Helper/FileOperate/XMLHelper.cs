@@ -24,7 +24,7 @@ using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Xml;
 
-namespace ORID.Helper.FileOperate
+namespace GPSoft.Helper.FileOperate
 {
     /// <summary>
     /// XML文档操作类

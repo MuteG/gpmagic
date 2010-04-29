@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace GP.GPMagic.GPSearch.UI
+namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormCardImage : Form
     {

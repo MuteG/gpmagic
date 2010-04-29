@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
-using GP.GPMagic.GPMagicBase.SQLite;
-using GP.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.SQLite;
+using GPSoft.GPMagic.GPMagicBase.Model;
 
-namespace GP.GPMagic.GPSearch.Command
+namespace GPSoft.GPMagic.GPSearch.Command
 {
     public sealed class DatabaseOperate
     {

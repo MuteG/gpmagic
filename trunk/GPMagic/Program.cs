@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace GP.GPMagic.GPMagic
+namespace GPSoft.GPMagic.GPMagic
 {
     static class Program
     {
