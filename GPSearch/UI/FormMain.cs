@@ -5,17 +5,19 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPSearch.Command;
 using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.UI;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormMain : Form
     {
         FormCardInfo frmInfo;
+        CardLibrary cards = new CardLibrary();
         public FormMain()
         {
             InitializeComponent();
+            cbxSearchLanguage.SelectedIndex = 0;
         }
 
         private void Init()
@@ -33,34 +35,44 @@ namespace GPSoft.GPMagic.GPSearch.UI
             FormCardImage frmCardImage = new FormCardImage();
             frmCardImage.CardImage = Properties.Resources.cardDemo;
             frmCardImage.Show();
-            DatabaseOperate.Init();
-            DataTable table = DatabaseOperate.GetAllCardInfo();
-            if (table != null)
-                MessageBox.Show(table.Rows.Count.ToString());
-            else
-                MessageBox.Show("null");
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            
+            if (cards.Count > 0)
+            {
+                foreach (DataRow cardRow in cards.Records.Rows)
+                {
+                    string symbol = cardRow["Symbol"] as string;
+                    string cnName = cardRow["CardName"] as string;
+                    string enName = cardRow["CardEnglishName"] as string;
+                    int rarity = Convert.ToInt32(cardRow["Rarity"]);
+                    int newRowIndex = dgvCardList.Rows.Add(symbol, cnName, enName);
+                    if (rarity > 1)
+                    {
+                        CardRarity aRarity = new CardRarity();
+                        dgvCardList.Rows[newRowIndex].DefaultCellStyle.ForeColor = aRarity.GetRarityColor(rarity);
+                        aRarity.Dispose();
+                    }
+                }
+            }
         }
 
         private void mnuAddCard_Click(object sender, EventArgs e)
         {
             FormCardInfo frmInfo = new FormCardInfo();
-            frmInfo.EditStatus = GPSoft.GPMagic.GPMagicBase.Model.EditStatus.Insert;
+            frmInfo.EditStatus = GPSoft.GPMagic.GPMagicBase.Model.DataOperateType.Insert;
             frmInfo.Show();
         }
 
         private void mnuEditCard_Click(object sender, EventArgs e)
         {
             FormCardInfo frmInfo = new FormCardInfo();
-            frmInfo.EditStatus = GPSoft.GPMagic.GPMagicBase.Model.EditStatus.Update;
+            frmInfo.EditStatus = GPSoft.GPMagic.GPMagicBase.Model.DataOperateType.Update;
             frmInfo.Show();
         }
 
-        private void ShowCardInfoForm(EditStatus editStatus)
+        private void ShowCardInfoForm(DataOperateType editStatus)
         {
             if (null == frmInfo)
             {
@@ -68,6 +80,12 @@ namespace GPSoft.GPMagic.GPSearch.UI
             }
             frmInfo.EditStatus = editStatus;
             frmInfo.Show();
+        }
+
+        private void mnuItemAbout_Click(object sender, EventArgs e)
+        {
+            AboutBox frmAbout = new AboutBox();
+            frmAbout.ShowDialog();
         }
     }
 }

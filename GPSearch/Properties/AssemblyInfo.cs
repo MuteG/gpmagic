@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // 控制。更改这些属性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("GPSearch")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("卡牌信息查询工具")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("GPSoft")]
 [assembly: AssemblyProduct("GPSearch")]

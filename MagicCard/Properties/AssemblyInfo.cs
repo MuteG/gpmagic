@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // 有关程序集的常规信息通过下列属性集
 // 控制。更改这些属性值可修改
 // 与程序集关联的信息。
-[assembly: AssemblyTitle("MagicCard")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("MagicDemo")]
+[assembly: AssemblyDescription("GPMagic演示")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("微软中国")]
-[assembly: AssemblyProduct("MagicCard")]
-[assembly: AssemblyCopyright("Copyright © 微软中国 2010")]
+[assembly: AssemblyCompany("GPSoft")]
+[assembly: AssemblyProduct("MagicDemo")]
+[assembly: AssemblyCopyright("Copyright © GPSoft 2010")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

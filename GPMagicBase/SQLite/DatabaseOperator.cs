@@ -7,7 +7,7 @@ using System.Data;
 
 namespace GPSoft.GPMagic.GPMagicBase.SQLite
 {
-    public class DBOperator : IDBOperate
+    public class DatabaseOperator : IDBOperate, IDisposable
     {
         private string _ConnStr = string.Empty;
         /// <summary>
@@ -21,7 +21,7 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         private SQLiteTransaction tran = null;
         private bool useTran = false;
 
-        public DBOperator(string connStr)
+        public DatabaseOperator(string connStr)
         {
             _ConnStr = connStr;
         }
@@ -179,6 +179,19 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
                 useTran = false;
             }
             return result;
+        }
+
+        #endregion
+
+        #region IDisposable 成员
+
+        public void Dispose()
+        {
+            if (useTran)
+            {
+                this.tran.Connection.Close();
+                this.tran.Dispose();
+            }
         }
 
         #endregion
