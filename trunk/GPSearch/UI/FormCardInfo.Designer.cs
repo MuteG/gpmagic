@@ -64,8 +64,6 @@
             this.lblRarity = new System.Windows.Forms.Label();
             this.cbxRarity = new System.Windows.Forms.ComboBox();
             this.lblPainterName = new System.Windows.Forms.Label();
-            this.tbxPainterName = new System.Windows.Forms.TextBox();
-            this.btnPainterName = new System.Windows.Forms.Button();
             this.lblCardPrice = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblFAQ = new System.Windows.Forms.Label();
@@ -78,6 +76,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.lblCardEnglishName = new System.Windows.Forms.Label();
             this.tbxCardEnglishName = new System.Windows.Forms.TextBox();
+            this.cbxPainterName = new System.Windows.Forms.ComboBox();
             this.gbxCardImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCardImage)).BeginInit();
             this.SuspendLayout();
@@ -415,33 +414,10 @@
             this.lblPainterName.TabIndex = 28;
             this.lblPainterName.Text = "画家姓名";
             // 
-            // tbxPainterName
-            // 
-            this.tbxPainterName.AcceptsReturn = true;
-            this.tbxPainterName.AcceptsTab = true;
-            this.tbxPainterName.BackColor = System.Drawing.SystemColors.Window;
-            this.tbxPainterName.Location = new System.Drawing.Point(71, 353);
-            this.tbxPainterName.Name = "tbxPainterName";
-            this.tbxPainterName.ReadOnly = true;
-            this.tbxPainterName.Size = new System.Drawing.Size(120, 19);
-            this.tbxPainterName.TabIndex = 29;
-            this.tbxPainterName.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
-            // 
-            // btnPainterName
-            // 
-            this.btnPainterName.AutoSize = true;
-            this.btnPainterName.Location = new System.Drawing.Point(196, 352);
-            this.btnPainterName.Name = "btnPainterName";
-            this.btnPainterName.Size = new System.Drawing.Size(33, 23);
-            this.btnPainterName.TabIndex = 30;
-            this.btnPainterName.Text = "...";
-            this.btnPainterName.UseVisualStyleBackColor = true;
-            this.btnPainterName.Click += new System.EventHandler(this.btnPainterName_Click);
-            // 
             // lblCardPrice
             // 
             this.lblCardPrice.AutoSize = true;
-            this.lblCardPrice.Location = new System.Drawing.Point(3, 384);
+            this.lblCardPrice.Location = new System.Drawing.Point(123, 384);
             this.lblCardPrice.Name = "lblCardPrice";
             this.lblCardPrice.Size = new System.Drawing.Size(53, 12);
             this.lblCardPrice.TabIndex = 25;
@@ -449,9 +425,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(71, 380);
+            this.textBox1.Location = new System.Drawing.Point(182, 380);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(158, 19);
+            this.textBox1.Size = new System.Drawing.Size(47, 19);
             this.textBox1.TabIndex = 26;
             // 
             // lblFAQ
@@ -494,23 +470,23 @@
             // 
             // tbxCollectorNumber
             // 
-            this.tbxCollectorNumber.Location = new System.Drawing.Point(71, 434);
+            this.tbxCollectorNumber.Location = new System.Drawing.Point(71, 380);
             this.tbxCollectorNumber.Name = "tbxCollectorNumber";
-            this.tbxCollectorNumber.Size = new System.Drawing.Size(158, 19);
+            this.tbxCollectorNumber.Size = new System.Drawing.Size(49, 19);
             this.tbxCollectorNumber.TabIndex = 32;
             // 
             // lblCollectorNumber
             // 
             this.lblCollectorNumber.AutoSize = true;
-            this.lblCollectorNumber.Location = new System.Drawing.Point(3, 438);
+            this.lblCollectorNumber.Location = new System.Drawing.Point(3, 384);
             this.lblCollectorNumber.Name = "lblCollectorNumber";
             this.lblCollectorNumber.Size = new System.Drawing.Size(53, 12);
             this.lblCollectorNumber.TabIndex = 31;
-            this.lblCollectorNumber.Text = "卡牌价格";
+            this.lblCollectorNumber.Text = "卡牌编号";
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(235, 433);
+            this.btnSubmit.Location = new System.Drawing.Point(235, 406);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
             this.btnSubmit.TabIndex = 33;
@@ -520,7 +496,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(431, 433);
+            this.btnClose.Location = new System.Drawing.Point(431, 406);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 34;
@@ -544,21 +520,30 @@
             this.tbxCardEnglishName.Size = new System.Drawing.Size(158, 19);
             this.tbxCardEnglishName.TabIndex = 12;
             // 
+            // cbxPainterName
+            // 
+            this.cbxPainterName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPainterName.FormattingEnabled = true;
+            this.cbxPainterName.Items.AddRange(new object[] {
+            "新建"});
+            this.cbxPainterName.Location = new System.Drawing.Point(71, 354);
+            this.cbxPainterName.Name = "cbxPainterName";
+            this.cbxPainterName.Size = new System.Drawing.Size(158, 20);
+            this.cbxPainterName.TabIndex = 24;
+            // 
             // FormCardInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(510, 460);
+            this.ClientSize = new System.Drawing.Size(510, 434);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.tbxCollectorNumber);
             this.Controls.Add(this.lblCollectorNumber);
             this.Controls.Add(this.btnFAQ);
-            this.Controls.Add(this.btnPainterName);
             this.Controls.Add(this.btnFlavorText);
             this.Controls.Add(this.tbxFAQ);
             this.Controls.Add(this.lblFAQ);
-            this.Controls.Add(this.tbxPainterName);
             this.Controls.Add(this.lblPainterName);
             this.Controls.Add(this.tbxFlavorText);
             this.Controls.Add(this.lblFlavorText);
@@ -574,6 +559,7 @@
             this.Controls.Add(this.lblCardPrice);
             this.Controls.Add(this.tbxAbilities);
             this.Controls.Add(this.lblAbilities);
+            this.Controls.Add(this.cbxPainterName);
             this.Controls.Add(this.cbxRarity);
             this.Controls.Add(this.lblRarity);
             this.Controls.Add(this.cbxExpansions);
@@ -598,6 +584,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FormCardInfo";
             this.Text = "卡牌信息 - 添加";
+            this.Load += new System.EventHandler(this.FormCardInfo_Load);
             this.gbxCardImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxCardImage)).EndInit();
             this.ResumeLayout(false);
@@ -642,8 +629,6 @@
         private System.Windows.Forms.Label lblRarity;
         private System.Windows.Forms.ComboBox cbxRarity;
         private System.Windows.Forms.Label lblPainterName;
-        private System.Windows.Forms.TextBox tbxPainterName;
-        private System.Windows.Forms.Button btnPainterName;
         private System.Windows.Forms.Label lblCardPrice;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblFAQ;
@@ -656,5 +641,6 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label lblCardEnglishName;
         private System.Windows.Forms.TextBox tbxCardEnglishName;
+        private System.Windows.Forms.ComboBox cbxPainterName;
     }
 }

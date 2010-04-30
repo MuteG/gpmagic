@@ -39,10 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractTableInstance.cs" />
     <Compile Include="ICanTrigger.cs" />
     <Compile Include="IMagicAction.cs" />
     <Compile Include="IMagicCard.cs" />
     <Compile Include="IOrganismCardAction.cs" />
+    <Compile Include="ITableIntanceAction.cs" />
     <Compile Include="IUpgradeSite.cs" />
     <Compile Include="MagicCardConst.cs" />
     <Compile Include="Model\CardRarity.cs" />

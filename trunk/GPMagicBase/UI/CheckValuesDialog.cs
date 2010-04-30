@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using GPSoft.GPMagic.GPMagicBase.Model;
 
 namespace GPSoft.GPMagic.GPMagicBase.UI
 {
@@ -44,6 +45,8 @@ namespace GPSoft.GPMagic.GPMagicBase.UI
             }
             return result;
         }
+
+        
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

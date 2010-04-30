@@ -30,6 +30,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             InitializeComponent();
         }
 
+        #region 自定义函数
         private void ChangeFormTitle(DataOperateType editStatus)
         {
             switch (editStatus)
@@ -48,20 +49,6 @@ namespace GPSoft.GPMagic.GPSearch.UI
                         btnSubmit.Text = DataOperateTypeDisplayWrods.Update;
                         break;
                     }
-            }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btnCardImage_Click(object sender, EventArgs e)
-        {
-            if (ofdCardImage.ShowDialog() == DialogResult.OK)
-            {
-                pbxCardImage.Image = Image.FromFile(ofdCardImage.FileName);
-                tbxCardImage.Text = ofdCardImage.FileName;
             }
         }
 
@@ -88,44 +75,82 @@ namespace GPSoft.GPMagic.GPSearch.UI
             return result;
         }
 
+        private void SetRarityItems()
+        {
+            CardRarity rarity = new CardRarity();
+            rarity.Records.Rows.InsertAt(rarity.Records.NewRow(), 0);
+            rarity.Records.Rows[0].ItemArray = new object[]{0, "新建"};
+            this.cbxRarity.DataSource = rarity.Records;
+            this.cbxRarity.DisplayMember = "RarityName";
+            this.cbxRarity.ValueMember = "RarityID";
+        }
+        private void SetComboBoxItems(ComboBox cbx, DataTable records, string display, string value)
+        {
+            records.Rows.InsertAt(records.NewRow(), 0);
+            records.Rows[0][display] = "新建";
+            records.Rows[0][value] = 0;
+            cbx.DataSource = records;
+            cbx.DisplayMember = display;
+            cbx.ValueMember = value;
+        }
+        #endregion
+
+        #region 系统函数
+        // 关闭窗口
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+        // 选择卡牌画像
+        private void btnCardImage_Click(object sender, EventArgs e)
+        {
+            if (ofdCardImage.ShowDialog() == DialogResult.OK)
+            {
+                pbxCardImage.Image = Image.FromFile(ofdCardImage.FileName);
+                tbxCardImage.Text = ofdCardImage.FileName;
+            }
+        }
+        // 提交操作
         private void btnSubmit_Click(object sender, EventArgs e)
         {
 
         }
-
+        // 选择子类别
         private void btnCardSubType_Click(object sender, EventArgs e)
         {
             tbxCardSubType.Text = CheckValuesDialog.Show(lblCardSubType.Text, tbxCardSubType.Text, "/");
         }
-
+        // 改变控件提示
         private void tbxCardSubType_TextChanged(object sender, EventArgs e)
         {
-            ttpCardInfo.SetToolTip((TextBox)sender, ((TextBox)sender).Text);
+            //ttpCardInfo.SetToolTip((TextBox)sender, ((TextBox)sender).Text);
         }
-
+        // 选择异能
         private void btnAbilities_Click(object sender, EventArgs e)
         {
             tbxAbilities.Text = CheckValuesDialog.Show(lblAbilities.Text, tbxAbilities.Text, ",");
         }
-
+        // 输入异能描述文字
         private void btnAbilitiesText_Click(object sender, EventArgs e)
         {
             tbxAbilitiesText.Text = InputTextDialog.Show(lblAbilitiesText.Text, tbxAbilitiesText.Text);
         }
-
+        // 输入背景描述文字
         private void btnFlavorText_Click(object sender, EventArgs e)
         {
             tbxFlavorText.Text = InputTextDialog.Show(lblFlavorText.Text, tbxFlavorText.Text);
         }
-
+        // 输入卡牌FAQ
         private void btnFAQ_Click(object sender, EventArgs e)
         {
             tbxFAQ.Text = InputTextDialog.Show(lblFAQ.Text, tbxFAQ.Text);
         }
+        #endregion
 
-        private void btnPainterName_Click(object sender, EventArgs e)
+        private void FormCardInfo_Load(object sender, EventArgs e)
         {
-            tbxPainterName.Text = InputTextDialog.Show(lblPainterName.Text, tbxPainterName.Text);
+            SetRarityItems();
+
         }
     }
 }

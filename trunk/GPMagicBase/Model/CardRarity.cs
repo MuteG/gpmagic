@@ -7,18 +7,11 @@ using GPSoft.GPMagic.GPMagicBase.SQLite;
 
 namespace GPSoft.GPMagic.GPMagicBase.Model
 {
-    public sealed class CardRarity : IDisposable
+    public sealed class CardRarity : AbstractTableInstance
     {
-        private DatabaseOperator dbop;
         public CardRarity()
         {
-            dbop = new DatabaseOperator(SQLiteDatabaseInformation.Connection);
-        }
-        private DataTable GetCardRarity()
-        {
-            DataTable result = null;
-            result = dbop.SelectTableData(DatabaseTableNames.CardRarity);
-            return result;
+            this.tableName = DatabaseTableNames.CardRarity;
         }
         public Color GetRarityColor(int rarity)
         {
@@ -48,14 +41,19 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             }
             return result;
         }
-
-        #region IDisposable 成员
-
-        public void Dispose()
-        {
-            dbop.Dispose();
-        }
-
-        #endregion
+    }
+    /// <summary>
+    /// 稀有度
+    /// </summary>
+    public struct Rarity
+    {
+        /// <summary>
+        /// 稀有度编号
+        /// </summary>
+        int RarityID;
+        /// <summary>
+        /// 稀有度名称
+        /// </summary>
+        string RarityName;
     }
 }
