@@ -8,14 +8,6 @@ namespace GPSoft.GPMagic.GPMagicBase
     {
     }
 
-    public enum CardSubType
-    {
-    }
-
-    public enum CardType
-    {
-    }
-
     public enum CardStatus
     {
         /// <summary>

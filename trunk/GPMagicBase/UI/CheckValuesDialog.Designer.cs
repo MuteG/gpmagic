@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lvwValues = new System.Windows.Forms.ListView();
             this.colCheckBox = new System.Windows.Forms.ColumnHeader();
             this.colValues = new System.Windows.Forms.ColumnHeader();
-            this.pnlBottom = new System.Windows.Forms.Panel();
             this.lvwResults = new System.Windows.Forms.ListView();
             this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
             this.lblSearch = new System.Windows.Forms.Label();
@@ -40,21 +40,25 @@
             this.btnOK = new System.Windows.Forms.Button();
             this.pnlContnet = new System.Windows.Forms.Panel();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.pnlBottom.SuspendLayout();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.ctxMnuValuesControl = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnuItemDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContnet.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.ctxMnuValuesControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // lvwValues
             // 
-            this.lvwValues.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwValues.CheckBoxes = true;
             this.lvwValues.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colCheckBox,
             this.colValues});
-            this.lvwValues.Location = new System.Drawing.Point(152, 0);
+            this.lvwValues.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwValues.Location = new System.Drawing.Point(163, 3);
             this.lvwValues.Name = "lvwValues";
-            this.lvwValues.Size = new System.Drawing.Size(154, 243);
+            this.lvwValues.Size = new System.Drawing.Size(155, 229);
             this.lvwValues.TabIndex = 0;
             this.lvwValues.UseCompatibleStateImageBehavior = false;
             this.lvwValues.View = System.Windows.Forms.View.Details;
@@ -68,27 +72,14 @@
             // 
             this.colValues.Width = 100;
             // 
-            // pnlBottom
-            // 
-            this.pnlBottom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlBottom.Controls.Add(this.lvwValues);
-            this.pnlBottom.Controls.Add(this.lvwResults);
-            this.pnlBottom.Location = new System.Drawing.Point(0, 30);
-            this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(307, 243);
-            this.pnlBottom.TabIndex = 3;
-            // 
             // lvwResults
             // 
-            this.lvwResults.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)));
             this.lvwResults.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
-            this.lvwResults.Location = new System.Drawing.Point(0, 0);
+            this.lvwResults.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwResults.Location = new System.Drawing.Point(3, 3);
             this.lvwResults.Name = "lvwResults";
-            this.lvwResults.Size = new System.Drawing.Size(153, 243);
+            this.lvwResults.Size = new System.Drawing.Size(154, 229);
             this.lvwResults.TabIndex = 0;
             this.lvwResults.UseCompatibleStateImageBehavior = false;
             this.lvwResults.View = System.Windows.Forms.View.Details;
@@ -111,13 +102,13 @@
             // 
             this.tbxSearch.Location = new System.Drawing.Point(47, 5);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(166, 19);
+            this.tbxSearch.Size = new System.Drawing.Size(100, 19);
             this.tbxSearch.TabIndex = 2;
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(219, 279);
+            this.btnCancel.Location = new System.Drawing.Point(233, 271);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 3;
@@ -128,7 +119,7 @@
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(138, 279);
+            this.btnOK.Location = new System.Drawing.Point(152, 271);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 4;
@@ -141,29 +132,72 @@
             this.pnlContnet.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlContnet.Controls.Add(this.btnNew);
             this.pnlContnet.Controls.Add(this.btnSearch);
             this.pnlContnet.Controls.Add(this.lblSearch);
             this.pnlContnet.Controls.Add(this.tbxSearch);
-            this.pnlContnet.Controls.Add(this.pnlBottom);
+            this.pnlContnet.Controls.Add(this.tableLayoutPanel1);
             this.pnlContnet.Location = new System.Drawing.Point(0, 0);
             this.pnlContnet.Name = "pnlContnet";
-            this.pnlContnet.Size = new System.Drawing.Size(307, 273);
+            this.pnlContnet.Size = new System.Drawing.Size(321, 265);
             this.pnlContnet.TabIndex = 6;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(219, 4);
+            this.btnSearch.Location = new System.Drawing.Point(153, 4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 4;
-            this.btnSearch.Text = "搜索";
+            this.btnSearch.Text = "查找";
             this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.lvwValues, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.lvwResults, 0, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 30);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(321, 235);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(234, 4);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 4;
+            this.btnNew.Text = "新建";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // ctxMnuValuesControl
+            // 
+            this.ctxMnuValuesControl.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuItemDelete});
+            this.ctxMnuValuesControl.Name = "ctxMnuValuesControl";
+            this.ctxMnuValuesControl.Size = new System.Drawing.Size(153, 48);
+            // 
+            // mnuItemDelete
+            // 
+            this.mnuItemDelete.Name = "mnuItemDelete";
+            this.mnuItemDelete.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemDelete.Text = "删除";
+            this.mnuItemDelete.Click += new System.EventHandler(this.mnuItemDelete_Click);
             // 
             // CheckValuesDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(306, 308);
+            this.ClientSize = new System.Drawing.Size(320, 300);
             this.Controls.Add(this.pnlContnet);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
@@ -173,9 +207,10 @@
             this.Name = "CheckValuesDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "CheckValuesDialog";
-            this.pnlBottom.ResumeLayout(false);
             this.pnlContnet.ResumeLayout(false);
             this.pnlContnet.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.ctxMnuValuesControl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -187,12 +222,15 @@
         private System.Windows.Forms.ColumnHeader colValues;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Label lblSearch;
-        private System.Windows.Forms.Panel pnlBottom;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Panel pnlContnet;
         private System.Windows.Forms.ListView lvwResults;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btnNew;
+        private System.Windows.Forms.ContextMenuStrip ctxMnuValuesControl;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemDelete;
     }
 }

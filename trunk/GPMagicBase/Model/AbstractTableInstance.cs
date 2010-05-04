@@ -5,7 +5,7 @@ using GPSoft.GPMagic.GPMagicBase.SQLite;
 using GPSoft.GPMagic.GPMagicBase.Model;
 using System.Data;
 
-namespace GPSoft.GPMagic.GPMagicBase
+namespace GPSoft.GPMagic.GPMagicBase.Model
 {
     public abstract class AbstractTableInstance : ITableIntanceAction, IDisposable
     {
@@ -13,7 +13,14 @@ namespace GPSoft.GPMagic.GPMagicBase
         private DataTable records = null;
         protected string tableName = string.Empty;
         /// <summary>
-        /// 获得全部记录数据
+        /// 获取当前实例对应的数据表名
+        /// </summary>
+        public string TableName
+        {
+            get { return tableName; }
+        }
+        /// <summary>
+        /// 获取全部记录数据
         /// </summary>
         public DataTable Records
         {
@@ -33,6 +40,11 @@ namespace GPSoft.GPMagic.GPMagicBase
             result = dbop.SelectTableData(this.tableName);
             return result;
         }
+        /// <summary>
+        /// 新生成一个本实例对应的表结构实例
+        /// </summary>
+        /// <returns></returns>
+        public abstract object NewTableInstance();
         #region ITableIntanceAction 成员
 
         /// <summary>

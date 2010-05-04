@@ -41,12 +41,21 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             }
             return result;
         }
+        /// <summary>
+        /// 新生成一个本实例对应的表结构实例
+        /// </summary>
+        /// <returns></returns>
+        public override object NewTableInstance()
+        {
+            return new ListRarity();
+        }
     }
     /// <summary>
     /// 稀有度
     /// </summary>
-    public struct Rarity
+    public struct ListRarity
     {
+        [ColumnInfo(IsPrimaryKey=true)]
         /// <summary>
         /// 稀有度编号
         /// </summary>
