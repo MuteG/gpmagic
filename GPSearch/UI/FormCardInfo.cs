@@ -118,7 +118,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         // 选择子类别
         private void btnCardSubType_Click(object sender, EventArgs e)
         {
-            tbxCardSubType.Text = CheckValuesDialog.Show(lblCardSubType.Text, tbxCardSubType.Text, "/");
+            tbxCardSubType.Text = CheckValuesDialog.Show(lblCardSubType.Text, tbxCardSubType.Text, "/", typeof(CardSubType));
         }
         // 改变控件提示
         private void tbxCardSubType_TextChanged(object sender, EventArgs e)
@@ -128,7 +128,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         // 选择异能
         private void btnAbilities_Click(object sender, EventArgs e)
         {
-            tbxAbilities.Text = CheckValuesDialog.Show(lblAbilities.Text, tbxAbilities.Text, ",");
+            tbxAbilities.Text = CheckValuesDialog.Show(lblAbilities.Text, tbxAbilities.Text, ",", typeof(CardAbilitie));
         }
         // 输入异能描述文字
         private void btnAbilitiesText_Click(object sender, EventArgs e)

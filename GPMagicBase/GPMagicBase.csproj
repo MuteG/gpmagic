@@ -39,17 +39,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractTableInstance.cs" />
+    <Compile Include="Model\CardAbilitie.cs" />
+    <Compile Include="Model\CardSubType.cs" />
+    <Compile Include="Model\AbstractTableInstance.cs" />
     <Compile Include="ICanTrigger.cs" />
     <Compile Include="IMagicAction.cs" />
     <Compile Include="IMagicCard.cs" />
     <Compile Include="IOrganismCardAction.cs" />
-    <Compile Include="ITableIntanceAction.cs" />
+    <Compile Include="Model\ColumnInfoAttribute.cs" />
+    <Compile Include="Model\ITableIntanceAction.cs" />
     <Compile Include="IUpgradeSite.cs" />
     <Compile Include="MagicCardConst.cs" />
     <Compile Include="Model\CardRarity.cs" />
     <Compile Include="Model\ConstClass.cs" />
-    <Compile Include="Model\ListCardTotal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>

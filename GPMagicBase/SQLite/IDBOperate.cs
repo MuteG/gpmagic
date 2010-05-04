@@ -11,12 +11,12 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         bool RollbackTran();
         bool CommitTran();
         /// <summary>
-        /// 将一行数据封装成指定类型的实例
+        /// 将一条数据封装成指定的对象
         /// </summary>
-        /// <typeparam name="T">指定要封装成的类型</typeparam>
-        /// <param name="row">要进行封装的数据行</param>
-        /// <returns>封装成的实例</returns>
-        T DataRowToObject<T>(DataRow row);
+        /// <typeparam name="T">要封装成的对象类型</typeparam>
+        /// <param name="dataRow">要进行封装的数据</param>
+        /// <returns>返回封装好的对象</returns>
+        T EncapsulateDataRowToObject<T>(DataRow dataRow);
         /// <summary>
         /// 执行查询语句
         /// </summary>
@@ -34,15 +34,13 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         /// </summary>
         /// <param name="tableName">要进行插入的表名</param>
         /// <param name="dataObj">封装好的数据实例</param>
-        /// <returns>影响到的行数</returns>
-        int InsertTableData(string tableName, object dataObj);
+        void InsertTableData(string tableName, object dataObj);
         /// <summary>
         /// 将一行数据插入到指定的表中
         /// </summary>
         /// <param name="tableName">要进行插入的表名</param>
         /// <param name="dataRow">数据行</param>
-        /// <returns>影响到的行数</returns>
-        int InsertTableData(string tableName, DataRow dataRow);
+        void InsertTableData(string tableName, DataRow dataRow);
         /// <summary>
         /// 从指定表中删除指定数据实例对应的数据行
         /// </summary>

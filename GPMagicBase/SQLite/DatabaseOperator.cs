@@ -4,6 +4,7 @@ using System.Text;
 using System.Data.SQLite;
 using System.Reflection;
 using System.Data;
+using GPSoft.GPMagic.GPMagicBase.Model;
 
 namespace GPSoft.GPMagic.GPMagicBase.SQLite
 {
@@ -28,19 +29,58 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
 
         #region IDBOperate 成员
 
-        public T DataRowToObject<T>(DataRow row)
+        /// <summary>
+        /// 将一条数据封装成指定的对象
+        /// </summary>
+        /// <typeparam name="T">要封装成的对象类型</typeparam>
+        /// <param name="dataRow">要进行封装的数据</param>
+        /// <returns>返回封装好的对象</returns>
+        public T EncapsulateDataRowToObject<T>(DataRow dataRow)
         {
             T result = Activator.CreateInstance<T>();
-            Type type = typeof(T);
-            DataColumnCollection rowColumns = row.Table.Columns;
-            foreach (PropertyInfo info in type.GetProperties())
+            PropertyInfo[] properties = result.GetType().GetProperties();
+            foreach (PropertyInfo info in properties)
             {
-                if (rowColumns.Contains(info.Name))
+                if (dataRow.Table.Columns.Contains(info.Name))
                 {
-                    info.SetValue(result, row[info.Name], null);
+                    info.SetValue(result, dataRow[info.Name], null);
                 }
             }
             return result;
+        }
+        /// <summary>
+        /// 执行没有返回值的数据库脚本
+        /// <param name="sql">要执行的数据库脚本</param>
+        /// </summary>
+        private void ExecuteNonreturnSqlStript(string sql)
+        {
+            SQLiteConnection conn = null;
+            try
+            {
+                SQLiteCommand cmd;
+                if (useTran)
+                {
+                    cmd = new SQLiteCommand(sql, tran.Connection, tran);
+                }
+                else
+                {
+                    conn = new SQLiteConnection(ConnStr);
+                    conn.Open();
+                    cmd = new SQLiteCommand(sql, conn);
+                }
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                if (useTran)
+                {
+                    RollbackTran();
+                }
+            }
+            finally
+            {
+                if (null != conn) conn.Close();
+            }
         }
 
         public DataTable SelectScriptData(string sql)
@@ -84,15 +124,42 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
             string sql = "SELECT * FROM " + tableName;
             return SelectScriptData(sql);
         }
-
-        public int InsertTableData(string tableName, object dataObj)
+        /// <summary>
+        /// 将一个封装好的数据实例插入到指定的表中
+        /// </summary>
+        /// <param name="tableName">要进行插入的表名</param>
+        /// <param name="dataObj">封装好的数据实例</param>
+        public void InsertTableData(string tableName, object dataObj)
         {
-            throw new NotImplementedException();
+            PropertyInfo[] properties = dataObj.GetType().GetProperties();
+            string sqlStript = "INSERT INTO {0} ({1}) VALUES({2})";
+            List<string> colNames = new List<string>();
+            List<string> values = new List<string>();
+            ColumnInfoAttribute pkidAttr = new ColumnInfoAttribute();
+            pkidAttr.IsAutoIncrement = true;
+            pkidAttr.IsPrimaryKey = true;
+            foreach (PropertyInfo info in properties)
+            {
+                if (info.Attributes.Equals(pkidAttr)) continue;
+                colNames.Add(info.Name);
+                values.Add(info.GetValue(dataObj, null).ToString());
+            }
+            sqlStript = string.Format(sqlStript, tableName, 
+                string.Join(",", colNames.ToArray()),
+                string.Join(",", values.ToArray()));
+            ExecuteNonreturnSqlStript(sqlStript);
+            colNames.Clear();
+            values.Clear();
         }
-
-        public int InsertTableData(string tableName, DataRow dataRow)
+        /// <summary>
+        /// 将一行数据插入到指定的表中
+        /// </summary>
+        /// <param name="tableName">要进行插入的表名</param>
+        /// <param name="dataRow">数据行</param>
+        public void InsertTableData(string tableName, DataRow dataRow)
         {
-            throw new NotImplementedException();
+            string classFullName = "GPSoft.GPMagic.GPMagicBase.Model." + tableName;
+            InsertTableData(tableName, Activator.CreateInstance("GPMagicBase", classFullName));
         }
 
         public int DeleteTableData(string tableName, object dataObj)
