@@ -17,19 +17,15 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         void Save();
 
         /// <summary>
-        /// 在指定位置插入记录
+        /// 新建一条记录
         /// </summary>
-        void InsertAt();
-
+        /// <param name="newObject">要添加的表实例</param>
+        void Add(object newObject);
         /// <summary>
         /// 新建一条记录
         /// </summary>
-        void NewRecord();
-
-        /// <summary>
-        /// 在尾部追加一条记录
-        /// </summary>
-        void Append();
+        /// <param name="newRow">要添加的数据行</param>
+        void Add(System.Data.DataRow newRow);
 
         /// <summary>
         /// 删除一条数据

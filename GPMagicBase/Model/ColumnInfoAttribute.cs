@@ -9,6 +9,15 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
     {
         bool isPrimaryKey = false;
         bool isAutoIncrement = false;
+        bool isDisplayKeyWord = false;
+        /// <summary>
+        /// 获取或者设置是否是用来显示简略信息的关键字字段
+        /// </summary>
+        public bool IsDisplayKeyWord
+        {
+            get { return isDisplayKeyWord; }
+            set { isDisplayKeyWord = value; }
+        }
         /// <summary>
         /// 获取或者设置是否是自增列
         /// </summary>
@@ -29,19 +38,6 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         public override int GetHashCode()
         {
             return base.GetHashCode();
-        }
-
-        public override bool Equals(object obj)
-        {
-            bool result = false;
-            result = obj is ColumnInfoAttribute;
-            if (result)
-            {
-                ColumnInfoAttribute colInfoObj = obj as ColumnInfoAttribute;
-                result = (this.IsAutoIncrement == colInfoObj.IsAutoIncrement) &&
-                    (this.IsPrimaryKey == colInfoObj.IsPrimaryKey);
-            }
-            return result;
         }
     }
 }

@@ -38,6 +38,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 获取或者设置异能名称
         /// </summary>
+        [ColumnInfo(IsDisplayKeyWord = true)]
         public string AbilitiesName
         {
             get { return abilitiesName; }
@@ -46,7 +47,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 获取或者设置异能编号（主键、自增）
         /// </summary>
-        [ColumnInfo(IsPrimaryKey=true, IsAutoIncrement=true)]
+        [ColumnInfo(IsPrimaryKey = true, IsAutoIncrement = true)]
         public int AbilitiesID
         {
             get { return abilitiesID; }

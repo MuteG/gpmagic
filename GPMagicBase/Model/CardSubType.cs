@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GPSoft.GPMagic.GPMagicBase.Model
 {
-    public sealed class CardSubType : GPSoft.GPMagic.GPMagicBase.Model.AbstractTableInstance
+    public sealed class CardSubType : AbstractTableInstance
     {
         public CardSubType()
         {
@@ -29,6 +29,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 获取或者设置卡牌子类型名称
         /// </summary>
+        [ColumnInfo(IsDisplayKeyWord = true)]
         public string SubTypeName
         {
             get { return subTypeName; }

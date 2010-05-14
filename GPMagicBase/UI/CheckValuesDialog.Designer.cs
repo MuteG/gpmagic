@@ -39,9 +39,9 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
             this.pnlContnet = new System.Windows.Forms.Panel();
+            this.btnNew = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnNew = new System.Windows.Forms.Button();
             this.ctxMnuValuesControl = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.mnuItemDelete = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContnet.SuspendLayout();
@@ -51,17 +51,24 @@
             // 
             // lvwValues
             // 
+            this.lvwValues.AllowDrop = true;
             this.lvwValues.CheckBoxes = true;
             this.lvwValues.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.colCheckBox,
             this.colValues});
             this.lvwValues.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwValues.HideSelection = false;
+            this.lvwValues.LabelWrap = false;
             this.lvwValues.Location = new System.Drawing.Point(163, 3);
+            this.lvwValues.MultiSelect = false;
             this.lvwValues.Name = "lvwValues";
             this.lvwValues.Size = new System.Drawing.Size(155, 229);
             this.lvwValues.TabIndex = 0;
             this.lvwValues.UseCompatibleStateImageBehavior = false;
             this.lvwValues.View = System.Windows.Forms.View.Details;
+            this.lvwValues.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lvwValues_ItemChecked);
+            this.lvwValues.DragDrop += new System.Windows.Forms.DragEventHandler(this.lvwValues_DragDrop);
+            this.lvwValues.DragEnter += new System.Windows.Forms.DragEventHandler(this.lvwValues_DragEnter);
             // 
             // colCheckBox
             // 
@@ -70,6 +77,7 @@
             // 
             // colValues
             // 
+            this.colValues.Text = "备选值";
             this.colValues.Width = 100;
             // 
             // lvwResults
@@ -77,12 +85,16 @@
             this.lvwResults.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1});
             this.lvwResults.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwResults.HideSelection = false;
+            this.lvwResults.LabelWrap = false;
             this.lvwResults.Location = new System.Drawing.Point(3, 3);
             this.lvwResults.Name = "lvwResults";
             this.lvwResults.Size = new System.Drawing.Size(154, 229);
             this.lvwResults.TabIndex = 0;
             this.lvwResults.UseCompatibleStateImageBehavior = false;
             this.lvwResults.View = System.Windows.Forms.View.Details;
+            this.lvwResults.KeyDown += new System.Windows.Forms.KeyEventHandler(this.lvwResults_KeyDown);
+            this.lvwResults.ItemDrag += new System.Windows.Forms.ItemDragEventHandler(this.lvwResults_ItemDrag);
             // 
             // columnHeader1
             // 
@@ -142,6 +154,16 @@
             this.pnlContnet.Size = new System.Drawing.Size(321, 265);
             this.pnlContnet.TabIndex = 6;
             // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(234, 4);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 23);
+            this.btnNew.TabIndex = 4;
+            this.btnNew.Text = "新建";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(153, 4);
@@ -165,31 +187,21 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 235F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(321, 235);
             this.tableLayoutPanel1.TabIndex = 7;
-            // 
-            // btnNew
-            // 
-            this.btnNew.Location = new System.Drawing.Point(234, 4);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 23);
-            this.btnNew.TabIndex = 4;
-            this.btnNew.Text = "新建";
-            this.btnNew.UseVisualStyleBackColor = true;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // ctxMnuValuesControl
             // 
             this.ctxMnuValuesControl.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuItemDelete});
             this.ctxMnuValuesControl.Name = "ctxMnuValuesControl";
-            this.ctxMnuValuesControl.Size = new System.Drawing.Size(153, 48);
+            this.ctxMnuValuesControl.Size = new System.Drawing.Size(95, 26);
             // 
             // mnuItemDelete
             // 
             this.mnuItemDelete.Name = "mnuItemDelete";
-            this.mnuItemDelete.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemDelete.Size = new System.Drawing.Size(94, 22);
             this.mnuItemDelete.Text = "删除";
             this.mnuItemDelete.Click += new System.EventHandler(this.mnuItemDelete_Click);
             // 

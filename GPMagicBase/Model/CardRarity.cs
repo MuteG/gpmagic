@@ -55,14 +55,15 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
     /// </summary>
     public struct ListRarity
     {
-        [ColumnInfo(IsPrimaryKey=true)]
         /// <summary>
         /// 稀有度编号
         /// </summary>
+        [ColumnInfo(IsPrimaryKey = true, IsAutoIncrement = true)]
         int RarityID;
         /// <summary>
         /// 稀有度名称
         /// </summary>
+        [ColumnInfo(IsDisplayKeyWord = true)]
         string RarityName;
     }
 }

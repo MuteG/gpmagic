@@ -37,16 +37,20 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         /// <returns>返回封装好的对象</returns>
         public T EncapsulateDataRowToObject<T>(DataRow dataRow)
         {
-            T result = Activator.CreateInstance<T>();
-            PropertyInfo[] properties = result.GetType().GetProperties();
+            object result = Activator.CreateInstance<T>();
+            EncapsulateDataRowToObject(ref result, dataRow);
+            return (T)result;
+        }
+        public void EncapsulateDataRowToObject(ref object instance, DataRow dataRow)
+        {
+            PropertyInfo[] properties = instance.GetType().GetProperties();
             foreach (PropertyInfo info in properties)
             {
                 if (dataRow.Table.Columns.Contains(info.Name))
                 {
-                    info.SetValue(result, dataRow[info.Name], null);
+                    info.SetValue(instance, dataRow[info.Name], null);
                 }
             }
-            return result;
         }
         /// <summary>
         /// 执行没有返回值的数据库脚本
@@ -135,14 +139,21 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
             string sqlStript = "INSERT INTO {0} ({1}) VALUES({2})";
             List<string> colNames = new List<string>();
             List<string> values = new List<string>();
-            ColumnInfoAttribute pkidAttr = new ColumnInfoAttribute();
-            pkidAttr.IsAutoIncrement = true;
-            pkidAttr.IsPrimaryKey = true;
             foreach (PropertyInfo info in properties)
             {
-                if (info.Attributes.Equals(pkidAttr)) continue;
-                colNames.Add(info.Name);
-                values.Add(info.GetValue(dataObj, null).ToString());
+                object[] attributes = info.GetCustomAttributes(typeof(ColumnInfoAttribute), false);
+                if (attributes.Length > 0)
+                {
+                    ColumnInfoAttribute colAttr = (ColumnInfoAttribute)attributes[0];
+                    if (colAttr != null && !colAttr.IsAutoIncrement)
+                    {
+                        colNames.Add(info.Name);
+                        string valueStr = info.GetValue(dataObj, null).ToString();
+                        if (info.PropertyType.Equals(typeof(string)))
+                            valueStr = string.Format("'{0}'", valueStr);
+                        values.Add(valueStr);
+                    }
+                }
             }
             sqlStript = string.Format(sqlStript, tableName, 
                 string.Join(",", colNames.ToArray()),
@@ -159,7 +170,9 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         public void InsertTableData(string tableName, DataRow dataRow)
         {
             string classFullName = "GPSoft.GPMagic.GPMagicBase.Model." + tableName;
-            InsertTableData(tableName, Activator.CreateInstance("GPMagicBase", classFullName));
+            object tableInstance = Activator.CreateInstance("GPMagicBase", classFullName);
+            EncapsulateDataRowToObject(ref tableInstance, dataRow);
+            InsertTableData(tableName, tableInstance);
         }
 
         public int DeleteTableData(string tableName, object dataObj)
