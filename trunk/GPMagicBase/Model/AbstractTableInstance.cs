@@ -19,6 +19,22 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         {
             get { return tableName; }
         }
+        private Type tableInstanceType = null;
+        /// <summary>
+        /// 获取当前实例对应的数据表实例的类型
+        /// </summary>
+        public Type TableInstanceType
+        {
+            get
+            {
+                if (null == tableInstanceType)
+                {
+                    tableInstanceType = Type.GetType(
+                        string.Format("{0}.{1}", this.GetType().Namespace, this.tableName));
+                }
+                return tableInstanceType;
+            }
+        }
         /// <summary>
         /// 获取全部记录数据
         /// </summary>
@@ -64,27 +80,20 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         }
 
         /// <summary>
-        /// 在指定位置插入记录
+        /// 新建一条记录
         /// </summary>
-        public void InsertAt()
+        /// <param name="newObject">要添加的表实例</param>
+        public void Add(object newObject)
         {
-            throw new NotImplementedException();
+            dbop.InsertTableData(this.tableName, newObject);
         }
-
         /// <summary>
         /// 新建一条记录
         /// </summary>
-        public void NewRecord()
+        /// <param name="newRow">要添加的数据行</param>
+        public void Add(DataRow newRow)
         {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// 在尾部追加一条记录
-        /// </summary>
-        public void Append()
-        {
-            throw new NotImplementedException();
+            dbop.InsertTableData(this.tableName, newRow);
         }
 
         /// <summary>
