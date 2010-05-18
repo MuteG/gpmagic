@@ -114,7 +114,7 @@
             // 
             this.tbxSearch.Location = new System.Drawing.Point(47, 5);
             this.tbxSearch.Name = "tbxSearch";
-            this.tbxSearch.Size = new System.Drawing.Size(100, 19);
+            this.tbxSearch.Size = new System.Drawing.Size(100, 21);
             this.tbxSearch.TabIndex = 2;
             // 
             // btnCancel
@@ -213,6 +213,7 @@
             this.Controls.Add(this.pnlContnet);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
+            this.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;

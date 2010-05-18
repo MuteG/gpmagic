@@ -61,14 +61,14 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private void mnuAddCard_Click(object sender, EventArgs e)
         {
             FormCardInfo frmInfo = new FormCardInfo();
-            frmInfo.EditStatus = GPSoft.GPMagic.GPMagicBase.Model.DataOperateType.Insert;
+            frmInfo.EditStatus = DataOperateType.Insert;
             frmInfo.Show();
         }
 
         private void mnuEditCard_Click(object sender, EventArgs e)
         {
             FormCardInfo frmInfo = new FormCardInfo();
-            frmInfo.EditStatus = GPSoft.GPMagic.GPMagicBase.Model.DataOperateType.Update;
+            frmInfo.EditStatus = DataOperateType.Update;
             frmInfo.Show();
         }
 

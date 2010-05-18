@@ -21,6 +21,8 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         }
         private SQLiteTransaction tran = null;
         private bool useTran = false;
+        ~DatabaseOperator() { }
+        
 
         public DatabaseOperator(string connStr)
         {
