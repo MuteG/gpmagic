@@ -160,22 +160,18 @@ namespace GPSoft.GPMagic.GPMagicBase.UI
             string itemText = string.Empty;
             if (e.Item.Checked)
             {
-                lvwResults.Items.Clear();
-                foreach (ListViewItem valueItem in lvwValues.CheckedItems)
-                {
-                    itemText = valueItem.SubItems[1].Text;
-                    lvwResults.Items.Add(itemText, itemText, -1);
-                }
-
-                //itemText = e.Item.SubItems[1].Text;
-                //lvwResults.Items.Add(itemText, itemText, -1);
+                itemText = e.Item.SubItems[1].Text;
+                lvwResults.Items.Add(itemText, itemText, -1);
             }
             else
             {
-                if (e.Item.SubItems.Count > 1) itemText = e.Item.SubItems[1].Text;
-                foreach (ListViewItem item in lvwResults.Items.Find(itemText, true))
+                if (lvwResults.Items.Count > 0)
                 {
-                    item.Remove();
+                    if (e.Item.SubItems.Count > 1) itemText = e.Item.SubItems[1].Text;
+                    foreach (ListViewItem item in lvwResults.Items.Find(itemText, true))
+                    {
+                        item.Remove();
+                    }
                 }
             }
         }
