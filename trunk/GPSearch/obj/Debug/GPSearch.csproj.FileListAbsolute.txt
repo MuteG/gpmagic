@@ -42,3 +42,5 @@ D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\System.Data.SQLite.dll
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\System.Data.SQLite.xml
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\GPMagicBase.pdb
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\obj\Debug\GPSoft.GPMagic.GPSearch.UI.AboutBox.resources
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\Helper.dll
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPSearch\bin\Debug\Helper.pdb
