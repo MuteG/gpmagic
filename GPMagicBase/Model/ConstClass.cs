@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
+using System.IO;
 
 namespace GPSoft.GPMagic.GPMagicBase.Model
 {
@@ -44,7 +45,8 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
     /// </summary>
     public struct SQLiteDatabaseInformation
     {
-        public static readonly string Connection = "Data Source=./GPMagic.db3";
+        public static readonly string Connection = string.Format("Data Source={0}",
+            Path.Combine(GPSoft.Helper.FunctionHelper.FunctionHelper.ApplicationPath, "GPMagic.db3"));
     }
     /// <summary>
     /// 表示稀有度的颜色

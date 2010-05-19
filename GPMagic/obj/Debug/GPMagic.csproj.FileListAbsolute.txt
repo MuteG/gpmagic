@@ -53,3 +53,5 @@ D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPMagic\bin\Debug\GPMagicBase.dll
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPMagic\bin\Debug\System.Data.SQLite.dll
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPMagic\bin\Debug\System.Data.SQLite.xml
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPMagic\bin\Debug\GPMagicBase.pdb
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPMagic\bin\Debug\Helper.dll
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\GPMagic\bin\Debug\Helper.pdb

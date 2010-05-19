@@ -16,3 +16,5 @@ D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\MagicCard\bin\Debug\GPMagic.pdb
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\MagicCard\bin\Debug\GPMagicBase.pdb
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\MagicCard\obj\Debug\MagicDemo.exe
 D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\MagicCard\obj\Debug\MagicDemo.pdb
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\MagicCard\bin\Debug\Helper.dll
+D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\MagicCard\bin\Debug\Helper.pdb
