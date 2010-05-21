@@ -25,6 +25,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         public static readonly string Delete = "删除";
         public static readonly string Update = "编辑";
         public static readonly string Insert = "添加";
+        public static readonly string New = "新建";
     }
     /// <summary>
     /// 数据库表名

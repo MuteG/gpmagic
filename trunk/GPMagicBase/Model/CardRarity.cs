@@ -45,7 +45,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// 新生成一个本实例对应的表结构实例
         /// </summary>
         /// <returns></returns>
-        public override object NewTableInstance()
+        public override object NewDataInstance()
         {
             return new ListRarity();
         }
@@ -53,17 +53,27 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
     /// <summary>
     /// 稀有度
     /// </summary>
-    public struct ListRarity
+    public sealed class ListRarity
     {
+        private int rarityID;
         /// <summary>
         /// 稀有度编号
         /// </summary>
         [ColumnInfo(IsPrimaryKey = true, IsAutoIncrement = true)]
-        int RarityID;
+        public int RarityID
+        {
+            set { this.rarityID = value; }
+            get { return this.rarityID; }
+        }
+        private string rarityName;
         /// <summary>
         /// 稀有度名称
         /// </summary>
         [ColumnInfo(IsDisplayKeyWord = true)]
-        string RarityName;
+        public string RarityName
+        {
+            set { this.rarityName = value; }
+            get { return this.rarityName; }
+        }
     }
 }

@@ -26,7 +26,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// 新生成一个本实例对应的表结构实例
         /// </summary>
         /// <returns></returns>
-        public override object NewTableInstance()
+        public override object NewDataInstance()
         {
             return new ListCardTotal();
         }

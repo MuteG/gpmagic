@@ -40,12 +40,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\CardAbilitie.cs" />
+    <Compile Include="Model\CardImageType.cs" />
     <Compile Include="Model\CardSubType.cs" />
     <Compile Include="Model\AbstractTableInstance.cs" />
     <Compile Include="ICanTrigger.cs" />
     <Compile Include="IMagicAction.cs" />
     <Compile Include="IMagicCard.cs" />
     <Compile Include="IOrganismCardAction.cs" />
+    <Compile Include="Model\CardType.cs" />
     <Compile Include="Model\ColumnInfoAttribute.cs" />
     <Compile Include="Model\ITableIntanceAction.cs" />
     <Compile Include="IUpgradeSite.cs" />

@@ -109,6 +109,7 @@
             // cbxImageType
             // 
             this.cbxImageType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxImageType.DropDownWidth = 180;
             this.cbxImageType.FormattingEnabled = true;
             this.cbxImageType.Items.AddRange(new object[] {
             "新建"});
@@ -116,6 +117,7 @@
             this.cbxImageType.Name = "cbxImageType";
             this.cbxImageType.Size = new System.Drawing.Size(158, 20);
             this.cbxImageType.TabIndex = 4;
+            this.cbxImageType.SelectionChangeCommitted += new System.EventHandler(this.cbxImageType_SelectionChangeCommitted);
             // 
             // gbxCardImage
             // 
@@ -194,6 +196,7 @@
             this.cbxCardType.Name = "cbxCardType";
             this.cbxCardType.Size = new System.Drawing.Size(158, 20);
             this.cbxCardType.TabIndex = 18;
+            this.cbxCardType.SelectionChangeCommitted += new System.EventHandler(this.cbxCardType_SelectionChangeCommitted);
             // 
             // lblCardType
             // 

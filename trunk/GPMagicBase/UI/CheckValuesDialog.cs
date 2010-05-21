@@ -15,7 +15,7 @@ namespace GPSoft.GPMagic.GPMagicBase.UI
         /// <summary>
         /// 当前处理的数据实例
         /// </summary>
-        private AbstractTableInstance dataInstance;
+        private AbstractTableInstance tableInstance;
         private Type modelType;
         private CheckValuesDialog()
         {
@@ -36,7 +36,7 @@ namespace GPSoft.GPMagic.GPMagicBase.UI
             cvd.Text = title;
             cvd.tbxSearch.Focus();
             cvd.modelType = modelType;
-            cvd.dataInstance = Activator.CreateInstance(modelType) as AbstractTableInstance;
+            cvd.tableInstance = Activator.CreateInstance(modelType) as AbstractTableInstance;
             cvd.SetValueListData();
             string[] defaultArray = defaultValue.Split(split.ToCharArray());
             foreach (string valueText in defaultArray)
@@ -66,8 +66,8 @@ namespace GPSoft.GPMagic.GPMagicBase.UI
         private void SetValueListData()
         {
             lvwValues.Items.Clear();
-            string displayColumnName = GetDisplayColumnName();
-            foreach (DataRow aRow in this.dataInstance.Records.Rows)
+            string displayColumnName = tableInstance.DisplayColumnName;
+            foreach (DataRow aRow in this.tableInstance.Records.Rows)
             {
                 lvwValues.Items.Add(string.Empty).SubItems.Add(aRow[displayColumnName].ToString());
             }
@@ -76,29 +76,9 @@ namespace GPSoft.GPMagic.GPMagicBase.UI
         private int GetValueItemIndex(string value)
         {
             int result = -1;
-            DataRow[] rows = dataInstance.Records.Select(
-                string.Format("{0}='{1}'", GetDisplayColumnName(), value));
-            result = rows.Length > 0 ? dataInstance.Records.Rows.IndexOf(rows[0]) : -1;
-            return result;
-        }
-
-        private string GetDisplayColumnName()
-        {
-            string result = string.Empty;
-            PropertyInfo[] properties = this.dataInstance.TableInstanceType.GetProperties();
-            foreach (PropertyInfo info in properties)
-            {
-                object[] attributes = info.GetCustomAttributes(typeof(ColumnInfoAttribute), false);
-                if (attributes.Length > 0)
-                {
-                    ColumnInfoAttribute colAttr = (ColumnInfoAttribute)attributes[0];
-                    if (colAttr != null && colAttr.IsDisplayKeyWord)
-                    {
-                        result = info.Name;
-                        break;
-                    }
-                }
-            }
+            DataRow[] rows = tableInstance.Records.Select(
+                string.Format("{0}='{1}'", tableInstance.DisplayColumnName, value));
+            result = rows.Length > 0 ? tableInstance.Records.Rows.IndexOf(rows[0]) : -1;
             return result;
         }
 
@@ -127,12 +107,12 @@ namespace GPSoft.GPMagic.GPMagicBase.UI
                 }
                 else
                 {
-                    object newObj = dataInstance.NewTableInstance();
-                    dataInstance.TableInstanceType.GetProperty(GetDisplayColumnName()).SetValue(newObj, newValue, null);
-                    dataInstance.Add(newObj);
-                    dataInstance.Reload();
+                    object newObj = tableInstance.NewDataInstance();
+                    tableInstance.DataInstanceType.GetProperty(tableInstance.DisplayColumnName).SetValue(newObj, newValue, null);
+                    tableInstance.Add(newObj);
+                    tableInstance.Reload();
                     lvwValues.Items.Add(string.Empty).SubItems.Add(newValue);
-                    existIndex = dataInstance.Records.Rows.Count - 1;
+                    existIndex = tableInstance.Records.Rows.Count - 1;
                 }
                 if (existIndex >= 0) lvwValues.Items[existIndex].Selected = true;
             }
