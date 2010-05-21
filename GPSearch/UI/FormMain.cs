@@ -62,14 +62,14 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             FormCardInfo frmInfo = new FormCardInfo();
             frmInfo.EditStatus = DataOperateType.Insert;
-            frmInfo.Show();
+            frmInfo.ShowDialog();
         }
 
         private void mnuEditCard_Click(object sender, EventArgs e)
         {
             FormCardInfo frmInfo = new FormCardInfo();
             frmInfo.EditStatus = DataOperateType.Update;
-            frmInfo.Show();
+            frmInfo.ShowDialog();
         }
 
         private void ShowCardInfoForm(DataOperateType editStatus)

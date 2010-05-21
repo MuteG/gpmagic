@@ -12,19 +12,20 @@ namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormCardInfo : Form
     {
-        private DataOperateType _EditStatus;
+        private DataOperateType editStatus;
         /// <summary>
         /// 获取或者设置当前编辑状态
         /// </summary>
         public DataOperateType EditStatus
         {
-            get { return _EditStatus; }
+            get { return editStatus; }
             set
             {
-                _EditStatus = value;
-                ChangeFormTitle(_EditStatus);
+                editStatus = value;
+                ChangeFormTitle(editStatus);
             }
         }
+        private Dictionary<string, AbstractTableInstance> tableInstanceDictionary = new Dictionary<string, AbstractTableInstance>();
         public FormCardInfo()
         {
             InitializeComponent();
@@ -74,24 +75,28 @@ namespace GPSoft.GPMagic.GPSearch.UI
             }
             return result;
         }
-
-        private void SetRarityItems()
+        /// <summary>
+        /// 填充指定ComboBox的内容
+        /// </summary>
+        /// <param name="cbx">要进行填充的ComboBox</param>
+        /// <param name="newItem">是否拥有“新建”功能</param>
+        private void SetComboBoxItems(ComboBox cbx, bool newItem)
         {
-            CardRarity rarity = new CardRarity();
-            rarity.Records.Rows.InsertAt(rarity.Records.NewRow(), 0);
-            rarity.Records.Rows[0].ItemArray = new object[]{0, "新建"};
-            this.cbxRarity.DataSource = rarity.Records;
-            this.cbxRarity.DisplayMember = "RarityName";
-            this.cbxRarity.ValueMember = "RarityID";
-        }
-        private void SetComboBoxItems(ComboBox cbx, DataTable records, string display, string value)
-        {
-            records.Rows.InsertAt(records.NewRow(), 0);
-            records.Rows[0][display] = "新建";
-            records.Rows[0][value] = 0;
+            AbstractTableInstance tableInstance = tableInstanceDictionary[cbx.Name];
+            DataTable records = tableInstance.Records;
+            if (newItem)
+            {
+                records.Rows.InsertAt(records.NewRow(), 0);
+                records.Rows[0][tableInstance.DisplayColumnName] = DataOperateTypeDisplayWrods.New;
+                records.Rows[0][tableInstance.PrimaryKeyColumnName] = 0; 
+            }
             cbx.DataSource = records;
-            cbx.DisplayMember = display;
-            cbx.ValueMember = value;
+            cbx.DisplayMember = tableInstance.DisplayColumnName;
+            cbx.ValueMember = tableInstance.PrimaryKeyColumnName;
+            if (newItem && records.Rows.Count > 1)
+            {
+                cbx.SelectedIndex = 1;
+            }
         }
         #endregion
 
@@ -149,8 +154,63 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void FormCardInfo_Load(object sender, EventArgs e)
         {
-            SetRarityItems();
+            tableInstanceDictionary.Add(cbxRarity.Name, new CardRarity());
+            tableInstanceDictionary.Add(cbxImageType.Name, new CardImageType());
+            tableInstanceDictionary.Add(cbxCardType.Name, new CardType());
 
+            SetComboBoxItems(cbxRarity, true);
+            SetComboBoxItems(cbxImageType, false);
+            SetComboBoxItems(cbxCardType, true);
+
+            ttpCardInfo.SetToolTip(cbxImageType, cbxImageType.Text);
+            SetComboBoxDropDownWidth(cbxImageType);
+        }
+
+        private void SetComboBoxDropDownWidth(ComboBox cbx)
+        {
+            int dropDownWidth = 0;
+            foreach (object item in cbx.Items)
+            {
+                dropDownWidth = Math.Max(dropDownWidth, 
+                    TextRenderer.MeasureText(cbx.GetItemText(item), cbx.Font).Width);
+            }
+            cbx.DropDownWidth = dropDownWidth;
+        }
+
+        private void cbxImageType_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            ttpCardInfo.SetToolTip(cbxImageType, cbxImageType.Text);
+            if (cbxImageType.SelectedItem.ToString().Equals(DataOperateTypeDisplayWrods.New))
+            {
+                string newValue = InputTextDialog.Show(lblImageType.Text, string.Empty);
+                AbstractTableInstance tableInstance = tableInstanceDictionary[cbxImageType.Name];
+                ListCardImageType imageType = (ListCardImageType)tableInstance.NewDataInstance();
+                imageType.Comment = newValue;
+                tableInstance.Add(imageType);
+            }
+        }
+
+        private void cbxCardType_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            ComboBoxSelectionChanged(cbxCardType, lblCardType.Text);
+        }
+
+        private void ComboBoxSelectionChanged(ComboBox cbx, string inputDialogTitle)
+        {
+            if (cbx.Text.Equals(DataOperateTypeDisplayWrods.New))
+            {
+                string newValue = InputTextDialog.Show(inputDialogTitle, string.Empty);
+                if (!string.IsNullOrEmpty(newValue))
+                {
+                    AbstractTableInstance tableInstance = tableInstanceDictionary[cbx.Name];
+                    object dataInstance = tableInstance.NewDataInstance();
+                    dataInstance.GetType().GetProperty(tableInstance.DisplayColumnName).SetValue(dataInstance, newValue, null);
+                    tableInstance.Add(dataInstance);
+                    tableInstance.Reload();
+                    SetComboBoxItems(cbx, true);
+                    cbx.SelectedIndex = cbx.Items.Count - 1;
+                }
+            }
         }
     }
 }

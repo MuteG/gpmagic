@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 using GPSoft.GPMagic.GPMagicBase.SQLite;
 using GPSoft.GPMagic.GPMagicBase.Model;
 using System.Data;
+using System.ComponentModel;
 
 namespace GPSoft.GPMagic.GPMagicBase.Model
 {
@@ -19,20 +21,46 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         {
             get { return tableName; }
         }
-        private Type tableInstanceType = null;
+        private Type dataInstanceType = null;
         /// <summary>
         /// 获取当前实例对应的数据表实例的类型
         /// </summary>
-        public Type TableInstanceType
+        public Type DataInstanceType
         {
             get
             {
-                if (null == tableInstanceType)
+                if (null == dataInstanceType)
                 {
-                    tableInstanceType = Type.GetType(
+                    dataInstanceType = Type.GetType(
                         string.Format("{0}.{1}", this.GetType().Namespace, this.tableName));
                 }
-                return tableInstanceType;
+                return dataInstanceType;
+            }
+        }
+        private string displayColumnName = null;
+        /// <summary>
+        /// 获取用来进行显示的列的名称
+        /// </summary>
+        public string DisplayColumnName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.displayColumnName))
+                    this.GetColumnName();
+                return displayColumnName;
+            }
+        }
+        private string primaryKeyColumnName = null;
+        /// <summary>
+        /// 获取主键列的名称
+        /// </summary>
+        public string PrimaryKeyColumnName
+        {
+            get
+            {
+                if (string.IsNullOrEmpty(this.primaryKeyColumnName))
+                    this.GetColumnName();
+                return primaryKeyColumnName;
             }
         }
         /// <summary>
@@ -56,11 +84,30 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             result = dbop.SelectTableData(this.tableName);
             return result;
         }
+        private void GetColumnName()
+        {
+            PropertyInfo[] properties = this.DataInstanceType.GetProperties();
+            foreach (PropertyInfo info in properties)
+            {
+                object[] attributes = info.GetCustomAttributes(typeof(ColumnInfoAttribute), false);
+                if (attributes.Length > 0)
+                {
+                    ColumnInfoAttribute colAttr = (ColumnInfoAttribute)attributes[0];
+                    if (colAttr != null)
+                    {
+                        if (colAttr.IsDisplayKeyWord) this.displayColumnName = info.Name;
+                        if (colAttr.IsPrimaryKey) this.primaryKeyColumnName = info.Name;
+                        if (!string.IsNullOrEmpty(this.primaryKeyColumnName)
+                            && !string.IsNullOrEmpty(this.displayColumnName)) break;
+                    }
+                }
+            }
+        }
         /// <summary>
         /// 新生成一个本实例对应的表结构实例
         /// </summary>
         /// <returns></returns>
-        public abstract object NewTableInstance();
+        public abstract object NewDataInstance();
         #region ITableIntanceAction 成员
 
         /// <summary>

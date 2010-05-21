@@ -31,11 +31,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mnuStpMain = new System.Windows.Forms.MenuStrip();
             this.mnuItemFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemNewDeck = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,29 +57,32 @@
             this.tbxCardName = new System.Windows.Forms.TextBox();
             this.pnlNameList = new System.Windows.Forms.Panel();
             this.dgvCardList = new System.Windows.Forms.DataGridView();
-            this.dgvColExpansions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColCNName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColENName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColBaseFill = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewLinkColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDeckList = new System.Windows.Forms.DataGridView();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.colDCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDSymbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDCardName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDCost = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dgvColExpansions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColCNName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColENName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColSubType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColAbilities = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColPower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColToughness = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mnuStpMain.SuspendLayout();
             this.gbxCardImage.SuspendLayout();
             this.pnlNameList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCardList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeckList)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -226,7 +233,6 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
             this.dgvCardList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCardList.BackgroundColor = System.Drawing.Color.White;
-            this.dgvCardList.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -240,7 +246,13 @@
             this.dgvColExpansions,
             this.dgvColCNName,
             this.dgvColENName,
-            this.dgvColBaseFill});
+            this.dgvColType,
+            this.dgvColSubType,
+            this.dgvColAbilities,
+            this.dgvColCost,
+            this.dgvColPower,
+            this.dgvColToughness,
+            this.dgvColPrice});
             this.dgvCardList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCardList.Location = new System.Drawing.Point(0, 0);
             this.dgvCardList.Name = "dgvCardList";
@@ -249,121 +261,41 @@
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             this.dgvCardList.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCardList.RowTemplate.Height = 20;
-            this.dgvCardList.Size = new System.Drawing.Size(260, 445);
+            this.dgvCardList.Size = new System.Drawing.Size(458, 445);
             this.dgvCardList.TabIndex = 2;
             // 
-            // dgvColExpansions
+            // dgvDeckList
             // 
-            this.dgvColExpansions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvColExpansions.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvColExpansions.Frozen = true;
-            this.dgvColExpansions.HeaderText = "系列名";
-            this.dgvColExpansions.Name = "dgvColExpansions";
-            this.dgvColExpansions.ReadOnly = true;
-            this.dgvColExpansions.Width = 55;
-            // 
-            // dgvColCNName
-            // 
-            this.dgvColCNName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvColCNName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvColCNName.HeaderText = "卡牌中文名";
-            this.dgvColCNName.Name = "dgvColCNName";
-            this.dgvColCNName.ReadOnly = true;
-            this.dgvColCNName.Width = 90;
-            // 
-            // dgvColENName
-            // 
-            this.dgvColENName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvColENName.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvColENName.HeaderText = "卡牌英文名";
-            this.dgvColENName.Name = "dgvColENName";
-            this.dgvColENName.ReadOnly = true;
-            this.dgvColENName.Width = 90;
-            // 
-            // dgvColBaseFill
-            // 
-            this.dgvColBaseFill.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvColBaseFill.HeaderText = "";
-            this.dgvColBaseFill.Name = "dgvColBaseFill";
-            this.dgvColBaseFill.ReadOnly = true;
-            this.dgvColBaseFill.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColBaseFill.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(497, 445);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Column1
-            // 
-            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 53;
-            // 
-            // Column2
-            // 
-            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 53;
-            // 
-            // Column3
-            // 
-            this.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.NullValue = false;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 53;
-            // 
-            // Column4
-            // 
-            this.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.NullValue = false;
-            this.Column4.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Column4.HeaderText = "Column4";
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 53;
-            // 
-            // Column5
-            // 
-            this.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column5.HeaderText = "Column5";
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 53;
-            // 
-            // Column6
-            // 
-            this.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column6.HeaderText = "Column6";
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 53;
-            // 
-            // Column7
-            // 
-            this.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.Column7.HeaderText = "Column7";
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 72;
+            this.dgvDeckList.AllowUserToAddRows = false;
+            this.dgvDeckList.AllowUserToDeleteRows = false;
+            this.dgvDeckList.AllowUserToResizeRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Lavender;
+            this.dgvDeckList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvDeckList.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDeckList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvDeckList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDeckList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colDCount,
+            this.colDSymbol,
+            this.colDCardName,
+            this.colDCost});
+            this.dgvDeckList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDeckList.Location = new System.Drawing.Point(0, 0);
+            this.dgvDeckList.Name = "dgvDeckList";
+            this.dgvDeckList.ReadOnly = true;
+            this.dgvDeckList.RowHeadersVisible = false;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            this.dgvDeckList.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            this.dgvDeckList.RowTemplate.Height = 23;
+            this.dgvDeckList.Size = new System.Drawing.Size(299, 445);
+            this.dgvDeckList.TabIndex = 0;
             // 
             // statusStrip1
             // 
@@ -407,7 +339,7 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
             this.splitContainer1.Location = new System.Drawing.Point(0, 75);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -417,10 +349,125 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer1.Panel2.Controls.Add(this.dgvDeckList);
             this.splitContainer1.Size = new System.Drawing.Size(761, 445);
-            this.splitContainer1.SplitterDistance = 260;
+            this.splitContainer1.SplitterDistance = 458;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // colDCount
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colDCount.DefaultCellStyle = dataGridViewCellStyle9;
+            this.colDCount.HeaderText = "数量";
+            this.colDCount.Name = "colDCount";
+            this.colDCount.ReadOnly = true;
+            this.colDCount.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colDCount.Width = 40;
+            // 
+            // colDSymbol
+            // 
+            this.colDSymbol.HeaderText = "系列";
+            this.colDSymbol.Name = "colDSymbol";
+            this.colDSymbol.ReadOnly = true;
+            this.colDSymbol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDSymbol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colDSymbol.Width = 40;
+            // 
+            // colDCardName
+            // 
+            this.colDCardName.HeaderText = "卡牌名";
+            this.colDCardName.Name = "colDCardName";
+            this.colDCardName.ReadOnly = true;
+            this.colDCardName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDCardName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colDCardName.Width = 120;
+            // 
+            // colDCost
+            // 
+            this.colDCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle10.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle10.NullValue")));
+            this.colDCost.DefaultCellStyle = dataGridViewCellStyle10;
+            this.colDCost.HeaderText = "费用";
+            this.colDCost.Name = "colDCost";
+            this.colDCost.ReadOnly = true;
+            this.colDCost.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            // 
+            // dgvColExpansions
+            // 
+            this.dgvColExpansions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColExpansions.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvColExpansions.Frozen = true;
+            this.dgvColExpansions.HeaderText = "系列";
+            this.dgvColExpansions.Name = "dgvColExpansions";
+            this.dgvColExpansions.ReadOnly = true;
+            this.dgvColExpansions.Width = 40;
+            // 
+            // dgvColCNName
+            // 
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColCNName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvColCNName.HeaderText = "中文名";
+            this.dgvColCNName.Name = "dgvColCNName";
+            this.dgvColCNName.ReadOnly = true;
+            this.dgvColCNName.Width = 120;
+            // 
+            // dgvColENName
+            // 
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColENName.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvColENName.HeaderText = "英文名";
+            this.dgvColENName.Name = "dgvColENName";
+            this.dgvColENName.ReadOnly = true;
+            this.dgvColENName.Width = 150;
+            // 
+            // dgvColType
+            // 
+            this.dgvColType.HeaderText = "类别";
+            this.dgvColType.Name = "dgvColType";
+            this.dgvColType.ReadOnly = true;
+            this.dgvColType.Width = 80;
+            // 
+            // dgvColSubType
+            // 
+            this.dgvColSubType.HeaderText = "子类别";
+            this.dgvColSubType.Name = "dgvColSubType";
+            this.dgvColSubType.ReadOnly = true;
+            // 
+            // dgvColAbilities
+            // 
+            this.dgvColAbilities.HeaderText = "异能";
+            this.dgvColAbilities.Name = "dgvColAbilities";
+            this.dgvColAbilities.ReadOnly = true;
+            // 
+            // dgvColCost
+            // 
+            this.dgvColCost.HeaderText = "费用";
+            this.dgvColCost.Name = "dgvColCost";
+            this.dgvColCost.ReadOnly = true;
+            // 
+            // dgvColPower
+            // 
+            this.dgvColPower.HeaderText = "攻击";
+            this.dgvColPower.Name = "dgvColPower";
+            this.dgvColPower.ReadOnly = true;
+            this.dgvColPower.Width = 40;
+            // 
+            // dgvColToughness
+            // 
+            this.dgvColToughness.HeaderText = "防御";
+            this.dgvColToughness.Name = "dgvColToughness";
+            this.dgvColToughness.ReadOnly = true;
+            this.dgvColToughness.Width = 40;
+            // 
+            // dgvColPrice
+            // 
+            this.dgvColPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvColPrice.HeaderText = "参考价格";
+            this.dgvColPrice.Name = "dgvColPrice";
+            this.dgvColPrice.ReadOnly = true;
             // 
             // FormMain
             // 
@@ -443,7 +490,7 @@
             this.gbxCardImage.PerformLayout();
             this.pnlNameList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCardList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeckList)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -471,14 +518,7 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewImageColumn Column1;
-        private System.Windows.Forms.DataGridViewButtonColumn Column2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewLinkColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridView dgvDeckList;
         private System.Windows.Forms.ToolStripMenuItem mnuItemCard;
         private System.Windows.Forms.ToolStripMenuItem mnuItemAddCard;
         private System.Windows.Forms.ToolStripMenuItem mnuItemDeleteCard;
@@ -486,11 +526,21 @@
         private System.Windows.Forms.DataGridView dgvCardList;
         private System.Windows.Forms.ComboBox cbxSearchLanguage;
         private System.Windows.Forms.ToolStripMenuItem mnuItemAbout;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDSymbol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDCardName;
+        private System.Windows.Forms.DataGridViewImageColumn colDCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColExpansions;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCNName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColENName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColBaseFill;
-        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColSubType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColAbilities;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColPower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColToughness;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColPrice;
     }
 }
 
