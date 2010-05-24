@@ -147,15 +147,16 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
                 if (attributes.Length > 0)
                 {
                     ColumnInfoAttribute colAttr = (ColumnInfoAttribute)attributes[0];
-                    if (colAttr != null && !colAttr.IsAutoIncrement)
+                    if (colAttr != null && colAttr.IsAutoIncrement)
                     {
-                        colNames.Add(info.Name);
-                        string valueStr = info.GetValue(dataObj, null).ToString();
-                        if (info.PropertyType.Equals(typeof(string)))
-                            valueStr = string.Format("'{0}'", valueStr);
-                        values.Add(valueStr);
+                        continue;
                     }
                 }
+                colNames.Add(info.Name);
+                string valueStr = info.GetValue(dataObj, null).ToString();
+                if (info.PropertyType.Equals(typeof(string)))
+                    valueStr = string.Format("'{0}'", valueStr);
+                values.Add(valueStr);
             }
             sqlStript = string.Format(sqlStript, tableName, 
                 string.Join(",", colNames.ToArray()),

@@ -12,8 +12,15 @@ namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormMain : Form
     {
-        FormCardInfo frmInfo;
-        CardLibrary cards = new CardLibrary();
+        private FormCardInfo frmInfo;
+        private CardLibrary cards = new CardLibrary();
+        /// <summary>
+        /// 获取卡牌一览对象
+        /// </summary>
+        public CardLibrary Cards
+        {
+            get { return cards; }
+        }
         public FormMain()
         {
             InitializeComponent();
@@ -34,20 +41,34 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             FormCardImage frmCardImage = new FormCardImage();
             frmCardImage.CardImage = Properties.Resources.cardDemo;
-            frmCardImage.Show();
+            frmCardImage.Show(this);
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+            SetDataGridViewData();
+        }
+
+        public void SetDataGridViewData()
+        {
             if (cards.Count > 0)
             {
+                dgvCardList.Rows.Clear();
                 foreach (DataRow cardRow in cards.Records.Rows)
                 {
-                    string symbol = cardRow["Symbol"] as string;
-                    string cnName = cardRow["CardName"] as string;
-                    string enName = cardRow["CardEnglishName"] as string;
                     int rarity = Convert.ToInt32(cardRow["Rarity"]);
-                    int newRowIndex = dgvCardList.Rows.Add(symbol, cnName, enName);
+                    int newRowIndex = dgvCardList.Rows.Add(
+                        cardRow["Symbol"].ToString(),
+                        cardRow["CardName"].ToString(),
+                        cardRow["CardEnglishName"].ToString(),
+                        cardRow["TypeName"].ToString(),
+                        cardRow["SubTypeName"].ToString(),
+                        cardRow["Abilities"].ToString(),
+                        cardRow["ManaCost"].ToString(),
+                        cardRow["Power"].ToString(),
+                        cardRow["Toughness"].ToString(),
+                        cardRow["CardPrice"].ToString()
+                        );
                     if (rarity > 1)
                     {
                         CardRarity aRarity = new CardRarity();
@@ -62,14 +83,14 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             FormCardInfo frmInfo = new FormCardInfo();
             frmInfo.EditStatus = DataOperateType.Insert;
-            frmInfo.ShowDialog();
+            frmInfo.ShowDialog(this);
         }
 
         private void mnuEditCard_Click(object sender, EventArgs e)
         {
             FormCardInfo frmInfo = new FormCardInfo();
             frmInfo.EditStatus = DataOperateType.Update;
-            frmInfo.ShowDialog();
+            frmInfo.ShowDialog(this);
         }
 
         private void ShowCardInfoForm(DataOperateType editStatus)
@@ -79,13 +100,13 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 frmInfo = new FormCardInfo();
             }
             frmInfo.EditStatus = editStatus;
-            frmInfo.Show();
+            frmInfo.Show(this);
         }
 
         private void mnuItemAbout_Click(object sender, EventArgs e)
         {
             AboutBox frmAbout = new AboutBox();
-            frmAbout.ShowDialog();
+            frmAbout.ShowDialog(this);
         }
     }
 }

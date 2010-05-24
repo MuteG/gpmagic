@@ -65,7 +65,7 @@
             this.cbxRarity = new System.Windows.Forms.ComboBox();
             this.lblPainterName = new System.Windows.Forms.Label();
             this.lblCardPrice = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxCardPrice = new System.Windows.Forms.TextBox();
             this.lblFAQ = new System.Windows.Forms.Label();
             this.tbxFAQ = new System.Windows.Forms.TextBox();
             this.btnFAQ = new System.Windows.Forms.Button();
@@ -95,7 +95,7 @@
             this.tbxCardName.Location = new System.Drawing.Point(71, 6);
             this.tbxCardName.Name = "tbxCardName";
             this.tbxCardName.Size = new System.Drawing.Size(158, 21);
-            this.tbxCardName.TabIndex = 1;
+            this.tbxCardName.TabIndex = 0;
             // 
             // lblImageType
             // 
@@ -144,7 +144,7 @@
             this.tbxManaCost.Location = new System.Drawing.Point(71, 60);
             this.tbxManaCost.Name = "tbxManaCost";
             this.tbxManaCost.Size = new System.Drawing.Size(158, 21);
-            this.tbxManaCost.TabIndex = 12;
+            this.tbxManaCost.TabIndex = 2;
             // 
             // lblManaCost
             // 
@@ -161,7 +161,7 @@
             this.btnCardImage.Location = new System.Drawing.Point(196, 86);
             this.btnCardImage.Name = "btnCardImage";
             this.btnCardImage.Size = new System.Drawing.Size(33, 23);
-            this.btnCardImage.TabIndex = 13;
+            this.btnCardImage.TabIndex = 3;
             this.btnCardImage.Text = "...";
             this.btnCardImage.UseVisualStyleBackColor = true;
             this.btnCardImage.Click += new System.EventHandler(this.btnCardImage_Click);
@@ -176,6 +176,7 @@
             this.tbxCardImage.Name = "tbxCardImage";
             this.tbxCardImage.Size = new System.Drawing.Size(120, 21);
             this.tbxCardImage.TabIndex = 16;
+            this.tbxCardImage.TabStop = false;
             // 
             // lblCardImage
             // 
@@ -195,7 +196,7 @@
             this.cbxCardType.Location = new System.Drawing.Point(71, 140);
             this.cbxCardType.Name = "cbxCardType";
             this.cbxCardType.Size = new System.Drawing.Size(158, 20);
-            this.cbxCardType.TabIndex = 18;
+            this.cbxCardType.TabIndex = 5;
             this.cbxCardType.SelectionChangeCommitted += new System.EventHandler(this.cbxCardType_SelectionChangeCommitted);
             // 
             // lblCardType
@@ -226,6 +227,7 @@
             this.tbxCardSubType.ReadOnly = true;
             this.tbxCardSubType.Size = new System.Drawing.Size(120, 21);
             this.tbxCardSubType.TabIndex = 21;
+            this.tbxCardSubType.TabStop = false;
             this.tbxCardSubType.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
             // btnCardSubType
@@ -234,7 +236,7 @@
             this.btnCardSubType.Location = new System.Drawing.Point(196, 165);
             this.btnCardSubType.Name = "btnCardSubType";
             this.btnCardSubType.Size = new System.Drawing.Size(33, 23);
-            this.btnCardSubType.TabIndex = 22;
+            this.btnCardSubType.TabIndex = 6;
             this.btnCardSubType.Text = "...";
             this.btnCardSubType.UseVisualStyleBackColor = true;
             this.btnCardSubType.Click += new System.EventHandler(this.btnCardSubType_Click);
@@ -248,7 +250,8 @@
             this.cbxExpansions.Location = new System.Drawing.Point(71, 193);
             this.cbxExpansions.Name = "cbxExpansions";
             this.cbxExpansions.Size = new System.Drawing.Size(158, 20);
-            this.cbxExpansions.TabIndex = 24;
+            this.cbxExpansions.TabIndex = 7;
+            this.cbxExpansions.SelectionChangeCommitted += new System.EventHandler(this.cbxExpansions_SelectionChangeCommitted);
             // 
             // lblExpansions
             // 
@@ -265,7 +268,7 @@
             this.btnAbilities.Location = new System.Drawing.Point(196, 218);
             this.btnAbilities.Name = "btnAbilities";
             this.btnAbilities.Size = new System.Drawing.Size(33, 23);
-            this.btnAbilities.TabIndex = 27;
+            this.btnAbilities.TabIndex = 8;
             this.btnAbilities.Text = "...";
             this.btnAbilities.UseVisualStyleBackColor = true;
             this.btnAbilities.Click += new System.EventHandler(this.btnAbilities_Click);
@@ -280,6 +283,7 @@
             this.tbxAbilities.ReadOnly = true;
             this.tbxAbilities.Size = new System.Drawing.Size(120, 21);
             this.tbxAbilities.TabIndex = 26;
+            this.tbxAbilities.TabStop = false;
             this.tbxAbilities.WordWrap = false;
             this.tbxAbilities.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
@@ -311,6 +315,7 @@
             this.tbxAbilitiesText.ReadOnly = true;
             this.tbxAbilitiesText.Size = new System.Drawing.Size(120, 21);
             this.tbxAbilitiesText.TabIndex = 26;
+            this.tbxAbilitiesText.TabStop = false;
             this.tbxAbilitiesText.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
             // btnAbilitiesText
@@ -319,7 +324,7 @@
             this.btnAbilitiesText.Location = new System.Drawing.Point(196, 245);
             this.btnAbilitiesText.Name = "btnAbilitiesText";
             this.btnAbilitiesText.Size = new System.Drawing.Size(33, 23);
-            this.btnAbilitiesText.TabIndex = 27;
+            this.btnAbilitiesText.TabIndex = 9;
             this.btnAbilitiesText.Text = "...";
             this.btnAbilitiesText.UseVisualStyleBackColor = true;
             this.btnAbilitiesText.Click += new System.EventHandler(this.btnAbilitiesText_Click);
@@ -330,7 +335,7 @@
             this.btnFlavorText.Location = new System.Drawing.Point(196, 272);
             this.btnFlavorText.Name = "btnFlavorText";
             this.btnFlavorText.Size = new System.Drawing.Size(33, 23);
-            this.btnFlavorText.TabIndex = 30;
+            this.btnFlavorText.TabIndex = 10;
             this.btnFlavorText.Text = "...";
             this.btnFlavorText.UseVisualStyleBackColor = true;
             this.btnFlavorText.Click += new System.EventHandler(this.btnFlavorText_Click);
@@ -345,6 +350,7 @@
             this.tbxFlavorText.ReadOnly = true;
             this.tbxFlavorText.Size = new System.Drawing.Size(120, 21);
             this.tbxFlavorText.TabIndex = 29;
+            this.tbxFlavorText.TabStop = false;
             this.tbxFlavorText.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
             // lblFlavorText
@@ -370,7 +376,7 @@
             this.tbxPower.Location = new System.Drawing.Point(71, 300);
             this.tbxPower.Name = "tbxPower";
             this.tbxPower.Size = new System.Drawing.Size(49, 21);
-            this.tbxPower.TabIndex = 26;
+            this.tbxPower.TabIndex = 11;
             // 
             // lblToughness
             // 
@@ -386,7 +392,7 @@
             this.tbxToughness.Location = new System.Drawing.Point(182, 300);
             this.tbxToughness.Name = "tbxToughness";
             this.tbxToughness.Size = new System.Drawing.Size(47, 21);
-            this.tbxToughness.TabIndex = 26;
+            this.tbxToughness.TabIndex = 12;
             // 
             // lblRarity
             // 
@@ -406,7 +412,7 @@
             this.cbxRarity.Location = new System.Drawing.Point(71, 327);
             this.cbxRarity.Name = "cbxRarity";
             this.cbxRarity.Size = new System.Drawing.Size(158, 20);
-            this.cbxRarity.TabIndex = 24;
+            this.cbxRarity.TabIndex = 13;
             // 
             // lblPainterName
             // 
@@ -426,12 +432,12 @@
             this.lblCardPrice.TabIndex = 25;
             this.lblCardPrice.Text = "卡牌价格";
             // 
-            // textBox1
+            // tbxCardPrice
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 380);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(47, 21);
-            this.textBox1.TabIndex = 26;
+            this.tbxCardPrice.Location = new System.Drawing.Point(182, 380);
+            this.tbxCardPrice.Name = "tbxCardPrice";
+            this.tbxCardPrice.Size = new System.Drawing.Size(47, 21);
+            this.tbxCardPrice.TabIndex = 16;
             // 
             // lblFAQ
             // 
@@ -451,7 +457,8 @@
             this.tbxFAQ.Name = "tbxFAQ";
             this.tbxFAQ.ReadOnly = true;
             this.tbxFAQ.Size = new System.Drawing.Size(120, 21);
-            this.tbxFAQ.TabIndex = 29;
+            this.tbxFAQ.TabIndex = 17;
+            this.tbxFAQ.TabStop = false;
             this.tbxFAQ.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
             // btnFAQ
@@ -460,7 +467,7 @@
             this.btnFAQ.Location = new System.Drawing.Point(196, 406);
             this.btnFAQ.Name = "btnFAQ";
             this.btnFAQ.Size = new System.Drawing.Size(33, 23);
-            this.btnFAQ.TabIndex = 30;
+            this.btnFAQ.TabIndex = 18;
             this.btnFAQ.Text = "...";
             this.btnFAQ.UseVisualStyleBackColor = true;
             this.btnFAQ.Click += new System.EventHandler(this.btnFAQ_Click);
@@ -476,7 +483,7 @@
             this.tbxCollectorNumber.Location = new System.Drawing.Point(71, 380);
             this.tbxCollectorNumber.Name = "tbxCollectorNumber";
             this.tbxCollectorNumber.Size = new System.Drawing.Size(49, 21);
-            this.tbxCollectorNumber.TabIndex = 32;
+            this.tbxCollectorNumber.TabIndex = 15;
             // 
             // lblCollectorNumber
             // 
@@ -492,7 +499,7 @@
             this.btnSubmit.Location = new System.Drawing.Point(235, 406);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(75, 23);
-            this.btnSubmit.TabIndex = 33;
+            this.btnSubmit.TabIndex = 19;
             this.btnSubmit.Text = "确认";
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -502,7 +509,7 @@
             this.btnClose.Location = new System.Drawing.Point(431, 406);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 34;
+            this.btnClose.TabIndex = 20;
             this.btnClose.Text = "关闭";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -521,7 +528,7 @@
             this.tbxCardEnglishName.Location = new System.Drawing.Point(71, 33);
             this.tbxCardEnglishName.Name = "tbxCardEnglishName";
             this.tbxCardEnglishName.Size = new System.Drawing.Size(158, 21);
-            this.tbxCardEnglishName.TabIndex = 12;
+            this.tbxCardEnglishName.TabIndex = 1;
             // 
             // cbxPainterName
             // 
@@ -532,7 +539,8 @@
             this.cbxPainterName.Location = new System.Drawing.Point(71, 354);
             this.cbxPainterName.Name = "cbxPainterName";
             this.cbxPainterName.Size = new System.Drawing.Size(158, 20);
-            this.cbxPainterName.TabIndex = 24;
+            this.cbxPainterName.TabIndex = 14;
+            this.cbxPainterName.SelectionChangeCommitted += new System.EventHandler(this.cbxPainterName_SelectionChangeCommitted);
             // 
             // FormCardInfo
             // 
@@ -558,7 +566,7 @@
             this.Controls.Add(this.lblToughness);
             this.Controls.Add(this.tbxPower);
             this.Controls.Add(this.lblPower);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxCardPrice);
             this.Controls.Add(this.lblCardPrice);
             this.Controls.Add(this.tbxAbilities);
             this.Controls.Add(this.lblAbilities);
@@ -635,7 +643,7 @@
         private System.Windows.Forms.ComboBox cbxRarity;
         private System.Windows.Forms.Label lblPainterName;
         private System.Windows.Forms.Label lblCardPrice;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxCardPrice;
         private System.Windows.Forms.Label lblFAQ;
         private System.Windows.Forms.TextBox tbxFAQ;
         private System.Windows.Forms.Button btnFAQ;

@@ -25,7 +25,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
     public sealed class ListCardImageType
     {
         private int cardImageTypeID;
-        private string comment;
+        private string comment = string.Empty;
         /// <summary>
         /// 获取或者设置图片类型编号
         /// </summary>

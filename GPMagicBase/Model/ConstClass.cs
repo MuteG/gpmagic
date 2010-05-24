@@ -17,6 +17,36 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         Select
     }
     /// <summary>
+    /// 图片显示形式
+    /// </summary>
+    public enum ImageDisplayType
+    {
+        /// <summary>
+        /// 全图
+        /// </summary>
+        Full = 1,
+        /// <summary>
+        /// 标准形式图片部分
+        /// </summary>
+        Normal = 2,
+        /// <summary>
+        /// 图片位于中间
+        /// </summary>
+        Middle = 3,
+        /// <summary>
+        /// 两张图片第一张
+        /// </summary>
+        TransverseFirst = 4,
+        /// <summary>
+        /// 两张图片第二张
+        /// </summary>
+        TransverseSecond = 5,
+        /// <summary>
+        /// 大图图片
+        /// </summary>
+        LargePic = 6
+    }
+    /// <summary>
     /// 数据操作类型对应的显示文字
     /// </summary>
     public struct DataOperateTypeDisplayWrods

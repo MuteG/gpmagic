@@ -25,8 +25,8 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
     public sealed class ListAbilities
     {
         int abilitiesID;
-        string abilitiesName;
-        string reminderText;
+        string abilitiesName = string.Empty;
+        string reminderText = string.Empty;
         /// <summary>
         /// 获取或者设置异能说明文字
         /// </summary>

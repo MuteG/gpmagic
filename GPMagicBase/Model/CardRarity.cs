@@ -65,7 +65,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             set { this.rarityID = value; }
             get { return this.rarityID; }
         }
-        private string rarityName;
+        private string rarityName = string.Empty;
         /// <summary>
         /// 稀有度名称
         /// </summary>

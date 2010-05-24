@@ -106,6 +106,10 @@
       <Project>{743CD5A4-33EA-4425-8C25-353505E515BD}</Project>
       <Name>GPMagicBase</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Helper\Helper.csproj">
+      <Project>{30D7ADD5-193B-4C32-B473-61BD5E64130A}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Command\" />

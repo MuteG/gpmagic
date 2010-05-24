@@ -34,7 +34,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             get { return typeID; }
             set { typeID = value; }
         }
-        private string typeName;
+        private string typeName = string.Empty;
         /// <summary>
         /// 获取或者设置卡牌类型
         /// </summary>

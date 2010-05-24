@@ -25,7 +25,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
     public sealed class ListSubType
     {
         int subTypeID;
-        string subTypeName;
+        string subTypeName = string.Empty;
         /// <summary>
         /// 获取或者设置卡牌子类型名称
         /// </summary>
