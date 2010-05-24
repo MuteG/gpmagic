@@ -40,7 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\CardAbilitie.cs" />
+    <Compile Include="Model\CardExpansions.cs" />
     <Compile Include="Model\CardImageType.cs" />
+    <Compile Include="Model\CardPainter.cs" />
     <Compile Include="Model\CardSubType.cs" />
     <Compile Include="Model\AbstractTableInstance.cs" />
     <Compile Include="ICanTrigger.cs" />

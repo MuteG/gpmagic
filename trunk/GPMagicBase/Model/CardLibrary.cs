@@ -36,23 +36,23 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
     {
         private int cardID;
 
-        private string symbol;
+        private string symbol = string.Empty;
 
         private int collectorNumber;
 
-        private string cardName;
+        private string cardName = string.Empty;
 
-        private string cardEnglishName;
+        private string cardEnglishName = string.Empty;
 
-        private string abilities;
+        private string abilities = string.Empty;
 
-        private string flavorText;
+        private string flavorText = string.Empty;
 
-        private string manaCost;
+        private string manaCost = string.Empty;
 
-        private string subTypeName;
+        private string subTypeName = string.Empty;
 
-        private string typeName;
+        private string typeName = string.Empty;
 
         private int power;
 
@@ -60,13 +60,13 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
 
         private int rarity;
 
-        private string cardImage;
+        private string cardImage = string.Empty;
 
-        private string painterName;
+        private string painterName = string.Empty;
 
-        private int cardPrice;
+        private double cardPrice;
 
-        private string faq;
+        private string faq = string.Empty;
         /// <summary>
         /// 获取或者设置卡牌ID
         /// </summary>
@@ -113,6 +113,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 获取或者设置卡牌名称
         /// </summary>
+        [ColumnInfo(IsDisplayKeyWord = true)]
         public string CardName
         {
             get
@@ -281,7 +282,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 获取或者设置卡牌价格
         /// </summary>
-        public int CardPrice
+        public double CardPrice
         {
             get
             {

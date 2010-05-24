@@ -4,9 +4,12 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.IO;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
 using GPSoft.GPMagic.GPMagicBase.UI;
+using GPSoft.Helper.FunctionHelper;
+using GPSoft.Helper.FileOperate;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
@@ -25,6 +28,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 ChangeFormTitle(editStatus);
             }
         }
+        private CardLibrary cardLibrary = new CardLibrary();
         private Dictionary<string, AbstractTableInstance> tableInstanceDictionary = new Dictionary<string, AbstractTableInstance>();
         public FormCardInfo()
         {
@@ -52,15 +56,99 @@ namespace GPSoft.GPMagic.GPSearch.UI
                     }
             }
         }
-
+        /// <summary>
+        /// 将当前界面中的数据封装成一个对象
+        /// </summary>
+        /// <returns></returns>
         private ListCardTotal PackageComponentToInstance()
         {
             ListCardTotal result = new ListCardTotal();
             if (CheckInput())
             {
+                result.Symbol = cbxExpansions.Text;
+                result.CollectorNumber = Convert.ToInt32(tbxCollectorNumber.Text);
                 result.CardName = tbxCardName.Text;
-                //result.CardEnglishName = tbxc
+                result.CardEnglishName = tbxCardEnglishName.Text;
+                result.Abilities = tbxAbilitiesText.Text;
+                result.FlavorText = tbxFlavorText.Text;
+                result.ManaCost = tbxManaCost.Text;
+                result.TypeName = cbxCardType.Text;
+                result.SubTypeName = tbxCardSubType.Text;
+                result.Power = Convert.ToInt32(tbxPower.Text);
+                result.Toughness = Convert.ToInt32(tbxToughness.Text);
+                result.Rarity = Convert.ToInt32(cbxRarity.SelectedValue);
+                result.PainterName = cbxPainterName.Text;
+                result.CardPrice = Convert.ToDouble(tbxCardPrice.Text);
+                result.FAQ = tbxFAQ.Text;
+                result.CardImage = SaveCardImage(tbxCardImage.Text);
+                if (string.IsNullOrEmpty(result.CardImage))
+                {
+                    result = null;
+                }
             }
+            return result;
+        }
+        /// <summary>
+        /// 保存图片
+        /// </summary>
+        /// <param name="sourcePath">原图路径</param>
+        /// <returns>返回保存后的图片路径</returns>
+        private string SaveCardImage(string sourcePath)
+        {
+            string result = string.Empty;
+            try
+            {
+                result = Path.Combine(FunctionHelper.ApplicationPath, string.Format("Pic\\{0}", cbxExpansions.Text));
+                FileHelper.CreateDirectory(result);
+                string imageName = GetImageName(sourcePath);
+                if (string.IsNullOrEmpty(imageName))
+                {
+                    result = string.Empty;
+                }
+                else
+                {
+                    result = Path.Combine(result, imageName);
+                    FileHelper.CopyFileCompel(sourcePath, result);
+                }
+            }
+            catch (Exception ex)
+            {
+                result = string.Empty;
+                MessageBox.Show(ex.Message, "保存图片时发生错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return result;
+        }
+        /// <summary>
+        /// 获得保存后的图片名
+        /// </summary>
+        /// <param name="sourceImageName">原图路径（带后缀文件名）</param>
+        /// <returns>返回保存后的图片名</returns>
+        private string GetImageName(string sourceImageName)
+        {
+            string result = string.Empty;
+            ImageDisplayType imageType = (ImageDisplayType)Convert.ToInt32(cbxImageType.SelectedValue);
+            switch (imageType)
+            {
+                case ImageDisplayType.Full:
+                    result = ".full";
+                    break;
+                case ImageDisplayType.Normal:
+                    result = ".noml";
+                    break;
+                case ImageDisplayType.Middle:
+                    result = ".midl";
+                    break;
+                case ImageDisplayType.TransverseFirst:
+                    result = ".t1st";
+                    break;
+                case ImageDisplayType.TransverseSecond:
+                    result = ".t2nd";
+                    break;
+                case ImageDisplayType.LargePic:
+                    result = ".larg";
+                    break;
+            }
+            result = string.Format("{0}{1}{2}", tbxCardEnglishName.Text, result, Path.GetExtension(sourceImageName));
             return result;
         }
 
@@ -71,7 +159,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
             if (!result)
             {
-                MessageBox.Show("错误的输入", message, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(message, "错误的输入", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             return result;
         }
@@ -98,9 +186,63 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 cbx.SelectedIndex = 1;
             }
         }
+        /// <summary>
+        /// 根据下拉框内容设置下拉列表显示宽度
+        /// </summary>
+        /// <param name="cbx">要进行设置的下拉框组件</param>
+        private void SetComboBoxDropDownWidth(ComboBox cbx)
+        {
+            int dropDownWidth = 0;
+            foreach (object item in cbx.Items)
+            {
+                dropDownWidth = Math.Max(dropDownWidth,
+                    TextRenderer.MeasureText(cbx.GetItemText(item), cbx.Font).Width);
+            }
+            cbx.DropDownWidth = dropDownWidth;
+        }
+        /// <summary>
+        /// 根据下拉框当前选项产生添加动作
+        /// </summary>
+        /// <param name="cbx">发生选择项改变的下拉框组件</param>
+        /// <param name="inputDialogTitle">输入对话框的标题</param>
+        private void ComboBoxSelectionChanged(ComboBox cbx, string inputDialogTitle)
+        {
+            if (cbx.Text.Equals(DataOperateTypeDisplayWrods.New))
+            {
+                string newValue = InputTextDialog.Show(inputDialogTitle, string.Empty);
+                if (!string.IsNullOrEmpty(newValue))
+                {
+                    AbstractTableInstance tableInstance = tableInstanceDictionary[cbx.Name];
+                    object dataInstance = tableInstance.NewDataInstance();
+                    dataInstance.GetType().GetProperty(tableInstance.DisplayColumnName).SetValue(dataInstance, newValue, null);
+                    tableInstance.Add(dataInstance);
+                    tableInstance.Reload();
+                    SetComboBoxItems(cbx, true);
+                    cbx.SelectedIndex = cbx.Items.Count - 1;
+                }
+            }
+        }
         #endregion
 
         #region 系统函数
+        // 窗体载入
+        private void FormCardInfo_Load(object sender, EventArgs e)
+        {
+            tableInstanceDictionary.Add(cbxRarity.Name, new CardRarity());
+            tableInstanceDictionary.Add(cbxImageType.Name, new CardImageType());
+            tableInstanceDictionary.Add(cbxCardType.Name, new CardType());
+            tableInstanceDictionary.Add(cbxExpansions.Name, new CardExpansions());
+            tableInstanceDictionary.Add(cbxPainterName.Name, new CardPainter());
+
+            SetComboBoxItems(cbxRarity, true);
+            SetComboBoxItems(cbxImageType, false);
+            SetComboBoxItems(cbxCardType, true);
+            SetComboBoxItems(cbxExpansions, true);
+            SetComboBoxItems(cbxPainterName, true);
+
+            ttpCardInfo.SetToolTip(cbxImageType, cbxImageType.Text);
+            SetComboBoxDropDownWidth(cbxImageType);
+        }
         // 关闭窗口
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -118,7 +260,14 @@ namespace GPSoft.GPMagic.GPSearch.UI
         // 提交操作
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            ListCardTotal data = PackageComponentToInstance();
+            FormMain frmMain = (FormMain)this.Owner;
+            if (null != data)
+            {
+                frmMain.Cards.Add(data);
+                frmMain.Cards.Reload();
+                frmMain.SetDataGridViewData();
+            }
         }
         // 选择子类别
         private void btnCardSubType_Click(object sender, EventArgs e)
@@ -150,67 +299,27 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             tbxFAQ.Text = InputTextDialog.Show(lblFAQ.Text, tbxFAQ.Text);
         }
-        #endregion
 
-        private void FormCardInfo_Load(object sender, EventArgs e)
-        {
-            tableInstanceDictionary.Add(cbxRarity.Name, new CardRarity());
-            tableInstanceDictionary.Add(cbxImageType.Name, new CardImageType());
-            tableInstanceDictionary.Add(cbxCardType.Name, new CardType());
-
-            SetComboBoxItems(cbxRarity, true);
-            SetComboBoxItems(cbxImageType, false);
-            SetComboBoxItems(cbxCardType, true);
-
-            ttpCardInfo.SetToolTip(cbxImageType, cbxImageType.Text);
-            SetComboBoxDropDownWidth(cbxImageType);
-        }
-
-        private void SetComboBoxDropDownWidth(ComboBox cbx)
-        {
-            int dropDownWidth = 0;
-            foreach (object item in cbx.Items)
-            {
-                dropDownWidth = Math.Max(dropDownWidth, 
-                    TextRenderer.MeasureText(cbx.GetItemText(item), cbx.Font).Width);
-            }
-            cbx.DropDownWidth = dropDownWidth;
-        }
-
+        // 画像表示形式选择项发生改变时
         private void cbxImageType_SelectionChangeCommitted(object sender, EventArgs e)
         {
             ttpCardInfo.SetToolTip(cbxImageType, cbxImageType.Text);
-            if (cbxImageType.SelectedItem.ToString().Equals(DataOperateTypeDisplayWrods.New))
-            {
-                string newValue = InputTextDialog.Show(lblImageType.Text, string.Empty);
-                AbstractTableInstance tableInstance = tableInstanceDictionary[cbxImageType.Name];
-                ListCardImageType imageType = (ListCardImageType)tableInstance.NewDataInstance();
-                imageType.Comment = newValue;
-                tableInstance.Add(imageType);
-            }
         }
-
+        // 卡牌类别选择项发生改变时
         private void cbxCardType_SelectionChangeCommitted(object sender, EventArgs e)
         {
             ComboBoxSelectionChanged(cbxCardType, lblCardType.Text);
         }
-
-        private void ComboBoxSelectionChanged(ComboBox cbx, string inputDialogTitle)
+        // 卡牌系列选择项发生改变时
+        private void cbxExpansions_SelectionChangeCommitted(object sender, EventArgs e)
         {
-            if (cbx.Text.Equals(DataOperateTypeDisplayWrods.New))
-            {
-                string newValue = InputTextDialog.Show(inputDialogTitle, string.Empty);
-                if (!string.IsNullOrEmpty(newValue))
-                {
-                    AbstractTableInstance tableInstance = tableInstanceDictionary[cbx.Name];
-                    object dataInstance = tableInstance.NewDataInstance();
-                    dataInstance.GetType().GetProperty(tableInstance.DisplayColumnName).SetValue(dataInstance, newValue, null);
-                    tableInstance.Add(dataInstance);
-                    tableInstance.Reload();
-                    SetComboBoxItems(cbx, true);
-                    cbx.SelectedIndex = cbx.Items.Count - 1;
-                }
-            }
+            ComboBoxSelectionChanged(cbxExpansions, lblExpansions.Text);
         }
+        // 画家选择项发生改变时
+        private void cbxPainterName_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            ComboBoxSelectionChanged(cbxPainterName, lblPainterName.Text);
+        }
+        #endregion
     }
 }
