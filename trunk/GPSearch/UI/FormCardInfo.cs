@@ -266,7 +266,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             {
                 frmMain.Cards.Add(data);
                 frmMain.Cards.Reload();
-                frmMain.SetDataGridViewData();
+                frmMain.RefreshTotalCardsGrid();
             }
         }
         // 选择子类别
