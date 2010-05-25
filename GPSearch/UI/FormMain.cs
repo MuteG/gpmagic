@@ -46,10 +46,10 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            SetDataGridViewData();
+            RefreshTotalCardsGrid();
         }
 
-        public void SetDataGridViewData()
+        public void RefreshTotalCardsGrid()
         {
             if (cards.Count > 0)
             {
@@ -107,6 +107,23 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             AboutBox frmAbout = new AboutBox();
             frmAbout.ShowDialog(this);
+        }
+
+        private void dgvDeckList_DragEnter(object sender, DragEventArgs e)
+        {
+            e.Effect = DragDropEffects.Copy;
+        }
+
+        private void dgvCardList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            dgvCardList.DoDragDrop(dgvCardList.SelectedRows, DragDropEffects.Copy);
+        }
+
+        private void dgvDeckList_DragDrop(object sender, DragEventArgs e)
+        {
+            DataGridViewSelectedRowCollection selectedRows = 
+                (DataGridViewSelectedRowCollection)e.Data.GetData(typeof(DataGridViewSelectedRowCollection));
+            MessageBox.Show(selectedRows.Count.ToString());
         }
     }
 }
