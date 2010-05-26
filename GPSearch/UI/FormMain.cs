@@ -24,7 +24,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         public FormMain()
         {
             InitializeComponent();
-            cbxSearchLanguage.SelectedIndex = 0;
+            tscbxLanguage.SelectedIndex = 1;
         }
 
         private void Init()
@@ -124,6 +124,24 @@ namespace GPSoft.GPMagic.GPSearch.UI
             DataGridViewSelectedRowCollection selectedRows = 
                 (DataGridViewSelectedRowCollection)e.Data.GetData(typeof(DataGridViewSelectedRowCollection));
             MessageBox.Show(selectedRows.Count.ToString());
+        }
+
+        private void dgvCardList_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            dgvCardList.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGray;
+        }
+
+        private void dgvCardList_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0) return;
+            DataGridViewRow row = dgvCardList.Rows[e.RowIndex];
+            row.DefaultCellStyle.BackColor = e.RowIndex % 2 == 0 ? Color.White : Color.Lavender;
+        }
+
+        private void tsbtnRefresh_Click(object sender, EventArgs e)
+        {
+            RefreshTotalCardsGrid();
         }
     }
 }

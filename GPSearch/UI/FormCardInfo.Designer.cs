@@ -77,6 +77,8 @@
             this.lblCardEnglishName = new System.Windows.Forms.Label();
             this.tbxCardEnglishName = new System.Windows.Forms.TextBox();
             this.cbxPainterName = new System.Windows.Forms.ComboBox();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.gbxCardImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCardImage)).BeginInit();
             this.SuspendLayout();
@@ -377,6 +379,7 @@
             this.tbxPower.Name = "tbxPower";
             this.tbxPower.Size = new System.Drawing.Size(49, 21);
             this.tbxPower.TabIndex = 11;
+            this.tbxPower.Text = "0";
             // 
             // lblToughness
             // 
@@ -393,6 +396,7 @@
             this.tbxToughness.Name = "tbxToughness";
             this.tbxToughness.Size = new System.Drawing.Size(47, 21);
             this.tbxToughness.TabIndex = 12;
+            this.tbxToughness.Text = "0";
             // 
             // lblRarity
             // 
@@ -438,6 +442,7 @@
             this.tbxCardPrice.Name = "tbxCardPrice";
             this.tbxCardPrice.Size = new System.Drawing.Size(47, 21);
             this.tbxCardPrice.TabIndex = 16;
+            this.tbxCardPrice.Text = "0";
             // 
             // lblFAQ
             // 
@@ -484,6 +489,7 @@
             this.tbxCollectorNumber.Name = "tbxCollectorNumber";
             this.tbxCollectorNumber.Size = new System.Drawing.Size(49, 21);
             this.tbxCollectorNumber.TabIndex = 15;
+            this.tbxCollectorNumber.Text = "0";
             // 
             // lblCollectorNumber
             // 
@@ -542,11 +548,33 @@
             this.cbxPainterName.TabIndex = 14;
             this.cbxPainterName.SelectionChangeCommitted += new System.EventHandler(this.cbxPainterName_SelectionChangeCommitted);
             // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Location = new System.Drawing.Point(316, 406);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(23, 23);
+            this.btnPrevious.TabIndex = 32;
+            this.btnPrevious.Text = "↑";
+            this.ttpCardInfo.SetToolTip(this.btnPrevious, "上一个");
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(345, 406);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(23, 23);
+            this.btnNext.TabIndex = 32;
+            this.btnNext.Text = "↓";
+            this.ttpCardInfo.SetToolTip(this.btnNext, "下一个");
+            this.btnNext.UseVisualStyleBackColor = true;
+            // 
             // FormCardInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 434);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.tbxCollectorNumber);
@@ -655,5 +683,7 @@
         private System.Windows.Forms.Label lblCardEnglishName;
         private System.Windows.Forms.TextBox tbxCardEnglishName;
         private System.Windows.Forms.ComboBox cbxPainterName;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnNext;
     }
 }
