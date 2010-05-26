@@ -45,6 +45,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
                         Text = string.Format("{0} - {1}", ConstClass.TitleOfCardInfomationForm,
                                     DataOperateTypeDisplayWrods.Insert);
                         btnSubmit.Text = DataOperateTypeDisplayWrods.Insert;
+                        btnPrevious.Enabled = false;
+                        btnNext.Enabled = false;
                         break;
                     }
                 case DataOperateType.Update:
@@ -52,6 +54,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
                         Text = string.Format("{0} - {1}", ConstClass.TitleOfCardInfomationForm,
                                     DataOperateTypeDisplayWrods.Update);
                         btnSubmit.Text = DataOperateTypeDisplayWrods.Update;
+                        btnPrevious.Enabled = true;
+                        btnNext.Enabled = true;
                         break;
                     }
             }
@@ -88,27 +92,30 @@ namespace GPSoft.GPMagic.GPSearch.UI
             }
             return result;
         }
+        private void UnPackInstanceToComponent(ListCardTotal card)
+        {
+            cbxExpansions.Text = card.Symbol;
+            tbxCollectorNumber.Text = card.CollectorNumber.ToString();
+
+        }
         /// <summary>
         /// 保存图片
         /// </summary>
         /// <param name="sourcePath">原图路径</param>
-        /// <returns>返回保存后的图片路径</returns>
+        /// <returns>返回保存后的图片路径(路径从Pic\开始)</returns>
         private string SaveCardImage(string sourcePath)
         {
             string result = string.Empty;
             try
             {
-                result = Path.Combine(FunctionHelper.ApplicationPath, string.Format("Pic\\{0}", cbxExpansions.Text));
-                FileHelper.CreateDirectory(result);
-                string imageName = GetImageName(sourcePath);
-                if (string.IsNullOrEmpty(imageName))
+                string targetPath = Path.Combine(FunctionHelper.ApplicationPath,
+                                                 string.Format("Pic\\{0}", cbxExpansions.Text));
+                FileHelper.CreateDirectory(targetPath);
+                result = GetSavedImageName(sourcePath);
+                if (!string.IsNullOrEmpty(result))
                 {
-                    result = string.Empty;
-                }
-                else
-                {
-                    result = Path.Combine(result, imageName);
-                    FileHelper.CopyFileCompel(sourcePath, result);
+                    targetPath = Path.Combine(targetPath, result);
+                    FileHelper.CopyFileCompel(sourcePath, targetPath);
                 }
             }
             catch (Exception ex)
@@ -123,7 +130,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         /// </summary>
         /// <param name="sourceImageName">原图路径（带后缀文件名）</param>
         /// <returns>返回保存后的图片名</returns>
-        private string GetImageName(string sourceImageName)
+        private string GetSavedImageName(string sourceImageName)
         {
             string result = string.Empty;
             ImageDisplayType imageType = (ImageDisplayType)Convert.ToInt32(cbxImageType.SelectedValue);
@@ -251,6 +258,11 @@ namespace GPSoft.GPMagic.GPSearch.UI
         // 选择卡牌画像
         private void btnCardImage_Click(object sender, EventArgs e)
         {
+            if (File.Exists(tbxCardImage.Text))
+            {
+                ofdCardImage.InitialDirectory = Path.GetDirectoryName(tbxCardImage.Text);
+                ofdCardImage.FileName = Path.GetFileName(tbxCardImage.Text);
+            }
             if (ofdCardImage.ShowDialog() == DialogResult.OK)
             {
                 pbxCardImage.Image = Image.FromFile(ofdCardImage.FileName);
