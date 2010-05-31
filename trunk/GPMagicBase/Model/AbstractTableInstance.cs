@@ -150,6 +150,26 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         {
             throw new NotImplementedException();
         }
+        /// <summary>
+        /// 获得Records中指定索引行的数据封装
+        /// </summary>
+        /// <param name="index">Records中的索引</param>
+        /// <returns>返回封装好的对象</returns>
+        public object GetDataInstance(int index)
+        {
+            object result = Activator.CreateInstance(this.DataInstanceType);
+            DataRow row = this.Records.Rows[index];
+            foreach (PropertyInfo info in this.DataInstanceType.GetProperties())
+            {
+                object value;
+                if (info.PropertyType.Equals(typeof(string)))
+                    value = row[info.Name].ToString();
+                else
+                    value = Convert.ToInt32(row[info.Name]);
+                info.SetValue(result, value, null);
+            }
+            return result;
+        }
 
         #endregion
 
