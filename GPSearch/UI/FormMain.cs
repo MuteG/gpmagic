@@ -12,7 +12,25 @@ namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormMain : Form
     {
-        private FormCardInfo frmInfo;
+        private FormCardInfo frmInfo = null;
+        /// <summary>
+        /// 获取卡牌详细信息窗口实例
+        /// </summary>
+        public FormCardInfo FrmInfo
+        {
+            get
+            {
+                if (null == frmInfo || frmInfo.IsDisposed || !frmInfo.IsHandleCreated)
+                {
+                    frmInfo = new FormCardInfo();
+                }
+                else
+                {
+
+                }
+                return frmInfo;
+            }
+        }
         private CardLibrary cards = new CardLibrary();
         /// <summary>
         /// 获取卡牌一览对象
@@ -81,26 +99,20 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void mnuAddCard_Click(object sender, EventArgs e)
         {
-            FormCardInfo frmInfo = new FormCardInfo();
-            frmInfo.EditStatus = DataOperateType.Insert;
-            frmInfo.ShowDialog(this);
+            FrmInfo.EditStatus = DataOperateType.Insert;
+            FrmInfo.ShowDialog(this);
         }
 
         private void mnuEditCard_Click(object sender, EventArgs e)
         {
-            FormCardInfo frmInfo = new FormCardInfo();
-            frmInfo.EditStatus = DataOperateType.Update;
-            frmInfo.ShowDialog(this);
+            FrmInfo.EditStatus = DataOperateType.Update;
+            FrmInfo.ShowDialog(this);
         }
 
         private void ShowCardInfoForm(DataOperateType editStatus)
         {
-            if (null == frmInfo)
-            {
-                frmInfo = new FormCardInfo();
-            }
-            frmInfo.EditStatus = editStatus;
-            frmInfo.Show(this);
+            FrmInfo.EditStatus = editStatus;
+            FrmInfo.Show(this);
         }
 
         private void mnuItemAbout_Click(object sender, EventArgs e)
@@ -116,6 +128,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void dgvCardList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
+            if(e.Clicks == 1)
             dgvCardList.DoDragDrop(dgvCardList.SelectedRows, DragDropEffects.Copy);
         }
 
@@ -142,6 +155,13 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private void tsbtnRefresh_Click(object sender, EventArgs e)
         {
             RefreshTotalCardsGrid();
+        }
+
+        private void dgvCardList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            ListCardTotal card = (ListCardTotal)cards.GetDataInstance(e.RowIndex);
+            FrmInfo.ShowCardInfo(card);
+            FrmInfo.ShowDialog(this);
         }
     }
 }

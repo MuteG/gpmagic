@@ -92,6 +92,10 @@ namespace GPSoft.GPMagic.GPSearch.UI
             }
             return result;
         }
+        public void ShowCardInfo(ListCardTotal card)
+        {
+            UnPackInstanceToComponent(card);
+        }
         private void UnPackInstanceToComponent(ListCardTotal card)
         {
             cbxExpansions.Text = card.Symbol;
