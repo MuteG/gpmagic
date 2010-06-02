@@ -70,6 +70,8 @@
             this.tbxFAQ = new System.Windows.Forms.TextBox();
             this.btnFAQ = new System.Windows.Forms.Button();
             this.ttpCardInfo = new System.Windows.Forms.ToolTip(this.components);
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
             this.tbxCollectorNumber = new System.Windows.Forms.TextBox();
             this.lblCollectorNumber = new System.Windows.Forms.Label();
             this.btnSubmit = new System.Windows.Forms.Button();
@@ -77,8 +79,6 @@
             this.lblCardEnglishName = new System.Windows.Forms.Label();
             this.tbxCardEnglishName = new System.Windows.Forms.TextBox();
             this.cbxPainterName = new System.Windows.Forms.ComboBox();
-            this.btnPrevious = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
             this.gbxCardImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCardImage)).BeginInit();
             this.SuspendLayout();
@@ -483,6 +483,28 @@
             this.ttpCardInfo.InitialDelay = 100;
             this.ttpCardInfo.ReshowDelay = 100;
             // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Location = new System.Drawing.Point(316, 406);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(23, 23);
+            this.btnPrevious.TabIndex = 32;
+            this.btnPrevious.Text = "↑";
+            this.ttpCardInfo.SetToolTip(this.btnPrevious, "上一个");
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(345, 406);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(23, 23);
+            this.btnNext.TabIndex = 32;
+            this.btnNext.Text = "↓";
+            this.ttpCardInfo.SetToolTip(this.btnNext, "下一个");
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
             // tbxCollectorNumber
             // 
             this.tbxCollectorNumber.Location = new System.Drawing.Point(71, 380);
@@ -547,26 +569,6 @@
             this.cbxPainterName.Size = new System.Drawing.Size(158, 20);
             this.cbxPainterName.TabIndex = 14;
             this.cbxPainterName.SelectionChangeCommitted += new System.EventHandler(this.cbxPainterName_SelectionChangeCommitted);
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.Location = new System.Drawing.Point(316, 406);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(23, 23);
-            this.btnPrevious.TabIndex = 32;
-            this.btnPrevious.Text = "↑";
-            this.ttpCardInfo.SetToolTip(this.btnPrevious, "上一个");
-            this.btnPrevious.UseVisualStyleBackColor = true;
-            // 
-            // btnNext
-            // 
-            this.btnNext.Location = new System.Drawing.Point(345, 406);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(23, 23);
-            this.btnNext.TabIndex = 32;
-            this.btnNext.Text = "↓";
-            this.ttpCardInfo.SetToolTip(this.btnNext, "下一个");
-            this.btnNext.UseVisualStyleBackColor = true;
             // 
             // FormCardInfo
             // 
