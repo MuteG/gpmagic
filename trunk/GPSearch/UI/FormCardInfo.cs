@@ -337,5 +337,23 @@ namespace GPSoft.GPMagic.GPSearch.UI
             ComboBoxSelectionChanged(cbxPainterName, lblPainterName.Text);
         }
         #endregion
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            if (this.EditStatus == DataOperateType.Update)
+            {
+                FormMain frmMain = (FormMain)this.Owner;
+                frmMain.SelectPreLineInGrid();
+            }
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (this.EditStatus == DataOperateType.Update)
+            {
+                FormMain frmMain = (FormMain)this.Owner;
+                frmMain.SelectNextLineInGrid();
+            }
+        }
     }
 }

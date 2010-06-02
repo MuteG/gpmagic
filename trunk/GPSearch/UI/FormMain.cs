@@ -47,7 +47,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void Init()
         {
-            frmInfo = new FormCardInfo();
+
         }
 
         private void mnuExit_Click(object sender, EventArgs e)
@@ -99,20 +99,18 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void mnuAddCard_Click(object sender, EventArgs e)
         {
-            FrmInfo.EditStatus = DataOperateType.Insert;
-            FrmInfo.ShowDialog(this);
+            ShowCardInfoForm(DataOperateType.Insert);
         }
 
         private void mnuEditCard_Click(object sender, EventArgs e)
         {
-            FrmInfo.EditStatus = DataOperateType.Update;
-            FrmInfo.ShowDialog(this);
+            ShowCardInfoForm(DataOperateType.Update);
         }
 
         private void ShowCardInfoForm(DataOperateType editStatus)
         {
             FrmInfo.EditStatus = editStatus;
-            FrmInfo.Show(this);
+            FrmInfo.ShowDialog(this);
         }
 
         private void mnuItemAbout_Click(object sender, EventArgs e)
@@ -161,7 +159,58 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             ListCardTotal card = (ListCardTotal)cards.GetDataInstance(e.RowIndex);
             FrmInfo.ShowCardInfo(card);
-            FrmInfo.ShowDialog(this);
+            ShowCardInfoForm(DataOperateType.Update);
+        }
+
+        /// <summary>
+        /// 选择上一行
+        /// </summary>
+        public void SelectPreLineInGrid()
+        {
+            if (dgvCardList.SelectedRows.Count > 0)
+            {
+                int index = dgvCardList.SelectedRows[0].Index;
+                foreach (DataGridViewRow row in dgvCardList.SelectedRows)
+                {
+                    row.Selected = false;
+                }
+                if (index == 0)
+                {
+                    index = dgvCardList.Rows.Count - 1;
+                }
+                else
+                {
+                    index--;
+                }
+                dgvCardList.Rows[index].Selected = true;
+                ListCardTotal card = (ListCardTotal)cards.GetDataInstance(index);
+                FrmInfo.ShowCardInfo(card);
+            }
+        }
+        /// <summary>
+        /// 选择下一行
+        /// </summary>
+        public void SelectNextLineInGrid()
+        {
+            if (dgvCardList.SelectedRows.Count > 0)
+            {
+                int index = dgvCardList.SelectedRows[dgvCardList.SelectedRows.Count - 1].Index;
+                foreach (DataGridViewRow row in dgvCardList.SelectedRows)
+                {
+                    row.Selected = false;
+                }
+                if (index == dgvCardList.Rows.Count - 1)
+                {
+                    index = 0;
+                }
+                else
+                {
+                    index++;
+                }
+                dgvCardList.Rows[index].Selected = true;
+                ListCardTotal card = (ListCardTotal)cards.GetDataInstance(index);
+                FrmInfo.ShowCardInfo(card);
+            }
         }
     }
 }
