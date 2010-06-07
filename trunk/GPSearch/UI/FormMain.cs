@@ -20,7 +20,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             get
             {
-                if (null == frmInfo || frmInfo.IsDisposed || !frmInfo.IsHandleCreated)
+                if (null == frmInfo || frmInfo.IsDisposed || frmInfo.Disposing)
                 {
                     frmInfo = new FormCardInfo();
                 }
