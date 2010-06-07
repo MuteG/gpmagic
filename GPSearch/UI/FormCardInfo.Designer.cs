@@ -628,6 +628,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "卡牌信息 - 添加";
             this.Load += new System.EventHandler(this.FormCardInfo_Load);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormCardInfo_FormClosed);
             this.gbxCardImage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxCardImage)).EndInit();
             this.ResumeLayout(false);

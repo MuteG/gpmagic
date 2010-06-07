@@ -355,5 +355,10 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 frmMain.SelectNextLineInGrid();
             }
         }
+
+        private void FormCardInfo_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Dispose();
+        }
     }
 }
