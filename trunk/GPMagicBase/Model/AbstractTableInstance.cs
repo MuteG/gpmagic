@@ -130,7 +130,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// 新建一条记录
         /// </summary>
         /// <param name="newObject">要添加的表实例</param>
-        public void Add(object newObject)
+        public virtual void Add(object newObject)
         {
             dbop.InsertTableData(this.tableName, newObject);
         }
@@ -138,7 +138,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// 新建一条记录
         /// </summary>
         /// <param name="newRow">要添加的数据行</param>
-        public void Add(DataRow newRow)
+        public virtual void Add(DataRow newRow)
         {
             dbop.InsertTableData(this.tableName, newRow);
         }

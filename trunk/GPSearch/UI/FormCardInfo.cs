@@ -100,7 +100,21 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             cbxExpansions.Text = card.Symbol;
             tbxCollectorNumber.Text = card.CollectorNumber.ToString();
-
+            tbxCardName.Text = card.CardName;
+            tbxCardEnglishName.Text = card.CardEnglishName;
+            tbxAbilitiesText.Text = card.Abilities;
+            //tbxAbilities.Text =
+            tbxFlavorText.Text = card.FlavorText;
+            tbxManaCost.Text = card.ManaCost;
+            cbxCardType.Text = card.TypeName;
+            tbxCardSubType.Text = card.SubTypeName;
+            tbxPower.Text = card.Power.ToString();
+            tbxToughness.Text = card.Toughness.ToString();
+            cbxRarity.SelectedValue = card.Rarity;
+            cbxPainterName.Text = card.PainterName;
+            tbxCardPrice.Text = card.CardPrice.ToString();
+            tbxFAQ.Text = card.FAQ;
+            tbxCardImage.Text = card.CardImage;
         }
         /// <summary>
         /// 保存图片
@@ -336,8 +350,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             ComboBoxSelectionChanged(cbxPainterName, lblPainterName.Text);
         }
-        #endregion
-
+        // 上一条记录
         private void btnPrevious_Click(object sender, EventArgs e)
         {
             if (this.EditStatus == DataOperateType.Update)
@@ -346,7 +359,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 frmMain.SelectPreLineInGrid();
             }
         }
-
+        // 下一条记录
         private void btnNext_Click(object sender, EventArgs e)
         {
             if (this.EditStatus == DataOperateType.Update)
@@ -355,10 +368,11 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 frmMain.SelectNextLineInGrid();
             }
         }
-
+        // 当窗口关闭时
         private void FormCardInfo_FormClosed(object sender, FormClosedEventArgs e)
         {
             Dispose();
         }
+        #endregion
     }
 }

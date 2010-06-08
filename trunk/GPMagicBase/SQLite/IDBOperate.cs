@@ -22,7 +22,7 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         /// </summary>
         /// <param name="sql">查询字符串</param>
         /// <returns>查询结果</returns>
-        DataTable SelectScriptData(string sql);
+        DataTable ExecuteDataTableScript(string sql);
         /// <summary>
         /// 查询指定表的全部数据
         /// </summary>
@@ -42,31 +42,31 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         /// <param name="dataRow">数据行</param>
         void InsertTableData(string tableName, DataRow dataRow);
         /// <summary>
-        /// 从指定表中删除指定数据实例对应的数据行
+        /// 从指定表中删除指定数据实例对应的数据
         /// </summary>
         /// <param name="tableName">要进行删除的表名</param>
         /// <param name="dataObj">要删除的数据实例</param>
         /// <returns>影响到的行数</returns>
-        int DeleteTableData(string tableName, object dataObj);
+        void DeleteTableData(string tableName, object dataObj);
         /// <summary>
-        /// 执行删除语句
+        /// 从指定表中删除指定数据行对应的数据
         /// </summary>
-        /// <param name="sql">删除语句</param>
-        /// <returns>影响到的行数</returns>
-        int DeleteScriptData(string sql);
+        /// <param name="tableName">要进行删除的表名</param>
+        /// <param name="dataRow">数据行</param>
+        void DeleteTableData(string tableName, DataRow dataRow);
         /// <summary>
         /// 将指定数据实例更新到指定表中
         /// </summary>
         /// <param name="tableName">要进行更新的表名</param>
         /// <param name="dataObj">要更新的数据实例</param>
         /// <returns>影响到的行数</returns>
-        int UpdateTableData(string tableName, object dataObj);
+        void UpdateTableData(string tableName, object dataObj);
         /// <summary>
         /// 将指定的数据行更新到指定的表中
         /// </summary>
         /// <param name="tableName">要进行更新的表名</param>
         /// <param name="dataRow">要更新的数据行</param>
         /// <returns>影响到的行数</returns>
-        int UpdataTableData(string tableName, DataRow dataRow);
+        void UpdataTableData(string tableName, DataRow dataRow);
     }
 }
