@@ -89,7 +89,7 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
             }
         }
 
-        public DataTable SelectScriptData(string sql)
+        public DataTable ExecuteDataTableScript(string sql)
         {
             DataTable result = null;
             SQLiteConnection conn = null;
@@ -128,7 +128,7 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         public DataTable SelectTableData(string tableName)
         {
             string sql = "SELECT * FROM " + tableName;
-            return SelectScriptData(sql);
+            return ExecuteDataTableScript(sql);
         }
         /// <summary>
         /// 将一个封装好的数据实例插入到指定的表中
@@ -172,28 +172,35 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         /// <param name="dataRow">数据行</param>
         public void InsertTableData(string tableName, DataRow dataRow)
         {
-            string classFullName = "GPSoft.GPMagic.GPMagicBase.Model." + tableName;
-            object tableInstance = Activator.CreateInstance("GPMagicBase", classFullName);
-            EncapsulateDataRowToObject(ref tableInstance, dataRow);
+            object tableInstance = GetTableInstance(tableName, dataRow);
             InsertTableData(tableName, tableInstance);
         }
 
-        public int DeleteTableData(string tableName, object dataObj)
+        private object GetTableInstance(string tableName, DataRow dataRow)
+        {
+            string classFullName = "GPSoft.GPMagic.GPMagicBase.Model." + tableName;
+            object tableInstance = Activator.CreateInstance("GPMagicBase", classFullName);
+            EncapsulateDataRowToObject(ref tableInstance, dataRow);
+            return tableInstance;
+        }
+
+        public void DeleteTableData(string tableName, object dataObj)
         {
             throw new NotImplementedException();
         }
 
-        public int DeleteScriptData(string sql)
+        public void DeleteTableData(string tableName, DataRow dataRow)
+        {
+            object tableInstance = GetTableInstance(tableName, dataRow);
+            DeleteTableData(tableName, tableInstance);
+        }
+
+        public void UpdateTableData(string tableName, object dataObj)
         {
             throw new NotImplementedException();
         }
 
-        public int UpdateTableData(string tableName, object dataObj)
-        {
-            throw new NotImplementedException();
-        }
-
-        public int UpdataTableData(string tableName, DataRow dataRow)
+        public void UpdataTableData(string tableName, DataRow dataRow)
         {
             throw new NotImplementedException();
         }
