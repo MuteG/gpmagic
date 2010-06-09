@@ -21,8 +21,6 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         }
         private SQLiteTransaction tran = null;
         private bool useTran = false;
-        ~DatabaseOperator() { }
-        
 
         public DatabaseOperator(string connStr)
         {
@@ -159,8 +157,8 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
                 values.Add(valueStr);
             }
             sqlStript = string.Format(sqlStript, tableName, 
-                string.Join(",", colNames.ToArray()),
-                string.Join(",", values.ToArray()));
+                string.Join(", ", colNames.ToArray()),
+                string.Join(", ", values.ToArray()));
             ExecuteNonreturnSqlStript(sqlStript);
             colNames.Clear();
             values.Clear();
@@ -186,7 +184,26 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
 
         public void DeleteTableData(string tableName, object dataObj)
         {
-            throw new NotImplementedException();
+            PropertyInfo[] properties = dataObj.GetType().GetProperties();
+            string sqlStript = "DELETE FROM {0} WHERE {1}";
+            List<string> where = new List<string>();
+            foreach (PropertyInfo info in properties)
+            {
+                object[] attributes = info.GetCustomAttributes(typeof(ColumnInfoAttribute), false);
+                string keyValueString = GetUpdateSetString(info, dataObj);
+                if (attributes.Length > 0)
+                {
+                    ColumnInfoAttribute colAttr = (ColumnInfoAttribute)attributes[0];
+                    if (colAttr != null && colAttr.IsPrimaryKey)
+                    {
+                        where.Add(keyValueString);
+                    }
+                }
+            }
+            sqlStript = string.Format(sqlStript, tableName,
+                string.Join(" AND ", where.ToArray()));
+            ExecuteNonreturnSqlStript(sqlStript);
+            where.Clear();
         }
 
         public void DeleteTableData(string tableName, DataRow dataRow)
@@ -197,12 +214,52 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
 
         public void UpdateTableData(string tableName, object dataObj)
         {
-            throw new NotImplementedException();
+            PropertyInfo[] properties = dataObj.GetType().GetProperties();
+            string sqlStript = "UPDATE {0} SET {1} WHERE {2}";
+            List<string> setValues = new List<string>();
+            List<string> where = new List<string>();
+            foreach (PropertyInfo info in properties)
+            {
+                object[] attributes = info.GetCustomAttributes(typeof(ColumnInfoAttribute), false);
+                string keyValueString = GetUpdateSetString(info, dataObj);
+                if (attributes.Length > 0)
+                {
+                    ColumnInfoAttribute colAttr = (ColumnInfoAttribute)attributes[0];
+                    if (colAttr != null)
+                    {
+                        if (colAttr.IsPrimaryKey)
+                        {
+                            where.Add(keyValueString);
+                        }
+                        if (colAttr.IsAutoIncrement) continue;
+                    }
+                }
+                setValues.Add(keyValueString);
+            }
+            sqlStript = string.Format(sqlStript, tableName,
+                string.Join(", ", setValues.ToArray()),
+                string.Join(" AND ", where.ToArray()));
+            ExecuteNonreturnSqlStript(sqlStript);
+            setValues.Clear();
+            where.Clear();
+        }
+
+        private string GetUpdateSetString(PropertyInfo info, object dataObj)
+        {
+            string result = string.Empty;
+            string formatStr = string.Empty;
+            if (info.PropertyType.Equals(typeof(string)))
+                formatStr = "{0}='{1}'";
+            else
+                formatStr = "{0}={1}";
+            result = string.Format(formatStr, info.Name, info.GetValue(dataObj, null));
+            return result;
         }
 
         public void UpdataTableData(string tableName, DataRow dataRow)
         {
-            throw new NotImplementedException();
+            object tableInstance = GetTableInstance(tableName, dataRow);
+            UpdateTableData(tableName, tableInstance);
         }
 
         public bool BeginTran()
