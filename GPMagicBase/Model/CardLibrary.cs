@@ -30,6 +30,24 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         {
             return new ListCardTotal();
         }
+        /// <summary>
+        /// 获得指定卡牌的异能
+        /// </summary>
+        /// <param name="cardID"></param>
+        /// <returns></returns>
+        public string GetAbilities(int cardID)
+        {
+            string result = string.Empty;
+            List<string> abilitiesList = new List<string>();
+            string sql = string.Format("SELECT AbilitiesID FROM RelateCardAbilities WHERE CardID={0}", cardID);
+            DataTable tablle = this.DatabaseOperator.ExecuteDataTableScript(sql);
+            foreach (DataRow row in tablle.Rows)
+            {
+                abilitiesList.Add(row["AbilitiesID"].ToString());
+            }
+            result = string.Join(",", abilitiesList.ToArray());
+            return result;
+        }
     }
 
     public sealed class ListCardTotal

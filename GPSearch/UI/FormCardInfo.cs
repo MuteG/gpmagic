@@ -103,7 +103,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             tbxCardName.Text = card.CardName;
             tbxCardEnglishName.Text = card.CardEnglishName;
             tbxAbilitiesText.Text = card.Abilities;
-            //tbxAbilities.Text =
+            tbxAbilities.Text = ((FormMain)this.Owner).Cards.GetAbilities(card.CardID);
             tbxFlavorText.Text = card.FlavorText;
             tbxManaCost.Text = card.ManaCost;
             cbxCardType.Text = card.TypeName;
@@ -115,6 +115,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             tbxCardPrice.Text = card.CardPrice.ToString();
             tbxFAQ.Text = card.FAQ;
             tbxCardImage.Text = card.CardImage;
+            LoadCardImage(card.CardImage);
         }
         /// <summary>
         /// 保存图片
@@ -142,6 +143,19 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 MessageBox.Show(ex.Message, "保存图片时发生错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return result;
+        }
+        private void LoadCardImage(string cardImageName)
+        {
+            string imagePath = Path.Combine(FunctionHelper.ApplicationPath,
+                                            string.Format("Pic\\{0}\\{1}", cbxExpansions.Text, cardImageName));
+            if (File.Exists(imagePath))
+            {
+                pbxCardImage.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                // 根据卡牌信息生成自定义画像
+            }
         }
         /// <summary>
         /// 获得保存后的图片名
