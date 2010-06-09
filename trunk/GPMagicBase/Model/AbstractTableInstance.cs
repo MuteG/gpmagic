@@ -12,6 +12,13 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
     public abstract class AbstractTableInstance : ITableIntanceAction, IDisposable
     {
         private DatabaseOperator dbop;
+        /// <summary>
+        /// 获取数据库操作对象
+        /// </summary>
+        public DatabaseOperator DatabaseOperator
+        {
+            get { return dbop; }
+        }
         private DataTable records = null;
         protected string tableName = string.Empty;
         /// <summary>

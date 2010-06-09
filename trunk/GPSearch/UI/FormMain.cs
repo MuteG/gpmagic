@@ -158,6 +158,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private void dgvCardList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             ListCardTotal card = (ListCardTotal)cards.GetDataInstance(e.RowIndex);
+            FrmInfo.Owner = this;
             FrmInfo.ShowCardInfo(card);
             ShowCardInfoForm(DataOperateType.Update);
         }
