@@ -56,7 +56,7 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         /// 执行没有返回值的数据库脚本
         /// <param name="sql">要执行的数据库脚本</param>
         /// </summary>
-        private void ExecuteNonreturnSqlStript(string sql)
+        public void ExecuteNonreturnSqlStript(string sql)
         {
             SQLiteConnection conn = null;
             try

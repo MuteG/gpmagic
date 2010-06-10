@@ -10,11 +10,13 @@ using GPSoft.GPMagic.GPMagicBase.Model;
 using GPSoft.GPMagic.GPMagicBase.UI;
 using GPSoft.Helper.FunctionHelper;
 using GPSoft.Helper.FileOperate;
+using GPSoft.GPMagic.GPMagicBase.SQLite;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormCardInfo : Form
     {
+        private DatabaseOperator dbop;
         private DataOperateType editStatus;
         /// <summary>
         /// 获取或者设置当前编辑状态
@@ -28,11 +30,20 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 ChangeFormTitle(editStatus);
             }
         }
-        private CardLibrary cardLibrary = new CardLibrary();
+        private ListCardTotal activeCard = new ListCardTotal();
+        /// <summary>
+        /// 获取或者设置当前显示的卡牌
+        /// </summary>
+        public ListCardTotal ActiveCard
+        {
+            get { return activeCard; }
+            set { activeCard = value; }
+        }
         private Dictionary<string, AbstractTableInstance> tableInstanceDictionary = new Dictionary<string, AbstractTableInstance>();
         public FormCardInfo()
         {
             InitializeComponent();
+            this.dbop = new DatabaseOperator(SQLiteDatabaseInformation.Connection);
         }
 
         #region 自定义函数
@@ -98,6 +109,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         }
         private void UnPackInstanceToComponent(ListCardTotal card)
         {
+            this.ActiveCard = card;
             cbxExpansions.Text = card.Symbol;
             tbxCollectorNumber.Text = card.CollectorNumber.ToString();
             tbxCardName.Text = card.CardName;
@@ -147,7 +159,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private void LoadCardImage(string cardImageName)
         {
             string imagePath = Path.Combine(FunctionHelper.ApplicationPath,
-                                            string.Format("Pic\\{0}\\{1}", cbxExpansions.Text, cardImageName));
+                                            string.Format("Pic\\{0}\\{1}", this.ActiveCard.Symbol, cardImageName));
             if (File.Exists(imagePath))
             {
                 pbxCardImage.Image = Image.FromFile(imagePath);
@@ -261,6 +273,42 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 }
             }
         }
+        private void AddRelateCardAbilities()
+        {
+            string[] abilities = tbxAbilities.Text.Split(",".ToCharArray());
+            foreach (string ability in abilities)
+            {
+                string sqlAbilityID = string.Format("SELECT DISTINCT AbilitiesID FROM ListAbilities WHERE AbilitiesName='{0}'",
+                                                    ability);
+                DataTable abilityTable = this.dbop.ExecuteDataTableScript(sqlAbilityID);
+                if (abilityTable.Rows.Count > 0)
+                {
+                    int abilityID = Convert.ToInt32(abilityTable.Rows[0]["AbilitiesID"].ToString());
+                    string sqlInsert = string.Format("INSERT INTO RelateCardAbilities VALUES({0},{1})",
+                                                     this.ActiveCard.CardID,
+                                                     abilityID);
+                    this.dbop.ExecuteNonreturnSqlStript(sqlInsert);
+                }
+            }
+        }
+        private void AddRelateCardSubTypes()
+        {
+            string[] subtypes = tbxCardSubType.Text.Split("/".ToCharArray());
+            foreach (string ability in subtypes)
+            {
+                string sqlAbilityID = string.Format("SELECT DISTINCT SubTypeID FROM ListSubType WHERE SubTypeName='{0}'",
+                                                    ability);
+                DataTable abilityTable = this.dbop.ExecuteDataTableScript(sqlAbilityID);
+                if (abilityTable.Rows.Count > 0)
+                {
+                    int subtypeID = Convert.ToInt32(abilityTable.Rows[0]["SubTypeID"].ToString());
+                    string sqlInsert = string.Format("INSERT INTO RelateCardSubType VALUES({0},{1})",
+                                                     this.ActiveCard.CardID,
+                                                     subtypeID);
+                    this.dbop.ExecuteNonreturnSqlStript(sqlInsert);
+                }
+            }
+        }
         #endregion
 
         #region 系统函数
@@ -304,12 +352,13 @@ namespace GPSoft.GPMagic.GPSearch.UI
         // 提交操作
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            ListCardTotal data = PackageComponentToInstance();
+            this.ActiveCard = PackageComponentToInstance();
             FormMain frmMain = (FormMain)this.Owner;
-            if (null != data)
+            if (null != this.ActiveCard)
             {
-                frmMain.Cards.Add(data);
-                frmMain.Cards.Reload();
+                frmMain.Cards.Add(this.ActiveCard);
+                AddRelateCardAbilities();
+                AddRelateCardSubTypes();
                 frmMain.RefreshTotalCardsGrid();
             }
         }

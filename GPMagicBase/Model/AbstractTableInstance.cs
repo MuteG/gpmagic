@@ -11,14 +11,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
 {
     public abstract class AbstractTableInstance : ITableIntanceAction, IDisposable
     {
-        private DatabaseOperator dbop;
-        /// <summary>
-        /// 获取数据库操作对象
-        /// </summary>
-        public DatabaseOperator DatabaseOperator
-        {
-            get { return dbop; }
-        }
+        protected DatabaseOperator dbop;
         private DataTable records = null;
         protected string tableName = string.Empty;
         /// <summary>
@@ -130,7 +123,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// </summary>
         public void Save()
         {
-            throw new NotImplementedException();
+            Reload();
         }
 
         /// <summary>
@@ -140,6 +133,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         public virtual void Add(object newObject)
         {
             dbop.InsertTableData(this.tableName, newObject);
+            Reload();
         }
         /// <summary>
         /// 新建一条记录
@@ -148,6 +142,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         public virtual void Add(DataRow newRow)
         {
             dbop.InsertTableData(this.tableName, newRow);
+            Reload();
         }
 
         /// <summary>
@@ -155,7 +150,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// </summary>
         public void Remove()
         {
-            throw new NotImplementedException();
+            Reload();
         }
         /// <summary>
         /// 获得Records中指定索引行的数据封装
