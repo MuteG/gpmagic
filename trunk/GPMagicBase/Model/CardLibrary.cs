@@ -18,6 +18,16 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
                 return null == Records ? 0 : Records.Rows.Count;
             }
         }
+        /// <summary>
+        /// 获取最大的卡牌编号
+        /// </summary>
+        public int MaxCardID
+        {
+            get
+            {
+                return GetMaxCardID();
+            }
+        }
         public CardLibrary()
         {
             tableName = DatabaseTableNames.CardLibrary;
@@ -39,14 +49,31 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         {
             string result = string.Empty;
             List<string> abilitiesList = new List<string>();
-            string sql = string.Format("SELECT AbilitiesID FROM RelateCardAbilities WHERE CardID={0}", cardID);
-            DataTable tablle = this.DatabaseOperator.ExecuteDataTableScript(sql);
+            StringBuilder sqlBulider = new StringBuilder();
+            sqlBulider.AppendLine("SELECT DISTINCT ListAbilities.AbilitiesName");
+            sqlBulider.AppendLine("FROM RelateCardAbilities, ListAbilities");
+            sqlBulider.AppendLine("WHERE RelateCardAbilities.AbilitiesID = ListAbilities.AbilitiesID AND CardID={0}");
+            string sql = string.Format(sqlBulider.ToString(), cardID);
+            DataTable tablle = this.dbop.ExecuteDataTableScript(sql);
             foreach (DataRow row in tablle.Rows)
             {
-                abilitiesList.Add(row["AbilitiesID"].ToString());
+                abilitiesList.Add(row["AbilitiesName"].ToString());
             }
             result = string.Join(",", abilitiesList.ToArray());
             return result;
+        }
+
+        private int GetMaxCardID()
+        {
+            string sql = "SELECT seq FROM sqlite_sequence WHERE name='ListCardTotal'";
+            DataTable table = dbop.ExecuteDataTableScript(sql);
+            return Convert.ToInt32(table.Rows[0]["seq"].ToString());
+        }
+
+        public override void Add(object newObject)
+        {
+            base.Add(newObject);
+            ((ListCardTotal)newObject).CardID = this.MaxCardID;
         }
     }
 
