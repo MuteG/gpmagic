@@ -256,7 +256,7 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
             return result;
         }
 
-        public void UpdataTableData(string tableName, DataRow dataRow)
+        public void UpdateTableData(string tableName, DataRow dataRow)
         {
             object tableInstance = GetTableInstance(tableName, dataRow);
             UpdateTableData(tableName, tableInstance);

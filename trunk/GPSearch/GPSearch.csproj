@@ -100,6 +100,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="0119_MTGWWK_CS_LR.jpg" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\picture.png" />
+    <None Include="Resources\clear.png" />
+    <None Include="Resources\type.png" />
+    <None Include="Resources\roll.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\graph.png" />
+    <None Include="Resources\experiment.png" />
+    <None Include="Resources\expansions.png" />
+    <None Include="Resources\deck.png" />
+    <None Include="Resources\search.png" />
+    <None Include="Resources\Search-2.gif" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\GPMagicBase\GPMagicBase.csproj">

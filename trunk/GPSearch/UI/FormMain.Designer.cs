@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -40,6 +39,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.mnuStpMain = new System.Windows.Forms.MenuStrip();
             this.mnuItemFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemNewDeck = new System.Windows.Forms.ToolStripMenuItem();
@@ -60,17 +60,7 @@
             this.tscbxLanguage = new System.Windows.Forms.ToolStripComboBox();
             this.tstbxCardName = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbtnType = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnKeyWord = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnExpansions = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnClear = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.tsbtnRefresh = new System.Windows.Forms.ToolStripButton();
-            this.tssbtnShowImage = new System.Windows.Forms.ToolStripSplitButton();
-            this.tsmItemImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmItemText = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmItemInfoImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmItemFAQ = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlNameList = new System.Windows.Forms.Panel();
             this.dgxDeck = new System.Windows.Forms.GroupBox();
             this.dgvCardList = new System.Windows.Forms.DataGridView();
@@ -95,6 +85,17 @@
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tsbtnSearch = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnType = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnKeyWord = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnExpansions = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnClear = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnRefresh = new System.Windows.Forms.ToolStripButton();
+            this.tssbtnShowImage = new System.Windows.Forms.ToolStripSplitButton();
+            this.tsmItemImage = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmItemText = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmItemInfoImage = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmItemFAQ = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuStpMain.SuspendLayout();
             this.gbxCardLibrary.SuspendLayout();
             this.tspCardLibrary.SuspendLayout();
@@ -242,6 +243,7 @@
             this.tspCardLibrary.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tscbxLanguage,
             this.tstbxCardName,
+            this.tsbtnSearch,
             this.toolStripSeparator1,
             this.tsbtnType,
             this.tsbtnKeyWord,
@@ -253,7 +255,7 @@
             this.tspCardLibrary.Location = new System.Drawing.Point(6, 13);
             this.tspCardLibrary.Name = "tspCardLibrary";
             this.tspCardLibrary.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.tspCardLibrary.Size = new System.Drawing.Size(396, 25);
+            this.tspCardLibrary.Size = new System.Drawing.Size(419, 25);
             this.tspCardLibrary.TabIndex = 4;
             this.tspCardLibrary.Text = "toolStrip1";
             // 
@@ -276,101 +278,10 @@
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
-            // tsbtnType
-            // 
-            this.tsbtnType.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnType.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnType.Image")));
-            this.tsbtnType.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnType.Name = "tsbtnType";
-            this.tsbtnType.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnType.Text = "卡牌类别过滤";
-            this.tsbtnType.ToolTipText = "卡牌类别过滤";
-            // 
-            // tsbtnKeyWord
-            // 
-            this.tsbtnKeyWord.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnKeyWord.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnKeyWord.Image")));
-            this.tsbtnKeyWord.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnKeyWord.Name = "tsbtnKeyWord";
-            this.tsbtnKeyWord.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnKeyWord.Text = "卡牌关键字过滤";
-            this.tsbtnKeyWord.ToolTipText = "卡牌关键字过滤";
-            // 
-            // tsbtnExpansions
-            // 
-            this.tsbtnExpansions.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnExpansions.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnExpansions.Image")));
-            this.tsbtnExpansions.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnExpansions.Name = "tsbtnExpansions";
-            this.tsbtnExpansions.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnExpansions.Text = "卡牌系列过滤";
-            this.tsbtnExpansions.ToolTipText = "卡牌系列过滤";
-            // 
-            // tsbtnClear
-            // 
-            this.tsbtnClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnClear.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnClear.Image")));
-            this.tsbtnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnClear.Name = "tsbtnClear";
-            this.tsbtnClear.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnClear.Text = "取消所有过滤条件";
-            this.tsbtnClear.ToolTipText = "取消所有过滤条件";
-            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
-            // 
-            // tsbtnRefresh
-            // 
-            this.tsbtnRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnRefresh.Image")));
-            this.tsbtnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnRefresh.Name = "tsbtnRefresh";
-            this.tsbtnRefresh.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnRefresh.Text = "刷新列表";
-            this.tsbtnRefresh.Click += new System.EventHandler(this.tsbtnRefresh_Click);
-            // 
-            // tssbtnShowImage
-            // 
-            this.tssbtnShowImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tssbtnShowImage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmItemImage,
-            this.tsmItemText,
-            this.tsmItemInfoImage,
-            this.tsmItemFAQ});
-            this.tssbtnShowImage.Image = ((System.Drawing.Image)(resources.GetObject("tssbtnShowImage.Image")));
-            this.tssbtnShowImage.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tssbtnShowImage.Name = "tssbtnShowImage";
-            this.tssbtnShowImage.Size = new System.Drawing.Size(32, 22);
-            this.tssbtnShowImage.Text = "显示卡牌图片";
-            this.tssbtnShowImage.ToolTipText = "显示卡牌图片";
-            // 
-            // tsmItemImage
-            // 
-            this.tsmItemImage.CheckOnClick = true;
-            this.tsmItemImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsmItemImage.Name = "tsmItemImage";
-            this.tsmItemImage.Size = new System.Drawing.Size(166, 22);
-            this.tsmItemImage.Text = "展示图片";
-            // 
-            // tsmItemText
-            // 
-            this.tsmItemText.Name = "tsmItemText";
-            this.tsmItemText.Size = new System.Drawing.Size(166, 22);
-            this.tsmItemText.Text = "纯文字描述";
-            // 
-            // tsmItemInfoImage
-            // 
-            this.tsmItemInfoImage.Name = "tsmItemInfoImage";
-            this.tsmItemInfoImage.Size = new System.Drawing.Size(166, 22);
-            this.tsmItemInfoImage.Text = "根据信息生成图片";
-            // 
-            // tsmItemFAQ
-            // 
-            this.tsmItemFAQ.Name = "tsmItemFAQ";
-            this.tsmItemFAQ.Size = new System.Drawing.Size(166, 22);
-            this.tsmItemFAQ.Text = "FAQ";
             // 
             // pnlNameList
             // 
@@ -648,6 +559,107 @@
             this.splitContainer1.SplitterDistance = 544;
             this.splitContainer1.TabIndex = 1;
             // 
+            // tsbtnSearch
+            // 
+            this.tsbtnSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnSearch.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSearch.Image")));
+            this.tsbtnSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnSearch.Name = "tsbtnSearch";
+            this.tsbtnSearch.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnSearch.Text = "根据名称搜索";
+            this.tsbtnSearch.ToolTipText = "根据名称搜索";
+            // 
+            // tsbtnType
+            // 
+            this.tsbtnType.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnType.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.type;
+            this.tsbtnType.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnType.Name = "tsbtnType";
+            this.tsbtnType.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnType.Text = "卡牌类别过滤";
+            this.tsbtnType.ToolTipText = "卡牌类别过滤";
+            // 
+            // tsbtnKeyWord
+            // 
+            this.tsbtnKeyWord.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnKeyWord.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.key;
+            this.tsbtnKeyWord.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnKeyWord.Name = "tsbtnKeyWord";
+            this.tsbtnKeyWord.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnKeyWord.Text = "卡牌关键字过滤";
+            this.tsbtnKeyWord.ToolTipText = "卡牌关键字过滤";
+            // 
+            // tsbtnExpansions
+            // 
+            this.tsbtnExpansions.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnExpansions.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.expansions;
+            this.tsbtnExpansions.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnExpansions.Name = "tsbtnExpansions";
+            this.tsbtnExpansions.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnExpansions.Text = "卡牌系列过滤";
+            this.tsbtnExpansions.ToolTipText = "卡牌系列过滤";
+            // 
+            // tsbtnClear
+            // 
+            this.tsbtnClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnClear.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.clear;
+            this.tsbtnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnClear.Name = "tsbtnClear";
+            this.tsbtnClear.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnClear.Text = "取消所有过滤条件";
+            this.tsbtnClear.ToolTipText = "取消所有过滤条件";
+            // 
+            // tsbtnRefresh
+            // 
+            this.tsbtnRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnRefresh.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.refresh;
+            this.tsbtnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnRefresh.Name = "tsbtnRefresh";
+            this.tsbtnRefresh.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnRefresh.Text = "刷新列表";
+            this.tsbtnRefresh.Click += new System.EventHandler(this.tsbtnRefresh_Click);
+            // 
+            // tssbtnShowImage
+            // 
+            this.tssbtnShowImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tssbtnShowImage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmItemImage,
+            this.tsmItemText,
+            this.tsmItemInfoImage,
+            this.tsmItemFAQ});
+            this.tssbtnShowImage.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.picture;
+            this.tssbtnShowImage.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tssbtnShowImage.Name = "tssbtnShowImage";
+            this.tssbtnShowImage.Size = new System.Drawing.Size(32, 22);
+            this.tssbtnShowImage.Text = "显示卡牌图片";
+            this.tssbtnShowImage.ToolTipText = "显示卡牌图片";
+            // 
+            // tsmItemImage
+            // 
+            this.tsmItemImage.CheckOnClick = true;
+            this.tsmItemImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsmItemImage.Name = "tsmItemImage";
+            this.tsmItemImage.Size = new System.Drawing.Size(166, 22);
+            this.tsmItemImage.Text = "展示图片";
+            // 
+            // tsmItemText
+            // 
+            this.tsmItemText.Name = "tsmItemText";
+            this.tsmItemText.Size = new System.Drawing.Size(166, 22);
+            this.tsmItemText.Text = "纯文字描述";
+            // 
+            // tsmItemInfoImage
+            // 
+            this.tsmItemInfoImage.Name = "tsmItemInfoImage";
+            this.tsmItemInfoImage.Size = new System.Drawing.Size(166, 22);
+            this.tsmItemInfoImage.Text = "根据信息生成图片";
+            // 
+            // tsmItemFAQ
+            // 
+            this.tsmItemFAQ.Name = "tsmItemFAQ";
+            this.tsmItemFAQ.Size = new System.Drawing.Size(166, 22);
+            this.tsmItemFAQ.Text = "FAQ";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -739,6 +751,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuItemEdit;
         private System.Windows.Forms.ToolStripMenuItem 卡牌类别ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 卡牌异能ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton tsbtnSearch;
     }
 }
 

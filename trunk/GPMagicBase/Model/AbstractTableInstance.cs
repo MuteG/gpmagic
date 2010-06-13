@@ -121,8 +121,18 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 保存数据
         /// </summary>
-        public void Save()
+        public void Save(DataRow saveRow)
         {
+            dbop.UpdateTableData(this.TableName, saveRow);
+            Reload();
+        }
+
+        /// <summary>
+        /// 保存数据
+        /// </summary>
+        public void Save(object saveObj)
+        {
+            dbop.UpdateTableData(this.TableName, saveObj);
             Reload();
         }
 
@@ -148,8 +158,18 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        public void Remove()
+        public void Remove(object deleteObject)
         {
+            dbop.DeleteTableData(this.tableName, deleteObject);
+            Reload();
+        }
+
+        /// <summary>
+        /// 删除一条数据
+        /// </summary>
+        public void Remove(DataRow deleteRow)
+        {
+            dbop.DeleteTableData(this.tableName, deleteRow);
             Reload();
         }
         /// <summary>
@@ -166,6 +186,8 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
                 object value;
                 if (info.PropertyType.Equals(typeof(string)))
                     value = row[info.Name].ToString();
+                else if (info.PropertyType.Equals(typeof(double)))
+                    value = Convert.ToDouble(row[info.Name]);
                 else
                     value = Convert.ToInt32(row[info.Name]);
                 info.SetValue(result, value, null);
