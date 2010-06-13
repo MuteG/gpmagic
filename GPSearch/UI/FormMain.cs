@@ -94,8 +94,14 @@ namespace GPSoft.GPMagic.GPSearch.UI
                         aRarity.Dispose();
                     }
                 }
+                if (frmInfo != null && frmInfo.EditStatus == DataOperateType.Update)
+                {
+                    SelectCard(frmInfo.ActiveCard);
+                }
             }
         }
+
+        
 
         private void mnuAddCard_Click(object sender, EventArgs e)
         {
@@ -171,10 +177,6 @@ namespace GPSoft.GPMagic.GPSearch.UI
             if (dgvCardList.SelectedRows.Count > 0)
             {
                 int index = dgvCardList.SelectedRows[0].Index;
-                foreach (DataGridViewRow row in dgvCardList.SelectedRows)
-                {
-                    row.Selected = false;
-                }
                 if (index == 0)
                 {
                     index = dgvCardList.Rows.Count - 1;
@@ -183,7 +185,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 {
                     index--;
                 }
-                dgvCardList.Rows[index].Selected = true;
+                SelectRowAtIndex(index);
                 ListCardTotal card = (ListCardTotal)cards.GetDataInstance(index);
                 FrmInfo.ShowCardInfo(card);
             }
@@ -196,10 +198,6 @@ namespace GPSoft.GPMagic.GPSearch.UI
             if (dgvCardList.SelectedRows.Count > 0)
             {
                 int index = dgvCardList.SelectedRows[dgvCardList.SelectedRows.Count - 1].Index;
-                foreach (DataGridViewRow row in dgvCardList.SelectedRows)
-                {
-                    row.Selected = false;
-                }
                 if (index == dgvCardList.Rows.Count - 1)
                 {
                     index = 0;
@@ -208,10 +206,33 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 {
                     index++;
                 }
-                dgvCardList.Rows[index].Selected = true;
+                SelectRowAtIndex(index);
                 ListCardTotal card = (ListCardTotal)cards.GetDataInstance(index);
                 FrmInfo.ShowCardInfo(card);
             }
+        }
+
+        public void SelectCard(ListCardTotal card)
+        {
+            int cardIndex = GetCardIndex(card.CardID);
+            SelectRowAtIndex(cardIndex);
+        }
+
+        private int GetCardIndex(int cardID)
+        {
+            int result = 0;
+            //这里要改为二分法搜索
+            result = Cards.Records.Rows.IndexOf(Cards.Records.Select(string.Format("CardID={0}", cardID))[0]);
+            return result;
+        }
+
+        private void SelectRowAtIndex(int index)
+        {
+            foreach (DataGridViewRow row in dgvCardList.SelectedRows)
+            {
+                row.Selected = false;
+            }
+            dgvCardList.Rows[index].Selected = true;
         }
     }
 }

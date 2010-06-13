@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Data;
 
 namespace GPSoft.GPMagic.GPMagicBase.Model
 {
@@ -14,7 +15,12 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 保存数据
         /// </summary>
-        void Save();
+        void Save(object saveObject);
+
+        /// <summary>
+        /// 保存数据
+        /// </summary>
+        void Save(DataRow saveRow);
 
         /// <summary>
         /// 新建一条记录
@@ -30,6 +36,11 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 删除一条数据
         /// </summary>
-        void Remove();
+        void Remove(object deleteObject);
+
+        /// <summary>
+        /// 删除一条数据
+        /// </summary>
+        void Remove(DataRow deleteRow);
     }
 }

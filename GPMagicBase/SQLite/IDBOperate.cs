@@ -67,6 +67,6 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         /// <param name="tableName">要进行更新的表名</param>
         /// <param name="dataRow">要更新的数据行</param>
         /// <returns>影响到的行数</returns>
-        void UpdataTableData(string tableName, DataRow dataRow);
+        void UpdateTableData(string tableName, DataRow dataRow);
     }
 }

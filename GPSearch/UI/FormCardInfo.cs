@@ -44,6 +44,20 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             InitializeComponent();
             this.dbop = new DatabaseOperator(SQLiteDatabaseInformation.Connection);
+            tableInstanceDictionary.Add(cbxRarity.Name, new CardRarity());
+            tableInstanceDictionary.Add(cbxImageType.Name, new CardImageType());
+            tableInstanceDictionary.Add(cbxCardType.Name, new CardType());
+            tableInstanceDictionary.Add(cbxExpansions.Name, new CardExpansions());
+            tableInstanceDictionary.Add(cbxPainterName.Name, new CardPainter());
+
+            SetComboBoxItems(cbxRarity, true);
+            SetComboBoxItems(cbxImageType, false);
+            SetComboBoxItems(cbxCardType, true);
+            SetComboBoxItems(cbxExpansions, true);
+            SetComboBoxItems(cbxPainterName, true);
+
+            ttpCardInfo.SetToolTip(cbxImageType, cbxImageType.Text);
+            SetComboBoxDropDownWidth(cbxImageType);
         }
 
         #region 自定义函数
@@ -80,6 +94,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             ListCardTotal result = new ListCardTotal();
             if (CheckInput())
             {
+                result.CardID = this.ActiveCard == null ? 0 : this.ActiveCard.CardID;
                 result.Symbol = cbxExpansions.Text;
                 result.CollectorNumber = Convert.ToInt32(tbxCollectorNumber.Text);
                 result.CardName = tbxCardName.Text;
@@ -124,7 +139,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             tbxToughness.Text = card.Toughness.ToString();
             cbxRarity.SelectedValue = card.Rarity;
             cbxPainterName.Text = card.PainterName;
-            tbxCardPrice.Text = card.CardPrice.ToString();
+            tbxCardPrice.Text = card.CardPrice.ToString("0.00");
             tbxFAQ.Text = card.FAQ;
             tbxCardImage.Text = card.CardImage;
             LoadCardImage(card.CardImage);
@@ -139,13 +154,19 @@ namespace GPSoft.GPMagic.GPSearch.UI
             string result = string.Empty;
             try
             {
-                string targetPath = Path.Combine(FunctionHelper.ApplicationPath,
-                                                 string.Format("Pic\\{0}", cbxExpansions.Text));
-                FileHelper.CreateDirectory(targetPath);
                 result = GetSavedImageName(sourcePath);
-                if (!string.IsNullOrEmpty(result))
+                string targetPath = GetSavedImagePath(cbxExpansions.Text, result);
+                FileHelper.CreateDirectory(Path.GetDirectoryName(targetPath));
+                if (tbxCardImage.Text.Equals(result))
                 {
-                    targetPath = Path.Combine(targetPath, result);
+                    if (this.ActiveCard != null && !this.ActiveCard.Symbol.Equals(cbxExpansions.Text))
+                    {
+                        FileHelper.MoveFileCompel(GetSavedImagePath(this.ActiveCard.Symbol, result), targetPath);
+                    }
+                }
+                else
+                {
+                    // 这里还需要加入画像大小调整（缩放成同样大小265*370）
                     FileHelper.CopyFileCompel(sourcePath, targetPath);
                 }
             }
@@ -156,17 +177,21 @@ namespace GPSoft.GPMagic.GPSearch.UI
             }
             return result;
         }
+        private string GetSavedImagePath(string symbol, string imageName)
+        {
+            return Path.Combine(FunctionHelper.ApplicationPath,
+                                string.Format("Pic\\{0}\\{1}", symbol, imageName));
+        }
         private void LoadCardImage(string cardImageName)
         {
-            string imagePath = Path.Combine(FunctionHelper.ApplicationPath,
-                                            string.Format("Pic\\{0}\\{1}", this.ActiveCard.Symbol, cardImageName));
+            string imagePath = GetSavedImagePath(this.ActiveCard.Symbol, cardImageName);
             if (File.Exists(imagePath))
             {
                 pbxCardImage.Image = Image.FromFile(imagePath);
             }
             else
             {
-                // 根据卡牌信息生成自定义画像
+                // 这里还需要加入根据卡牌信息生成自定义画像
             }
         }
         /// <summary>
@@ -207,7 +232,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             bool result = true;
             string message = string.Empty;
-
+            message = "必须指定卡牌英文名";
+            result = !string.IsNullOrEmpty(tbxCardEnglishName.Text);
             if (!result)
             {
                 MessageBox.Show(message, "错误的输入", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -327,20 +353,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         // 窗体载入
         private void FormCardInfo_Load(object sender, EventArgs e)
         {
-            tableInstanceDictionary.Add(cbxRarity.Name, new CardRarity());
-            tableInstanceDictionary.Add(cbxImageType.Name, new CardImageType());
-            tableInstanceDictionary.Add(cbxCardType.Name, new CardType());
-            tableInstanceDictionary.Add(cbxExpansions.Name, new CardExpansions());
-            tableInstanceDictionary.Add(cbxPainterName.Name, new CardPainter());
-
-            SetComboBoxItems(cbxRarity, true);
-            SetComboBoxItems(cbxImageType, false);
-            SetComboBoxItems(cbxCardType, true);
-            SetComboBoxItems(cbxExpansions, true);
-            SetComboBoxItems(cbxPainterName, true);
-
-            ttpCardInfo.SetToolTip(cbxImageType, cbxImageType.Text);
-            SetComboBoxDropDownWidth(cbxImageType);
+            
         }
         // 关闭窗口
         private void btnClose_Click(object sender, EventArgs e)
@@ -368,9 +381,16 @@ namespace GPSoft.GPMagic.GPSearch.UI
             FormMain frmMain = (FormMain)this.Owner;
             if (null != this.ActiveCard)
             {
-                frmMain.Cards.Add(this.ActiveCard);
-                AddRelateCardAbilities();
-                //AddRelateCardSubTypes();
+                if (this.EditStatus == DataOperateType.Insert)
+                {
+                    frmMain.Cards.Add(this.ActiveCard);
+                    AddRelateCardAbilities();
+                    //AddRelateCardSubTypes();
+                }
+                else
+                {
+                    frmMain.Cards.Save(this.ActiveCard);
+                }
                 frmMain.RefreshTotalCardsGrid();
             }
         }
