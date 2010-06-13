@@ -276,19 +276,31 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private void AddRelateCardAbilities()
         {
             string[] abilities = tbxAbilities.Text.Split(",".ToCharArray());
-            foreach (string ability in abilities)
+            dbop.BeginTran();
+            try
             {
-                string sqlAbilityID = string.Format("SELECT DISTINCT AbilitiesID FROM ListAbilities WHERE AbilitiesName='{0}'",
-                                                    ability);
-                DataTable abilityTable = this.dbop.ExecuteDataTableScript(sqlAbilityID);
-                if (abilityTable.Rows.Count > 0)
+                string sqlDelete = string.Format("DELETE FROM RelateCardAbilities WHERE CardID={0}",
+                                                             this.activeCard.CardID);
+                this.dbop.ExecuteNonreturnSqlStript(sqlDelete);
+                foreach (string ability in abilities)
                 {
-                    int abilityID = Convert.ToInt32(abilityTable.Rows[0]["AbilitiesID"].ToString());
-                    string sqlInsert = string.Format("INSERT INTO RelateCardAbilities VALUES({0},{1})",
-                                                     this.ActiveCard.CardID,
-                                                     abilityID);
-                    this.dbop.ExecuteNonreturnSqlStript(sqlInsert);
+                    string sqlAbilityID = string.Format("SELECT DISTINCT AbilitiesID FROM ListAbilities WHERE AbilitiesName='{0}'",
+                                                        ability);
+                    DataTable abilityTable = this.dbop.ExecuteDataTableScript(sqlAbilityID);
+                    if (abilityTable.Rows.Count > 0)
+                    {
+                        int abilityID = Convert.ToInt32(abilityTable.Rows[0]["AbilitiesID"].ToString());
+                        string sqlInsert = string.Format("INSERT INTO RelateCardAbilities VALUES({0},{1})",
+                                                         this.ActiveCard.CardID,
+                                                         abilityID);
+                        this.dbop.ExecuteNonreturnSqlStript(sqlInsert);
+                    }
                 }
+                dbop.CommitTran();
+            }
+            catch
+            {
+                dbop.RollbackTran();
             }
         }
         private void AddRelateCardSubTypes()
@@ -358,7 +370,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             {
                 frmMain.Cards.Add(this.ActiveCard);
                 AddRelateCardAbilities();
-                AddRelateCardSubTypes();
+                //AddRelateCardSubTypes();
                 frmMain.RefreshTotalCardsGrid();
             }
         }
