@@ -39,6 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Command\Filter.cs" />
+    <Compile Include="Command\IFilterable.cs" />
     <Compile Include="UI\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -50,6 +52,12 @@
     </Compile>
     <Compile Include="UI\FormCardInfo.Designer.cs">
       <DependentUpon>FormCardInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormFilterCardType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormFilterCardType.Designer.cs">
+      <DependentUpon>FormFilterCardType.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FormMain.cs">
       <SubType>Form</SubType>
@@ -70,6 +78,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormCardInfo.resx">
       <DependentUpon>FormCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormFilterCardType.resx">
+      <DependentUpon>FormFilterCardType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
@@ -122,9 +133,6 @@
       <Project>{30D7ADD5-193B-4C32-B473-61BD5E64130A}</Project>
       <Name>Helper</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Command\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
