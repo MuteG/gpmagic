@@ -101,8 +101,6 @@ namespace GPSoft.GPMagic.GPSearch.UI
             }
         }
 
-        
-
         private void mnuAddCard_Click(object sender, EventArgs e)
         {
             ShowCardInfoForm(DataOperateType.Insert);
