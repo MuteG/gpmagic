@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using GPSoft.Helper.FileOperate;
 using GPSoft.GPMagic.GPMagic.UI;
 
 namespace GPSoft.GPMagic.MagicDemo
@@ -103,18 +104,17 @@ namespace GPSoft.GPMagic.MagicDemo
             //this.Controls.Add(oc);
             //oc.Show();
 
-            WindowPanel wp = new WindowPanel();
-            wp.Location = new Point(btnLoadCard.Left, btnLoadCard.Top + btnLoadCard.Height + 15);
-            this.Controls.Add(wp);
-            wp.Show();
-            wp.BringToFront();
+            //WindowPanel wp = new WindowPanel();
+            //wp.Location = new Point(btnLoadCard.Left, btnLoadCard.Top + btnLoadCard.Height + 15);
+            //this.Controls.Add(wp);
+            //wp.Show();
+            //wp.BringToFront();
 
-            Image img = new Bitmap((Image)this.pictureBox1.Image.Clone(), 20, 20);
-            //SmallPic(
-            countPanel1.Image = img;
-            countPanel1.Tip = "tip";
-            countPanel1.Count = 10;
-            
+            //Image img = new Bitmap((Image)this.pictureBox1.Image.Clone(), 20, 20);
+            ////SmallPic(
+            //countPanel1.Image = img;
+            //countPanel1.Tip = "tip";
+            //countPanel1.Count = 10;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

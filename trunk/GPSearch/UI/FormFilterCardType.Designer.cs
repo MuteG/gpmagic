@@ -33,6 +33,8 @@
             this.lblCardSubType = new System.Windows.Forms.Label();
             this.tbxCardSubType = new System.Windows.Forms.TextBox();
             this.btnCardSubType = new System.Windows.Forms.Button();
+            this.lblRarity = new System.Windows.Forms.Label();
+            this.cbxRarity = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // lblCardType
@@ -78,11 +80,30 @@
             this.btnCardSubType.UseVisualStyleBackColor = true;
             this.btnCardSubType.Click += new System.EventHandler(this.btnCardType_Click);
             // 
+            // lblRarity
+            // 
+            this.lblRarity.AutoSize = true;
+            this.lblRarity.Location = new System.Drawing.Point(12, 62);
+            this.lblRarity.Name = "lblRarity";
+            this.lblRarity.Size = new System.Drawing.Size(65, 12);
+            this.lblRarity.TabIndex = 5;
+            this.lblRarity.Text = "卡牌稀有度";
+            // 
+            // cbxRarity
+            // 
+            this.cbxRarity.FormattingEnabled = true;
+            this.cbxRarity.Location = new System.Drawing.Point(83, 58);
+            this.cbxRarity.Name = "cbxRarity";
+            this.cbxRarity.Size = new System.Drawing.Size(157, 20);
+            this.cbxRarity.TabIndex = 6;
+            // 
             // FormFilterCardType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(543, 394);
+            this.ClientSize = new System.Drawing.Size(253, 394);
+            this.Controls.Add(this.cbxRarity);
+            this.Controls.Add(this.lblRarity);
             this.Controls.Add(this.btnCardSubType);
             this.Controls.Add(this.tbxCardSubType);
             this.Controls.Add(this.lblCardSubType);
@@ -103,5 +124,7 @@
         private System.Windows.Forms.Label lblCardSubType;
         private System.Windows.Forms.TextBox tbxCardSubType;
         private System.Windows.Forms.Button btnCardSubType;
+        private System.Windows.Forms.Label lblRarity;
+        private System.Windows.Forms.ComboBox cbxRarity;
     }
 }
