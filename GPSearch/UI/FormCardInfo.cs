@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.IO;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
-using GPSoft.GPMagic.GPMagicBase.UI;
-using GPSoft.Helper.FunctionHelper;
-using GPSoft.Helper.FileOperate;
 using GPSoft.GPMagic.GPMagicBase.SQLite;
+using GPSoft.GPMagic.GPMagicBase.UI;
+using GPSoft.GPMagic.GPSearch.Common;
+using GPSoft.Helper.FileOperate;
+using GPSoft.Helper.FunctionHelper;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
@@ -50,11 +49,11 @@ namespace GPSoft.GPMagic.GPSearch.UI
             tableInstanceDictionary.Add(cbxExpansions.Name, new CardExpansions());
             tableInstanceDictionary.Add(cbxPainterName.Name, new CardPainter());
 
-            SetComboBoxItems(cbxRarity, true);
-            SetComboBoxItems(cbxImageType, false);
-            SetComboBoxItems(cbxCardType, true);
-            SetComboBoxItems(cbxExpansions, true);
-            SetComboBoxItems(cbxPainterName, true);
+            ComponentFiller.FillComboBoxItems(cbxRarity, tableInstanceDictionary[cbxRarity.Name], true);
+            ComponentFiller.FillComboBoxItems(cbxImageType, tableInstanceDictionary[cbxImageType.Name], false);
+            ComponentFiller.FillComboBoxItems(cbxCardType, tableInstanceDictionary[cbxCardType.Name], true);
+            ComponentFiller.FillComboBoxItems(cbxExpansions, tableInstanceDictionary[cbxExpansions.Name], true);
+            ComponentFiller.FillComboBoxItems(cbxPainterName, tableInstanceDictionary[cbxPainterName.Name], true);
 
             ttpCardInfo.SetToolTip(cbxImageType, cbxImageType.Text);
             SetComboBoxDropDownWidth(cbxImageType);
@@ -240,29 +239,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             }
             return result;
         }
-        /// <summary>
-        /// 填充指定ComboBox的内容
-        /// </summary>
-        /// <param name="cbx">要进行填充的ComboBox</param>
-        /// <param name="newItem">是否拥有“新建”功能</param>
-        private void SetComboBoxItems(ComboBox cbx, bool newItem)
-        {
-            AbstractTableInstance tableInstance = tableInstanceDictionary[cbx.Name];
-            DataTable records = tableInstance.Records;
-            if (newItem)
-            {
-                records.Rows.InsertAt(records.NewRow(), 0);
-                records.Rows[0][tableInstance.DisplayColumnName] = DataOperateTypeDisplayWrods.New;
-                records.Rows[0][tableInstance.PrimaryKeyColumnName] = 0; 
-            }
-            cbx.DataSource = records;
-            cbx.DisplayMember = tableInstance.DisplayColumnName;
-            cbx.ValueMember = tableInstance.PrimaryKeyColumnName;
-            if (newItem && records.Rows.Count > 1)
-            {
-                cbx.SelectedIndex = 1;
-            }
-        }
+
         /// <summary>
         /// 根据下拉框内容设置下拉列表显示宽度
         /// </summary>
@@ -294,7 +271,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
                     dataInstance.GetType().GetProperty(tableInstance.DisplayColumnName).SetValue(dataInstance, newValue, null);
                     tableInstance.Add(dataInstance);
                     tableInstance.Reload();
-                    SetComboBoxItems(cbx, true);
+                    ComponentFiller.FillComboBoxItems(cbx, tableInstance, true);
+                    //SetComboBoxItems(cbx, true);
                     cbx.SelectedIndex = cbx.Items.Count - 1;
                 }
             }

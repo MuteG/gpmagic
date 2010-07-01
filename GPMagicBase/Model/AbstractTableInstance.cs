@@ -175,12 +175,12 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 获得Records中指定索引行的数据封装
         /// </summary>
-        /// <param name="index">Records中的索引</param>
+        /// <param name="cardID">Records中的cardID</param>
         /// <returns>返回封装好的对象</returns>
-        public object GetDataInstance(int index)
+        public object GetDataInstance(int cardID)
         {
             object result = Activator.CreateInstance(this.DataInstanceType);
-            DataRow row = this.Records.Rows[index];
+            DataRow row = this.Records.Select(string.Format("CardID={0}", cardID))[0];
             foreach (PropertyInfo info in this.DataInstanceType.GetProperties())
             {
                 object value;

@@ -28,18 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mnuStpMain = new System.Windows.Forms.MenuStrip();
             this.mnuItemFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemNewDeck = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,21 +59,22 @@
             this.tspCardLibrary = new System.Windows.Forms.ToolStrip();
             this.tscbxLanguage = new System.Windows.Forms.ToolStripComboBox();
             this.tstbxCardName = new System.Windows.Forms.ToolStripTextBox();
+            this.tsbtnSearch = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnType = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnKeyWord = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnExpansions = new System.Windows.Forms.ToolStripButton();
+            this.tsbtnClear = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsbtnRefresh = new System.Windows.Forms.ToolStripButton();
+            this.tssbtnShowImage = new System.Windows.Forms.ToolStripSplitButton();
+            this.tsmItemImage = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmItemText = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmItemInfoImage = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmItemFAQ = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlNameList = new System.Windows.Forms.Panel();
             this.dgxDeck = new System.Windows.Forms.GroupBox();
             this.dgvCardList = new System.Windows.Forms.DataGridView();
-            this.dgvColExpansions = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColCNName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColENName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColSubType = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColAbilities = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColPower = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColToughness = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvDeckList = new System.Windows.Forms.DataGridView();
             this.colDCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDSymbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,17 +86,17 @@
             this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.tsbtnSearch = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnType = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnKeyWord = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnExpansions = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnClear = new System.Windows.Forms.ToolStripButton();
-            this.tsbtnRefresh = new System.Windows.Forms.ToolStripButton();
-            this.tssbtnShowImage = new System.Windows.Forms.ToolStripSplitButton();
-            this.tsmItemImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmItemText = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmItemInfoImage = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmItemFAQ = new System.Windows.Forms.ToolStripMenuItem();
+            this.dgvColExpansions = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColCNName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColENName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColSubType = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColAbilities = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColPower = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColToughness = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvColCardID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mnuStpMain.SuspendLayout();
             this.gbxCardLibrary.SuspendLayout();
             this.tspCardLibrary.SuspendLayout();
@@ -273,15 +274,117 @@
             this.tstbxCardName.Name = "tstbxCardName";
             this.tstbxCardName.Size = new System.Drawing.Size(100, 25);
             // 
+            // tsbtnSearch
+            // 
+            this.tsbtnSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnSearch.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSearch.Image")));
+            this.tsbtnSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnSearch.Name = "tsbtnSearch";
+            this.tsbtnSearch.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnSearch.Text = "根据名称搜索";
+            this.tsbtnSearch.ToolTipText = "根据名称搜索";
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
             // 
+            // tsbtnType
+            // 
+            this.tsbtnType.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnType.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.type;
+            this.tsbtnType.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnType.Name = "tsbtnType";
+            this.tsbtnType.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnType.Text = "卡牌类别过滤";
+            this.tsbtnType.ToolTipText = "卡牌类别过滤";
+            this.tsbtnType.Click += new System.EventHandler(this.tsbtnType_Click);
+            // 
+            // tsbtnKeyWord
+            // 
+            this.tsbtnKeyWord.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnKeyWord.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.key;
+            this.tsbtnKeyWord.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnKeyWord.Name = "tsbtnKeyWord";
+            this.tsbtnKeyWord.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnKeyWord.Text = "卡牌关键字过滤";
+            this.tsbtnKeyWord.ToolTipText = "卡牌关键字过滤";
+            // 
+            // tsbtnExpansions
+            // 
+            this.tsbtnExpansions.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnExpansions.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.expansions;
+            this.tsbtnExpansions.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnExpansions.Name = "tsbtnExpansions";
+            this.tsbtnExpansions.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnExpansions.Text = "卡牌系列过滤";
+            this.tsbtnExpansions.ToolTipText = "卡牌系列过滤";
+            // 
+            // tsbtnClear
+            // 
+            this.tsbtnClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnClear.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.clear;
+            this.tsbtnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnClear.Name = "tsbtnClear";
+            this.tsbtnClear.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnClear.Text = "取消所有过滤条件";
+            this.tsbtnClear.ToolTipText = "取消所有过滤条件";
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // tsbtnRefresh
+            // 
+            this.tsbtnRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnRefresh.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.refresh;
+            this.tsbtnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnRefresh.Name = "tsbtnRefresh";
+            this.tsbtnRefresh.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnRefresh.Text = "刷新列表";
+            this.tsbtnRefresh.Click += new System.EventHandler(this.tsbtnRefresh_Click);
+            // 
+            // tssbtnShowImage
+            // 
+            this.tssbtnShowImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tssbtnShowImage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmItemImage,
+            this.tsmItemText,
+            this.tsmItemInfoImage,
+            this.tsmItemFAQ});
+            this.tssbtnShowImage.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.picture;
+            this.tssbtnShowImage.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tssbtnShowImage.Name = "tssbtnShowImage";
+            this.tssbtnShowImage.Size = new System.Drawing.Size(32, 22);
+            this.tssbtnShowImage.Text = "显示卡牌图片";
+            this.tssbtnShowImage.ToolTipText = "显示卡牌图片";
+            // 
+            // tsmItemImage
+            // 
+            this.tsmItemImage.CheckOnClick = true;
+            this.tsmItemImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.tsmItemImage.Name = "tsmItemImage";
+            this.tsmItemImage.Size = new System.Drawing.Size(166, 22);
+            this.tsmItemImage.Text = "展示图片";
+            // 
+            // tsmItemText
+            // 
+            this.tsmItemText.Name = "tsmItemText";
+            this.tsmItemText.Size = new System.Drawing.Size(166, 22);
+            this.tsmItemText.Text = "纯文字描述";
+            // 
+            // tsmItemInfoImage
+            // 
+            this.tsmItemInfoImage.Name = "tsmItemInfoImage";
+            this.tsmItemInfoImage.Size = new System.Drawing.Size(166, 22);
+            this.tsmItemInfoImage.Text = "根据信息生成图片";
+            // 
+            // tsmItemFAQ
+            // 
+            this.tsmItemFAQ.Name = "tsmItemFAQ";
+            this.tsmItemFAQ.Size = new System.Drawing.Size(166, 22);
+            this.tsmItemFAQ.Text = "FAQ";
             // 
             // pnlNameList
             // 
@@ -332,7 +435,8 @@
             this.dgvColCost,
             this.dgvColPower,
             this.dgvColToughness,
-            this.dgvColPrice});
+            this.dgvColPrice,
+            this.dgvColCardID});
             this.dgvCardList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvCardList.Location = new System.Drawing.Point(0, 0);
             this.dgvCardList.Name = "dgvCardList";
@@ -350,81 +454,6 @@
             this.dgvCardList.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCardList_CellMouseDown);
             this.dgvCardList.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCardList_CellMouseEnter);
             this.dgvCardList.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCardList_CellMouseDoubleClick);
-            // 
-            // dgvColExpansions
-            // 
-            this.dgvColExpansions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColExpansions.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvColExpansions.Frozen = true;
-            this.dgvColExpansions.HeaderText = "系列";
-            this.dgvColExpansions.Name = "dgvColExpansions";
-            this.dgvColExpansions.ReadOnly = true;
-            this.dgvColExpansions.Width = 40;
-            // 
-            // dgvColCNName
-            // 
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColCNName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvColCNName.HeaderText = "中文名";
-            this.dgvColCNName.Name = "dgvColCNName";
-            this.dgvColCNName.ReadOnly = true;
-            this.dgvColCNName.Width = 120;
-            // 
-            // dgvColENName
-            // 
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColENName.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvColENName.HeaderText = "英文名";
-            this.dgvColENName.Name = "dgvColENName";
-            this.dgvColENName.ReadOnly = true;
-            this.dgvColENName.Width = 150;
-            // 
-            // dgvColType
-            // 
-            this.dgvColType.HeaderText = "类别";
-            this.dgvColType.Name = "dgvColType";
-            this.dgvColType.ReadOnly = true;
-            this.dgvColType.Width = 80;
-            // 
-            // dgvColSubType
-            // 
-            this.dgvColSubType.HeaderText = "子类别";
-            this.dgvColSubType.Name = "dgvColSubType";
-            this.dgvColSubType.ReadOnly = true;
-            // 
-            // dgvColAbilities
-            // 
-            this.dgvColAbilities.HeaderText = "异能";
-            this.dgvColAbilities.Name = "dgvColAbilities";
-            this.dgvColAbilities.ReadOnly = true;
-            // 
-            // dgvColCost
-            // 
-            this.dgvColCost.HeaderText = "费用";
-            this.dgvColCost.Name = "dgvColCost";
-            this.dgvColCost.ReadOnly = true;
-            // 
-            // dgvColPower
-            // 
-            this.dgvColPower.HeaderText = "攻击";
-            this.dgvColPower.Name = "dgvColPower";
-            this.dgvColPower.ReadOnly = true;
-            this.dgvColPower.Width = 40;
-            // 
-            // dgvColToughness
-            // 
-            this.dgvColToughness.HeaderText = "防御";
-            this.dgvColToughness.Name = "dgvColToughness";
-            this.dgvColToughness.ReadOnly = true;
-            this.dgvColToughness.Width = 40;
-            // 
-            // dgvColPrice
-            // 
-            this.dgvColPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvColPrice.HeaderText = "参考价格";
-            this.dgvColPrice.Name = "dgvColPrice";
-            this.dgvColPrice.ReadOnly = true;
             // 
             // dgvDeckList
             // 
@@ -559,106 +588,87 @@
             this.splitContainer1.SplitterDistance = 544;
             this.splitContainer1.TabIndex = 1;
             // 
-            // tsbtnSearch
+            // dgvColExpansions
             // 
-            this.tsbtnSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnSearch.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnSearch.Image")));
-            this.tsbtnSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnSearch.Name = "tsbtnSearch";
-            this.tsbtnSearch.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnSearch.Text = "根据名称搜索";
-            this.tsbtnSearch.ToolTipText = "根据名称搜索";
+            this.dgvColExpansions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColExpansions.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvColExpansions.Frozen = true;
+            this.dgvColExpansions.HeaderText = "系列";
+            this.dgvColExpansions.Name = "dgvColExpansions";
+            this.dgvColExpansions.ReadOnly = true;
+            this.dgvColExpansions.Width = 40;
             // 
-            // tsbtnType
+            // dgvColCNName
             // 
-            this.tsbtnType.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnType.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.type;
-            this.tsbtnType.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnType.Name = "tsbtnType";
-            this.tsbtnType.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnType.Text = "卡牌类别过滤";
-            this.tsbtnType.ToolTipText = "卡牌类别过滤";
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColCNName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvColCNName.HeaderText = "中文名";
+            this.dgvColCNName.Name = "dgvColCNName";
+            this.dgvColCNName.ReadOnly = true;
+            this.dgvColCNName.Width = 120;
             // 
-            // tsbtnKeyWord
+            // dgvColENName
             // 
-            this.tsbtnKeyWord.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnKeyWord.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.key;
-            this.tsbtnKeyWord.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnKeyWord.Name = "tsbtnKeyWord";
-            this.tsbtnKeyWord.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnKeyWord.Text = "卡牌关键字过滤";
-            this.tsbtnKeyWord.ToolTipText = "卡牌关键字过滤";
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColENName.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvColENName.HeaderText = "英文名";
+            this.dgvColENName.Name = "dgvColENName";
+            this.dgvColENName.ReadOnly = true;
+            this.dgvColENName.Width = 150;
             // 
-            // tsbtnExpansions
+            // dgvColType
             // 
-            this.tsbtnExpansions.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnExpansions.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.expansions;
-            this.tsbtnExpansions.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnExpansions.Name = "tsbtnExpansions";
-            this.tsbtnExpansions.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnExpansions.Text = "卡牌系列过滤";
-            this.tsbtnExpansions.ToolTipText = "卡牌系列过滤";
+            this.dgvColType.HeaderText = "类别";
+            this.dgvColType.Name = "dgvColType";
+            this.dgvColType.ReadOnly = true;
+            this.dgvColType.Width = 80;
             // 
-            // tsbtnClear
+            // dgvColSubType
             // 
-            this.tsbtnClear.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnClear.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.clear;
-            this.tsbtnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnClear.Name = "tsbtnClear";
-            this.tsbtnClear.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnClear.Text = "取消所有过滤条件";
-            this.tsbtnClear.ToolTipText = "取消所有过滤条件";
+            this.dgvColSubType.HeaderText = "子类别";
+            this.dgvColSubType.Name = "dgvColSubType";
+            this.dgvColSubType.ReadOnly = true;
             // 
-            // tsbtnRefresh
+            // dgvColAbilities
             // 
-            this.tsbtnRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnRefresh.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.refresh;
-            this.tsbtnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tsbtnRefresh.Name = "tsbtnRefresh";
-            this.tsbtnRefresh.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnRefresh.Text = "刷新列表";
-            this.tsbtnRefresh.Click += new System.EventHandler(this.tsbtnRefresh_Click);
+            this.dgvColAbilities.HeaderText = "异能";
+            this.dgvColAbilities.Name = "dgvColAbilities";
+            this.dgvColAbilities.ReadOnly = true;
             // 
-            // tssbtnShowImage
+            // dgvColCost
             // 
-            this.tssbtnShowImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tssbtnShowImage.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmItemImage,
-            this.tsmItemText,
-            this.tsmItemInfoImage,
-            this.tsmItemFAQ});
-            this.tssbtnShowImage.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.picture;
-            this.tssbtnShowImage.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tssbtnShowImage.Name = "tssbtnShowImage";
-            this.tssbtnShowImage.Size = new System.Drawing.Size(32, 22);
-            this.tssbtnShowImage.Text = "显示卡牌图片";
-            this.tssbtnShowImage.ToolTipText = "显示卡牌图片";
+            this.dgvColCost.HeaderText = "费用";
+            this.dgvColCost.Name = "dgvColCost";
+            this.dgvColCost.ReadOnly = true;
             // 
-            // tsmItemImage
+            // dgvColPower
             // 
-            this.tsmItemImage.CheckOnClick = true;
-            this.tsmItemImage.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.tsmItemImage.Name = "tsmItemImage";
-            this.tsmItemImage.Size = new System.Drawing.Size(166, 22);
-            this.tsmItemImage.Text = "展示图片";
+            this.dgvColPower.HeaderText = "攻击";
+            this.dgvColPower.Name = "dgvColPower";
+            this.dgvColPower.ReadOnly = true;
+            this.dgvColPower.Width = 40;
             // 
-            // tsmItemText
+            // dgvColToughness
             // 
-            this.tsmItemText.Name = "tsmItemText";
-            this.tsmItemText.Size = new System.Drawing.Size(166, 22);
-            this.tsmItemText.Text = "纯文字描述";
+            this.dgvColToughness.HeaderText = "防御";
+            this.dgvColToughness.Name = "dgvColToughness";
+            this.dgvColToughness.ReadOnly = true;
+            this.dgvColToughness.Width = 40;
             // 
-            // tsmItemInfoImage
+            // dgvColPrice
             // 
-            this.tsmItemInfoImage.Name = "tsmItemInfoImage";
-            this.tsmItemInfoImage.Size = new System.Drawing.Size(166, 22);
-            this.tsmItemInfoImage.Text = "根据信息生成图片";
+            this.dgvColPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvColPrice.HeaderText = "参考价格";
+            this.dgvColPrice.Name = "dgvColPrice";
+            this.dgvColPrice.ReadOnly = true;
             // 
-            // tsmItemFAQ
+            // dgvColCardID
             // 
-            this.tsmItemFAQ.Name = "tsmItemFAQ";
-            this.tsmItemFAQ.Size = new System.Drawing.Size(166, 22);
-            this.tsmItemFAQ.Text = "FAQ";
+            this.dgvColCardID.HeaderText = "CardID";
+            this.dgvColCardID.Name = "dgvColCardID";
+            this.dgvColCardID.ReadOnly = true;
+            this.dgvColCardID.Visible = false;
             // 
             // FormMain
             // 
@@ -722,16 +732,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colDSymbol;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDCardName;
         private System.Windows.Forms.DataGridViewImageColumn colDCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColExpansions;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCNName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColENName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColSubType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColAbilities;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColPower;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColToughness;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColPrice;
         private System.Windows.Forms.GroupBox dgxDeck;
         private System.Windows.Forms.ToolStrip tspCardLibrary;
         private System.Windows.Forms.ToolStripButton tsbtnType;
@@ -752,6 +752,17 @@
         private System.Windows.Forms.ToolStripMenuItem 卡牌类别ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 卡牌异能ToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton tsbtnSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColExpansions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCNName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColENName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColSubType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColAbilities;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColPower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColToughness;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCardID;
     }
 }
 

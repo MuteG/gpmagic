@@ -3,11 +3,6 @@ E:\WorkSpace\CSharp\GPMagic\Helper\bin\Debug\Helper.pdb
 E:\WorkSpace\CSharp\GPMagic\Helper\obj\Debug\ResolveAssemblyReference.cache
 E:\WorkSpace\CSharp\GPMagic\Helper\obj\Debug\Helper.dll
 E:\WorkSpace\CSharp\GPMagic\Helper\obj\Debug\Helper.pdb
-D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\Helper\bin\Debug\Helper.dll
-D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\Helper\bin\Debug\Helper.pdb
-D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\Helper\obj\Debug\ResolveAssemblyReference.cache
-D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\Helper\obj\Debug\Helper.dll
-D:\WORK\WorkSpace\CSharp\DEMO\gpmagic\Helper\obj\Debug\Helper.pdb
 E:\Work\wordspace\CSharp\GPMagicGoogleCode\Helper\bin\Debug\Helper.dll
 E:\Work\wordspace\CSharp\GPMagicGoogleCode\Helper\bin\Debug\Helper.pdb
 E:\Work\wordspace\CSharp\GPMagicGoogleCode\Helper\obj\Debug\ResolveAssemblyReference.cache

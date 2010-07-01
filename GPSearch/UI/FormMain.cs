@@ -6,12 +6,16 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPSearch.Model;
 using GPSoft.GPMagic.GPMagicBase.UI;
+using GPSoft.GPMagic.GPSearch.Common;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormMain : Form
     {
+        private TotalCardFilter totalCardsFilter = new TotalCardFilter();
+
         private FormCardInfo frmInfo = null;
         /// <summary>
         /// 获取卡牌详细信息窗口实例
@@ -31,6 +35,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 return frmInfo;
             }
         }
+        
         private CardLibrary cards = new CardLibrary();
         /// <summary>
         /// 获取卡牌一览对象
@@ -72,7 +77,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             if (cards.Count > 0)
             {
                 dgvCardList.Rows.Clear();
-                foreach (DataRow cardRow in cards.Records.Rows)
+                foreach (DataRow cardRow in this.totalCardsFilter.Filter(cards.Records))
                 {
                     int rarity = Convert.ToInt32(cardRow["Rarity"]);
                     int newRowIndex = dgvCardList.Rows.Add(
@@ -85,7 +90,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
                         cardRow["ManaCost"].ToString(),
                         cardRow["Power"].ToString(),
                         cardRow["Toughness"].ToString(),
-                        cardRow["CardPrice"].ToString()
+                        cardRow["CardPrice"].ToString(),
+                        cardRow["CardID"]
                         );
                     if (rarity > 1)
                     {
@@ -161,7 +167,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void dgvCardList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            ListCardTotal card = (ListCardTotal)cards.GetDataInstance(e.RowIndex);
+            int cardID = Convert.ToInt32(dgvCardList.Rows[e.RowIndex].Cells[dgvCardList.Columns.Count - 1].Value);
+            ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
             FrmInfo.Owner = this;
             FrmInfo.ShowCardInfo(card);
             ShowCardInfoForm(DataOperateType.Update);
@@ -184,7 +191,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
                     index--;
                 }
                 SelectRowAtIndex(index);
-                ListCardTotal card = (ListCardTotal)cards.GetDataInstance(index);
+                int cardID = Convert.ToInt32(dgvCardList.Rows[index].Cells[dgvCardList.Columns.Count - 1].Value);
+                ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
                 FrmInfo.ShowCardInfo(card);
             }
         }
@@ -205,7 +213,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
                     index++;
                 }
                 SelectRowAtIndex(index);
-                ListCardTotal card = (ListCardTotal)cards.GetDataInstance(index);
+                int cardID = Convert.ToInt32(dgvCardList.Rows[index].Cells[dgvCardList.Columns.Count - 1].Value);
+                ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
                 FrmInfo.ShowCardInfo(card);
             }
         }
@@ -231,6 +240,12 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 row.Selected = false;
             }
             dgvCardList.Rows[index].Selected = true;
+        }
+
+        private void tsbtnType_Click(object sender, EventArgs e)
+        {
+            this.totalCardsFilter.SetCardType();
+            RefreshTotalCardsGrid();
         }
     }
 }
