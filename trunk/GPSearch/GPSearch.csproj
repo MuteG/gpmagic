@@ -49,6 +49,12 @@
     <Compile Include="UI\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FormAddExpansions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormAddExpansions.Designer.cs">
+      <DependentUpon>FormAddExpansions.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FormCardInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +66,30 @@
     </Compile>
     <Compile Include="UI\FormFilterCardType.Designer.cs">
       <DependentUpon>FormFilterCardType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormFilterExpansions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormFilterExpansions.Designer.cs">
+      <DependentUpon>FormFilterExpansions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormFilterKeyWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormFilterKeyWord.Designer.cs">
+      <DependentUpon>FormFilterKeyWord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormImportCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormImportCards.Designer.cs">
+      <DependentUpon>FormImportCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormImportCardsSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormImportCardsSetting.Designer.cs">
+      <DependentUpon>FormImportCardsSetting.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FormMain.cs">
       <SubType>Form</SubType>
@@ -78,11 +108,17 @@
     <EmbeddedResource Include="UI\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormAddExpansions.resx">
+      <DependentUpon>FormAddExpansions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FormCardInfo.resx">
       <DependentUpon>FormCardInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormFilterCardType.resx">
       <DependentUpon>FormFilterCardType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormImportCards.resx">
+      <DependentUpon>FormImportCards.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>

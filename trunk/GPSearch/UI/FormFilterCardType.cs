@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPMagicBase.UI;
 using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.UI;
 using GPSoft.GPMagic.GPSearch.Common;
 
 namespace GPSoft.GPMagic.GPSearch.UI

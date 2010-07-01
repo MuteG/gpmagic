@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mnuStpMain = new System.Windows.Forms.MenuStrip();
             this.mnuItemFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemNewDeck = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,17 +75,6 @@
             this.pnlNameList = new System.Windows.Forms.Panel();
             this.dgxDeck = new System.Windows.Forms.GroupBox();
             this.dgvCardList = new System.Windows.Forms.DataGridView();
-            this.dgvDeckList = new System.Windows.Forms.DataGridView();
-            this.colDCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDSymbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDCardName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDCost = new System.Windows.Forms.DataGridViewImageColumn();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.dgvColExpansions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColCNName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColENName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,6 +86,17 @@
             this.dgvColToughness = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColCardID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDeckList = new System.Windows.Forms.DataGridView();
+            this.colDCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDSymbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDCardName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDCost = new System.Windows.Forms.DataGridViewImageColumn();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.mnuStpMain.SuspendLayout();
             this.gbxCardLibrary.SuspendLayout();
             this.tspCardLibrary.SuspendLayout();
@@ -118,6 +118,7 @@
             this.mnuItemHelp});
             this.mnuStpMain.Location = new System.Drawing.Point(0, 0);
             this.mnuStpMain.Name = "mnuStpMain";
+            this.mnuStpMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
             this.mnuStpMain.Size = new System.Drawing.Size(847, 24);
             this.mnuStpMain.TabIndex = 0;
             this.mnuStpMain.Text = "menuStrip1";
@@ -241,6 +242,7 @@
             // 
             this.tspCardLibrary.Dock = System.Windows.Forms.DockStyle.None;
             this.tspCardLibrary.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tspCardLibrary.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.tspCardLibrary.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tscbxLanguage,
             this.tstbxCardName,
@@ -256,7 +258,7 @@
             this.tspCardLibrary.Location = new System.Drawing.Point(6, 13);
             this.tspCardLibrary.Name = "tspCardLibrary";
             this.tspCardLibrary.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.tspCardLibrary.Size = new System.Drawing.Size(419, 25);
+            this.tspCardLibrary.Size = new System.Drawing.Size(410, 25);
             this.tspCardLibrary.TabIndex = 4;
             this.tspCardLibrary.Text = "toolStrip1";
             // 
@@ -411,19 +413,19 @@
             this.dgvCardList.AllowUserToAddRows = false;
             this.dgvCardList.AllowUserToDeleteRows = false;
             this.dgvCardList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCardList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCardList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvCardList.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCardList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCardList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgvCardList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCardList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvColExpansions,
@@ -442,10 +444,10 @@
             this.dgvCardList.Name = "dgvCardList";
             this.dgvCardList.ReadOnly = true;
             this.dgvCardList.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCardList.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCardList.RowsDefaultCellStyle = dataGridViewCellStyle17;
             this.dgvCardList.RowTemplate.Height = 20;
             this.dgvCardList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCardList.Size = new System.Drawing.Size(544, 403);
@@ -455,23 +457,105 @@
             this.dgvCardList.CellMouseEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCardList_CellMouseEnter);
             this.dgvCardList.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCardList_CellMouseDoubleClick);
             // 
+            // dgvColExpansions
+            // 
+            this.dgvColExpansions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColExpansions.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dgvColExpansions.Frozen = true;
+            this.dgvColExpansions.HeaderText = "系列";
+            this.dgvColExpansions.Name = "dgvColExpansions";
+            this.dgvColExpansions.ReadOnly = true;
+            this.dgvColExpansions.Width = 40;
+            // 
+            // dgvColCNName
+            // 
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColCNName.DefaultCellStyle = dataGridViewCellStyle15;
+            this.dgvColCNName.HeaderText = "中文名";
+            this.dgvColCNName.Name = "dgvColCNName";
+            this.dgvColCNName.ReadOnly = true;
+            this.dgvColCNName.Width = 120;
+            // 
+            // dgvColENName
+            // 
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColENName.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dgvColENName.HeaderText = "英文名";
+            this.dgvColENName.Name = "dgvColENName";
+            this.dgvColENName.ReadOnly = true;
+            this.dgvColENName.Width = 150;
+            // 
+            // dgvColType
+            // 
+            this.dgvColType.HeaderText = "类别";
+            this.dgvColType.Name = "dgvColType";
+            this.dgvColType.ReadOnly = true;
+            this.dgvColType.Width = 80;
+            // 
+            // dgvColSubType
+            // 
+            this.dgvColSubType.HeaderText = "子类别";
+            this.dgvColSubType.Name = "dgvColSubType";
+            this.dgvColSubType.ReadOnly = true;
+            // 
+            // dgvColAbilities
+            // 
+            this.dgvColAbilities.HeaderText = "异能";
+            this.dgvColAbilities.Name = "dgvColAbilities";
+            this.dgvColAbilities.ReadOnly = true;
+            // 
+            // dgvColCost
+            // 
+            this.dgvColCost.HeaderText = "费用";
+            this.dgvColCost.Name = "dgvColCost";
+            this.dgvColCost.ReadOnly = true;
+            // 
+            // dgvColPower
+            // 
+            this.dgvColPower.HeaderText = "攻击";
+            this.dgvColPower.Name = "dgvColPower";
+            this.dgvColPower.ReadOnly = true;
+            this.dgvColPower.Width = 40;
+            // 
+            // dgvColToughness
+            // 
+            this.dgvColToughness.HeaderText = "防御";
+            this.dgvColToughness.Name = "dgvColToughness";
+            this.dgvColToughness.ReadOnly = true;
+            this.dgvColToughness.Width = 40;
+            // 
+            // dgvColPrice
+            // 
+            this.dgvColPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvColPrice.HeaderText = "参考价格";
+            this.dgvColPrice.Name = "dgvColPrice";
+            this.dgvColPrice.ReadOnly = true;
+            // 
+            // dgvColCardID
+            // 
+            this.dgvColCardID.HeaderText = "CardID";
+            this.dgvColCardID.Name = "dgvColCardID";
+            this.dgvColCardID.ReadOnly = true;
+            this.dgvColCardID.Visible = false;
+            // 
             // dgvDeckList
             // 
             this.dgvDeckList.AllowDrop = true;
             this.dgvDeckList.AllowUserToAddRows = false;
             this.dgvDeckList.AllowUserToDeleteRows = false;
             this.dgvDeckList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Lavender;
-            this.dgvDeckList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Lavender;
+            this.dgvDeckList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
             this.dgvDeckList.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDeckList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDeckList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dgvDeckList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDeckList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDCount,
@@ -483,8 +567,8 @@
             this.dgvDeckList.Name = "dgvDeckList";
             this.dgvDeckList.ReadOnly = true;
             this.dgvDeckList.RowHeadersVisible = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            this.dgvDeckList.RowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
+            this.dgvDeckList.RowsDefaultCellStyle = dataGridViewCellStyle22;
             this.dgvDeckList.RowTemplate.Height = 23;
             this.dgvDeckList.Size = new System.Drawing.Size(299, 403);
             this.dgvDeckList.TabIndex = 0;
@@ -493,8 +577,8 @@
             // 
             // colDCount
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colDCount.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colDCount.DefaultCellStyle = dataGridViewCellStyle20;
             this.colDCount.HeaderText = "数量";
             this.colDCount.Name = "colDCount";
             this.colDCount.ReadOnly = true;
@@ -523,9 +607,9 @@
             // colDCost
             // 
             this.colDCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle10.NullValue")));
-            this.colDCost.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle21.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle21.NullValue")));
+            this.colDCost.DefaultCellStyle = dataGridViewCellStyle21;
             this.colDCost.HeaderText = "费用";
             this.colDCost.Name = "colDCost";
             this.colDCost.ReadOnly = true;
@@ -587,88 +671,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(847, 403);
             this.splitContainer1.SplitterDistance = 544;
             this.splitContainer1.TabIndex = 1;
-            // 
-            // dgvColExpansions
-            // 
-            this.dgvColExpansions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColExpansions.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvColExpansions.Frozen = true;
-            this.dgvColExpansions.HeaderText = "系列";
-            this.dgvColExpansions.Name = "dgvColExpansions";
-            this.dgvColExpansions.ReadOnly = true;
-            this.dgvColExpansions.Width = 40;
-            // 
-            // dgvColCNName
-            // 
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColCNName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvColCNName.HeaderText = "中文名";
-            this.dgvColCNName.Name = "dgvColCNName";
-            this.dgvColCNName.ReadOnly = true;
-            this.dgvColCNName.Width = 120;
-            // 
-            // dgvColENName
-            // 
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColENName.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvColENName.HeaderText = "英文名";
-            this.dgvColENName.Name = "dgvColENName";
-            this.dgvColENName.ReadOnly = true;
-            this.dgvColENName.Width = 150;
-            // 
-            // dgvColType
-            // 
-            this.dgvColType.HeaderText = "类别";
-            this.dgvColType.Name = "dgvColType";
-            this.dgvColType.ReadOnly = true;
-            this.dgvColType.Width = 80;
-            // 
-            // dgvColSubType
-            // 
-            this.dgvColSubType.HeaderText = "子类别";
-            this.dgvColSubType.Name = "dgvColSubType";
-            this.dgvColSubType.ReadOnly = true;
-            // 
-            // dgvColAbilities
-            // 
-            this.dgvColAbilities.HeaderText = "异能";
-            this.dgvColAbilities.Name = "dgvColAbilities";
-            this.dgvColAbilities.ReadOnly = true;
-            // 
-            // dgvColCost
-            // 
-            this.dgvColCost.HeaderText = "费用";
-            this.dgvColCost.Name = "dgvColCost";
-            this.dgvColCost.ReadOnly = true;
-            // 
-            // dgvColPower
-            // 
-            this.dgvColPower.HeaderText = "攻击";
-            this.dgvColPower.Name = "dgvColPower";
-            this.dgvColPower.ReadOnly = true;
-            this.dgvColPower.Width = 40;
-            // 
-            // dgvColToughness
-            // 
-            this.dgvColToughness.HeaderText = "防御";
-            this.dgvColToughness.Name = "dgvColToughness";
-            this.dgvColToughness.ReadOnly = true;
-            this.dgvColToughness.Width = 40;
-            // 
-            // dgvColPrice
-            // 
-            this.dgvColPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvColPrice.HeaderText = "参考价格";
-            this.dgvColPrice.Name = "dgvColPrice";
-            this.dgvColPrice.ReadOnly = true;
-            // 
-            // dgvColCardID
-            // 
-            this.dgvColCardID.HeaderText = "CardID";
-            this.dgvColCardID.Name = "dgvColCardID";
-            this.dgvColCardID.ReadOnly = true;
-            this.dgvColCardID.Visible = false;
             // 
             // FormMain
             // 
