@@ -39,8 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Command\Filter.cs" />
-    <Compile Include="Command\IFilterable.cs" />
+    <Compile Include="Common\CommonHelper.cs" />
+    <Compile Include="Common\ComponentFiller.cs" />
+    <Compile Include="Common\TotalCardFilter.cs" />
+    <Compile Include="Model\IFilterable.cs" />
     <Compile Include="UI\AboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +135,9 @@
       <Project>{30D7ADD5-193B-4C32-B473-61BD5E64130A}</Project>
       <Name>Helper</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Filter\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
