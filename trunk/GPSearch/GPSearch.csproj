@@ -120,6 +120,9 @@
     <EmbeddedResource Include="UI\FormImportCards.resx">
       <DependentUpon>FormImportCards.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormImportCardsSetting.resx">
+      <DependentUpon>FormImportCardsSetting.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FormMain.resx">
       <DependentUpon>FormMain.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -149,12 +152,85 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="0119_MTGWWK_CS_LR.jpg" />
+    <None Include="Resources\%2800,12%29.png" />
+    <None Include="Resources\%2839,05%29.png" />
+    <None Include="Resources\%2842,00%29.png" />
+    <None Include="Resources\%2839,17%29.png" />
+    <None Include="Resources\%2838,27%29.png" />
+    <None Include="Resources\%2842,02%29.png" />
+    <None Include="Resources\%2831,07%29.png" />
+    <None Include="Resources\%2831,05%29.png" />
+    <None Include="Resources\%2816,01%29.png" />
+    <None Include="Resources\%2815,01%29.png" />
+    <None Include="Resources\%2813,12%29.png" />
+    <None Include="Resources\%2832,03%29.png" />
+    <None Include="Resources\ImportTableDemo.png" />
+    <None Include="Resources\ImportInfoListDemo.png" />
+    <None Include="Resources\stop-2.png" />
+    <None Include="Resources\spelling.png" />
+    <None Include="Resources\settings.png" />
+    <None Include="Resources\select color.png" />
+    <None Include="Resources\searchnext.png" />
+    <None Include="Resources\screen.png" />
+    <None Include="Resources\ruler-2.png" />
+    <None Include="Resources\ruler.png" />
+    <None Include="Resources\report.png" />
+    <None Include="Resources\repeat.png" />
+    <None Include="Resources\record.png" />
+    <None Include="Resources\plus_over.png" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\percent.png" />
+    <None Include="Resources\pencil tool.png" />
+    <None Include="Resources\pen tool.png" />
+    <None Include="Resources\ok.png" />
+    <None Include="Resources\key.png" />
+    <None Include="Resources\insert bitmap.png" />
+    <None Include="Resources\idcard.png" />
+    <None Include="Resources\hand point.png" />
+    <None Include="Resources\hammer.png" />
+    <None Include="Resources\frame.png" />
+    <None Include="Resources\flag red.png" />
+    <None Include="Resources\flag green.png" />
+    <None Include="Resources\flag blue.png" />
+    <None Include="Resources\find.png" />
+    <None Include="Resources\filter-2.png" />
+    <None Include="Resources\file new 2.png" />
+    <None Include="Resources\favs.png" />
+    <None Include="Resources\execute.png" />
+    <None Include="Resources\db refresh.png" />
+    <None Include="Resources\db previous.png" />
+    <None Include="Resources\db post.png" />
+    <None Include="Resources\db next.png" />
+    <None Include="Resources\db last.png" />
+    <None Include="Resources\db insert.png" />
+    <None Include="Resources\db first.png" />
+    <None Include="Resources\db edit.png" />
+    <None Include="Resources\db delete.png" />
+    <None Include="Resources\db cancel.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\database security.png" />
+    <None Include="Resources\database remove.png" />
+    <None Include="Resources\database open.png" />
+    <None Include="Resources\database import.png" />
+    <None Include="Resources\database close.png" />
+    <None Include="Resources\database add.png" />
+    <None Include="Resources\copy plus.png" />
+    <None Include="Resources\contents.png" />
+    <None Include="Resources\configure.png" />
+    <None Include="Resources\cog.png" />
+    <None Include="Resources\clock-2.png" />
+    <None Include="Resources\binoculars replace.png" />
+    <None Include="Resources\barcode.png" />
+    <None Include="Resources\bar chart.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\plus.ico" />
+    <None Include="Resources\pencil tool.ico" />
     <None Include="Resources\refresh.png" />
     <None Include="Resources\picture.png" />
     <None Include="Resources\clear.png" />
     <None Include="Resources\type.png" />
     <None Include="Resources\roll.png" />
-    <None Include="Resources\key.png" />
     <None Include="Resources\graph.png" />
     <None Include="Resources\experiment.png" />
     <None Include="Resources\expansions.png" />

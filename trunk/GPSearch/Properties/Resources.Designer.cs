@@ -60,6 +60,55 @@ namespace GPSoft.GPMagic.GPSearch.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap _38_27_ {
+            get {
+                object obj = ResourceManager.GetObject("_38_27_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap _42_02_ {
+            get {
+                object obj = ResourceManager.GetObject("_42_02_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Add {
+            get {
+                object obj = ResourceManager.GetObject("Add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap back {
+            get {
+                object obj = ResourceManager.GetObject("back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap bar_chart {
+            get {
+                object obj = ResourceManager.GetObject("bar_chart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap barcode {
+            get {
+                object obj = ResourceManager.GetObject("barcode", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap binoculars_replace {
+            get {
+                object obj = ResourceManager.GetObject("binoculars_replace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap cardDemo {
             get {
                 object obj = ResourceManager.GetObject("cardDemo", resourceCulture);
@@ -74,6 +123,139 @@ namespace GPSoft.GPMagic.GPSearch.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap clock_2 {
+            get {
+                object obj = ResourceManager.GetObject("clock_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap cog {
+            get {
+                object obj = ResourceManager.GetObject("cog", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap configure {
+            get {
+                object obj = ResourceManager.GetObject("configure", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap contents {
+            get {
+                object obj = ResourceManager.GetObject("contents", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap copy_plus {
+            get {
+                object obj = ResourceManager.GetObject("copy_plus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap database {
+            get {
+                object obj = ResourceManager.GetObject("database", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap database_add {
+            get {
+                object obj = ResourceManager.GetObject("database_add", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap database_close {
+            get {
+                object obj = ResourceManager.GetObject("database_close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap database_import {
+            get {
+                object obj = ResourceManager.GetObject("database_import", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap database_open {
+            get {
+                object obj = ResourceManager.GetObject("database_open", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap database_remove {
+            get {
+                object obj = ResourceManager.GetObject("database_remove", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap database_security {
+            get {
+                object obj = ResourceManager.GetObject("database_security", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap db_cancel {
+            get {
+                object obj = ResourceManager.GetObject("db_cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap db_edit {
+            get {
+                object obj = ResourceManager.GetObject("db_edit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap db_first {
+            get {
+                object obj = ResourceManager.GetObject("db_first", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap db_last {
+            get {
+                object obj = ResourceManager.GetObject("db_last", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap db_next {
+            get {
+                object obj = ResourceManager.GetObject("db_next", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap db_post {
+            get {
+                object obj = ResourceManager.GetObject("db_post", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap db_previous {
+            get {
+                object obj = ResourceManager.GetObject("db_previous", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap deck {
             get {
                 object obj = ResourceManager.GetObject("deck", resourceCulture);
@@ -81,9 +263,16 @@ namespace GPSoft.GPMagic.GPSearch.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap expansions {
+        internal static System.Drawing.Bitmap Delete {
             get {
-                object obj = ResourceManager.GetObject("expansions", resourceCulture);
+                object obj = ResourceManager.GetObject("Delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap execute {
+            get {
+                object obj = ResourceManager.GetObject("execute", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,9 +284,128 @@ namespace GPSoft.GPMagic.GPSearch.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap favs {
+            get {
+                object obj = ResourceManager.GetObject("favs", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap file_new_2 {
+            get {
+                object obj = ResourceManager.GetObject("file_new_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap filter_2 {
+            get {
+                object obj = ResourceManager.GetObject("filter_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Filter_Expansions {
+            get {
+                object obj = ResourceManager.GetObject("Filter_Expansions", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Filter_KeyWord {
+            get {
+                object obj = ResourceManager.GetObject("Filter_KeyWord", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Filter_Type {
+            get {
+                object obj = ResourceManager.GetObject("Filter_Type", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap find {
+            get {
+                object obj = ResourceManager.GetObject("find", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap flag_blue {
+            get {
+                object obj = ResourceManager.GetObject("flag_blue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap flag_green {
+            get {
+                object obj = ResourceManager.GetObject("flag_green", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap flag_red {
+            get {
+                object obj = ResourceManager.GetObject("flag_red", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap frame {
+            get {
+                object obj = ResourceManager.GetObject("frame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap graph {
             get {
                 object obj = ResourceManager.GetObject("graph", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap hammer {
+            get {
+                object obj = ResourceManager.GetObject("hammer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap hand_point {
+            get {
+                object obj = ResourceManager.GetObject("hand_point", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap idcard {
+            get {
+                object obj = ResourceManager.GetObject("idcard", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ImportInfoListDemo {
+            get {
+                object obj = ResourceManager.GetObject("ImportInfoListDemo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ImportTableDemo {
+            get {
+                object obj = ResourceManager.GetObject("ImportTableDemo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap insert_bitmap {
+            get {
+                object obj = ResourceManager.GetObject("insert_bitmap", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -109,9 +417,79 @@ namespace GPSoft.GPMagic.GPSearch.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap ok {
+            get {
+                object obj = ResourceManager.GetObject("ok", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap pen_tool {
+            get {
+                object obj = ResourceManager.GetObject("pen_tool", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon pencil_tool {
+            get {
+                object obj = ResourceManager.GetObject("pencil_tool", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap pencil_tool1 {
+            get {
+                object obj = ResourceManager.GetObject("pencil_tool1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap percent {
+            get {
+                object obj = ResourceManager.GetObject("percent", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap picture {
             get {
                 object obj = ResourceManager.GetObject("picture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap play {
+            get {
+                object obj = ResourceManager.GetObject("play", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Icon plus {
+            get {
+                object obj = ResourceManager.GetObject("plus", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap plus_over {
+            get {
+                object obj = ResourceManager.GetObject("plus_over", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap plus1 {
+            get {
+                object obj = ResourceManager.GetObject("plus1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap record {
+            get {
+                object obj = ResourceManager.GetObject("record", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,6 +501,20 @@ namespace GPSoft.GPMagic.GPSearch.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap repeat {
+            get {
+                object obj = ResourceManager.GetObject("repeat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap report {
+            get {
+                object obj = ResourceManager.GetObject("report", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap roll {
             get {
                 object obj = ResourceManager.GetObject("roll", resourceCulture);
@@ -130,16 +522,65 @@ namespace GPSoft.GPMagic.GPSearch.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap search {
+        internal static System.Drawing.Bitmap ruler {
             get {
-                object obj = ResourceManager.GetObject("search", resourceCulture);
+                object obj = ResourceManager.GetObject("ruler", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
         
-        internal static System.Drawing.Bitmap type {
+        internal static System.Drawing.Bitmap ruler_2 {
             get {
-                object obj = ResourceManager.GetObject("type", resourceCulture);
+                object obj = ResourceManager.GetObject("ruler_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap screen {
+            get {
+                object obj = ResourceManager.GetObject("screen", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap Search {
+            get {
+                object obj = ResourceManager.GetObject("Search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap searchnext {
+            get {
+                object obj = ResourceManager.GetObject("searchnext", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap select_color {
+            get {
+                object obj = ResourceManager.GetObject("select_color", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap ShowCardPicture {
+            get {
+                object obj = ResourceManager.GetObject("ShowCardPicture", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap spelling {
+            get {
+                object obj = ResourceManager.GetObject("spelling", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap stop_2 {
+            get {
+                object obj = ResourceManager.GetObject("stop_2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
