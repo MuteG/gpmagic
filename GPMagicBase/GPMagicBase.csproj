@@ -101,6 +101,180 @@
       <Name>Helper</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bar chart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\barcode.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\binoculars replace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cog.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\configure.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contents.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database import.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\database.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db first.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db insert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db post.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\db refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\execute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\favs.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file new 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\filter-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flag red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frame.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hammer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hand point.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\idcard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\insert bitmap.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pen tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pencil tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\percent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_over.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repeat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruler.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ruler-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\searchnext.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\select color.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\spelling.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
