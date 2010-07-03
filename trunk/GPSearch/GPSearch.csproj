@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7AB4B931-0802-4FA2-9ABD-368E89B81D17}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="UI\FormFilterCardType.Designer.cs">
       <DependentUpon>FormFilterCardType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormFilterColor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormFilterColor.Designer.cs">
+      <DependentUpon>FormFilterColor.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FormFilterExpansions.cs">
       <SubType>Form</SubType>
