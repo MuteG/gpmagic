@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7AB4B931-0802-4FA2-9ABD-368E89B81D17}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -49,11 +49,17 @@
     <Compile Include="UI\AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\FormAddExpansions.cs">
+    <Compile Include="UI\FormEditColor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\FormAddExpansions.Designer.cs">
-      <DependentUpon>FormAddExpansions.cs</DependentUpon>
+    <Compile Include="UI\FormEditColor.Designer.cs">
+      <DependentUpon>FormEditColor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormEditExpansions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormEditExpansions.Designer.cs">
+      <DependentUpon>FormEditExpansions.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\FormCardInfo.cs">
       <SubType>Form</SubType>
@@ -114,14 +120,20 @@
     <EmbeddedResource Include="UI\AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\FormAddExpansions.resx">
-      <DependentUpon>FormAddExpansions.cs</DependentUpon>
+    <EmbeddedResource Include="UI\FormEditColor.resx">
+      <DependentUpon>FormEditColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormEditExpansions.resx">
+      <DependentUpon>FormEditExpansions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormCardInfo.resx">
       <DependentUpon>FormCardInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormFilterCardType.resx">
       <DependentUpon>FormFilterCardType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormFilterKeyWord.resx">
+      <DependentUpon>FormFilterKeyWord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormImportCards.resx">
       <DependentUpon>FormImportCards.cs</DependentUpon>
