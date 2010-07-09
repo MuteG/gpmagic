@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
-    public partial class FormAddExpansions : Form
+    public partial class FormEditColor : Form
     {
-        public FormAddExpansions()
+        public FormEditColor()
         {
             InitializeComponent();
         }
