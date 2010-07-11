@@ -28,9 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FormFilterExpansions
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(554, 363);
+            this.Name = "FormFilterExpansions";
             this.Text = "FormFilterExpansions";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

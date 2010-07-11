@@ -132,6 +132,9 @@
     <EmbeddedResource Include="UI\FormFilterCardType.resx">
       <DependentUpon>FormFilterCardType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormFilterExpansions.resx">
+      <DependentUpon>FormFilterExpansions.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\FormFilterKeyWord.resx">
       <DependentUpon>FormFilterKeyWord.cs</DependentUpon>
     </EmbeddedResource>
