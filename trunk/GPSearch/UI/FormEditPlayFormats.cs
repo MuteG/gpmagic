@@ -8,16 +8,11 @@ using System.Windows.Forms;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
-    public partial class FormEditColor : Form
+    public partial class FormEditPlayFormats : Form
     {
-        public FormEditColor()
+        public FormEditPlayFormats()
         {
             InitializeComponent();
-        }
-
-        private void tbxColorImage_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

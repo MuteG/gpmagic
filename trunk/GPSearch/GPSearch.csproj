@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>9.0.21022</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7AB4B931-0802-4FA2-9ABD-368E89B81D17}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -67,6 +67,12 @@
     <Compile Include="UI\FormCardInfo.Designer.cs">
       <DependentUpon>FormCardInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FormEditPlayFormats.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormEditPlayFormats.Designer.cs">
+      <DependentUpon>FormEditPlayFormats.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FormFilterCardType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormCardInfo.resx">
       <DependentUpon>FormCardInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormEditPlayFormats.resx">
+      <DependentUpon>FormEditPlayFormats.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormFilterCardType.resx">
       <DependentUpon>FormFilterCardType.cs</DependentUpon>
