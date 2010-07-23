@@ -38,6 +38,11 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
                         result = RarityColor.MythicRare;
                         break;
                     }
+                default:
+                    {
+                        result = RarityColor.Common;
+                        break;
+                    }
             }
             return result;
         }

@@ -37,6 +37,10 @@
             this.cbxRarity = new System.Windows.Forms.ComboBox();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
+            this.lblRarityPreview = new System.Windows.Forms.Label();
+            this.lblTypePreview = new System.Windows.Forms.Label();
+            this.gbxFilterPreview = new System.Windows.Forms.GroupBox();
+            this.gbxFilterPreview.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCardType
@@ -56,6 +60,7 @@
             this.cbxCardType.Name = "cbxCardType";
             this.cbxCardType.Size = new System.Drawing.Size(157, 20);
             this.cbxCardType.TabIndex = 1;
+            this.cbxCardType.SelectedIndexChanged += new System.EventHandler(this.cbxCardType_SelectedIndexChanged);
             // 
             // lblCardSubType
             // 
@@ -74,14 +79,15 @@
             this.tbxCardSubType.ReadOnly = true;
             this.tbxCardSubType.Size = new System.Drawing.Size(120, 19);
             this.tbxCardSubType.TabIndex = 3;
+            this.tbxCardSubType.TextChanged += new System.EventHandler(this.tbxCardSubType_TextChanged);
             // 
             // btnCardSubType
             // 
+            this.btnCardSubType.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.config;
             this.btnCardSubType.Location = new System.Drawing.Point(209, 30);
             this.btnCardSubType.Name = "btnCardSubType";
             this.btnCardSubType.Size = new System.Drawing.Size(31, 23);
             this.btnCardSubType.TabIndex = 4;
-            this.btnCardSubType.Text = "...";
             this.btnCardSubType.UseVisualStyleBackColor = true;
             this.btnCardSubType.Click += new System.EventHandler(this.btnCardType_Click);
             // 
@@ -102,11 +108,12 @@
             this.cbxRarity.Name = "cbxRarity";
             this.cbxRarity.Size = new System.Drawing.Size(157, 20);
             this.cbxRarity.TabIndex = 6;
+            this.cbxRarity.SelectedIndexChanged += new System.EventHandler(this.cbxRarity_SelectedIndexChanged);
             // 
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(166, 359);
+            this.btnCancel.Location = new System.Drawing.Point(166, 148);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 7;
@@ -117,7 +124,7 @@
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Location = new System.Drawing.Point(85, 359);
+            this.btnOK.Location = new System.Drawing.Point(85, 148);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 8;
@@ -125,11 +132,42 @@
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // lblRarityPreview
+            // 
+            this.lblRarityPreview.AutoSize = true;
+            this.lblRarityPreview.Location = new System.Drawing.Point(6, 15);
+            this.lblRarityPreview.Name = "lblRarityPreview";
+            this.lblRarityPreview.Size = new System.Drawing.Size(0, 12);
+            this.lblRarityPreview.TabIndex = 9;
+            // 
+            // lblTypePreview
+            // 
+            this.lblTypePreview.AutoSize = true;
+            this.lblTypePreview.Location = new System.Drawing.Point(6, 37);
+            this.lblTypePreview.Name = "lblTypePreview";
+            this.lblTypePreview.Size = new System.Drawing.Size(0, 12);
+            this.lblTypePreview.TabIndex = 10;
+            // 
+            // gbxFilterPreview
+            // 
+            this.gbxFilterPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxFilterPreview.Controls.Add(this.lblRarityPreview);
+            this.gbxFilterPreview.Controls.Add(this.lblTypePreview);
+            this.gbxFilterPreview.Location = new System.Drawing.Point(14, 84);
+            this.gbxFilterPreview.Name = "gbxFilterPreview";
+            this.gbxFilterPreview.Size = new System.Drawing.Size(226, 58);
+            this.gbxFilterPreview.TabIndex = 11;
+            this.gbxFilterPreview.TabStop = false;
+            this.gbxFilterPreview.Text = "预览";
+            // 
             // FormFilterCardType
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(253, 394);
+            this.ClientSize = new System.Drawing.Size(253, 183);
+            this.Controls.Add(this.gbxFilterPreview);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.cbxRarity);
@@ -143,7 +181,10 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormFilterCardType";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "卡牌种类过滤";
+            this.gbxFilterPreview.ResumeLayout(false);
+            this.gbxFilterPreview.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,5 +201,8 @@
         private System.Windows.Forms.ComboBox cbxRarity;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Label lblRarityPreview;
+        private System.Windows.Forms.Label lblTypePreview;
+        private System.Windows.Forms.GroupBox gbxFilterPreview;
     }
 }

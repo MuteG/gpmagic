@@ -10,6 +10,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
     {
         private string filterString = string.Empty;
         private static FormFilterCardType singleInstance = null;
+        private CardRarity cardRarity = new CardRarity();
         private FormFilterCardType()
         {
             InitializeComponent();
@@ -27,8 +28,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void FillComponents()
         {
-            ComponentFiller.FillComboBoxItems(cbxCardType, new CardType(), false);
-            ComponentFiller.FillComboBoxItems(cbxRarity, new CardRarity(), false);
+            ComponentFiller.FillComboBoxItems(cbxCardType, new CardType(), false, true);
+            ComponentFiller.FillComboBoxItems(cbxRarity, cardRarity, false, true);
         }
 
         private void btnCardType_Click(object sender, EventArgs e)
@@ -88,6 +89,33 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 result = string.Format("Rarity = {0}", cbxRarity.SelectedValue);
             }
             return result;
+        }
+
+        private void cbxCardType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxCardType.SelectedIndex > 0)
+            {
+                SetCardTypeText();
+            }
+        }
+
+        private void SetCardTypeText()
+        {
+            lblTypePreview.Text = string.Format("{0} ～ {1}", cbxCardType.Text, tbxCardSubType.Text);
+        }
+
+        private void cbxRarity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxRarity.SelectedIndex > 0)
+            {
+                lblRarityPreview.ForeColor = cardRarity.GetRarityColor(Convert.ToInt32(cbxRarity.SelectedValue));
+                lblRarityPreview.Text = cbxRarity.Text;
+            }
+        }
+
+        private void tbxCardSubType_TextChanged(object sender, EventArgs e)
+        {
+            SetCardTypeText();
         }
     }
 }
