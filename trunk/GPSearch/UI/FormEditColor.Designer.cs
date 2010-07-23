@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.lbxColorList = new System.Windows.Forms.ListBox();
             this.lblColorCode = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxColorCode = new System.Windows.Forms.TextBox();
             this.lblColorImage = new System.Windows.Forms.Label();
             this.ofdColorImage = new System.Windows.Forms.OpenFileDialog();
             this.tbxColorImage = new System.Windows.Forms.TextBox();
@@ -62,12 +62,12 @@
             this.lblColorCode.TabIndex = 1;
             this.lblColorCode.Text = "颜色代号";
             // 
-            // textBox1
+            // tbxColorCode
             // 
-            this.textBox1.Location = new System.Drawing.Point(210, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(86, 21);
-            this.textBox1.TabIndex = 2;
+            this.tbxColorCode.Location = new System.Drawing.Point(210, 12);
+            this.tbxColorCode.Name = "tbxColorCode";
+            this.tbxColorCode.Size = new System.Drawing.Size(86, 19);
+            this.tbxColorCode.TabIndex = 2;
             // 
             // lblColorImage
             // 
@@ -86,14 +86,14 @@
             // 
             this.tbxColorImage.Location = new System.Drawing.Point(210, 39);
             this.tbxColorImage.Name = "tbxColorImage";
-            this.tbxColorImage.Size = new System.Drawing.Size(57, 21);
+            this.tbxColorImage.Size = new System.Drawing.Size(57, 19);
             this.tbxColorImage.TabIndex = 4;
             this.tbxColorImage.TextChanged += new System.EventHandler(this.tbxColorImage_TextChanged);
             // 
             // btnColorImageBrowser
             // 
             this.btnColorImageBrowser.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.find;
-            this.btnColorImageBrowser.Location = new System.Drawing.Point(273, 38);
+            this.btnColorImageBrowser.Location = new System.Drawing.Point(273, 37);
             this.btnColorImageBrowser.Name = "btnColorImageBrowser";
             this.btnColorImageBrowser.Size = new System.Drawing.Size(23, 23);
             this.btnColorImageBrowser.TabIndex = 5;
@@ -163,7 +163,7 @@
             this.Controls.Add(this.btnColorImageBrowser);
             this.Controls.Add(this.tbxColorImage);
             this.Controls.Add(this.lblColorImage);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.tbxColorCode);
             this.Controls.Add(this.lblColorCode);
             this.Controls.Add(this.lbxColorList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -181,7 +181,7 @@
 
         private System.Windows.Forms.ListBox lbxColorList;
         private System.Windows.Forms.Label lblColorCode;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxColorCode;
         private System.Windows.Forms.Label lblColorImage;
         private System.Windows.Forms.OpenFileDialog ofdColorImage;
         private System.Windows.Forms.TextBox tbxColorImage;

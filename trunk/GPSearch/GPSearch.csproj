@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.21022</ProductVersion>
+    <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{7AB4B931-0802-4FA2-9ABD-368E89B81D17}</ProjectGuid>
     <OutputType>WinExe</OutputType>
@@ -183,6 +183,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="0119_MTGWWK_CS_LR.jpg" />
+    <None Include="Resources\%2801,34%29.png" />
+    <None Include="Resources\%2827,27%29.png" />
+    <None Include="Resources\%2827,04%29.png" />
+    <None Include="Resources\%2826,26%29.png" />
+    <None Include="Resources\%2823,00%29.png" />
+    <None Include="Resources\%2819,47%29.png" />
+    <None Include="Resources\%2818,11%29.png" />
+    <None Include="Resources\%2817,24%29.png" />
+    <None Include="Resources\%2817,03%29.png" />
+    <None Include="Resources\%2815,43%29.png" />
+    <None Include="Resources\%2815,15%29.png" />
+    <None Include="Resources\%2813,28%29.png" />
+    <None Include="Resources\%2813,25%29.png" />
+    <None Include="Resources\%2802,18%29.png" />
+    <None Include="Resources\%2837,07%29.png" />
+    <None Include="Resources\%2837,00%29.png" />
+    <None Include="Resources\%2833,14%29.png" />
+    <None Include="Resources\%2828,40%29.png" />
+    <None Include="Resources\%2828,30%29.png" />
     <None Include="Resources\%2800,12%29.png" />
     <None Include="Resources\%2839,05%29.png" />
     <None Include="Resources\%2842,00%29.png" />

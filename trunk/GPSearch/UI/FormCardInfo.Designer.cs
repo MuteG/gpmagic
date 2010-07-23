@@ -160,11 +160,11 @@
             // btnCardImage
             // 
             this.btnCardImage.AutoSize = true;
+            this.btnCardImage.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.open;
             this.btnCardImage.Location = new System.Drawing.Point(196, 86);
             this.btnCardImage.Name = "btnCardImage";
             this.btnCardImage.Size = new System.Drawing.Size(33, 23);
             this.btnCardImage.TabIndex = 3;
-            this.btnCardImage.Text = "...";
             this.btnCardImage.UseVisualStyleBackColor = true;
             this.btnCardImage.Click += new System.EventHandler(this.btnCardImage_Click);
             // 
@@ -208,7 +208,7 @@
             this.lblCardType.Name = "lblCardType";
             this.lblCardType.Size = new System.Drawing.Size(53, 12);
             this.lblCardType.TabIndex = 17;
-            this.lblCardType.Text = "卡牌类型";
+            this.lblCardType.Text = "卡牌类别";
             // 
             // lblCardSubType
             // 
@@ -217,7 +217,7 @@
             this.lblCardSubType.Name = "lblCardSubType";
             this.lblCardSubType.Size = new System.Drawing.Size(65, 12);
             this.lblCardSubType.TabIndex = 20;
-            this.lblCardSubType.Text = "卡牌子类型";
+            this.lblCardSubType.Text = "卡牌子类别";
             // 
             // tbxCardSubType
             // 
@@ -235,11 +235,11 @@
             // btnCardSubType
             // 
             this.btnCardSubType.AutoSize = true;
+            this.btnCardSubType.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.config;
             this.btnCardSubType.Location = new System.Drawing.Point(196, 165);
             this.btnCardSubType.Name = "btnCardSubType";
             this.btnCardSubType.Size = new System.Drawing.Size(33, 23);
             this.btnCardSubType.TabIndex = 6;
-            this.btnCardSubType.Text = "...";
             this.btnCardSubType.UseVisualStyleBackColor = true;
             this.btnCardSubType.Click += new System.EventHandler(this.btnCardSubType_Click);
             // 
@@ -267,11 +267,11 @@
             // btnAbilities
             // 
             this.btnAbilities.AutoSize = true;
+            this.btnAbilities.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.config;
             this.btnAbilities.Location = new System.Drawing.Point(196, 218);
             this.btnAbilities.Name = "btnAbilities";
             this.btnAbilities.Size = new System.Drawing.Size(33, 23);
             this.btnAbilities.TabIndex = 8;
-            this.btnAbilities.Text = "...";
             this.btnAbilities.UseVisualStyleBackColor = true;
             this.btnAbilities.Click += new System.EventHandler(this.btnAbilities_Click);
             // 
@@ -323,22 +323,22 @@
             // btnAbilitiesText
             // 
             this.btnAbilitiesText.AutoSize = true;
+            this.btnAbilitiesText.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.input;
             this.btnAbilitiesText.Location = new System.Drawing.Point(196, 245);
             this.btnAbilitiesText.Name = "btnAbilitiesText";
             this.btnAbilitiesText.Size = new System.Drawing.Size(33, 23);
             this.btnAbilitiesText.TabIndex = 9;
-            this.btnAbilitiesText.Text = "...";
             this.btnAbilitiesText.UseVisualStyleBackColor = true;
             this.btnAbilitiesText.Click += new System.EventHandler(this.btnAbilitiesText_Click);
             // 
             // btnFlavorText
             // 
             this.btnFlavorText.AutoSize = true;
+            this.btnFlavorText.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.input;
             this.btnFlavorText.Location = new System.Drawing.Point(196, 272);
             this.btnFlavorText.Name = "btnFlavorText";
             this.btnFlavorText.Size = new System.Drawing.Size(33, 23);
             this.btnFlavorText.TabIndex = 10;
-            this.btnFlavorText.Text = "...";
             this.btnFlavorText.UseVisualStyleBackColor = true;
             this.btnFlavorText.Click += new System.EventHandler(this.btnFlavorText_Click);
             // 
@@ -469,6 +469,7 @@
             // btnFAQ
             // 
             this.btnFAQ.AutoSize = true;
+            this.btnFAQ.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.input;
             this.btnFAQ.Location = new System.Drawing.Point(196, 406);
             this.btnFAQ.Name = "btnFAQ";
             this.btnFAQ.Size = new System.Drawing.Size(33, 23);
