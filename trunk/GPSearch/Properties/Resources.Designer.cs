@@ -172,13 +172,6 @@ namespace GPSoft.GPMagic.GPSearch.Properties {
             }
         }
         
-        internal static System.Drawing.Bitmap _42_02_ {
-            get {
-                object obj = ResourceManager.GetObject("_42_02_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
         internal static System.Drawing.Bitmap Add {
             get {
                 object obj = ResourceManager.GetObject("Add", resourceCulture);
@@ -434,6 +427,13 @@ namespace GPSoft.GPMagic.GPSearch.Properties {
         internal static System.Drawing.Bitmap key {
             get {
                 object obj = ResourceManager.GetObject("key", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap LockDeck {
+            get {
+                object obj = ResourceManager.GetObject("LockDeck", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
