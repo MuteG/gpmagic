@@ -1,11 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using GPSoft.GPMagic.GPMagicBase.Model;
 
 namespace GPSoft.GPMagic.GPSearch.Common
 {
     internal class CommonHelper
     {
+        private static CardRarity cardRarity = new CardRarity();
+        public static CardRarity CardRarity
+        {
+            get
+            {
+                return cardRarity;
+            }
+        }
         public static string JoinFilterStrings(params string[] filterStr)
         {
             string result = string.Empty;

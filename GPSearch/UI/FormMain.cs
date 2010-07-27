@@ -43,6 +43,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             InitializeComponent();
             tscbxLanguage.SelectedIndex = 1;
+            this.DoubleBuffered = true;
         }
 
         private void Init()
@@ -88,12 +89,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                         cardRow["CardPrice"].ToString(),
                         cardRow["CardID"]
                         );
-                    if (rarity > 1)
-                    {
-                        CardRarity aRarity = new CardRarity();
-                        dgvCardList.Rows[newRowIndex].DefaultCellStyle.ForeColor = aRarity.GetRarityColor(rarity);
-                        aRarity.Dispose();
-                    }
+                    dgvCardList.Rows[newRowIndex].DefaultCellStyle.ForeColor = CommonHelper.CardRarity.GetRarityColor(rarity);
                 }
                 if (frmInfo != null && frmInfo.EditStatus == DataOperateType.Update)
                 {
@@ -123,23 +119,83 @@ namespace GPSoft.GPMagic.GPSearch.UI
             AboutBox frmAbout = new AboutBox();
             frmAbout.ShowDialog(this);
         }
-
+        //设置拖曳效果
         private void dgvDeckList_DragEnter(object sender, DragEventArgs e)
         {
             e.Effect = DragDropEffects.Copy;
         }
-
+        //开始拖曳数据
         private void dgvCardList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if(e.Clicks == 1)
-            dgvCardList.DoDragDrop(dgvCardList.SelectedRows, DragDropEffects.Copy);
+            if (e.Clicks == 1)
+            {
+                DataGridViewRow[] rows;
+                if (dgvCardList.Rows[e.RowIndex].Selected)
+                {
+                    rows = new DataGridViewRow[dgvCardList.SelectedRows.Count];
+                    dgvCardList.SelectedRows.CopyTo(rows, 0);
+                }
+                else
+                {
+                    rows = new DataGridViewRow[1];
+                    rows[0] = dgvCardList.Rows[e.RowIndex];
+                }
+                dgvCardList.DoDragDrop(rows, DragDropEffects.Copy);
+            }
         }
-
+        //拖曳动作结束
         private void dgvDeckList_DragDrop(object sender, DragEventArgs e)
         {
-            DataGridViewSelectedRowCollection selectedRows = 
-                (DataGridViewSelectedRowCollection)e.Data.GetData(typeof(DataGridViewSelectedRowCollection));
-            MessageBox.Show(selectedRows.Count.ToString());
+            DataGridViewRow[] selectedRows =
+                (DataGridViewRow[])e.Data.GetData(typeof(DataGridViewRow[]));
+            foreach (DataGridViewRow row in selectedRows)
+            {
+                AddDeckList(row);
+            }
+            dgvDeckList.Sort(colDCardID, System.ComponentModel.ListSortDirection.Ascending);
+        }
+
+        private void AddDeckList(DataGridViewRow row)
+        {
+            int cardID = Convert.ToInt32(row.Cells["dgvColCardID"].Value);
+            int index = GetDeckCardIndex(cardID);
+            if (index < 0)
+            {
+                dgvDeckList.Rows.Add(
+                    1,
+                    row.Cells["dgvColExpansions"].Value,
+                    row.Cells["dgvColCNName"].Value,
+                    row.Cells["dgvColCost"].Value,
+                    row.Cells["dgvColCardID"].Value);
+                dgvDeckList.Rows[dgvDeckList.Rows.Count - 1].DefaultCellStyle.ForeColor = row.DefaultCellStyle.ForeColor;
+            }
+            else
+            {
+                AddDeckCardCount(index);
+            }
+        }
+
+        private void AddDeckCardCount(int index)
+        {
+            int count = Convert.ToInt32(dgvDeckList.Rows[index].Cells["colDCount"].Value);
+            if (count < 4)
+            {
+                dgvDeckList.Rows[index].Cells["colDCount"].Value = count + 1;
+            }
+        }
+
+        private int GetDeckCardIndex(int cardID)
+        {
+            int result = -1;
+            foreach (DataGridViewRow row in dgvDeckList.Rows)
+            {
+                if (cardID == Convert.ToInt32(row.Cells["colDCardID"].Value))
+                {
+                    result = row.Index;
+                    break;
+                }
+            }
+            return result;
         }
 
         private void dgvCardList_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
@@ -241,6 +297,76 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             this.totalCardsFilter.SetCardType();
             RefreshTotalCardsGrid();
+        }
+
+        private void dgvDeckList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0 && !tsbtnLockDeck.Checked)
+            {
+                switch (e.Button)
+                {
+                    case MouseButtons.Left:
+                        {
+                            AddDeckCardCount(e.RowIndex);
+                            break;
+                        }
+                    case MouseButtons.Right:
+                        {
+                            SubDeckCardCount(e.RowIndex);
+                            break;
+                        }
+                }
+            }
+        }
+
+        private void SubDeckCardCount(int index)
+        {
+            int count = Convert.ToInt32(dgvDeckList.Rows[index].Cells["colDCount"].Value);
+            if (count > 1)
+            {
+                dgvDeckList.Rows[index].Cells["colDCount"].Value = count - 1;
+            }
+            else
+            {
+                dgvDeckList.Rows.RemoveAt(index);
+            }
+        }
+
+        private void dgvDeckList_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyValue)
+            {
+                case 187:
+                case 107:
+                    {
+                        //加号键
+                        foreach (DataGridViewRow row in dgvDeckList.SelectedRows)
+                        {
+                            AddDeckCardCount(row.Index);
+                        }
+                        break;
+                    }
+                case 189:
+                case 109:
+                    {
+                        //减号键
+                        foreach (DataGridViewRow row in dgvDeckList.SelectedRows)
+                        {
+                            SubDeckCardCount(row.Index);
+                        }
+                        break;
+                    }
+                case 46:
+                case 110:
+                    {
+                        //删除键
+                        foreach (DataGridViewRow row in dgvDeckList.SelectedRows)
+                        {
+                            dgvDeckList.Rows.Remove(row);
+                        }
+                        break;
+                    }
+            }
         }
     }
 }

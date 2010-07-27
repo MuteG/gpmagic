@@ -28,18 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mnuStpMain = new System.Windows.Forms.MenuStrip();
             this.mnuItemFile = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemNewDeck = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +76,8 @@
             this.tsmItemFAQ = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlNameList = new System.Windows.Forms.Panel();
             this.dgxDeck = new System.Windows.Forms.GroupBox();
+            this.tspDeckList = new System.Windows.Forms.ToolStrip();
+            this.tsbtnLockDeck = new System.Windows.Forms.ToolStripButton();
             this.dgvCardList = new System.Windows.Forms.DataGridView();
             this.dgvColExpansions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColCNName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,20 +94,18 @@
             this.colDCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDSymbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDCardName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDCost = new System.Windows.Forms.DataGridViewImageColumn();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripProgressBar1 = new System.Windows.Forms.ToolStripProgressBar();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.colDCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDCardID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.mnuStpMain.SuspendLayout();
             this.gbxCardLibrary.SuspendLayout();
             this.tspCardLibrary.SuspendLayout();
             this.pnlNameList.SuspendLayout();
+            this.dgxDeck.SuspendLayout();
+            this.tspDeckList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCardList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeckList)).BeginInit();
-            this.statusStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
@@ -138,25 +139,25 @@
             // mnuItemNewDeck
             // 
             this.mnuItemNewDeck.Name = "mnuItemNewDeck";
-            this.mnuItemNewDeck.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemNewDeck.Size = new System.Drawing.Size(118, 22);
             this.mnuItemNewDeck.Text = "新建套牌";
             this.mnuItemNewDeck.Click += new System.EventHandler(this.mnuNewDeck_Click);
             // 
             // mnuItemNewBase
             // 
             this.mnuItemNewBase.Name = "mnuItemNewBase";
-            this.mnuItemNewBase.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemNewBase.Size = new System.Drawing.Size(118, 22);
             this.mnuItemNewBase.Text = "新建牌库";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(115, 6);
             // 
             // mnuItemExit
             // 
             this.mnuItemExit.Name = "mnuItemExit";
-            this.mnuItemExit.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemExit.Size = new System.Drawing.Size(118, 22);
             this.mnuItemExit.Text = "退出";
             this.mnuItemExit.Click += new System.EventHandler(this.mnuExit_Click);
             // 
@@ -173,21 +174,21 @@
             // mnuItemAddCard
             // 
             this.mnuItemAddCard.Name = "mnuItemAddCard";
-            this.mnuItemAddCard.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemAddCard.Size = new System.Drawing.Size(118, 22);
             this.mnuItemAddCard.Text = "添加卡牌";
             this.mnuItemAddCard.Click += new System.EventHandler(this.mnuAddCard_Click);
             // 
             // mnuItemEditCard
             // 
             this.mnuItemEditCard.Name = "mnuItemEditCard";
-            this.mnuItemEditCard.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemEditCard.Size = new System.Drawing.Size(118, 22);
             this.mnuItemEditCard.Text = "编辑卡牌";
             this.mnuItemEditCard.Click += new System.EventHandler(this.mnuEditCard_Click);
             // 
             // mnuItemDeleteCard
             // 
             this.mnuItemDeleteCard.Name = "mnuItemDeleteCard";
-            this.mnuItemDeleteCard.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemDeleteCard.Size = new System.Drawing.Size(118, 22);
             this.mnuItemDeleteCard.Text = "删除卡牌";
             // 
             // mnuItemEdit
@@ -202,13 +203,13 @@
             // 卡牌类别ToolStripMenuItem
             // 
             this.卡牌类别ToolStripMenuItem.Name = "卡牌类别ToolStripMenuItem";
-            this.卡牌类别ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.卡牌类别ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.卡牌类别ToolStripMenuItem.Text = "卡牌类别";
             // 
             // 卡牌异能ToolStripMenuItem
             // 
             this.卡牌异能ToolStripMenuItem.Name = "卡牌异能ToolStripMenuItem";
-            this.卡牌异能ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.卡牌异能ToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.卡牌异能ToolStripMenuItem.Text = "卡牌异能";
             // 
             // mnuItemHelp
@@ -222,7 +223,7 @@
             // mnuItemAbout
             // 
             this.mnuItemAbout.Name = "mnuItemAbout";
-            this.mnuItemAbout.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemAbout.Size = new System.Drawing.Size(94, 22);
             this.mnuItemAbout.Text = "关于";
             this.mnuItemAbout.Click += new System.EventHandler(this.mnuItemAbout_Click);
             // 
@@ -414,6 +415,7 @@
             // 
             this.dgxDeck.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgxDeck.Controls.Add(this.tspDeckList);
             this.dgxDeck.Location = new System.Drawing.Point(572, 5);
             this.dgxDeck.Name = "dgxDeck";
             this.dgxDeck.Size = new System.Drawing.Size(296, 40);
@@ -421,24 +423,47 @@
             this.dgxDeck.TabStop = false;
             this.dgxDeck.Text = "套牌";
             // 
+            // tspDeckList
+            // 
+            this.tspDeckList.Dock = System.Windows.Forms.DockStyle.None;
+            this.tspDeckList.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
+            this.tspDeckList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsbtnLockDeck});
+            this.tspDeckList.Location = new System.Drawing.Point(3, 13);
+            this.tspDeckList.Name = "tspDeckList";
+            this.tspDeckList.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            this.tspDeckList.Size = new System.Drawing.Size(57, 25);
+            this.tspDeckList.TabIndex = 0;
+            this.tspDeckList.Text = "toolStrip1";
+            // 
+            // tsbtnLockDeck
+            // 
+            this.tsbtnLockDeck.CheckOnClick = true;
+            this.tsbtnLockDeck.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnLockDeck.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.LockDeck;
+            this.tsbtnLockDeck.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnLockDeck.Name = "tsbtnLockDeck";
+            this.tsbtnLockDeck.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnLockDeck.Text = "锁定列表，无法通过鼠标点击进行数量修改";
+            // 
             // dgvCardList
             // 
             this.dgvCardList.AllowUserToAddRows = false;
             this.dgvCardList.AllowUserToDeleteRows = false;
             this.dgvCardList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Lavender;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCardList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.Lavender;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCardList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle34;
             this.dgvCardList.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCardList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCardList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle35;
             this.dgvCardList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCardList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgvColExpansions,
@@ -457,13 +482,13 @@
             this.dgvCardList.Name = "dgvCardList";
             this.dgvCardList.ReadOnly = true;
             this.dgvCardList.RowHeadersVisible = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.RoyalBlue;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvCardList.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle39.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.RoyalBlue;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvCardList.RowsDefaultCellStyle = dataGridViewCellStyle39;
             this.dgvCardList.RowTemplate.Height = 20;
             this.dgvCardList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCardList.Size = new System.Drawing.Size(568, 428);
+            this.dgvCardList.Size = new System.Drawing.Size(568, 450);
             this.dgvCardList.TabIndex = 2;
             this.dgvCardList.CellMouseLeave += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCardList_CellMouseLeave);
             this.dgvCardList.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCardList_CellMouseDown);
@@ -473,8 +498,8 @@
             // dgvColExpansions
             // 
             this.dgvColExpansions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColExpansions.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle36.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColExpansions.DefaultCellStyle = dataGridViewCellStyle36;
             this.dgvColExpansions.Frozen = true;
             this.dgvColExpansions.HeaderText = "系列";
             this.dgvColExpansions.Name = "dgvColExpansions";
@@ -483,8 +508,8 @@
             // 
             // dgvColCNName
             // 
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColCNName.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColCNName.DefaultCellStyle = dataGridViewCellStyle37;
             this.dgvColCNName.HeaderText = "中文名";
             this.dgvColCNName.Name = "dgvColCNName";
             this.dgvColCNName.ReadOnly = true;
@@ -492,8 +517,8 @@
             // 
             // dgvColENName
             // 
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColENName.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColENName.DefaultCellStyle = dataGridViewCellStyle38;
             this.dgvColENName.HeaderText = "英文名";
             this.dgvColENName.Name = "dgvColENName";
             this.dgvColENName.ReadOnly = true;
@@ -542,6 +567,7 @@
             // 
             this.dgvColPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.dgvColPrice.HeaderText = "参考价格";
+            this.dgvColPrice.MinimumWidth = 70;
             this.dgvColPrice.Name = "dgvColPrice";
             this.dgvColPrice.ReadOnly = true;
             // 
@@ -558,40 +584,44 @@
             this.dgvDeckList.AllowUserToAddRows = false;
             this.dgvDeckList.AllowUserToDeleteRows = false;
             this.dgvDeckList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Lavender;
-            this.dgvDeckList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle40.BackColor = System.Drawing.Color.Lavender;
+            this.dgvDeckList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle40;
             this.dgvDeckList.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDeckList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDeckList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle41;
             this.dgvDeckList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDeckList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colDCount,
             this.colDSymbol,
             this.colDCardName,
-            this.colDCost});
+            this.colDCost,
+            this.colDCardID});
             this.dgvDeckList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDeckList.Location = new System.Drawing.Point(0, 0);
             this.dgvDeckList.Name = "dgvDeckList";
             this.dgvDeckList.ReadOnly = true;
             this.dgvDeckList.RowHeadersVisible = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
-            this.dgvDeckList.RowsDefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvDeckList.RowTemplate.Height = 23;
-            this.dgvDeckList.Size = new System.Drawing.Size(299, 428);
+            dataGridViewCellStyle44.BackColor = System.Drawing.Color.White;
+            this.dgvDeckList.RowsDefaultCellStyle = dataGridViewCellStyle44;
+            this.dgvDeckList.RowTemplate.Height = 20;
+            this.dgvDeckList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDeckList.Size = new System.Drawing.Size(299, 450);
             this.dgvDeckList.TabIndex = 0;
+            this.dgvDeckList.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDeckList_CellMouseDown);
             this.dgvDeckList.DragEnter += new System.Windows.Forms.DragEventHandler(this.dgvDeckList_DragEnter);
+            this.dgvDeckList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvDeckList_KeyDown);
             this.dgvDeckList.DragDrop += new System.Windows.Forms.DragEventHandler(this.dgvDeckList_DragDrop);
             // 
             // colDCount
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colDCount.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colDCount.DefaultCellStyle = dataGridViewCellStyle42;
             this.colDCount.HeaderText = "数量";
             this.colDCount.Name = "colDCount";
             this.colDCount.ReadOnly = true;
@@ -620,52 +650,20 @@
             // colDCost
             // 
             this.colDCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle10.NullValue = ((object)(resources.GetObject("dataGridViewCellStyle10.NullValue")));
-            this.colDCost.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colDCost.DefaultCellStyle = dataGridViewCellStyle43;
             this.colDCost.HeaderText = "费用";
             this.colDCost.Name = "colDCost";
             this.colDCost.ReadOnly = true;
             this.colDCost.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDCost.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // statusStrip1
+            // colDCardID
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabel1,
-            this.toolStripStatusLabel2,
-            this.toolStripProgressBar1,
-            this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 503);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(871, 22);
-            this.statusStrip1.TabIndex = 0;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // toolStripStatusLabel1
-            // 
-            this.toolStripStatusLabel1.AutoSize = false;
-            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(131, 17);
-            this.toolStripStatusLabel1.Text = "toolStripStatusLabel1";
-            // 
-            // toolStripStatusLabel2
-            // 
-            this.toolStripStatusLabel2.AutoSize = false;
-            this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
-            this.toolStripStatusLabel2.Size = new System.Drawing.Size(131, 17);
-            this.toolStripStatusLabel2.Text = "toolStripStatusLabel2";
-            // 
-            // toolStripProgressBar1
-            // 
-            this.toolStripProgressBar1.AutoSize = false;
-            this.toolStripProgressBar1.Name = "toolStripProgressBar1";
-            this.toolStripProgressBar1.Size = new System.Drawing.Size(300, 16);
-            // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(114, 17);
-            this.toolStripStatusLabel3.Text = "toolStripStatusLabel3";
+            this.colDCardID.HeaderText = "CardID";
+            this.colDCardID.Name = "colDCardID";
+            this.colDCardID.ReadOnly = true;
+            this.colDCardID.Visible = false;
             // 
             // splitContainer1
             // 
@@ -681,7 +679,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvDeckList);
-            this.splitContainer1.Size = new System.Drawing.Size(871, 428);
+            this.splitContainer1.Size = new System.Drawing.Size(871, 450);
             this.splitContainer1.SplitterDistance = 568;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -692,7 +690,6 @@
             this.ClientSize = new System.Drawing.Size(871, 525);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.pnlNameList);
-            this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.mnuStpMain);
             this.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.MainMenuStrip = this.mnuStpMain;
@@ -708,10 +705,12 @@
             this.tspCardLibrary.ResumeLayout(false);
             this.tspCardLibrary.PerformLayout();
             this.pnlNameList.ResumeLayout(false);
+            this.dgxDeck.ResumeLayout(false);
+            this.dgxDeck.PerformLayout();
+            this.tspDeckList.ResumeLayout(false);
+            this.tspDeckList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCardList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeckList)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
@@ -731,11 +730,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuItemNewBase;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mnuItemExit;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.ToolStripProgressBar toolStripProgressBar1;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
         private System.Windows.Forms.DataGridView dgvDeckList;
         private System.Windows.Forms.ToolStripMenuItem mnuItemCard;
         private System.Windows.Forms.ToolStripMenuItem mnuItemAddCard;
@@ -744,10 +738,6 @@
         private System.Windows.Forms.DataGridView dgvCardList;
         private System.Windows.Forms.ToolStripMenuItem mnuItemAbout;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDCount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDSymbol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDCardName;
-        private System.Windows.Forms.DataGridViewImageColumn colDCost;
         private System.Windows.Forms.GroupBox dgxDeck;
         private System.Windows.Forms.ToolStrip tspCardLibrary;
         private System.Windows.Forms.ToolStripButton tsbtnType;
@@ -768,6 +758,7 @@
         private System.Windows.Forms.ToolStripMenuItem 卡牌类别ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 卡牌异能ToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton tsbtnSearch;
+        private System.Windows.Forms.ToolStripButton tsbtnColor;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColExpansions;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCNName;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColENName;
@@ -779,7 +770,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColToughness;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColPrice;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCardID;
-        private System.Windows.Forms.ToolStripButton tsbtnColor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDSymbol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDCardName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDCardID;
+        private System.Windows.Forms.ToolStrip tspDeckList;
+        private System.Windows.Forms.ToolStripButton tsbtnLockDeck;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
