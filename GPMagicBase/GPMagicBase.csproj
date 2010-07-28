@@ -51,6 +51,7 @@
     <Compile Include="IOrganismCardAction.cs" />
     <Compile Include="Model\CardType.cs" />
     <Compile Include="Model\ColumnInfoAttribute.cs" />
+    <Compile Include="Model\ConfigDeckFilter.cs" />
     <Compile Include="Model\ITableIntanceAction.cs" />
     <Compile Include="IUpgradeSite.cs" />
     <Compile Include="MagicCardConst.cs" />

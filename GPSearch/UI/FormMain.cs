@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
 using GPSoft.GPMagic.GPSearch.Common;
+using System.IO;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
@@ -367,6 +368,25 @@ namespace GPSoft.GPMagic.GPSearch.UI
                         break;
                     }
             }
+        }
+
+        private void tsbtnSaveDeck_Click(object sender, EventArgs e)
+        {
+            DemoSerializeDeckListFilter();
+        }
+
+        private static void DemoSerializeDeckListFilter()
+        {
+            ConfigDeckFilterList deckFilters = new ConfigDeckFilterList();
+            ConfigDeckFilter filter = new ConfigDeckFilter();
+            filter.DisplayName = "生物";
+            filter.FieldName = "TypeName";
+            filter.FieldValue = "生物";
+            filter.BackgroundColor = Color.Black.ToArgb();
+            deckFilters.DeckFilterList.Add(filter);
+            if (!Directory.Exists("./Config")) Directory.CreateDirectory("./Config");
+            //Helper.FileOperate.ObjectXMLSerialize<ConfigDeckFilterList>.Save(deckFilters, "./Config/DeckFilter.xml");
+            deckFilters.Load();
         }
     }
 }

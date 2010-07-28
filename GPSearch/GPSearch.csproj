@@ -183,6 +183,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="0119_MTGWWK_CS_LR.jpg" />
+    <None Include="Resources\%2800,05%29.png" />
     <None Include="Resources\%2801,34%29.png" />
     <None Include="Resources\%2827,27%29.png" />
     <None Include="Resources\%2827,04%29.png" />

@@ -15,6 +15,10 @@ namespace GPSoft.GPMagic.GPSearch.Common
                 return cardRarity;
             }
         }
+        public static void ReloadData()
+        {
+            cardRarity.Reload();
+        }
         public static string JoinFilterStrings(params string[] filterStr)
         {
             string result = string.Empty;
