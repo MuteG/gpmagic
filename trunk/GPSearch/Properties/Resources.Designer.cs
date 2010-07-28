@@ -564,6 +564,13 @@ namespace GPSoft.GPMagic.GPSearch.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap SaveDeck {
+            get {
+                object obj = ResourceManager.GetObject("SaveDeck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap screen {
             get {
                 object obj = ResourceManager.GetObject("screen", resourceCulture);

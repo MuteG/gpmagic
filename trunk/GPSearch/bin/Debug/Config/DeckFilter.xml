@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeckFilterConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FilterList>
+    <Filter>
+      <FieldName>TypeName</FieldName>
+      <FieldValue>生物</FieldValue>
+      <IsReverse>false</IsReverse>
+      <DisplayName>生物</DisplayName>
+      <IsShow>true</IsShow>
+      <BackgroundColor>-16777216</BackgroundColor>
+    </Filter>
+  </FilterList>
+</DeckFilterConfig>
