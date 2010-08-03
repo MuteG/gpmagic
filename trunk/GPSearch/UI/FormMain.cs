@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
 using GPSoft.GPMagic.GPSearch.Common;
+using GPSoft.GPMagic.GPMagicBase.UI;
 using System.IO;
 
 namespace GPSoft.GPMagic.GPSearch.UI
@@ -372,7 +373,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void tsbtnSaveDeck_Click(object sender, EventArgs e)
         {
-            DemoSerializeDeckListFilter();
+            //DemoSerializeDeckListFilter();
+            RadioButtonDialog.Show("aaa", "");
         }
 
         private static void DemoSerializeDeckListFilter()

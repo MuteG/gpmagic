@@ -43,6 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\APIConst.cs" />
+    <Compile Include="Component\RadioGroup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Component\RadioGroup.Designer.cs">
+      <DependentUpon>RadioGroup.cs</DependentUpon>
+    </Compile>
     <Compile Include="FileOperate\FileHelper.cs" />
     <Compile Include="FileOperate\ObjectXMLSerializer.cs" />
     <Compile Include="FunctionHelper\FunctionHelper.cs" />
@@ -55,6 +61,11 @@
     <Compile Include="SqlServer\SQLHelper.cs" />
     <Compile Include="FileOperate\XMLHelper.cs" />
     <Compile Include="API\User32.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Component\RadioGroup.resx">
+      <DependentUpon>RadioGroup.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
