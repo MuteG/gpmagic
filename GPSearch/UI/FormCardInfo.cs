@@ -369,7 +369,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 {
                     frmMain.Cards.Save(this.ActiveCard);
                 }
-                frmMain.RefreshTotalCardsGrid();
+                frmMain.RefreshDataGridView();
             }
         }
         // 选择子类别

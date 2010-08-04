@@ -58,6 +58,15 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         public static readonly string New = "新建";
     }
     /// <summary>
+    /// 套牌保存格式
+    /// </summary>
+    public struct DeckSaveFormat
+    {
+        public static readonly string Mws = "MWS";
+        public static readonly string GPMagic = "GPMagic";
+        public static readonly string CnList = "中文牌表";
+    }
+    /// <summary>
     /// 数据库表名
     /// </summary>
     public struct DatabaseTableNames

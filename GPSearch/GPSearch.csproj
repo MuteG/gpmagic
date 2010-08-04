@@ -55,6 +55,12 @@
     <Compile Include="UI\FormEditColor.Designer.cs">
       <DependentUpon>FormEditColor.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\FormEditDeckFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormEditDeckFilter.Designer.cs">
+      <DependentUpon>FormEditDeckFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\FormEditExpansions.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormEditColor.resx">
       <DependentUpon>FormEditColor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormEditDeckFilter.resx">
+      <DependentUpon>FormEditDeckFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\FormEditExpansions.resx">
       <DependentUpon>FormEditExpansions.cs</DependentUpon>

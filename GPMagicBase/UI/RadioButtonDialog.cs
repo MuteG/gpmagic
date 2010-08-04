@@ -13,22 +13,38 @@ namespace GPSoft.GPMagic.GPMagicBase.UI
         private RadioButtonDialog()
         {
             InitializeComponent();
+            this.DialogResult = DialogResult.Cancel;
         }
 
-        public static string Show(string title, string defaultText)
+        public static int Show(string title, List<string> items)
         {
-            string result = string.Empty;
+            int result = -1;
             RadioButtonDialog rbd = new RadioButtonDialog();
-            rbd.gbxTitle.Text = title;
+            rbd.rgbMain.Text = title;
+            foreach (string itemText in items)
+            {
+                rbd.rgbMain.Items.Add(itemText);
+            }
+            if (items.Count > 0)
+            {
+                rbd.rgbMain.Items[0].Checked = true;
+            }
             if (rbd.ShowDialog() == DialogResult.OK)
             {
-                //result = rbd.tbxText.Text;
-            }
-            else
-            {
-                result = defaultText;
+                result = rbd.rgbMain.CheckedIndex;
             }
             return result;
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            Close();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
