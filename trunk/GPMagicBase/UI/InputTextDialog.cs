@@ -13,6 +13,7 @@ namespace GPSoft.GPMagic.GPMagicBase.UI
         private InputTextDialog()
         {
             InitializeComponent();
+            this.DialogResult = DialogResult.Cancel;
         }
 
         public static string Show(string title, string defaultText)
@@ -35,7 +36,6 @@ namespace GPSoft.GPMagic.GPMagicBase.UI
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.DialogResult = DialogResult.Cancel;
             Close();
         }
 

@@ -1,11 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
-using GPSoft.GPMagic.GPSearch.Common;
 using GPSoft.GPMagic.GPMagicBase.UI;
-using System.IO;
+using GPSoft.GPMagic.GPSearch.Common;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
@@ -67,10 +68,10 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            RefreshTotalCardsGrid();
+            RefreshDataGridView();
         }
 
-        public void RefreshTotalCardsGrid()
+        public void RefreshDataGridView()
         {
             if (cards.Count > 0)
             {
@@ -105,7 +106,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             ShowCardInfoForm(DataOperateType.Insert);
         }
 
-        private void mnuEditCard_Click(object sender, EventArgs e)
+        private void mnuItemEditCard_Click(object sender, EventArgs e)
         {
             ShowCardInfoForm(DataOperateType.Update);
         }
@@ -121,6 +122,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
             AboutBox frmAbout = new AboutBox();
             frmAbout.ShowDialog(this);
         }
+
+        #region 数据拖曳
         //设置拖曳效果
         private void dgvDeckList_DragEnter(object sender, DragEventArgs e)
         {
@@ -155,12 +158,13 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 AddDeckList(row);
             }
             dgvDeckList.Sort(colDCardID, System.ComponentModel.ListSortDirection.Ascending);
-        }
+        } 
+        #endregion
 
         private void AddDeckList(DataGridViewRow row)
         {
             int cardID = Convert.ToInt32(row.Cells["dgvColCardID"].Value);
-            int index = GetDeckCardIndex(cardID);
+            int index = GetCardIndexOfDeckGridView(cardID);
             if (index < 0)
             {
                 dgvDeckList.Rows.Add(
@@ -180,13 +184,10 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private void AddDeckCardCount(int index)
         {
             int count = Convert.ToInt32(dgvDeckList.Rows[index].Cells["colDCount"].Value);
-            if (count < 4)
-            {
-                dgvDeckList.Rows[index].Cells["colDCount"].Value = count + 1;
-            }
+            dgvDeckList.Rows[index].Cells["colDCount"].Value = count + 1;
         }
 
-        private int GetDeckCardIndex(int cardID)
+        private int GetCardIndexOfDeckGridView(int cardID)
         {
             int result = -1;
             foreach (DataGridViewRow row in dgvDeckList.Rows)
@@ -200,22 +201,9 @@ namespace GPSoft.GPMagic.GPSearch.UI
             return result;
         }
 
-        private void dgvCardList_CellMouseEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-            dgvCardList.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGray;
-        }
-
-        private void dgvCardList_CellMouseLeave(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex < 0) return;
-            DataGridViewRow row = dgvCardList.Rows[e.RowIndex];
-            row.DefaultCellStyle.BackColor = e.RowIndex % 2 == 0 ? Color.White : Color.Lavender;
-        }
-
         private void tsbtnRefresh_Click(object sender, EventArgs e)
         {
-            RefreshTotalCardsGrid();
+            RefreshDataGridView();
         }
 
         private void dgvCardList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -227,6 +215,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             ShowCardInfoForm(DataOperateType.Update);
         }
 
+        #region 选择列表中的行
         /// <summary>
         /// 选择上一行
         /// </summary>
@@ -274,15 +263,22 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         public void SelectCard(ListCardTotal card)
         {
-            int cardIndex = GetCardIndex(card.CardID);
+            int cardIndex = GetCardIndexOfTotalGridView(card.CardID);
             SelectRowAtIndex(cardIndex);
         }
 
-        private int GetCardIndex(int cardID)
+        private int GetCardIndexOfTotalGridView(int cardID)
         {
             int result = 0;
             //这里要改为二分法搜索
-            result = Cards.Records.Rows.IndexOf(Cards.Records.Select(string.Format("CardID={0}", cardID))[0]);
+            foreach (DataGridViewRow row in dgvCardList.Rows)
+            {
+                if (cardID == Convert.ToInt32(row.Cells["dgvColCardID"].Value))
+                {
+                    result = row.Index;
+                    break;
+                }
+            }
             return result;
         }
 
@@ -292,13 +288,15 @@ namespace GPSoft.GPMagic.GPSearch.UI
             {
                 row.Selected = false;
             }
+            if (index < 0) index = 0;
             dgvCardList.Rows[index].Selected = true;
-        }
+        } 
+        #endregion
 
         private void tsbtnType_Click(object sender, EventArgs e)
         {
             this.totalCardsFilter.SetCardType();
-            RefreshTotalCardsGrid();
+            RefreshDataGridView();
         }
 
         private void dgvDeckList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -373,8 +371,75 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void tsbtnSaveDeck_Click(object sender, EventArgs e)
         {
-            //DemoSerializeDeckListFilter();
-            RadioButtonDialog.Show("aaa", "");
+            List<string> items = GenerateSaveFormatList();
+            int index = RadioButtonDialog.Show("保存格式", items);
+            if (index >= 0)
+            {
+                string formatText = items[index];
+                SetSaveFileDialogFilter(formatText);
+                SaveDeck(formatText);
+            }
+        }
+
+        private void SaveDeck(string formatText)
+        {
+            saveFileDialog1.Title = "保存牌表";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if (File.Exists(saveFileDialog1.FileName))
+                {
+                    if (MessageBox.Show("文件已经存在，是否覆盖现有文件？",
+                                    "文件名冲突",
+                                    MessageBoxButtons.YesNo,
+                                    MessageBoxIcon.Information) == DialogResult.Yes)
+                    {
+                        OutputDeckFile(saveFileDialog1.FileName, formatText);
+                    }
+                    else
+                    {
+                        SaveDeck(formatText);
+                    }
+                }
+                else
+                {
+                    OutputDeckFile(saveFileDialog1.FileName, formatText);
+                }
+            }
+        }
+
+        private void OutputDeckFile(string deckName, string formatText)
+        {
+            if (!File.Exists(deckName)) File.Create(deckName).Close();
+            FileStream writeStream = File.OpenWrite(deckName);
+            if (formatText.Equals(DeckSaveFormat.CnList))
+            {
+                saveFileDialog1.Filter = "中文牌表|*.txt";
+            }
+            else if (formatText.Equals(DeckSaveFormat.Mws))
+            {
+                saveFileDialog1.Filter = "MWS牌表格式|*.mwDeck";
+            }
+        }
+
+        private List<string> GenerateSaveFormatList()
+        {
+            List<string> result = new List<string>();
+            result.Add(DeckSaveFormat.Mws);
+            //items.Add("GPMagic");
+            result.Add(DeckSaveFormat.CnList);
+            return result;
+        }
+
+        private void SetSaveFileDialogFilter(string formatText)
+        {
+            if (formatText.Equals(DeckSaveFormat.CnList))
+            {
+                saveFileDialog1.Filter = "中文牌表|*.txt";
+            }
+            else if (formatText.Equals(DeckSaveFormat.Mws))
+            {
+                saveFileDialog1.Filter = "MWS牌表格式|*.mwDeck";
+            }
         }
 
         private static void DemoSerializeDeckListFilter()
@@ -387,8 +452,15 @@ namespace GPSoft.GPMagic.GPSearch.UI
             filter.BackgroundColor = Color.Black.ToArgb();
             deckFilters.DeckFilterList.Add(filter);
             if (!Directory.Exists("./Config")) Directory.CreateDirectory("./Config");
-            //Helper.FileOperate.ObjectXMLSerialize<ConfigDeckFilterList>.Save(deckFilters, "./Config/DeckFilter.xml");
             deckFilters.Load();
+        }
+
+        private void mnuItemDeckFilterSetting_Click(object sender, EventArgs e)
+        {
+            using (FormEditDeckFilter form = new FormEditDeckFilter())
+            {
+                form.ShowDialog(this);
+            }
         }
     }
 }

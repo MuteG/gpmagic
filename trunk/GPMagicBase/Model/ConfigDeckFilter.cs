@@ -14,7 +14,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
     /// 套牌列表中卡牌类型过滤统计设定
     /// </summary>
     [Serializable]
-    public sealed class ConfigDeckFilter
+    public sealed class ConfigDeckFilter :IEquatable<ConfigDeckFilter>
     {
         private string fieldName = string.Empty;
         /// <summary>
@@ -79,6 +79,15 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             get { return backgroundColor; }
             set { backgroundColor = value; }
         }
+
+        #region IEquatable<ConfigDeckFilter> 成员
+
+        public bool Equals(ConfigDeckFilter other)
+        {
+            return this.FieldName.Equals(other.FieldName) && this.FieldValue.Equals(other.FieldValue);
+        }
+
+        #endregion
     }
     /// <summary>
     /// 套牌列表中卡牌类型过滤统计设定列表
@@ -114,6 +123,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         public void Save(string path)
         {
             this.configPath = path;
+            FileHelper.CreateDirectory(Path.GetDirectoryName(path));
             ObjectXMLSerialize<ConfigDeckFilterList>.Save(this, path);
         }
         public void Load()
