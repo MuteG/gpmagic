@@ -39,11 +39,11 @@
             this.lblDisplayName = new System.Windows.Forms.Label();
             this.tbxDisplayName = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.cbxIsShow = new System.Windows.Forms.CheckBox();
             this.lblBackgroundColor = new System.Windows.Forms.Label();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.pbxBackgroundColor = new System.Windows.Forms.PictureBox();
             this.btnBackgroundColor = new System.Windows.Forms.Button();
+            this.cbxIsShow = new System.Windows.Forms.CheckBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbxFieldSetting = new System.Windows.Forms.GroupBox();
@@ -73,6 +73,7 @@
             // 
             // cbxFieldName
             // 
+            this.cbxFieldName.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxFieldName.FormattingEnabled = true;
             this.cbxFieldName.Items.AddRange(new object[] {
             "卡牌类别",
@@ -82,6 +83,7 @@
             this.cbxFieldName.Size = new System.Drawing.Size(121, 20);
             this.cbxFieldName.TabIndex = 2;
             this.toolTip1.SetToolTip(this.cbxFieldName, "在此对象上根据制定的条件进行统计，符合条件的数据总数作为统计结果");
+            this.cbxFieldName.SelectedIndexChanged += new System.EventHandler(this.cbxFieldName_SelectedIndexChanged);
             // 
             // lblFieldValue
             // 
@@ -95,8 +97,10 @@
             // 
             // tbxFieldValue
             // 
+            this.tbxFieldValue.BackColor = System.Drawing.Color.White;
             this.tbxFieldValue.Location = new System.Drawing.Point(65, 42);
             this.tbxFieldValue.Name = "tbxFieldValue";
+            this.tbxFieldValue.ReadOnly = true;
             this.tbxFieldValue.Size = new System.Drawing.Size(91, 19);
             this.tbxFieldValue.TabIndex = 4;
             this.toolTip1.SetToolTip(this.tbxFieldValue, "统计对象的值符合设定的取值时，对这样的数据进行技术统计，并作为统计结果");
@@ -109,6 +113,7 @@
             this.btnFieldValue.Size = new System.Drawing.Size(24, 24);
             this.btnFieldValue.TabIndex = 5;
             this.btnFieldValue.UseVisualStyleBackColor = true;
+            this.btnFieldValue.Click += new System.EventHandler(this.btnFieldValue_Click);
             // 
             // cbxIsReverse
             // 
@@ -138,16 +143,6 @@
             this.tbxDisplayName.TabIndex = 8;
             this.toolTip1.SetToolTip(this.tbxDisplayName, "建议使用简短的名称（比如：生物）");
             // 
-            // cbxIsShow
-            // 
-            this.cbxIsShow.AutoSize = true;
-            this.cbxIsShow.Location = new System.Drawing.Point(243, 14);
-            this.cbxIsShow.Name = "cbxIsShow";
-            this.cbxIsShow.Size = new System.Drawing.Size(72, 16);
-            this.cbxIsShow.TabIndex = 9;
-            this.cbxIsShow.Text = "是否显示";
-            this.cbxIsShow.UseVisualStyleBackColor = true;
-            // 
             // lblBackgroundColor
             // 
             this.lblBackgroundColor.AutoSize = true;
@@ -157,11 +152,6 @@
             this.lblBackgroundColor.TabIndex = 10;
             this.lblBackgroundColor.Text = "背景色";
             this.toolTip1.SetToolTip(this.lblBackgroundColor, "套牌列表中数据行的背景色");
-            // 
-            // colorDialog1
-            // 
-            this.colorDialog1.AnyColor = true;
-            this.colorDialog1.FullOpen = true;
             // 
             // pbxBackgroundColor
             // 
@@ -183,6 +173,21 @@
             this.toolTip1.SetToolTip(this.btnBackgroundColor, "套牌列表中数据行的背景色");
             this.btnBackgroundColor.UseVisualStyleBackColor = true;
             this.btnBackgroundColor.Click += new System.EventHandler(this.btnBackgroundColor_Click);
+            // 
+            // cbxIsShow
+            // 
+            this.cbxIsShow.AutoSize = true;
+            this.cbxIsShow.Location = new System.Drawing.Point(243, 14);
+            this.cbxIsShow.Name = "cbxIsShow";
+            this.cbxIsShow.Size = new System.Drawing.Size(72, 16);
+            this.cbxIsShow.TabIndex = 9;
+            this.cbxIsShow.Text = "是否显示";
+            this.cbxIsShow.UseVisualStyleBackColor = true;
+            // 
+            // colorDialog1
+            // 
+            this.colorDialog1.AnyColor = true;
+            this.colorDialog1.FullOpen = true;
             // 
             // btnSave
             // 

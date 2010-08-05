@@ -3,20 +3,33 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPSearch.Common;
 using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.UI;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormEditDeckFilter : Form
     {
+        private DataTable filterFieldTable = new DataTable();
         public FormEditDeckFilter()
         {
             InitializeComponent();
             FillFilterList();
+            FillComboBoxFilterName();
+        }
+
+        private void FillComboBoxFilterName()
+        {
+            this.filterFieldTable.Columns.Add("colDisplayName", typeof(string));
+            this.filterFieldTable.Columns.Add("colFieldName", typeof(string));
+            this.filterFieldTable.Rows.Add("卡牌类别", "TypeName");
+            this.filterFieldTable.Rows.Add("卡牌子类别", "SubTypeName");
+            cbxFieldName.DataSource = this.filterFieldTable;
+            cbxFieldName.DisplayMember = "colDisplayName";
+            cbxFieldName.ValueMember = "colFieldName";
         }
 
         private void FillFilterList()
@@ -97,6 +110,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 else
                 {
                     filterList.Add(filter);
+                    lbxFilterList.Items.Add(filter.DisplayName);
                 }
             }
             CommonHelper.DeckFilterListConfiguration.Save();
@@ -119,6 +133,43 @@ namespace GPSoft.GPMagic.GPSearch.UI
             if (index >= 0 && lbxFilterList.Items.Count > 0)
             {
                 DisplayFilterInformation(CommonHelper.DeckFilterListConfiguration.DeckFilterList[index]);
+            }
+        }
+
+        private void btnFieldValue_Click(object sender, EventArgs e)
+        {
+            switch (Convert.ToString(cbxFieldName.SelectedValue))
+            {
+                case "TypeName":
+                    {
+                        tbxFieldValue.Text = CheckValuesDialog.Show(lblFieldValue.Text, tbxFieldValue.Text, "/", typeof(CardType));
+                        break;
+                    }
+                case "SubTypeName":
+                    {
+                        tbxFieldValue.Text = CheckValuesDialog.Show(lblFieldValue.Text, tbxFieldValue.Text, "/", typeof(CardSubType));
+                        break;
+                    }
+            }
+        }
+
+        private void cbxFieldName_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbxFilterList.SelectedIndex >= 0 && CommonHelper.DeckFilterListConfiguration.DeckFilterList.Count > 0)
+            {
+                ConfigDeckFilter filter = CommonHelper.DeckFilterListConfiguration.DeckFilterList[lbxFilterList.SelectedIndex];
+                if (cbxFieldName.SelectedValue.Equals(filter.FieldName))
+                {
+                    tbxFieldValue.Text = filter.FieldValue;
+                }
+                else
+                {
+                    tbxFieldValue.Text = string.Empty;
+                }
+            }
+            else
+            {
+                tbxFieldValue.Text = string.Empty;
             }
         }
     }

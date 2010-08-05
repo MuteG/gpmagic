@@ -44,6 +44,14 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             get { return typeName; }
             set { typeName = value; }
         }
-
+        private string englishName = string.Empty;
+        /// <summary>
+        /// 获取或者设置卡牌类型的英文名
+        /// </summary>
+        public string EnglishName
+        {
+            get { return englishName; }
+            set { englishName = value; }
+        }
     }
 }
