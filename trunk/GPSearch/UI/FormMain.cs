@@ -442,19 +442,6 @@ namespace GPSoft.GPMagic.GPSearch.UI
             }
         }
 
-        private static void DemoSerializeDeckListFilter()
-        {
-            ConfigDeckFilterList deckFilters = new ConfigDeckFilterList();
-            ConfigDeckFilter filter = new ConfigDeckFilter();
-            filter.DisplayName = "生物";
-            filter.FieldName = "TypeName";
-            filter.FieldValue = "生物";
-            filter.BackgroundColor = Color.Black.ToArgb();
-            deckFilters.DeckFilterList.Add(filter);
-            if (!Directory.Exists("./Config")) Directory.CreateDirectory("./Config");
-            deckFilters.Load();
-        }
-
         private void mnuItemDeckFilterSetting_Click(object sender, EventArgs e)
         {
             using (FormEditDeckFilter form = new FormEditDeckFilter())

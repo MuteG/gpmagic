@@ -2,12 +2,12 @@
 <DeckFilterConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <FilterList>
     <Filter>
-      <FieldName />
-      <FieldValue />
+      <FieldName>TypeName</FieldName>
+      <FieldValue>生物,鹏洛客</FieldValue>
       <IsReverse>false</IsReverse>
-      <DisplayName>Test</DisplayName>
+      <DisplayName>生物</DisplayName>
       <IsShow>true</IsShow>
-      <BackgroundColor>-1</BackgroundColor>
+      <BackgroundColor>-10493286</BackgroundColor>
     </Filter>
   </FilterList>
 </DeckFilterConfig>

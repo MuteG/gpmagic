@@ -118,22 +118,17 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         }
         public void Save()
         {
-            this.Save(this.configPath);
+            FileHelper.CreateDirectory(Path.GetDirectoryName(this.configPath));
+            ObjectXMLSerialize<ConfigDeckFilterList>.Save(this, this.configPath);
         }
-        public void Save(string path)
+        public static ConfigDeckFilterList GetInstance()
         {
-            this.configPath = path;
-            FileHelper.CreateDirectory(Path.GetDirectoryName(path));
-            ObjectXMLSerialize<ConfigDeckFilterList>.Save(this, path);
-        }
-        public void Load()
-        {
-            this.Load(this.configPath);
-        }
-        public void Load(string path)
-        {
-            this.configPath = path;
-            ObjectXMLSerialize<ConfigDeckFilterList>.Load(this, path);
+            ConfigDeckFilterList filterList = new ConfigDeckFilterList();
+            if (File.Exists(filterList.configPath))
+            {
+                filterList = ObjectXMLSerialize<ConfigDeckFilterList>.Load(filterList, filterList.configPath);
+            }
+            return filterList;
         }
     }
 }

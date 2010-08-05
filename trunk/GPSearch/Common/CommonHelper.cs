@@ -15,13 +15,12 @@ namespace GPSoft.GPMagic.GPSearch.Common
                 return cardRarity;
             }
         }
-        private static ConfigDeckFilterList deckFilterConfiguration = new ConfigDeckFilterList();
+        private static ConfigDeckFilterList deckFilterConfiguration = ConfigDeckFilterList.GetInstance();
 
         public static ConfigDeckFilterList DeckFilterListConfiguration
         {
             get
             {
-                CommonHelper.deckFilterConfiguration.Load();
                 return CommonHelper.deckFilterConfiguration;
             }
         }
