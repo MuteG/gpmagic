@@ -3,7 +3,7 @@
   <FilterList>
     <Filter>
       <FieldName>TypeName</FieldName>
-      <FieldValue>生物,鹏洛客</FieldValue>
+      <FieldValue>生物/鹏洛客/神器生物</FieldValue>
       <IsReverse>false</IsReverse>
       <DisplayName>生物</DisplayName>
       <IsShow>true</IsShow>
