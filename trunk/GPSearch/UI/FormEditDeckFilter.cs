@@ -17,8 +17,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
         public FormEditDeckFilter()
         {
             InitializeComponent();
-            FillFilterList();
             FillComboBoxFilterName();
+            FillFilterList();
         }
 
         private void FillComboBoxFilterName()

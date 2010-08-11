@@ -60,6 +60,7 @@
             this.mnuItemDeckFilterSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemGridHeaderSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemDefaultSavePathSetting = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemStatistics = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.gbxCardLibrary = new System.Windows.Forms.GroupBox();
@@ -114,7 +115,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.mnuItemStatistics = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbtnOpenDeck = new System.Windows.Forms.ToolStripButton();
             this.mnuStpMain.SuspendLayout();
             this.gbxCardLibrary.SuspendLayout();
             this.tspCardLibrary.SuspendLayout();
@@ -194,7 +195,7 @@
             this.mnuItemEditCard,
             this.mnuItemDeleteCard});
             this.mnuItemCardEdit.Name = "mnuItemCardEdit";
-            this.mnuItemCardEdit.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemCardEdit.Size = new System.Drawing.Size(94, 22);
             this.mnuItemCardEdit.Text = "卡牌";
             // 
             // mnuItemAddCard
@@ -231,7 +232,7 @@
             this.mnuItemCardTypeSetting,
             this.mnuItemCardAbilitiesSetting});
             this.mnuItemCardSetting.Name = "mnuItemCardSetting";
-            this.mnuItemCardSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemCardSetting.Size = new System.Drawing.Size(94, 22);
             this.mnuItemCardSetting.Text = "卡牌";
             // 
             // mnuItemCardTypeSetting
@@ -253,7 +254,7 @@
             this.mnuItemGridHeaderSetting,
             this.mnuItemDefaultSavePathSetting});
             this.mnuItemDeckSetting.Name = "mnuItemDeckSetting";
-            this.mnuItemDeckSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemDeckSetting.Size = new System.Drawing.Size(94, 22);
             this.mnuItemDeckSetting.Text = "套牌";
             // 
             // mnuItemDeckFilterSetting
@@ -275,6 +276,12 @@
             this.mnuItemDefaultSavePathSetting.Size = new System.Drawing.Size(166, 22);
             this.mnuItemDefaultSavePathSetting.Text = "牌表默认保存路径";
             // 
+            // mnuItemStatistics
+            // 
+            this.mnuItemStatistics.Name = "mnuItemStatistics";
+            this.mnuItemStatistics.Size = new System.Drawing.Size(41, 20);
+            this.mnuItemStatistics.Text = "统计";
+            // 
             // mnuItemHelp
             // 
             this.mnuItemHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -286,7 +293,7 @@
             // mnuItemAbout
             // 
             this.mnuItemAbout.Name = "mnuItemAbout";
-            this.mnuItemAbout.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemAbout.Size = new System.Drawing.Size(94, 22);
             this.mnuItemAbout.Text = "关于";
             this.mnuItemAbout.Click += new System.EventHandler(this.mnuItemAbout_Click);
             // 
@@ -492,6 +499,7 @@
             this.tspDeckList.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.tspDeckList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsbtnLockDeck,
+            this.tsbtnOpenDeck,
             this.tsbtnSaveDeck,
             this.toolStripSeparator3,
             this.tsbtnDeckFilterType,
@@ -500,7 +508,7 @@
             this.tspDeckList.Location = new System.Drawing.Point(3, 13);
             this.tspDeckList.Name = "tspDeckList";
             this.tspDeckList.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.tspDeckList.Size = new System.Drawing.Size(239, 25);
+            this.tspDeckList.Size = new System.Drawing.Size(262, 25);
             this.tspDeckList.TabIndex = 0;
             this.tspDeckList.Text = "toolStrip1";
             // 
@@ -521,7 +529,7 @@
             this.tsbtnSaveDeck.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnSaveDeck.Name = "tsbtnSaveDeck";
             this.tsbtnSaveDeck.Size = new System.Drawing.Size(23, 22);
-            this.tsbtnSaveDeck.Text = "toolStripButton1";
+            this.tsbtnSaveDeck.Text = "保存套牌牌表";
             this.tsbtnSaveDeck.Click += new System.EventHandler(this.tsbtnSaveDeck_Click);
             // 
             // toolStripSeparator3
@@ -537,34 +545,34 @@
             this.mnuItemFilterCreature,
             this.mnuItemFilterLand,
             this.mnuItemFilterSpell});
-            this.tsbtnDeckFilterType.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnDeckFilterType.Image")));
+            this.tsbtnDeckFilterType.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.filter_2;
             this.tsbtnDeckFilterType.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnDeckFilterType.Name = "tsbtnDeckFilterType";
             this.tsbtnDeckFilterType.Size = new System.Drawing.Size(29, 22);
-            this.tsbtnDeckFilterType.Text = "toolStripDropDownButton1";
+            this.tsbtnDeckFilterType.Text = "过滤统计项";
             // 
             // mnuItemTotalFilterType
             // 
             this.mnuItemTotalFilterType.Name = "mnuItemTotalFilterType";
-            this.mnuItemTotalFilterType.Size = new System.Drawing.Size(94, 22);
+            this.mnuItemTotalFilterType.Size = new System.Drawing.Size(152, 22);
             this.mnuItemTotalFilterType.Text = "全部";
             // 
             // mnuItemFilterCreature
             // 
             this.mnuItemFilterCreature.Name = "mnuItemFilterCreature";
-            this.mnuItemFilterCreature.Size = new System.Drawing.Size(94, 22);
+            this.mnuItemFilterCreature.Size = new System.Drawing.Size(152, 22);
             this.mnuItemFilterCreature.Text = "生物";
             // 
             // mnuItemFilterLand
             // 
             this.mnuItemFilterLand.Name = "mnuItemFilterLand";
-            this.mnuItemFilterLand.Size = new System.Drawing.Size(94, 22);
+            this.mnuItemFilterLand.Size = new System.Drawing.Size(152, 22);
             this.mnuItemFilterLand.Text = "地";
             // 
             // mnuItemFilterSpell
             // 
             this.mnuItemFilterSpell.Name = "mnuItemFilterSpell";
-            this.mnuItemFilterSpell.Size = new System.Drawing.Size(94, 22);
+            this.mnuItemFilterSpell.Size = new System.Drawing.Size(152, 22);
             this.mnuItemFilterSpell.Text = "咒语";
             // 
             // toolStripSeparator4
@@ -813,11 +821,14 @@
             this.splitContainer1.SplitterDistance = 568;
             this.splitContainer1.TabIndex = 1;
             // 
-            // mnuItemStatistics
+            // tsbtnOpenDeck
             // 
-            this.mnuItemStatistics.Name = "mnuItemStatistics";
-            this.mnuItemStatistics.Size = new System.Drawing.Size(41, 20);
-            this.mnuItemStatistics.Text = "统计";
+            this.tsbtnOpenDeck.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnOpenDeck.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.open;
+            this.tsbtnOpenDeck.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnOpenDeck.Name = "tsbtnOpenDeck";
+            this.tsbtnOpenDeck.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnOpenDeck.Text = "打开套牌牌表";
             // 
             // FormMain
             // 
@@ -931,6 +942,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuItemEditCard;
         private System.Windows.Forms.ToolStripMenuItem mnuItemDeleteCard;
         private System.Windows.Forms.ToolStripMenuItem mnuItemStatistics;
+        private System.Windows.Forms.ToolStripButton tsbtnOpenDeck;
     }
 }
 
