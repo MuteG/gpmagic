@@ -74,14 +74,26 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
                 return records;
             }
         }
+        private DataTable _TableClone = null;
+        /// <summary>
+        /// 获取对应的数据表的表结构
+        /// </summary>
+        public DataTable TableClone
+        {
+            get
+            {
+                if (null == _TableClone) this.GetTableClone();
+                return _TableClone.Clone();
+            }
+        }
         public AbstractTableInstance()
         {
-            this.dbop = new DatabaseOperator(SQLiteDatabaseInformation.Connection);
+            this.dbop = new DatabaseOperator();
         }
-        private DataTable GetTableRecords()
+        private DataTable GetTableClone()
         {
             DataTable result = null;
-            result = dbop.SelectTableData(this.tableName);
+            _TableClone = dbop.ExecuteDataTableScript(string.Format("SELECT * FROM {0} WHERE 1 = -1", this.tableName));
             return result;
         }
         private void GetColumnName()
@@ -115,7 +127,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// </summary>
         public void Reload()
         {
-            records = GetTableRecords();
+            records = dbop.SelectTableData(this.tableName);
         }
 
         /// <summary>

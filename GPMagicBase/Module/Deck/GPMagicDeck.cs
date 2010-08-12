@@ -1,35 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using GPSoft.GPMagic.GPMagicBase.Model.Deck;
 
 namespace GPSoft.GPMagic.GPMagicBase.Module.Deck
 {
-    class GPMagicDeck:IDeck
+    public class GPMagicDeck:IDeck
     {
         #region IDeck 成员
 
-        public string Name
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        private DeckFile deck = new DeckFile();
 
-        public string Description
+        public DeckFile Deck
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get { return deck; }
         }
 
         public void Load(string deckFullPath)

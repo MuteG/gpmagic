@@ -10,7 +10,7 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
 {
     public class DatabaseOperator : IDBOperate, IDisposable
     {
-        private string _ConnStr = string.Empty;
+        private string _ConnStr = SQLiteDatabaseInformation.Connection;
         /// <summary>
         /// 获取或者设置数据库连接字符串
         /// </summary>
@@ -21,11 +21,6 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
         }
         private SQLiteTransaction tran = null;
         private bool useTran = false;
-
-        public DatabaseOperator(string connStr)
-        {
-            _ConnStr = connStr;
-        }
 
         #region IDBOperate 成员
 

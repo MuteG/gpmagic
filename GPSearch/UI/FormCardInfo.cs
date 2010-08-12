@@ -42,7 +42,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         public FormCardInfo()
         {
             InitializeComponent();
-            this.dbop = new DatabaseOperator(SQLiteDatabaseInformation.Connection);
+            this.dbop = new DatabaseOperator();
             tableInstanceDictionary.Add(cbxRarity.Name, new CardRarity());
             tableInstanceDictionary.Add(cbxImageType.Name, new CardImageType());
             tableInstanceDictionary.Add(cbxCardType.Name, new CardType());
