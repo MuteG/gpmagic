@@ -6,12 +6,16 @@ using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
 using GPSoft.GPMagic.GPMagicBase.UI;
 using GPSoft.GPMagic.GPSearch.Common;
+using GPSoft.GPMagic.GPMagicBase.Model.Deck;
+using GPSoft.GPMagic.GPMagicBase.Module.Deck;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormMain : Form
     {
         private TotalCardFilter totalCardsFilter = new TotalCardFilter();
+        private IDeck deck = new GPMagicDeck();
+        private DataTable deckTable = new DataTable();
 
         private FormCardInfo frmInfo = null;
         /// <summary>
@@ -46,6 +50,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             InitializeComponent();
             tscbxLanguage.SelectedIndex = 1;
             this.DoubleBuffered = true;
+            deckTable = this.Cards.TableClone;
         }
 
         private void Init()
@@ -131,7 +136,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         //开始拖曳数据
         private void dgvCardList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Clicks == 1)
+            if (e.Clicks == 1 && e.RowIndex >= 0)
             {
                 DataGridViewRow[] rows;
                 if (dgvCardList.Rows[e.RowIndex].Selected)
@@ -173,6 +178,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                     row.Cells["dgvColCost"].Value,
                     row.Cells["dgvColCardID"].Value);
                 dgvDeckList.Rows[dgvDeckList.Rows.Count - 1].DefaultCellStyle.ForeColor = row.DefaultCellStyle.ForeColor;
+                this.deckTable.Rows.Add(this.Cards.Records.Select(string.Format("CardID={0}", cardID))[0].ItemArray);
             }
             else
             {
@@ -387,17 +393,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             {
                 if (File.Exists(saveFileDialog1.FileName))
                 {
-                    if (MessageBox.Show("文件已经存在，是否覆盖现有文件？",
-                                    "文件名冲突",
-                                    MessageBoxButtons.YesNo,
-                                    MessageBoxIcon.Information) == DialogResult.Yes)
-                    {
-                        OutputDeckFile(saveFileDialog1.FileName, formatText);
-                    }
-                    else
-                    {
-                        SaveDeck(formatText);
-                    }
+                    OutputDeckFile(saveFileDialog1.FileName, formatText);
                 }
                 else
                 {
@@ -408,16 +404,43 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void OutputDeckFile(string deckName, string formatText)
         {
-            if (!File.Exists(deckName)) File.Create(deckName).Close();
-            FileStream writeStream = File.OpenWrite(deckName);
+            
             if (formatText.Equals(DeckSaveFormat.CnList))
             {
                 saveFileDialog1.Filter = "中文牌表|*.txt";
+                deck = new GPMagicDeck();
             }
             else if (formatText.Equals(DeckSaveFormat.Mws))
             {
                 saveFileDialog1.Filter = "MWS牌表格式|*.mwDeck";
+                deck = new MWSDeck();
             }
+            foreach (DataRow row in this.deckTable.Rows)
+            {
+                deck.Deck.CardRecords.ImportRow(row);
+                DeckCard card = new DeckCard();
+                card.CardEnglishName = row["CardEnglishName"].ToString();
+                card.CardID = Convert.ToInt32(row["CardID"]);
+                card.CardName = row["CardName"].ToString();
+                card.Count = GetCardCountFromDeckList(card.CardID);
+                card.Symbol = row["Symbol"].ToString();
+                deck.Deck.Cards.Add(card);
+            }
+            deck.Save(deckName);
+        }
+
+        private int GetCardCountFromDeckList(int cardID)
+        {
+            int result = 0;
+            foreach (DataGridViewRow row in dgvDeckList.Rows)
+            {
+                if (cardID == Convert.ToInt32(row.Cells["colDCardID"].Value))
+                {
+                    result = Convert.ToInt32(row.Cells["colDCount"].Value);
+                    break;
+                }
+            }
+            return result;
         }
 
         private List<string> GenerateSaveFormatList()
