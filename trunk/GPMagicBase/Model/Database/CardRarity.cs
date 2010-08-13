@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using GPSoft.GPMagic.GPMagicBase.SQLite;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model
+namespace GPSoft.GPMagic.GPMagicBase.Model.Database
 {
     public sealed class CardRarity : AbstractTableInstance
     {

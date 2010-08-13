@@ -7,6 +7,8 @@ using System.Text;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPSearch.Common;
 using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.GPMagic.GPMagicBase.Model.Deck;
 using GPSoft.GPMagic.GPMagicBase.UI;
 
 namespace GPSoft.GPMagic.GPSearch.UI
@@ -34,6 +36,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void FillFilterList()
         {
+            lbxFilterList.Items.Clear();
             foreach (ConfigDeckFilter filter in CommonHelper.DeckFilterListConfiguration.DeckFilterList)
             {
                 lbxFilterList.Items.Add(filter.DisplayName);
@@ -88,30 +91,23 @@ namespace GPSoft.GPMagic.GPSearch.UI
             if (!CheckInput()) return;
             ConfigDeckFilter filter;
             List<ConfigDeckFilter> filterList = CommonHelper.DeckFilterListConfiguration.DeckFilterList;
-            if (lbxFilterList.Items.Count > 0 && lbxFilterList.SelectedIndex >= 0)
+            filter = new ConfigDeckFilter();
+            PackFilterInformation(filter);
+            if (filterList.Contains(filter))
             {
-                filter = filterList[lbxFilterList.SelectedIndex];
-                PackFilterInformation(filter);
+                ConfigDeckFilter existFilter = filterList[filterList.IndexOf(filter)];
+                existFilter.DisplayName = filter.DisplayName;
+                existFilter.FieldName = filter.FieldName;
+                existFilter.FieldValue = filter.FieldValue;
+                existFilter.IsShow = filter.IsShow;
+                existFilter.IsReverse = filter.IsReverse;
+                existFilter.BackgroundColor = filter.BackgroundColor;
             }
             else
             {
-                filter = new ConfigDeckFilter();
-                PackFilterInformation(filter);
-                if (filterList.Contains(filter))
-                {
-                    ConfigDeckFilter existFilter = filterList[filterList.IndexOf(filter)];
-                    existFilter.DisplayName = filter.DisplayName;
-                    existFilter.FieldName = filter.FieldName;
-                    existFilter.FieldValue = filter.FieldValue;
-                    existFilter.IsShow = filter.IsShow;
-                    existFilter.IsReverse = filter.IsReverse;
-                    existFilter.BackgroundColor = filter.BackgroundColor;
-                }
-                else
-                {
-                    filterList.Add(filter);
-                    lbxFilterList.Items.Add(filter.DisplayName);
-                }
+                filterList.Add(filter);
+                int index = lbxFilterList.Items.Add(filter.DisplayName);
+                lbxFilterList.SelectedIndex = index;
             }
             CommonHelper.DeckFilterListConfiguration.Save();
         }
@@ -170,6 +166,38 @@ namespace GPSoft.GPMagic.GPSearch.UI
             else
             {
                 tbxFieldValue.Text = string.Empty;
+            }
+        }
+
+        private void btnDown_Click(object sender, EventArgs e)
+        {
+            if (lbxFilterList.SelectedIndex >= 0)
+            {
+                ConfigDeckFilter filter = CommonHelper.DeckFilterListConfiguration.DeckFilterList[lbxFilterList.SelectedIndex];
+                if (lbxFilterList.SelectedIndex < CommonHelper.DeckFilterListConfiguration.DeckFilterList.Count - 1)
+                {
+                    CommonHelper.DeckFilterListConfiguration.DeckFilterList.Insert(lbxFilterList.SelectedIndex + 2, filter);
+                    CommonHelper.DeckFilterListConfiguration.DeckFilterList.Remove(filter);
+                    FillFilterList();
+                    lbxFilterList.SelectedIndex = CommonHelper.DeckFilterListConfiguration.DeckFilterList.IndexOf(filter);
+                    CommonHelper.DeckFilterListConfiguration.Save();
+                }
+            }
+        }
+
+        private void btnUp_Click(object sender, EventArgs e)
+        {
+            if (lbxFilterList.SelectedIndex >= 0)
+            {
+                ConfigDeckFilter filter = CommonHelper.DeckFilterListConfiguration.DeckFilterList[lbxFilterList.SelectedIndex];
+                if (lbxFilterList.SelectedIndex > 0)
+                {
+                    CommonHelper.DeckFilterListConfiguration.DeckFilterList.Remove(filter);
+                    CommonHelper.DeckFilterListConfiguration.DeckFilterList.Insert(lbxFilterList.SelectedIndex - 1, filter);
+                    FillFilterList();
+                    lbxFilterList.SelectedIndex = CommonHelper.DeckFilterListConfiguration.DeckFilterList.IndexOf(filter);
+                    CommonHelper.DeckFilterListConfiguration.Save();
+                }
             }
         }
     }

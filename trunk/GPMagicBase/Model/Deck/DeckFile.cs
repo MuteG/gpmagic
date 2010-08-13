@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Xml.Serialization;
+using GPSoft.GPMagic.GPMagicBase.Model.Database;
 
 namespace GPSoft.GPMagic.GPMagicBase.Model.Deck
 {
@@ -86,7 +87,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Deck
             {
                 if (null == _CardRecords)
                 {
-                    _CardRecords = new CardLibrary().TableClone;
+                    _CardRecords = new CardTotal().TableClone;
                 }
                 return _CardRecords;
             }
@@ -96,7 +97,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Deck
     /// 套牌中包含的卡牌信息
     /// </summary>
     [Serializable]
-    public sealed class DeckCard
+    public sealed class DeckCard : ListCardTotal
     {
         private int count;
         /// <summary>
@@ -108,45 +109,15 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Deck
             get { return count; }
             set { count = value; }
         }
-        private string cardName = string.Empty;
-        /// <summary>
-        /// 获取或者设置卡牌名
-        /// </summary>
-        [XmlElement]
-        public string CardName
+
+        public override int GetHashCode()
         {
-            get { return cardName; }
-            set { cardName = value; }
+            return base.GetHashCode();
         }
-        private string cardEnglishName = string.Empty;
-        /// <summary>
-        /// 获取或者设置卡牌英文名
-        /// </summary>
-        [XmlElement]
-        public string CardEnglishName
+
+        public override bool Equals(object obj)
         {
-            get { return cardEnglishName; }
-            set { cardEnglishName = value; }
-        }
-        private string symbol = string.Empty;
-        /// <summary>
-        /// 获取或者设置卡牌所属系列的简称
-        /// </summary>
-        [XmlElement]
-        public string Symbol
-        {
-            get { return symbol; }
-            set { symbol = value; }
-        }
-        private int cardID;
-        /// <summary>
-        /// 获取或者设置卡牌ID
-        /// </summary>
-        [XmlElement]
-        public int CardID
-        {
-            get { return cardID; }
-            set { cardID = value; }
+            return this.CardID == (obj as DeckCard).CardID;
         }
     }
 }

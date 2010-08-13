@@ -118,6 +118,9 @@
     <Compile Include="UI\FormMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="UI\FormMain.DeckList.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UI\FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>

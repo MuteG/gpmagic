@@ -39,25 +39,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\CardAbilitie.cs" />
-    <Compile Include="Model\CardExpansions.cs" />
-    <Compile Include="Model\CardImageType.cs" />
-    <Compile Include="Model\CardPainter.cs" />
-    <Compile Include="Model\CardSubType.cs" />
-    <Compile Include="Model\AbstractTableInstance.cs" />
+    <Compile Include="Model\Database\CardAbilitie.cs" />
+    <Compile Include="Model\Database\CardExpansions.cs" />
+    <Compile Include="Model\Database\CardImageType.cs" />
+    <Compile Include="Model\Database\CardPainter.cs" />
+    <Compile Include="Model\Database\CardSubType.cs" />
+    <Compile Include="Model\Database\AbstractTableInstance.cs" />
     <Compile Include="ICanTrigger.cs" />
     <Compile Include="IMagicAction.cs" />
     <Compile Include="IMagicCard.cs" />
     <Compile Include="IOrganismCardAction.cs" />
-    <Compile Include="Model\CardType.cs" />
-    <Compile Include="Model\ColumnInfoAttribute.cs" />
-    <Compile Include="Model\ConfigDeckFilter.cs" />
+    <Compile Include="Model\Database\CardType.cs" />
+    <Compile Include="Model\Database\ColumnInfoAttribute.cs" />
+    <Compile Include="Model\Deck\ConfigDeckFilter.cs" />
     <Compile Include="Model\Deck\DeckFile.cs" />
-    <Compile Include="Model\ITableIntanceAction.cs" />
+    <Compile Include="Model\Database\ITableIntanceAction.cs" />
     <Compile Include="IUpgradeSite.cs" />
     <Compile Include="MagicCardConst.cs" />
-    <Compile Include="Model\CardRarity.cs" />
+    <Compile Include="Model\Database\CardRarity.cs" />
     <Compile Include="Model\ConstClass.cs" />
+    <Compile Include="Module\Deck\AbstractDeck.cs" />
+    <Compile Include="Module\Deck\CNDeck.cs" />
     <Compile Include="Module\Deck\GPMagicDeck.cs" />
     <Compile Include="Module\Deck\IDeck.cs" />
     <Compile Include="Module\Deck\MWSDeck.cs" />
@@ -68,7 +70,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SQLite\DatabaseOperator.cs" />
-    <Compile Include="Model\CardLibrary.cs" />
+    <Compile Include="Model\Database\CardTotal.cs" />
     <Compile Include="SQLite\IDBOperate.cs" />
     <Compile Include="UI\CheckValuesDialog.cs">
       <SubType>Form</SubType>

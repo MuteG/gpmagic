@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.GPMagic.GPMagicBase.Model.Deck;
 
 namespace GPSoft.GPMagic.GPSearch.Common
 {

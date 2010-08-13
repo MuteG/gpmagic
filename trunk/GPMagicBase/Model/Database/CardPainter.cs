@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPMagicBase.Model
+﻿namespace GPSoft.GPMagic.GPMagicBase.Model.Database
 {
     public sealed class CardPainter : AbstractTableInstance
     {
