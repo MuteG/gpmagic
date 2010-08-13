@@ -3,11 +3,19 @@
   <FilterList>
     <Filter>
       <FieldName>TypeName</FieldName>
+      <FieldValue>地/基本地/传奇地</FieldValue>
+      <IsReverse>false</IsReverse>
+      <DisplayName>地</DisplayName>
+      <IsShow>true</IsShow>
+      <BackgroundColor>-9592874</BackgroundColor>
+    </Filter>
+    <Filter>
+      <FieldName>TypeName</FieldName>
       <FieldValue>生物/鹏洛客/神器生物</FieldValue>
       <IsReverse>false</IsReverse>
       <DisplayName>生物</DisplayName>
       <IsShow>true</IsShow>
-      <BackgroundColor>-10493286</BackgroundColor>
+      <BackgroundColor>-6297419</BackgroundColor>
     </Filter>
   </FilterList>
 </DeckFilterConfig>

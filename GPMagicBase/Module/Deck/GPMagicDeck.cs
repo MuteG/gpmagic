@@ -5,23 +5,16 @@ using GPSoft.GPMagic.GPMagicBase.Model.Deck;
 
 namespace GPSoft.GPMagic.GPMagicBase.Module.Deck
 {
-    public class GPMagicDeck:IDeck
+    public class GPMagicDeck : AbstractDeck
     {
         #region IDeck 成员
 
-        private DeckFile deck = new DeckFile();
-
-        public DeckFile Deck
-        {
-            get { return deck; }
-        }
-
-        public void Load(string deckFullPath)
+        public override void Load(string deckFullPath)
         {
             throw new NotImplementedException();
         }
 
-        public void Save(string deckFullPath)
+        public override void Save(string deckFullPath)
         {
             throw new NotImplementedException();
         }

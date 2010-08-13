@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.Model.Database;
 using System.Data;
 
 namespace GPSoft.GPMagic.GPSearch.Common

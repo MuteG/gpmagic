@@ -5,6 +5,7 @@ using System.Data.SQLite;
 using System.Reflection;
 using System.Data;
 using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.Model.Database;
 
 namespace GPSoft.GPMagic.GPMagicBase.SQLite
 {

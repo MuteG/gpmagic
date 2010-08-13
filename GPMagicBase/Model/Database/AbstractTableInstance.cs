@@ -7,7 +7,7 @@ using GPSoft.GPMagic.GPMagicBase.Model;
 using System.Data;
 using System.ComponentModel;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model
+namespace GPSoft.GPMagic.GPMagicBase.Model.Database
 {
     public abstract class AbstractTableInstance : ITableIntanceAction, IDisposable
     {
@@ -90,11 +90,9 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         {
             this.dbop = new DatabaseOperator();
         }
-        private DataTable GetTableClone()
+        private void GetTableClone()
         {
-            DataTable result = null;
             _TableClone = dbop.ExecuteDataTableScript(string.Format("SELECT * FROM {0} WHERE 1 = -1", this.tableName));
-            return result;
         }
         private void GetColumnName()
         {
@@ -187,22 +185,35 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 获得Records中指定索引行的数据封装
         /// </summary>
-        /// <param name="cardID">Records中的cardID</param>
+        /// <param name="pkID">Records中作为主键的列的值</param>
         /// <returns>返回封装好的对象</returns>
-        public object GetDataInstance(int cardID)
+        public object GetDataInstance(object pkID)
         {
-            object result = Activator.CreateInstance(this.DataInstanceType);
-            DataRow row = this.Records.Select(string.Format("CardID={0}", cardID))[0];
+            return GetDataInstance(pkID, this.DataInstanceType);
+        }
+        /// <summary>
+        /// 获得Records中指定索引行的数据封装
+        /// </summary>
+        /// <param name="pkID">Records中作为主键的列的值</param>
+        /// <param name="instanceType">与当前表结构兼容的实例类型</param>
+        /// <returns>返回封装好的对象</returns>
+        public object GetDataInstance(object pkID, Type instanceType)
+        {
+            object result = Activator.CreateInstance(instanceType);
+            DataRow row = this.Records.Select(string.Format("{1}={0}", pkID, this.PrimaryKeyColumnName))[0];
             foreach (PropertyInfo info in this.DataInstanceType.GetProperties())
             {
-                object value;
-                if (info.PropertyType.Equals(typeof(string)))
-                    value = row[info.Name].ToString();
-                else if (info.PropertyType.Equals(typeof(double)))
-                    value = Convert.ToDouble(row[info.Name]);
-                else
-                    value = Convert.ToInt32(row[info.Name]);
-                info.SetValue(result, value, null);
+                if (row.Table.Columns.Contains(info.Name))
+                {
+                    object value;
+                    if (info.PropertyType.Equals(typeof(string)))
+                        value = row[info.Name].ToString();
+                    else if (info.PropertyType.Equals(typeof(double)))
+                        value = Convert.ToDouble(row[info.Name]);
+                    else
+                        value = Convert.ToInt32(row[info.Name]);
+                    info.SetValue(result, value, null);
+                }
             }
             return result;
         }

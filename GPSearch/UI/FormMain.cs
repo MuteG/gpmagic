@@ -4,6 +4,7 @@ using System.Data;
 using System.IO;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.Model.Database;
 using GPSoft.GPMagic.GPMagicBase.UI;
 using GPSoft.GPMagic.GPSearch.Common;
 using GPSoft.GPMagic.GPMagicBase.Model.Deck;
@@ -14,9 +15,6 @@ namespace GPSoft.GPMagic.GPSearch.UI
     public partial class FormMain : Form
     {
         private TotalCardFilter totalCardsFilter = new TotalCardFilter();
-        private IDeck deck = new GPMagicDeck();
-        private DataTable deckTable = new DataTable();
-
         private FormCardInfo frmInfo = null;
         /// <summary>
         /// 获取卡牌详细信息窗口实例
@@ -37,11 +35,11 @@ namespace GPSoft.GPMagic.GPSearch.UI
             }
         }
         
-        private CardLibrary cards = new CardLibrary();
+        private CardTotal cards = new CardTotal();
         /// <summary>
         /// 获取卡牌一览对象
         /// </summary>
-        public CardLibrary Cards
+        public CardTotal Cards
         {
             get { return cards; }
         }
@@ -51,11 +49,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             tscbxLanguage.SelectedIndex = 1;
             this.DoubleBuffered = true;
             deckTable = this.Cards.TableClone;
-        }
-
-        private void Init()
-        {
-
+            LoadDeckFilter();
         }
 
         private void mnuExit_Click(object sender, EventArgs e)
@@ -159,52 +153,12 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 (DataGridViewRow[])e.Data.GetData(typeof(DataGridViewRow[]));
             foreach (DataGridViewRow row in selectedRows)
             {
-                AddDeckList(row);
+                int cardID = Convert.ToInt32(row.Cells["dgvColCardID"].Value);
+                DeckCard card = (DeckCard)this.Cards.GetDataInstance(cardID, typeof(DeckCard));
+                AddDeckList(card);
             }
-            dgvDeckList.Sort(colDCardID, System.ComponentModel.ListSortDirection.Ascending);
         } 
         #endregion
-
-        private void AddDeckList(DataGridViewRow row)
-        {
-            int cardID = Convert.ToInt32(row.Cells["dgvColCardID"].Value);
-            int index = GetCardIndexOfDeckGridView(cardID);
-            if (index < 0)
-            {
-                dgvDeckList.Rows.Add(
-                    1,
-                    row.Cells["dgvColExpansions"].Value,
-                    row.Cells["dgvColCNName"].Value,
-                    row.Cells["dgvColCost"].Value,
-                    row.Cells["dgvColCardID"].Value);
-                dgvDeckList.Rows[dgvDeckList.Rows.Count - 1].DefaultCellStyle.ForeColor = row.DefaultCellStyle.ForeColor;
-                this.deckTable.Rows.Add(this.Cards.Records.Select(string.Format("CardID={0}", cardID))[0].ItemArray);
-            }
-            else
-            {
-                AddDeckCardCount(index);
-            }
-        }
-
-        private void AddDeckCardCount(int index)
-        {
-            int count = Convert.ToInt32(dgvDeckList.Rows[index].Cells["colDCount"].Value);
-            dgvDeckList.Rows[index].Cells["colDCount"].Value = count + 1;
-        }
-
-        private int GetCardIndexOfDeckGridView(int cardID)
-        {
-            int result = -1;
-            foreach (DataGridViewRow row in dgvDeckList.Rows)
-            {
-                if (cardID == Convert.ToInt32(row.Cells["colDCardID"].Value))
-                {
-                    result = row.Index;
-                    break;
-                }
-            }
-            return result;
-        }
 
         private void tsbtnRefresh_Click(object sender, EventArgs e)
         {
@@ -304,172 +258,9 @@ namespace GPSoft.GPMagic.GPSearch.UI
             RefreshDataGridView();
         }
 
-        private void dgvDeckList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.RowIndex >= 0 && !tsbtnLockDeck.Checked)
-            {
-                switch (e.Button)
-                {
-                    case MouseButtons.Left:
-                        {
-                            AddDeckCardCount(e.RowIndex);
-                            break;
-                        }
-                    case MouseButtons.Right:
-                        {
-                            SubDeckCardCount(e.RowIndex);
-                            break;
-                        }
-                }
-            }
-        }
-
-        private void SubDeckCardCount(int index)
-        {
-            int count = Convert.ToInt32(dgvDeckList.Rows[index].Cells["colDCount"].Value);
-            if (count > 1)
-            {
-                dgvDeckList.Rows[index].Cells["colDCount"].Value = count - 1;
-            }
-            else
-            {
-                dgvDeckList.Rows.RemoveAt(index);
-            }
-        }
-
-        private void dgvDeckList_KeyDown(object sender, KeyEventArgs e)
-        {
-            switch (e.KeyValue)
-            {
-                case 187:
-                case 107:
-                    {
-                        //加号键
-                        foreach (DataGridViewRow row in dgvDeckList.SelectedRows)
-                        {
-                            AddDeckCardCount(row.Index);
-                        }
-                        break;
-                    }
-                case 189:
-                case 109:
-                    {
-                        //减号键
-                        foreach (DataGridViewRow row in dgvDeckList.SelectedRows)
-                        {
-                            SubDeckCardCount(row.Index);
-                        }
-                        break;
-                    }
-                case 46:
-                case 110:
-                    {
-                        //删除键
-                        foreach (DataGridViewRow row in dgvDeckList.SelectedRows)
-                        {
-                            dgvDeckList.Rows.Remove(row);
-                        }
-                        break;
-                    }
-            }
-        }
-
-        private void tsbtnSaveDeck_Click(object sender, EventArgs e)
-        {
-            List<string> items = GenerateSaveFormatList();
-            int index = RadioButtonDialog.Show("保存格式", items);
-            if (index >= 0)
-            {
-                string formatText = items[index];
-                SetSaveFileDialogFilter(formatText);
-                SaveDeck(formatText);
-            }
-        }
-
-        private void SaveDeck(string formatText)
-        {
-            saveFileDialog1.Title = "保存牌表";
-            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-            {
-                if (File.Exists(saveFileDialog1.FileName))
-                {
-                    OutputDeckFile(saveFileDialog1.FileName, formatText);
-                }
-                else
-                {
-                    OutputDeckFile(saveFileDialog1.FileName, formatText);
-                }
-            }
-        }
-
-        private void OutputDeckFile(string deckName, string formatText)
+        private void FormMain_KeyDown(object sender, KeyEventArgs e)
         {
             
-            if (formatText.Equals(DeckSaveFormat.CnList))
-            {
-                saveFileDialog1.Filter = "中文牌表|*.txt";
-                deck = new GPMagicDeck();
-            }
-            else if (formatText.Equals(DeckSaveFormat.Mws))
-            {
-                saveFileDialog1.Filter = "MWS牌表格式|*.mwDeck";
-                deck = new MWSDeck();
-            }
-            foreach (DataRow row in this.deckTable.Rows)
-            {
-                deck.Deck.CardRecords.ImportRow(row);
-                DeckCard card = new DeckCard();
-                card.CardEnglishName = row["CardEnglishName"].ToString();
-                card.CardID = Convert.ToInt32(row["CardID"]);
-                card.CardName = row["CardName"].ToString();
-                card.Count = GetCardCountFromDeckList(card.CardID);
-                card.Symbol = row["Symbol"].ToString();
-                deck.Deck.Cards.Add(card);
-            }
-            deck.Save(deckName);
-        }
-
-        private int GetCardCountFromDeckList(int cardID)
-        {
-            int result = 0;
-            foreach (DataGridViewRow row in dgvDeckList.Rows)
-            {
-                if (cardID == Convert.ToInt32(row.Cells["colDCardID"].Value))
-                {
-                    result = Convert.ToInt32(row.Cells["colDCount"].Value);
-                    break;
-                }
-            }
-            return result;
-        }
-
-        private List<string> GenerateSaveFormatList()
-        {
-            List<string> result = new List<string>();
-            result.Add(DeckSaveFormat.Mws);
-            //items.Add("GPMagic");
-            result.Add(DeckSaveFormat.CnList);
-            return result;
-        }
-
-        private void SetSaveFileDialogFilter(string formatText)
-        {
-            if (formatText.Equals(DeckSaveFormat.CnList))
-            {
-                saveFileDialog1.Filter = "中文牌表|*.txt";
-            }
-            else if (formatText.Equals(DeckSaveFormat.Mws))
-            {
-                saveFileDialog1.Filter = "MWS牌表格式|*.mwDeck";
-            }
-        }
-
-        private void mnuItemDeckFilterSetting_Click(object sender, EventArgs e)
-        {
-            using (FormEditDeckFilter form = new FormEditDeckFilter())
-            {
-                form.ShowDialog(this);
-            }
         }
     }
 }

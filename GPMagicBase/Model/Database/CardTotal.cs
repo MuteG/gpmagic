@@ -4,9 +4,9 @@ using System.Text;
 using System.Data;
 using GPSoft.GPMagic.GPMagicBase.SQLite;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model
+namespace GPSoft.GPMagic.GPMagicBase.Model.Database
 {
-    public sealed class CardLibrary : AbstractTableInstance
+    public sealed class CardTotal : AbstractTableInstance
     {
         /// <summary>
         /// 获取牌库中卡牌的数量
@@ -28,7 +28,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
                 return GetMaxCardID();
             }
         }
-        public CardLibrary()
+        public CardTotal()
         {
             tableName = DatabaseTableNames.CardLibrary;
         }
@@ -77,7 +77,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         }
     }
 
-    public sealed class ListCardTotal
+    public class ListCardTotal
     {
         private int cardID;
 

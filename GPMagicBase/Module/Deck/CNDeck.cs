@@ -10,9 +10,10 @@ using GPSoft.Helper.FileOperate;
 
 namespace GPSoft.GPMagic.GPMagicBase.Module.Deck
 {
-    public sealed class MWSDeck : AbstractDeck
+    public class CNDeck : AbstractDeck
     {
-        #region AbstractDeck 成员
+        private const string SIDEBOARD = "备牌：";
+        #region IDeck 成员
 
         public override void Load(string deckFullPath)
         {
@@ -22,30 +23,31 @@ namespace GPSoft.GPMagic.GPMagicBase.Module.Deck
                 string[] allLines = File.ReadAllLines(deckFullPath);
                 StringBuilder notExistCardMessage = new StringBuilder();
                 StringBuilder noEffectCardMessage = new StringBuilder();
-                string sql = "SELECT * FROM ListCardTotal WHERE Symbol='{0}' AND CardEnglishName='{1}' LIMIT 1";
+                string sql = "SELECT * FROM ListCardTotal WHERE Symbol='{0}' AND CardName='{1}' LIMIT 1";
+                string regex = @"^(" + SIDEBOARD + @")?\d+ \[\w+\] [\u4e00-\u9fa5]+ [\p{L}\p{N}]+$";
                 Deck.Cards.Clear();
                 Deck.CardRecords.Rows.Clear();
                 foreach (string line in allLines)
                 {
                     string content = line.Trim();
-                    if (!content.StartsWith("//") && content.Length > 0)
+                    if (!content.StartsWith(SIDEBOARD) && content.Length > 0)
                     {
-                        if (Regex.IsMatch(content, @"^(SB: )?\d+ \[\w+\] [\p{L}\p{N}\p{P}\p{S} ]+$"))
+                        if (Regex.IsMatch(content, regex))
                         {
-                            bool isSideboard = content.StartsWith("SB: ");
-                            string[] cardInfo = content.Replace("SB: ", "").Split(' ');
+                            bool isSideboard = content.StartsWith(SIDEBOARD);
+                            string[] cardInfo = content.Replace(SIDEBOARD, string.Empty).Split(' ');
                             DeckCard card = new DeckCard();
                             card.Count = Convert.ToInt32(cardInfo[0]);
                             card.Symbol = cardInfo[1].Substring(1, cardInfo[1].Length - 2);
-                            card.CardEnglishName = string.Join(" ", cardInfo, 2, cardInfo.Length - 2);
+                            card.CardName = string.Join(" ", cardInfo, 2, cardInfo.Length - 3);
 
-                            using (DataTable table = dbOperator.ExecuteDataTableScript(string.Format(sql, card.Symbol, card.CardEnglishName)))
+                            using (DataTable table = dbOperator.ExecuteDataTableScript(string.Format(sql, card.Symbol, card.CardName)))
                             {
                                 if (table != null && table.Rows.Count > 0)
                                 {
                                     Deck.CardRecords.Rows.Add(table.Rows[0].ItemArray);
                                     Deck.Name = Path.GetFileNameWithoutExtension(deckFullPath);
-                                    Deck.Description = "MWS牌表";
+                                    Deck.Description = "中文牌表信息";
                                     card.CardID = Convert.ToInt32(table.Rows[0]["CardID"]);
                                     card.CardName = table.Rows[0]["CardName"].ToString();
                                     card.ManaCost = table.Rows[0]["ManaCost"].ToString();
@@ -100,46 +102,30 @@ namespace GPSoft.GPMagic.GPMagicBase.Module.Deck
             {
                 File.Create(deckFullPath).Close();
             }
+            StringBuilder content = new StringBuilder();
             StringBuilder sideboardContent = new StringBuilder();
-            sideboardContent.AppendLine("// Sideboard");
-            StringBuilder landContent = new StringBuilder();
-            landContent.AppendLine("// Lands");
-            StringBuilder creatureContent = new StringBuilder();
-            creatureContent.AppendLine("// Creatures");
-            StringBuilder spellContent = new StringBuilder();
-            spellContent.AppendLine("// Spells");
             foreach (DeckCard card in this.Deck.Cards)
             {
-                string cardInfo = string.Format("    {0} [{1}] {2}", card.Count, card.Symbol, card.CardEnglishName);
-                string sql = string.Format("Symbol='{0}' AND CardEnglishName='{1}'", card.Symbol, card.CardEnglishName);
-                string cardType = this.Deck.CardRecords.Select(sql)[0]["TypeName"].ToString();
-                if (cardType.Contains("地"))
-                {
-                    landContent.AppendLine(cardInfo);
-                }
-                else if (cardType.Contains("生物"))
-                {
-                    creatureContent.AppendLine(cardInfo);
-                }
-                else
-                {
-                    spellContent.AppendLine(cardInfo);
-                }
+                string cardInfo = string.Format("{0} [{1}] {2} {3}", 
+                                                card.Count, 
+                                                card.Symbol, 
+                                                card.CardName,
+                                                card.ManaCost);
+                content.AppendLine(cardInfo);
             }
             foreach (DeckCard card in this.Deck.SideboardCards)
             {
-                string cardInfo = string.Format("SB: {0} [{1}] {2}", card.Count, card.Symbol, card.CardEnglishName);
+                string cardInfo = string.Format("{4}{0} [{1}] {2} {3}",
+                                                card.Count,
+                                                card.Symbol,
+                                                card.CardName,
+                                                card.ManaCost,
+                                                SIDEBOARD);
                 sideboardContent.AppendLine(cardInfo);
             }
-            StringBuilder content = new StringBuilder();
-            content.AppendLine("// Deck file for Magic Workstation (http://www.magicworkstation.com)");
-            content.AppendLine("// GPMagic (http://code.google.com/p/gpmagic/)");
-            content.AppendLine();
-            content.AppendLine(landContent.ToString());
-            content.AppendLine(creatureContent.ToString());
-            content.AppendLine(spellContent.ToString());
+            
             content.Append(sideboardContent.ToString().Trim());
-            FileHelper.WriteToFile(deckFullPath, content.ToString());
+            File.AppendAllText(deckFullPath, content.ToString(), Encoding.UTF8);
         }
 
         #endregion

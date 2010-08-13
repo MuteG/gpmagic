@@ -8,13 +8,13 @@ using GPSoft.Helper.FileOperate;
 using GPSoft.Helper.FunctionHelper;
 using System.IO;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model
+namespace GPSoft.GPMagic.GPMagicBase.Model.Deck
 {
     /// <summary>
     /// 套牌列表中卡牌类型过滤统计设定
     /// </summary>
     [Serializable]
-    public sealed class ConfigDeckFilter :IEquatable<ConfigDeckFilter>
+    public sealed class ConfigDeckFilter : IEquatable<ConfigDeckFilter>
     {
         private string fieldName = string.Empty;
         /// <summary>
@@ -80,6 +80,17 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             set { backgroundColor = value; }
         }
 
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.FieldName.Equals((obj as ConfigDeckFilter).FieldName)
+                && this.FieldValue.Equals((obj as ConfigDeckFilter).FieldValue);
+        }
+
         #region IEquatable<ConfigDeckFilter> 成员
 
         public bool Equals(ConfigDeckFilter other)
@@ -121,14 +132,20 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             FileHelper.CreateDirectory(Path.GetDirectoryName(this.configPath));
             ObjectXMLSerialize<ConfigDeckFilterList>.Save(this, this.configPath);
         }
+        private static ConfigDeckFilterList filterList = null;
         public static ConfigDeckFilterList GetInstance()
         {
-            ConfigDeckFilterList filterList = new ConfigDeckFilterList();
+            filterList = new ConfigDeckFilterList();
             if (File.Exists(filterList.configPath))
             {
                 filterList = ObjectXMLSerialize<ConfigDeckFilterList>.Load(filterList, filterList.configPath);
             }
             return filterList;
+        }
+
+        private void Reload()
+        {
+            filterList = ObjectXMLSerialize<ConfigDeckFilterList>.Load(filterList, filterList.configPath);
         }
     }
 }

@@ -8,8 +8,9 @@ namespace GPSoft.GPMagic.GPMagicBase.Module.Deck
     public interface IDeck
     {
         DeckFile Deck { get; }
-
+        string DeckFullPath { set; get; }
         void Load(string deckFullPath);
         void Save(string deckFullPath);
+        void Save();
     }
 }

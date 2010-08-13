@@ -47,6 +47,8 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.gbxFieldSetting = new System.Windows.Forms.GroupBox();
+            this.btnDown = new System.Windows.Forms.Button();
+            this.btnUp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBackgroundColor)).BeginInit();
             this.gbxFieldSetting.SuspendLayout();
             this.SuspendLayout();
@@ -191,9 +193,9 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(159, 164);
+            this.btnSave.Location = new System.Drawing.Point(183, 164);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(63, 23);
             this.btnSave.TabIndex = 13;
             this.btnSave.Text = "保存";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -201,9 +203,9 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(240, 164);
+            this.btnClose.Location = new System.Drawing.Point(252, 164);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(63, 23);
             this.btnClose.TabIndex = 14;
             this.btnClose.Text = "关闭";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -224,11 +226,35 @@
             this.gbxFieldSetting.TabStop = false;
             this.gbxFieldSetting.Text = "统计对象设置";
             // 
+            // btnDown
+            // 
+            this.btnDown.Location = new System.Drawing.Point(144, 164);
+            this.btnDown.Name = "btnDown";
+            this.btnDown.Size = new System.Drawing.Size(23, 23);
+            this.btnDown.TabIndex = 34;
+            this.btnDown.Text = "↓";
+            this.toolTip1.SetToolTip(this.btnDown, "向下降低次序");
+            this.btnDown.UseVisualStyleBackColor = true;
+            this.btnDown.Click += new System.EventHandler(this.btnDown_Click);
+            // 
+            // btnUp
+            // 
+            this.btnUp.Location = new System.Drawing.Point(115, 164);
+            this.btnUp.Name = "btnUp";
+            this.btnUp.Size = new System.Drawing.Size(23, 23);
+            this.btnUp.TabIndex = 33;
+            this.btnUp.Text = "↑";
+            this.toolTip1.SetToolTip(this.btnUp, "向上提升次序");
+            this.btnUp.UseVisualStyleBackColor = true;
+            this.btnUp.Click += new System.EventHandler(this.btnUp_Click);
+            // 
             // FormEditDeckFilter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(328, 197);
+            this.Controls.Add(this.btnDown);
+            this.Controls.Add(this.btnUp);
             this.Controls.Add(this.gbxFieldSetting);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
@@ -243,6 +269,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormEditDeckFilter";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "设置套牌列表统计项";
             ((System.ComponentModel.ISupportInitialize)(this.pbxBackgroundColor)).EndInit();
@@ -273,5 +300,7 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.GroupBox gbxFieldSetting;
+        private System.Windows.Forms.Button btnDown;
+        private System.Windows.Forms.Button btnUp;
     }
 }
