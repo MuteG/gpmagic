@@ -13,7 +13,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
 {
     partial class FormMain
     {
-        private IDeck deck = new CNDeck();
+        private IDeck workDeck = new CNDeck();
         private DataTable deckTable = new DataTable();
 
         private void LoadDeckFilter()
@@ -42,6 +42,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 if (filter.IsShow)
                 {
                     // 根据统计设定分类显示卡牌
+
                 }
             }
         }
@@ -52,7 +53,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             if (index < 0)
             {
                 card.Count = 1;
-                this.deck.Deck.Cards.Add(card);
+                this.workDeck.Deck.Cards.Add(card);
                 int rowIndex = dgvDeckList.Rows.Add(1,
                                                     card.Symbol,
                                                     card.CardName,
@@ -61,7 +62,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 DataRow deckRow = this.Cards.Records.Select(string.Format("CardID={0}", card.CardID))[0];
                 dgvDeckList.Rows[rowIndex].DefaultCellStyle.ForeColor =
                     CommonHelper.CardRarity.GetRarityColor(card.Rarity);
-                this.deck.Deck.CardRecords.Rows.Add(deckRow.ItemArray);
+                this.workDeck.Deck.CardRecords.Rows.Add(deckRow.ItemArray);
             }
             else
             {
@@ -80,7 +81,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private DeckCard GetDeckCardFromWorkDeck(int cardID)
         {
             DeckCard result = new DeckCard();
-            foreach (DeckCard card in this.deck.Deck.Cards)
+            foreach (DeckCard card in this.workDeck.Deck.Cards)
             {
                 if (card.CardID == cardID)
                 {
@@ -144,8 +145,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             dgvDeckList.Rows.RemoveAt(deckGridViewIndex);
             DeckCard card = GetDeckCardFromWorkDeck((int)dgvDeckList.Rows[deckGridViewIndex].Cells["colDCardID"].Value);
-            this.deck.Deck.Cards.Remove(card);
-            foreach (DataRow deckRow in this.deck.Deck.CardRecords.Rows)
+            this.workDeck.Deck.Cards.Remove(card);
+            foreach (DataRow deckRow in this.workDeck.Deck.CardRecords.Rows)
             {
                 if (((int)deckRow["CardID"]) == card.CardID)
                 {
@@ -217,9 +218,9 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void SaveDeck(string formatText)
         {
-            if (this.deck.DeckFullPath.Length > 0)
+            if (this.workDeck.DeckFullPath.Length > 0)
             {
-                OutputDeckFile(this.deck.DeckFullPath, formatText);
+                OutputDeckFile(this.workDeck.DeckFullPath, formatText);
             }
             else
             {
@@ -244,11 +245,11 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 saveFileDialog1.Filter = "MWS牌表格式|*.mwDeck";
                 saveDeck = new MWSDeck();
             }
-            foreach (DataRow row in this.deck.Deck.CardRecords.Rows)
+            foreach (DataRow row in this.workDeck.Deck.CardRecords.Rows)
             {
                 saveDeck.Deck.CardRecords.ImportRow(row);
             }
-            saveDeck.Deck.Cards.AddRange(this.deck.Deck.Cards);
+            saveDeck.Deck.Cards.AddRange(this.workDeck.Deck.Cards);
             saveDeck.Save(deckName);
         }
 
@@ -303,14 +304,14 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 {
                     case 1: // 中文牌表
                         {
-                            this.deck = new CNDeck();
-                            this.deck.Load(ofdDeck.FileName);
+                            this.workDeck = new CNDeck();
+                            this.workDeck.Load(ofdDeck.FileName);
                             break;
                         }
                     case 2: // MWS牌表格式
                         {
-                            this.deck = new MWSDeck();
-                            this.deck.Load(ofdDeck.FileName);
+                            this.workDeck = new MWSDeck();
+                            this.workDeck.Load(ofdDeck.FileName);
                             break;
                         }
                 }
