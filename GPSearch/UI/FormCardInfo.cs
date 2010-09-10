@@ -180,7 +180,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private string GetSavedImagePath(string symbol, string imageName)
         {
             return Path.Combine(FunctionHelper.ApplicationPath,
-                                string.Format("Pic\\{0}\\{1}", symbol, imageName));
+                                string.Format("{2}\\{0}\\{1}", symbol, imageName, DefaultDirectoryName.CardPictures));
         }
         private void LoadCardImage(string cardImageName)
         {
