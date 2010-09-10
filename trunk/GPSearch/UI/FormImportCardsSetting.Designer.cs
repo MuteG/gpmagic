@@ -28,17 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormImportCardsSetting));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpgInfoList = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tpgTable = new System.Windows.Forms.TabPage();
-            this.gbxAddField = new System.Windows.Forms.GroupBox();
-            this.btnDeleteModel = new System.Windows.Forms.Button();
-            this.btnNewModel = new System.Windows.Forms.Button();
-            this.cbxCardProperties = new System.Windows.Forms.ComboBox();
-            this.lblFieldName = new System.Windows.Forms.Label();
-            this.lblFieldIndex = new System.Windows.Forms.Label();
-            this.tbxFieldIndex = new System.Windows.Forms.TextBox();
+            this.gbxTableModeStructure = new System.Windows.Forms.GroupBox();
+            this.btnSetDataModel = new System.Windows.Forms.Button();
+            this.tbxDataModel = new System.Windows.Forms.TextBox();
+            this.chkDataModel = new System.Windows.Forms.CheckBox();
+            this.lblFilterContent = new System.Windows.Forms.Label();
+            this.lblSample = new System.Windows.Forms.Label();
+            this.tbxSuffix = new System.Windows.Forms.TextBox();
+            this.tbxFilterPrefix = new System.Windows.Forms.TextBox();
+            this.chkFilterContent = new System.Windows.Forms.CheckBox();
+            this.btnTableModeClose = new System.Windows.Forms.Button();
+            this.btnTableModeSave = new System.Windows.Forms.Button();
+            this.lbxTableModeCardProperties = new System.Windows.Forms.ListBox();
+            this.btnDelTableModeStructure = new System.Windows.Forms.Button();
+            this.btnAddTableModeStructure = new System.Windows.Forms.Button();
+            this.cbxTableModePropertyName = new System.Windows.Forms.ComboBox();
+            this.lblTableModePropertyName = new System.Windows.Forms.Label();
+            this.lblStructureIndex = new System.Windows.Forms.Label();
+            this.tbxStructureIndex = new System.Windows.Forms.TextBox();
             this.gbxSplitType = new System.Windows.Forms.GroupBox();
             this.tbxOtherSplitString = new System.Windows.Forms.TextBox();
             this.tbtnOther = new System.Windows.Forms.RadioButton();
@@ -46,148 +58,191 @@
             this.rbtnTab = new System.Windows.Forms.RadioButton();
             this.rbtnComma = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.lbxTableFrame = new System.Windows.Forms.ListBox();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.cbxFilterContent = new System.Windows.Forms.CheckBox();
-            this.tbxFilterPrefix = new System.Windows.Forms.TextBox();
-            this.lblSample = new System.Windows.Forms.Label();
-            this.tbxSuffix = new System.Windows.Forms.TextBox();
-            this.lblFilterContent = new System.Windows.Forms.Label();
-            this.cbxDataModel = new System.Windows.Forms.CheckBox();
-            this.tbxDataModel = new System.Windows.Forms.TextBox();
-            this.btnSetDataModel = new System.Windows.Forms.Button();
+            this.gbxListModeStructure = new System.Windows.Forms.GroupBox();
+            this.lbxListModeCardProperties = new System.Windows.Forms.ListBox();
+            this.btnDelListModeStructure = new System.Windows.Forms.Button();
+            this.btnAddListModeStructure = new System.Windows.Forms.Button();
+            this.cbxListModeCardPropertyName = new System.Windows.Forms.ComboBox();
+            this.lblListModeCardPropertyName = new System.Windows.Forms.Label();
+            this.lblPropertyDisplayText = new System.Windows.Forms.Label();
+            this.tbxPropertyDisplayText = new System.Windows.Forms.TextBox();
+            this.btnListModeClose = new System.Windows.Forms.Button();
+            this.btnListModeSave = new System.Windows.Forms.Button();
+            this.mnuImportStracture = new System.Windows.Forms.MenuStrip();
+            this.模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemNewModel = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemOpenModel = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tpgInfoList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpgTable.SuspendLayout();
-            this.gbxAddField.SuspendLayout();
+            this.gbxTableModeStructure.SuspendLayout();
             this.gbxSplitType.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.gbxListModeStructure.SuspendLayout();
+            this.mnuImportStracture.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tpgInfoList);
             this.tabControl1.Controls.Add(this.tpgTable);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(537, 320);
-            this.tabControl1.TabIndex = 0;
             // 
             // tpgInfoList
             // 
+            this.tpgInfoList.Controls.Add(this.btnListModeClose);
+            this.tpgInfoList.Controls.Add(this.btnListModeSave);
+            this.tpgInfoList.Controls.Add(this.lblPropertyDisplayText);
+            this.tpgInfoList.Controls.Add(this.tbxPropertyDisplayText);
+            this.tpgInfoList.Controls.Add(this.btnDelListModeStructure);
+            this.tpgInfoList.Controls.Add(this.btnAddListModeStructure);
+            this.tpgInfoList.Controls.Add(this.cbxListModeCardPropertyName);
+            this.tpgInfoList.Controls.Add(this.lblListModeCardPropertyName);
+            this.tpgInfoList.Controls.Add(this.gbxListModeStructure);
             this.tpgInfoList.Controls.Add(this.pictureBox1);
-            this.tpgInfoList.Location = new System.Drawing.Point(4, 21);
+            resources.ApplyResources(this.tpgInfoList, "tpgInfoList");
             this.tpgInfoList.Name = "tpgInfoList";
-            this.tpgInfoList.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgInfoList.Size = new System.Drawing.Size(529, 271);
-            this.tpgInfoList.TabIndex = 0;
-            this.tpgInfoList.Text = "信息序列模式";
             this.tpgInfoList.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.pictureBox1, "pictureBox1");
             this.pictureBox1.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.ImportInfoListDemo;
-            this.pictureBox1.Location = new System.Drawing.Point(171, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(355, 135);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // tpgTable
             // 
-            this.tpgTable.Controls.Add(this.gbxAddField);
+            this.tpgTable.Controls.Add(this.gbxTableModeStructure);
             this.tpgTable.Controls.Add(this.gbxSplitType);
             this.tpgTable.Controls.Add(this.pictureBox2);
-            this.tpgTable.Location = new System.Drawing.Point(4, 21);
+            resources.ApplyResources(this.tpgTable, "tpgTable");
             this.tpgTable.Name = "tpgTable";
-            this.tpgTable.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgTable.Size = new System.Drawing.Size(529, 295);
-            this.tpgTable.TabIndex = 1;
-            this.tpgTable.Text = "表格模式";
             this.tpgTable.UseVisualStyleBackColor = true;
             // 
-            // gbxAddField
+            // gbxTableModeStructure
             // 
-            this.gbxAddField.Controls.Add(this.btnSetDataModel);
-            this.gbxAddField.Controls.Add(this.tbxDataModel);
-            this.gbxAddField.Controls.Add(this.cbxDataModel);
-            this.gbxAddField.Controls.Add(this.lblFilterContent);
-            this.gbxAddField.Controls.Add(this.lblSample);
-            this.gbxAddField.Controls.Add(this.tbxSuffix);
-            this.gbxAddField.Controls.Add(this.tbxFilterPrefix);
-            this.gbxAddField.Controls.Add(this.cbxFilterContent);
-            this.gbxAddField.Controls.Add(this.btnClose);
-            this.gbxAddField.Controls.Add(this.btnSave);
-            this.gbxAddField.Controls.Add(this.lbxTableFrame);
-            this.gbxAddField.Controls.Add(this.btnDeleteModel);
-            this.gbxAddField.Controls.Add(this.btnNewModel);
-            this.gbxAddField.Controls.Add(this.cbxCardProperties);
-            this.gbxAddField.Controls.Add(this.lblFieldName);
-            this.gbxAddField.Controls.Add(this.lblFieldIndex);
-            this.gbxAddField.Controls.Add(this.tbxFieldIndex);
-            this.gbxAddField.Location = new System.Drawing.Point(3, 144);
-            this.gbxAddField.Name = "gbxAddField";
-            this.gbxAddField.Size = new System.Drawing.Size(523, 148);
-            this.gbxAddField.TabIndex = 5;
-            this.gbxAddField.TabStop = false;
-            this.gbxAddField.Text = "定义数据结构";
+            this.gbxTableModeStructure.Controls.Add(this.btnSetDataModel);
+            this.gbxTableModeStructure.Controls.Add(this.tbxDataModel);
+            this.gbxTableModeStructure.Controls.Add(this.chkDataModel);
+            this.gbxTableModeStructure.Controls.Add(this.lblFilterContent);
+            this.gbxTableModeStructure.Controls.Add(this.lblSample);
+            this.gbxTableModeStructure.Controls.Add(this.tbxSuffix);
+            this.gbxTableModeStructure.Controls.Add(this.tbxFilterPrefix);
+            this.gbxTableModeStructure.Controls.Add(this.chkFilterContent);
+            this.gbxTableModeStructure.Controls.Add(this.btnTableModeClose);
+            this.gbxTableModeStructure.Controls.Add(this.btnTableModeSave);
+            this.gbxTableModeStructure.Controls.Add(this.lbxTableModeCardProperties);
+            this.gbxTableModeStructure.Controls.Add(this.btnDelTableModeStructure);
+            this.gbxTableModeStructure.Controls.Add(this.btnAddTableModeStructure);
+            this.gbxTableModeStructure.Controls.Add(this.cbxTableModePropertyName);
+            this.gbxTableModeStructure.Controls.Add(this.lblTableModePropertyName);
+            this.gbxTableModeStructure.Controls.Add(this.lblStructureIndex);
+            this.gbxTableModeStructure.Controls.Add(this.tbxStructureIndex);
+            resources.ApplyResources(this.gbxTableModeStructure, "gbxTableModeStructure");
+            this.gbxTableModeStructure.Name = "gbxTableModeStructure";
+            this.gbxTableModeStructure.TabStop = false;
             // 
-            // btnDeleteModel
+            // btnSetDataModel
             // 
-            this.btnDeleteModel.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Delete;
-            this.btnDeleteModel.Location = new System.Drawing.Point(450, 38);
-            this.btnDeleteModel.Name = "btnDeleteModel";
-            this.btnDeleteModel.Size = new System.Drawing.Size(24, 23);
-            this.btnDeleteModel.TabIndex = 10;
-            this.btnDeleteModel.UseVisualStyleBackColor = true;
+            this.btnSetDataModel.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.hammer;
+            resources.ApplyResources(this.btnSetDataModel, "btnSetDataModel");
+            this.btnSetDataModel.Name = "btnSetDataModel";
+            this.btnSetDataModel.UseVisualStyleBackColor = true;
             // 
-            // btnNewModel
+            // tbxDataModel
             // 
-            this.btnNewModel.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Add;
-            this.btnNewModel.Location = new System.Drawing.Point(420, 38);
-            this.btnNewModel.Name = "btnNewModel";
-            this.btnNewModel.Size = new System.Drawing.Size(24, 23);
-            this.btnNewModel.TabIndex = 10;
-            this.btnNewModel.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.tbxDataModel, "tbxDataModel");
+            this.tbxDataModel.Name = "tbxDataModel";
             // 
-            // cbxCardProperties
+            // chkDataModel
             // 
-            this.cbxCardProperties.FormattingEnabled = true;
-            this.cbxCardProperties.Location = new System.Drawing.Point(289, 40);
-            this.cbxCardProperties.Name = "cbxCardProperties";
-            this.cbxCardProperties.Size = new System.Drawing.Size(125, 20);
-            this.cbxCardProperties.TabIndex = 6;
+            resources.ApplyResources(this.chkDataModel, "chkDataModel");
+            this.chkDataModel.Name = "chkDataModel";
+            this.chkDataModel.UseVisualStyleBackColor = true;
             // 
-            // lblFieldName
+            // lblFilterContent
             // 
-            this.lblFieldName.AutoSize = true;
-            this.lblFieldName.Location = new System.Drawing.Point(168, 43);
-            this.lblFieldName.Name = "lblFieldName";
-            this.lblFieldName.Size = new System.Drawing.Size(77, 12);
-            this.lblFieldName.TabIndex = 5;
-            this.lblFieldName.Text = "对应卡牌属性";
+            resources.ApplyResources(this.lblFilterContent, "lblFilterContent");
+            this.lblFilterContent.Name = "lblFilterContent";
             // 
-            // lblFieldIndex
+            // lblSample
             // 
-            this.lblFieldIndex.AutoSize = true;
-            this.lblFieldIndex.Location = new System.Drawing.Point(168, 18);
-            this.lblFieldIndex.Name = "lblFieldIndex";
-            this.lblFieldIndex.Size = new System.Drawing.Size(115, 12);
-            this.lblFieldIndex.TabIndex = 3;
-            this.lblFieldIndex.Text = "数据列索引(从0开始)";
+            resources.ApplyResources(this.lblSample, "lblSample");
+            this.lblSample.ForeColor = System.Drawing.Color.Salmon;
+            this.lblSample.Name = "lblSample";
             // 
-            // tbxFieldIndex
+            // tbxSuffix
             // 
-            this.tbxFieldIndex.Location = new System.Drawing.Point(289, 15);
-            this.tbxFieldIndex.Name = "tbxFieldIndex";
-            this.tbxFieldIndex.Size = new System.Drawing.Size(41, 19);
-            this.tbxFieldIndex.TabIndex = 4;
+            resources.ApplyResources(this.tbxSuffix, "tbxSuffix");
+            this.tbxSuffix.Name = "tbxSuffix";
+            // 
+            // tbxFilterPrefix
+            // 
+            resources.ApplyResources(this.tbxFilterPrefix, "tbxFilterPrefix");
+            this.tbxFilterPrefix.Name = "tbxFilterPrefix";
+            // 
+            // chkFilterContent
+            // 
+            resources.ApplyResources(this.chkFilterContent, "chkFilterContent");
+            this.chkFilterContent.Name = "chkFilterContent";
+            this.chkFilterContent.UseVisualStyleBackColor = true;
+            // 
+            // btnTableModeClose
+            // 
+            resources.ApplyResources(this.btnTableModeClose, "btnTableModeClose");
+            this.btnTableModeClose.Name = "btnTableModeClose";
+            this.btnTableModeClose.UseVisualStyleBackColor = true;
+            // 
+            // btnTableModeSave
+            // 
+            resources.ApplyResources(this.btnTableModeSave, "btnTableModeSave");
+            this.btnTableModeSave.Name = "btnTableModeSave";
+            this.btnTableModeSave.UseVisualStyleBackColor = true;
+            // 
+            // lbxTableModeCardProperties
+            // 
+            this.lbxTableModeCardProperties.FormattingEnabled = true;
+            resources.ApplyResources(this.lbxTableModeCardProperties, "lbxTableModeCardProperties");
+            this.lbxTableModeCardProperties.Name = "lbxTableModeCardProperties";
+            // 
+            // btnDelTableModeStructure
+            // 
+            this.btnDelTableModeStructure.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Delete;
+            resources.ApplyResources(this.btnDelTableModeStructure, "btnDelTableModeStructure");
+            this.btnDelTableModeStructure.Name = "btnDelTableModeStructure";
+            this.btnDelTableModeStructure.UseVisualStyleBackColor = true;
+            // 
+            // btnAddTableModeStructure
+            // 
+            this.btnAddTableModeStructure.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Add;
+            resources.ApplyResources(this.btnAddTableModeStructure, "btnAddTableModeStructure");
+            this.btnAddTableModeStructure.Name = "btnAddTableModeStructure";
+            this.btnAddTableModeStructure.UseVisualStyleBackColor = true;
+            // 
+            // cbxTableModePropertyName
+            // 
+            this.cbxTableModePropertyName.FormattingEnabled = true;
+            resources.ApplyResources(this.cbxTableModePropertyName, "cbxTableModePropertyName");
+            this.cbxTableModePropertyName.Name = "cbxTableModePropertyName";
+            // 
+            // lblTableModePropertyName
+            // 
+            resources.ApplyResources(this.lblTableModePropertyName, "lblTableModePropertyName");
+            this.lblTableModePropertyName.Name = "lblTableModePropertyName";
+            // 
+            // lblStructureIndex
+            // 
+            resources.ApplyResources(this.lblStructureIndex, "lblStructureIndex");
+            this.lblStructureIndex.Name = "lblStructureIndex";
+            // 
+            // tbxStructureIndex
+            // 
+            resources.ApplyResources(this.tbxStructureIndex, "tbxStructureIndex");
+            this.tbxStructureIndex.Name = "tbxStructureIndex";
             // 
             // gbxSplitType
             // 
@@ -196,191 +251,161 @@
             this.gbxSplitType.Controls.Add(this.rbtnSpace);
             this.gbxSplitType.Controls.Add(this.rbtnTab);
             this.gbxSplitType.Controls.Add(this.rbtnComma);
-            this.gbxSplitType.Location = new System.Drawing.Point(3, 3);
+            resources.ApplyResources(this.gbxSplitType, "gbxSplitType");
             this.gbxSplitType.Name = "gbxSplitType";
-            this.gbxSplitType.Size = new System.Drawing.Size(162, 135);
-            this.gbxSplitType.TabIndex = 2;
             this.gbxSplitType.TabStop = false;
-            this.gbxSplitType.Text = "数据分隔类型";
             // 
             // tbxOtherSplitString
             // 
-            this.tbxOtherSplitString.Location = new System.Drawing.Point(107, 83);
+            resources.ApplyResources(this.tbxOtherSplitString, "tbxOtherSplitString");
             this.tbxOtherSplitString.Name = "tbxOtherSplitString";
-            this.tbxOtherSplitString.Size = new System.Drawing.Size(38, 19);
-            this.tbxOtherSplitString.TabIndex = 2;
             // 
             // tbtnOther
             // 
-            this.tbtnOther.AutoSize = true;
-            this.tbtnOther.Location = new System.Drawing.Point(6, 84);
+            resources.ApplyResources(this.tbtnOther, "tbtnOther");
             this.tbtnOther.Name = "tbtnOther";
-            this.tbtnOther.Size = new System.Drawing.Size(95, 16);
-            this.tbtnOther.TabIndex = 1;
             this.tbtnOther.TabStop = true;
-            this.tbtnOther.Text = "其他字符分隔";
             this.tbtnOther.UseVisualStyleBackColor = true;
             // 
             // rbtnSpace
             // 
-            this.rbtnSpace.AutoSize = true;
-            this.rbtnSpace.Location = new System.Drawing.Point(6, 62);
+            resources.ApplyResources(this.rbtnSpace, "rbtnSpace");
             this.rbtnSpace.Name = "rbtnSpace";
-            this.rbtnSpace.Size = new System.Drawing.Size(139, 16);
-            this.rbtnSpace.TabIndex = 1;
             this.rbtnSpace.TabStop = true;
-            this.rbtnSpace.Text = "空格(一个或多个)分隔";
             this.rbtnSpace.UseVisualStyleBackColor = true;
             // 
             // rbtnTab
             // 
-            this.rbtnTab.AutoSize = true;
-            this.rbtnTab.Location = new System.Drawing.Point(6, 40);
+            resources.ApplyResources(this.rbtnTab, "rbtnTab");
             this.rbtnTab.Name = "rbtnTab";
-            this.rbtnTab.Size = new System.Drawing.Size(114, 16);
-            this.rbtnTab.TabIndex = 1;
             this.rbtnTab.TabStop = true;
-            this.rbtnTab.Text = "制表符(TAB)分隔";
             this.rbtnTab.UseVisualStyleBackColor = true;
             // 
             // rbtnComma
             // 
-            this.rbtnComma.AutoSize = true;
-            this.rbtnComma.Location = new System.Drawing.Point(6, 18);
+            resources.ApplyResources(this.rbtnComma, "rbtnComma");
             this.rbtnComma.Name = "rbtnComma";
-            this.rbtnComma.Size = new System.Drawing.Size(71, 16);
-            this.rbtnComma.TabIndex = 0;
             this.rbtnComma.TabStop = true;
-            this.rbtnComma.Text = "逗号分隔";
             this.rbtnComma.UseVisualStyleBackColor = true;
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.pictureBox2, "pictureBox2");
             this.pictureBox2.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.ImportTableDemo;
-            this.pictureBox2.Location = new System.Drawing.Point(171, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(355, 135);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // lbxTableFrame
+            // gbxListModeStructure
             // 
-            this.lbxTableFrame.FormattingEnabled = true;
-            this.lbxTableFrame.ItemHeight = 12;
-            this.lbxTableFrame.Location = new System.Drawing.Point(3, 18);
-            this.lbxTableFrame.Name = "lbxTableFrame";
-            this.lbxTableFrame.Size = new System.Drawing.Size(159, 124);
-            this.lbxTableFrame.TabIndex = 11;
+            this.gbxListModeStructure.Controls.Add(this.lbxListModeCardProperties);
+            resources.ApplyResources(this.gbxListModeStructure, "gbxListModeStructure");
+            this.gbxListModeStructure.Name = "gbxListModeStructure";
+            this.gbxListModeStructure.TabStop = false;
             // 
-            // btnSave
+            // lbxListModeCardProperties
             // 
-            this.btnSave.Location = new System.Drawing.Point(361, 119);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 12;
-            this.btnSave.Text = "保存";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.lbxListModeCardProperties.FormattingEnabled = true;
+            resources.ApplyResources(this.lbxListModeCardProperties, "lbxListModeCardProperties");
+            this.lbxListModeCardProperties.Name = "lbxListModeCardProperties";
             // 
-            // btnClose
+            // btnDelListModeStructure
             // 
-            this.btnClose.Location = new System.Drawing.Point(442, 119);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 13;
-            this.btnClose.Text = "关闭";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnDelListModeStructure.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Delete;
+            resources.ApplyResources(this.btnDelListModeStructure, "btnDelListModeStructure");
+            this.btnDelListModeStructure.Name = "btnDelListModeStructure";
+            this.btnDelListModeStructure.UseVisualStyleBackColor = true;
             // 
-            // cbxFilterContent
+            // btnAddListModeStructure
             // 
-            this.cbxFilterContent.AutoSize = true;
-            this.cbxFilterContent.Location = new System.Drawing.Point(170, 68);
-            this.cbxFilterContent.Name = "cbxFilterContent";
-            this.cbxFilterContent.Size = new System.Drawing.Size(96, 16);
-            this.cbxFilterContent.TabIndex = 14;
-            this.cbxFilterContent.Text = "过滤如下内容";
-            this.cbxFilterContent.UseVisualStyleBackColor = true;
+            this.btnAddListModeStructure.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Add;
+            resources.ApplyResources(this.btnAddListModeStructure, "btnAddListModeStructure");
+            this.btnAddListModeStructure.Name = "btnAddListModeStructure";
+            this.btnAddListModeStructure.UseVisualStyleBackColor = true;
             // 
-            // tbxFilterPrefix
+            // cbxListModeCardPropertyName
             // 
-            this.tbxFilterPrefix.Location = new System.Drawing.Point(289, 66);
-            this.tbxFilterPrefix.Name = "tbxFilterPrefix";
-            this.tbxFilterPrefix.Size = new System.Drawing.Size(41, 19);
-            this.tbxFilterPrefix.TabIndex = 15;
+            this.cbxListModeCardPropertyName.FormattingEnabled = true;
+            resources.ApplyResources(this.cbxListModeCardPropertyName, "cbxListModeCardPropertyName");
+            this.cbxListModeCardPropertyName.Name = "cbxListModeCardPropertyName";
             // 
-            // lblSample
+            // lblListModeCardPropertyName
             // 
-            this.lblSample.AutoSize = true;
-            this.lblSample.ForeColor = System.Drawing.Color.Salmon;
-            this.lblSample.Location = new System.Drawing.Point(420, 69);
-            this.lblSample.Name = "lblSample";
-            this.lblSample.Size = new System.Drawing.Size(29, 12);
-            this.lblSample.TabIndex = 16;
-            this.lblSample.Text = "内容";
+            resources.ApplyResources(this.lblListModeCardPropertyName, "lblListModeCardPropertyName");
+            this.lblListModeCardPropertyName.Name = "lblListModeCardPropertyName";
             // 
-            // tbxSuffix
+            // lblPropertyDisplayText
             // 
-            this.tbxSuffix.Location = new System.Drawing.Point(373, 66);
-            this.tbxSuffix.Name = "tbxSuffix";
-            this.tbxSuffix.Size = new System.Drawing.Size(41, 19);
-            this.tbxSuffix.TabIndex = 15;
+            resources.ApplyResources(this.lblPropertyDisplayText, "lblPropertyDisplayText");
+            this.lblPropertyDisplayText.Name = "lblPropertyDisplayText";
             // 
-            // lblFilterContent
+            // tbxPropertyDisplayText
             // 
-            this.lblFilterContent.AutoSize = true;
-            this.lblFilterContent.Location = new System.Drawing.Point(336, 69);
-            this.lblFilterContent.Name = "lblFilterContent";
-            this.lblFilterContent.Size = new System.Drawing.Size(29, 12);
-            this.lblFilterContent.TabIndex = 16;
-            this.lblFilterContent.Text = "内容";
+            resources.ApplyResources(this.tbxPropertyDisplayText, "tbxPropertyDisplayText");
+            this.tbxPropertyDisplayText.Name = "tbxPropertyDisplayText";
             // 
-            // cbxDataModel
+            // btnListModeClose
             // 
-            this.cbxDataModel.AutoSize = true;
-            this.cbxDataModel.Location = new System.Drawing.Point(170, 93);
-            this.cbxDataModel.Name = "cbxDataModel";
-            this.cbxDataModel.Size = new System.Drawing.Size(96, 16);
-            this.cbxDataModel.TabIndex = 17;
-            this.cbxDataModel.Text = "包含多项属性";
-            this.cbxDataModel.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btnListModeClose, "btnListModeClose");
+            this.btnListModeClose.Name = "btnListModeClose";
+            this.btnListModeClose.UseVisualStyleBackColor = true;
             // 
-            // tbxDataModel
+            // btnListModeSave
             // 
-            this.tbxDataModel.Location = new System.Drawing.Point(289, 91);
-            this.tbxDataModel.Name = "tbxDataModel";
-            this.tbxDataModel.Size = new System.Drawing.Size(125, 19);
-            this.tbxDataModel.TabIndex = 18;
+            resources.ApplyResources(this.btnListModeSave, "btnListModeSave");
+            this.btnListModeSave.Name = "btnListModeSave";
+            this.btnListModeSave.UseVisualStyleBackColor = true;
             // 
-            // btnSetDataModel
+            // mnuImportStracture
             // 
-            this.btnSetDataModel.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.hammer;
-            this.btnSetDataModel.Location = new System.Drawing.Point(420, 89);
-            this.btnSetDataModel.Name = "btnSetDataModel";
-            this.btnSetDataModel.Size = new System.Drawing.Size(24, 23);
-            this.btnSetDataModel.TabIndex = 19;
-            this.btnSetDataModel.UseVisualStyleBackColor = true;
+            this.mnuImportStracture.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.模板ToolStripMenuItem});
+            resources.ApplyResources(this.mnuImportStracture, "mnuImportStracture");
+            this.mnuImportStracture.Name = "mnuImportStracture";
+            this.mnuImportStracture.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
+            // 
+            // 模板ToolStripMenuItem
+            // 
+            this.模板ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuItemNewModel,
+            this.mnuItemOpenModel});
+            this.模板ToolStripMenuItem.Name = "模板ToolStripMenuItem";
+            resources.ApplyResources(this.模板ToolStripMenuItem, "模板ToolStripMenuItem");
+            // 
+            // mnuItemNewModel
+            // 
+            this.mnuItemNewModel.Name = "mnuItemNewModel";
+            resources.ApplyResources(this.mnuItemNewModel, "mnuItemNewModel");
+            // 
+            // mnuItemOpenModel
+            // 
+            this.mnuItemOpenModel.Name = "mnuItemOpenModel";
+            resources.ApplyResources(this.mnuItemOpenModel, "mnuItemOpenModel");
             // 
             // FormImportCardsSetting
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 320);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.mnuImportStracture);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.mnuImportStracture;
             this.MaximizeBox = false;
             this.Name = "FormImportCardsSetting";
-            this.Text = "FormImportCardsSetting";
             this.tabControl1.ResumeLayout(false);
             this.tpgInfoList.ResumeLayout(false);
+            this.tpgInfoList.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tpgTable.ResumeLayout(false);
-            this.gbxAddField.ResumeLayout(false);
-            this.gbxAddField.PerformLayout();
+            this.gbxTableModeStructure.ResumeLayout(false);
+            this.gbxTableModeStructure.PerformLayout();
             this.gbxSplitType.ResumeLayout(false);
             this.gbxSplitType.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.gbxListModeStructure.ResumeLayout(false);
+            this.mnuImportStracture.ResumeLayout(false);
+            this.mnuImportStracture.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -397,23 +422,37 @@
         private System.Windows.Forms.TextBox tbxOtherSplitString;
         private System.Windows.Forms.RadioButton tbtnOther;
         private System.Windows.Forms.RadioButton rbtnSpace;
-        private System.Windows.Forms.Label lblFieldIndex;
-        private System.Windows.Forms.TextBox tbxFieldIndex;
-        private System.Windows.Forms.GroupBox gbxAddField;
-        private System.Windows.Forms.ComboBox cbxCardProperties;
-        private System.Windows.Forms.Label lblFieldName;
-        private System.Windows.Forms.Button btnNewModel;
-        private System.Windows.Forms.Button btnDeleteModel;
-        private System.Windows.Forms.ListBox lbxTableFrame;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.CheckBox cbxFilterContent;
+        private System.Windows.Forms.Label lblStructureIndex;
+        private System.Windows.Forms.TextBox tbxStructureIndex;
+        private System.Windows.Forms.GroupBox gbxTableModeStructure;
+        private System.Windows.Forms.ComboBox cbxTableModePropertyName;
+        private System.Windows.Forms.Label lblTableModePropertyName;
+        private System.Windows.Forms.Button btnAddTableModeStructure;
+        private System.Windows.Forms.Button btnDelTableModeStructure;
+        private System.Windows.Forms.ListBox lbxTableModeCardProperties;
+        private System.Windows.Forms.Button btnTableModeClose;
+        private System.Windows.Forms.Button btnTableModeSave;
+        private System.Windows.Forms.CheckBox chkFilterContent;
         private System.Windows.Forms.TextBox tbxFilterPrefix;
         private System.Windows.Forms.Label lblSample;
         private System.Windows.Forms.Label lblFilterContent;
         private System.Windows.Forms.TextBox tbxSuffix;
         private System.Windows.Forms.Button btnSetDataModel;
         private System.Windows.Forms.TextBox tbxDataModel;
-        private System.Windows.Forms.CheckBox cbxDataModel;
+        private System.Windows.Forms.CheckBox chkDataModel;
+        private System.Windows.Forms.GroupBox gbxListModeStructure;
+        private System.Windows.Forms.ListBox lbxListModeCardProperties;
+        private System.Windows.Forms.Label lblPropertyDisplayText;
+        private System.Windows.Forms.TextBox tbxPropertyDisplayText;
+        private System.Windows.Forms.Button btnDelListModeStructure;
+        private System.Windows.Forms.Button btnAddListModeStructure;
+        private System.Windows.Forms.ComboBox cbxListModeCardPropertyName;
+        private System.Windows.Forms.Label lblListModeCardPropertyName;
+        private System.Windows.Forms.Button btnListModeClose;
+        private System.Windows.Forms.Button btnListModeSave;
+        private System.Windows.Forms.MenuStrip mnuImportStracture;
+        private System.Windows.Forms.ToolStripMenuItem 模板ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemNewModel;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemOpenModel;
     }
 }

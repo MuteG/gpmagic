@@ -89,6 +89,20 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             Path.Combine(GPSoft.Helper.FunctionHelper.FunctionHelper.ApplicationPath, "GPMagic.db3"));
     }
     /// <summary>
+    /// 系统各个文件夹的默认路径（相对路径）
+    /// </summary>
+    public struct DefaultDirectoryName
+    {
+        /// <summary>
+        /// 卡牌图片文件夹
+        /// </summary>
+        public static readonly string CardPictures = "Pic";
+        /// <summary>
+        /// 卡牌数据导入/导出模板文件夹
+        /// </summary>
+        public static readonly string ImportModel = "Imp";
+    }
+    /// <summary>
     /// 表示稀有度的颜色
     /// </summary>
     public sealed class RarityColor
