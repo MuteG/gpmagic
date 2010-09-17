@@ -58,6 +58,7 @@
     <Compile Include="MagicCardConst.cs" />
     <Compile Include="Model\Database\CardRarity.cs" />
     <Compile Include="Model\ConstClass.cs" />
+    <Compile Include="Model\ImportExportModel.cs" />
     <Compile Include="Module\Deck\AbstractDeck.cs" />
     <Compile Include="Module\Deck\CNDeck.cs" />
     <Compile Include="Module\Deck\GPMagicDeck.cs" />

@@ -12,6 +12,7 @@
     <AssemblyName>GPSearch</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>44412.ICO</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -195,6 +196,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="0119_MTGWWK_CS_LR.jpg" />
+    <Content Include="20.ico" />
+    <Content Include="44412.ICO" />
+    <Content Include="png-0812.ico" />
     <None Include="Resources\%2800,05%29.png" />
     <None Include="Resources\%2801,34%29.png" />
     <None Include="Resources\%2827,27%29.png" />

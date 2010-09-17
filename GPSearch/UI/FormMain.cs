@@ -262,5 +262,10 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             
         }
+
+        private void mnuItemImportModel_Click(object sender, EventArgs e)
+        {
+            new FormImportCardsSetting().ShowDialog();
+        }
     }
 }

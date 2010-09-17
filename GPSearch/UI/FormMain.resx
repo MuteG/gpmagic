@@ -132,12 +132,6 @@
   <metadata name="tspCardLibrary.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>245, 17</value>
   </metadata>
-  <metadata name="tspCardLibrary.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="tspCardLibrary.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>245, 17</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="tsbtnKeyWord.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -243,4 +237,87 @@
   <metadata name="ofdDeck.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>710, 17</value>
   </metadata>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAQAEBAQAAAAAAAoAQAARgAAABAQAAAAAAAAaAUAAG4BAAAgIBAAAAAAAOgCAADWBgAAICAAAAAA
+        AACoCAAAvgkAACgAAAAQAAAAIAAAAAEABAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAD///8ABfP8AAJk
+        /wAGCN0AhAjyAKUARgDUAAAA6qsCABS3HwARZAAABSxWADpxkADAwMAAgICAAEBAQAAAAAAA////////
+        ///8zMzMzMzMz/zMzMzMzMzP/MzMxfXMzM/8zFV8zHxVz//M/8zMzP/P/PwPzMzMD8/8v/DMzMzMz/u8
+        z/AAzMf/+8zMf////7/8vMzH8RH8v/y7u8fxEfy//Md3x/ER8M///Mx/EREfD/Ef//ERERH/////////
+        //+AAYABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACAAYABKAAAABAAAAAgAAAAAQAIAAAAAABAAQAAAAAAAAAAAAAAAAAAAAAAAP///wDM//8Amf//AGb/
+        /wAz//8AAP//AP/M/wDMzP8Amcz/AGbM/wAzzP8AAMz/AP+Z/wDMmf8AmZn/AGaZ/wAzmf8AAJn/AP9m
+        /wDMZv8AmWb/AGZm/wAzZv8AAGb/AP8z/wDMM/8AmTP/AGYz/wAzM/8AADP/AP8A/wDMAP8AmQD/AGYA
+        /wAzAP8AAAD/AP//zADM/8wAmf/MAGb/zAAz/8wAAP/MAP/MzADMzMwAmczMAGbMzAAzzMwAAMzMAP+Z
+        zADMmcwAmZnMAGaZzAAzmcwAAJnMAP9mzADMZswAmWbMAGZmzAAzZswAAGbMAP8zzADMM8wAmTPMAGYz
+        zAAzM8wAADPMAP8AzADMAMwAmQDMAGYAzAAzAMwAAADMAP//mQDM/5kAmf+ZAGb/mQAz/5kAAP+ZAP/M
+        mQDMzJkAmcyZAGbMmQAzzJkAAMyZAP+ZmQDMmZkAmZmZAGaZmQAzmZkAAJmZAP9mmQDMZpkAmWaZAGZm
+        mQAzZpkAAGaZAP8zmQDMM5kAmTOZAGYzmQAzM5kAADOZAP8AmQDMAJkAmQCZAGYAmQAzAJkAAACZAP//
+        ZgDM/2YAmf9mAGb/ZgAz/2YAAP9mAP/MZgDMzGYAmcxmAGbMZgAzzGYAAMxmAP+ZZgDMmWYAmZlmAGaZ
+        ZgAzmWYAAJlmAP9mZgDMZmYAmWZmAGZmZgAzZmYAAGZmAP8zZgDMM2YAmTNmAGYzZgAzM2YAADNmAP8A
+        ZgDMAGYAmQBmAGYAZgAzAGYAAABmAP//MwDM/zMAmf8zAGb/MwAz/zMAAP8zAP/MMwDMzDMAmcwzAGbM
+        MwAzzDMAAMwzAP+ZMwDMmTMAmZkzAGaZMwAzmTMAAJkzAP9mMwDMZjMAmWYzAGZmMwAzZjMAAGYzAP8z
+        MwDMMzMAmTMzAGYzMwAzMzMAADMzAP8AMwDMADMAmQAzAGYAMwAzADMAAAAzAP//AADM/wAAmf8AAGb/
+        AAAz/wAAAP8AAP/MAADMzAAAmcwAAGbMAAAzzAAAAMwAAP+ZAADMmQAAmZkAAGaZAAAzmQAAAJkAAP9m
+        AADMZgAAmWYAAGZmAAAzZgAAAGYAAP8zAADMMwAAmTMAAGYzAAAzMwAAADMAAP8AAADMAAAAmQAAAGYA
+        AAAzAAAAAADuAAAA3QAAALsAAACqAAAAiAAAAHcAAABVAAAARAAAACIAAAARAADuAAAA3QAAALsAAACq
+        AAAAiAAAAHcAAABVAAAARAAAACIAAAARAADuAAAA3QAAALsAAACqAAAAiAAAAHcAAABVAAAARAAAACIA
+        AAARAAAA7u7uAN3d3QC7u7sAqqqqAIiIiAB3d3cAVVVVAERERAAiIiIAERERAAAAAAD/////////////
+        /////////05OTk5OTk5OTk5OTk5O//9OTk5OTk5OTk5OTk5OTv//Tk5OTk5OpP+kTk5OTk7//05OTqSk
+        eE5OTnhOpKRO////Tk7//05OTk5OTv//Tv//Tv9OAP9OTk5OTk4A/07//045//8kTk5OTk5OTk5O//85
+        OQ4H//8kJCROTk54////OQ4OBwd4/////////zn//045Dg4OTnj/CwsL/045//9OOTk5OU54/wsLC/9O
+        Of//Tk54eHhOeP8LCwv/JE7/////Tk5OeP8LCwsLC/8k//8LC/////8LCwsLCwsL////////////////
+        ////////gAGAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAgAGAASgAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAAAD///8ABfP8AAJk
+        /wAGCN0AhAjyAKUARgDUAAAA6qsCABS3HwARZAAABSxWADpxkADAwMAAgICAAEBAQAAAAAAA////////
+        //////////////////DH////8Mz////////////8d/////fM/////////////3////9Xd///////////
+        ///8zMzM/1f///////////8AAAAAzMz////////////AAAAAAADMx//////////8AAAAAAAADMd/////
+        ////zAAAAAAAAADMd////////8AAAAAAAAAAzHf///////zAAAAAAAAAAMzHf//////8wAAAAAAAAADM
+        d3///////MAAAAAAAAAAx3d///////d8AAAAAAAAAP93f////////AAAAAAAAA9893///////H/AAAAA
+        AADHwPd///////DHzMAAAADMzA93f//////8DMzMzMzMzMzMx3///////8zMzMzMzMzMzHf//wAA///8
+        zMzF9czMzMx3//DMAA///MxVfMx8VczMf//wx8AP///M/8zMzP/MzH//8Ad8D//8/A/MzMwPzMf3//AA
+        zA//zL/wzMzMzMf/zH//AAD//8u8z/AAzMf/zMx////////LzMx/////vMzMf///////zLzMx////LvM
+        zH////////y7u8f///y7vMz////////8x3fH///wy7zH//////////zMf////wzM////////////////
+        ///////////////////////////////////+P4///B8H//wfB//+AAf//AAH//AAD//gAAZ/wAABf4AA
+        Ab+AAAGjAAAAmwAAAPcAAADvAAAA4wAAAPsAAAD7AAAA9wAAAMOAAAGBwAABAMAAAwDgAAMAwAABAIAA
+        AIGAAADDgAAA/4AcAP/AHAH/wBwB/+A+A//4fw///////ygAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAA
+        AAAAAAAAAAAAAAAAAAD///8AzP//AJn//wBm//8AM///AAD//wD/zP8AzMz/AJnM/wBmzP8AM8z/AADM
+        /wD/mf8AzJn/AJmZ/wBmmf8AM5n/AACZ/wD/Zv8AzGb/AJlm/wBmZv8AM2b/AABm/wD/M/8AzDP/AJkz
+        /wBmM/8AMzP/AAAz/wD/AP8AzAD/AJkA/wBmAP8AMwD/AAAA/wD//8wAzP/MAJn/zABm/8wAM//MAAD/
+        zAD/zMwAzMzMAJnMzABmzMwAM8zMAADMzAD/mcwAzJnMAJmZzABmmcwAM5nMAACZzAD/ZswAzGbMAJlm
+        zABmZswAM2bMAABmzAD/M8wAzDPMAJkzzABmM8wAMzPMAAAzzAD/AMwAzADMAJkAzABmAMwAMwDMAAAA
+        zAD//5kAzP+ZAJn/mQBm/5kAM/+ZAAD/mQD/zJkAzMyZAJnMmQBmzJkAM8yZAADMmQD/mZkAzJmZAJmZ
+        mQBmmZkAM5mZAACZmQD/ZpkAzGaZAJlmmQBmZpkAM2aZAABmmQD/M5kAzDOZAJkzmQBmM5kAMzOZAAAz
+        mQD/AJkAzACZAJkAmQBmAJkAMwCZAAAAmQD//2YAzP9mAJn/ZgBm/2YAM/9mAAD/ZgD/zGYAzMxmAJnM
+        ZgBmzGYAM8xmAADMZgD/mWYAzJlmAJmZZgBmmWYAM5lmAACZZgD/ZmYAzGZmAJlmZgBmZmYAM2ZmAABm
+        ZgD/M2YAzDNmAJkzZgBmM2YAMzNmAAAzZgD/AGYAzABmAJkAZgBmAGYAMwBmAAAAZgD//zMAzP8zAJn/
+        MwBm/zMAM/8zAAD/MwD/zDMAzMwzAJnMMwBmzDMAM8wzAADMMwD/mTMAzJkzAJmZMwBmmTMAM5kzAACZ
+        MwD/ZjMAzGYzAJlmMwBmZjMAM2YzAABmMwD/MzMAzDMzAJkzMwBmMzMAMzMzAAAzMwD/ADMAzAAzAJkA
+        MwBmADMAMwAzAAAAMwD//wAAzP8AAJn/AABm/wAAM/8AAAD/AAD/zAAAzMwAAJnMAABmzAAAM8wAAADM
+        AAD/mQAAzJkAAJmZAABmmQAAM5kAAACZAAD/ZgAAzGYAAJlmAABmZgAAM2YAAABmAAD/MwAAzDMAAJkz
+        AABmMwAAMzMAAAAzAAD/AAAAzAAAAJkAAABmAAAAMwAAAAAA7gAAAN0AAAC7AAAAqgAAAIgAAAB3AAAA
+        VQAAAEQAAAAiAAAAEQAA7gAAAN0AAAC7AAAAqgAAAIgAAAB3AAAAVQAAAEQAAAAiAAAAEQAA7gAAAN0A
+        AAC7AAAAqgAAAIgAAAB3AAAAVQAAAEQAAAAiAAAAEQAAAO7u7gDd3d0Au7u7AKqqqgCIiIgAd3d3AFVV
+        VQBEREQAIiIiABEREQAAAAAA////////////////////////////////////////////////////JE54
+        /////////yROTv////////////////////////9OeHj/////////eE5O////////////////////////
+        //94/////////6R4eHj///////////////////////////8ICAgICAhO//+keP//////////////////
+        /////wEBAQEBAQEBCAhOTv///////////////////////04kAAAAAAEBAQEBAQhOTnj/////////////
+        //////9OJAAAAAAAAAAAAQEBAQhOeHj/////////////////Tk4kAAAAAAAAAAAAAAEBAU5OeHj/////
+        //////////9OJAAAAAAAAAAAAAAAAAEBTk54eP//////////////Tk4kAAAAAAAAAAAAAAAAAAFOTk54
+        eP////////////9OTiQAAAAAAAAAAAAAAAAAAU5OeHh4/////////////05OJAAAAAAAAAAAAAAAAAAk
+        Tnh4eHj/////////////eHhOJAAAAAAAAAAAAAAAACT//3h4eP///////////////04kAAAAAAAAAAAA
+        AAAk/3hO/3h4/////////////054/04kJAAAAAAAAAAkJE54TiT/eHj/////////////JE54Tk5OJCQk
+        JCQkJE5OTk4k/3h4eP////////////9OJE5OTk5OTk5OTk5OTk5OTk5OTnh4//////////////9OTk5O
+        Tk5OTk5OTk5OTk5OTk54eP////8kJCQk//////9OTk5OTk6k/6ROTk5OTk5OTnh4////JE5OJAAk////
+        /05OTqSkeE5OTnhOpKROTk5OeP////8kTnhOJCT//////05O//9OTk5OTk7//05OTk54/////yQAeHhO
+        JP////9O/04A/05OTk5OTgD/Tk5OeP94////JAAATk4k////Tk45//8kTk5OTk5OTk5OeP//B054////
+        JCQkJP////9OOTkOB///JCQkTk5OeP//DgcHTnj//////////////045Dg4HB3j/////////OQ4ODgdO
+        eP//////////////Tk45Dg4OTnj//////045OQ4ODk54////////////////Tjk5OTlOeP//////Tjk5
+        OQ5OTv////////////////9OTnh4eE54//////8kTjk5Tk54////////////////////Tk5OeP//////
+        //8kTk5O////////////////////////////////////////////////////////////////////////
+        //////////////////////////////4/j//8Hwf//B8H//4AB//8AAf/8AAP/+AABn/AAAF/gAABv4AA
+        AaMAAACbAAAA9wAAAO8AAADjAAAA+wAAAPsAAAD3AAAAw4AAAYHAAAEAwAADAOAAAwDAAAEAgAAAgYAA
+        AMOAAAD/gBwA/8AcAf/AHAH/4D4D//h/D///////
+</value>
+  </data>
 </root>

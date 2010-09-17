@@ -123,1144 +123,277 @@
   <metadata name="tpgInfoList.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="btnListModeClose.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="tpgInfoList.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnListModeClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>445, 264</value>
-  </data>
-  <data name="btnListModeClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnListModeClose.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="btnListModeClose.Text" xml:space="preserve">
-    <value>关闭</value>
-  </data>
-  <data name="&gt;&gt;btnListModeClose.Name" xml:space="preserve">
-    <value>btnListModeClose</value>
-  </data>
-  <data name="&gt;&gt;btnListModeClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnListModeClose.Parent" xml:space="preserve">
-    <value>tpgInfoList</value>
-  </data>
-  <data name="&gt;&gt;btnListModeClose.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <metadata name="btnListModeSave.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="gbxListModeStructure.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnListModeSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>364, 264</value>
-  </data>
-  <data name="btnListModeSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="btnListModeSave.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="btnListModeSave.Text" xml:space="preserve">
-    <value>保存</value>
-  </data>
-  <data name="&gt;&gt;btnListModeSave.Name" xml:space="preserve">
-    <value>btnListModeSave</value>
-  </data>
-  <data name="&gt;&gt;btnListModeSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnListModeSave.Parent" xml:space="preserve">
-    <value>tpgInfoList</value>
-  </data>
-  <data name="&gt;&gt;btnListModeSave.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="lblPropertyDisplayText.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="lblPropertyDisplayText.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblPropertyDisplayText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 147</value>
-  </data>
-  <data name="lblPropertyDisplayText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 12</value>
-  </data>
-  <data name="lblPropertyDisplayText.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="lblPropertyDisplayText.Text" xml:space="preserve">
-    <value>数据标签文字</value>
-  </data>
-  <data name="&gt;&gt;lblPropertyDisplayText.Name" xml:space="preserve">
-    <value>lblPropertyDisplayText</value>
-  </data>
-  <data name="&gt;&gt;lblPropertyDisplayText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblPropertyDisplayText.Parent" xml:space="preserve">
-    <value>tpgInfoList</value>
-  </data>
-  <data name="&gt;&gt;lblPropertyDisplayText.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <metadata name="tbxPropertyDisplayText.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="btnClose.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="tbxPropertyDisplayText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 144</value>
-  </data>
-  <data name="tbxPropertyDisplayText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 19</value>
-  </data>
-  <data name="tbxPropertyDisplayText.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="&gt;&gt;tbxPropertyDisplayText.Name" xml:space="preserve">
-    <value>tbxPropertyDisplayText</value>
-  </data>
-  <data name="&gt;&gt;tbxPropertyDisplayText.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxPropertyDisplayText.Parent" xml:space="preserve">
-    <value>tpgInfoList</value>
-  </data>
-  <data name="&gt;&gt;tbxPropertyDisplayText.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <metadata name="btnDelListModeStructure.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="btnSave.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnDelListModeStructure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>415, 168</value>
-  </data>
-  <data name="btnDelListModeStructure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
-  </data>
-  <data name="btnDelListModeStructure.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="&gt;&gt;btnDelListModeStructure.Name" xml:space="preserve">
-    <value>btnDelListModeStructure</value>
-  </data>
-  <data name="&gt;&gt;btnDelListModeStructure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDelListModeStructure.Parent" xml:space="preserve">
-    <value>tpgInfoList</value>
-  </data>
-  <data name="&gt;&gt;btnDelListModeStructure.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <metadata name="btnAddListModeStructure.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnAddListModeStructure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>385, 168</value>
-  </data>
-  <data name="btnAddListModeStructure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
-  </data>
-  <data name="btnAddListModeStructure.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;btnAddListModeStructure.Name" xml:space="preserve">
-    <value>btnAddListModeStructure</value>
-  </data>
-  <data name="&gt;&gt;btnAddListModeStructure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddListModeStructure.Parent" xml:space="preserve">
-    <value>tpgInfoList</value>
-  </data>
-  <data name="&gt;&gt;btnAddListModeStructure.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <metadata name="cbxListModeCardPropertyName.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="cbxListModeCardPropertyName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>254, 169</value>
-  </data>
-  <data name="cbxListModeCardPropertyName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 20</value>
-  </data>
-  <data name="cbxListModeCardPropertyName.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;cbxListModeCardPropertyName.Name" xml:space="preserve">
-    <value>cbxListModeCardPropertyName</value>
-  </data>
-  <data name="&gt;&gt;cbxListModeCardPropertyName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbxListModeCardPropertyName.Parent" xml:space="preserve">
-    <value>tpgInfoList</value>
-  </data>
-  <data name="&gt;&gt;cbxListModeCardPropertyName.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <metadata name="lblListModeCardPropertyName.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblListModeCardPropertyName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblListModeCardPropertyName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 172</value>
-  </data>
-  <data name="lblListModeCardPropertyName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 12</value>
-  </data>
-  <data name="lblListModeCardPropertyName.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="lblListModeCardPropertyName.Text" xml:space="preserve">
-    <value>对应卡牌属性</value>
-  </data>
-  <data name="&gt;&gt;lblListModeCardPropertyName.Name" xml:space="preserve">
-    <value>lblListModeCardPropertyName</value>
-  </data>
-  <data name="&gt;&gt;lblListModeCardPropertyName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblListModeCardPropertyName.Parent" xml:space="preserve">
-    <value>tpgInfoList</value>
-  </data>
-  <data name="&gt;&gt;lblListModeCardPropertyName.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
   <metadata name="gbxListModeStructure.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="lbxListModeCardProperties.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="lbxListModeCardProperties.ItemHeight" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="lbxListModeCardProperties.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 18</value>
-  </data>
-  <data name="lbxListModeCardProperties.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 256</value>
-  </data>
-  <data name="lbxListModeCardProperties.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;lbxListModeCardProperties.Name" xml:space="preserve">
-    <value>lbxListModeCardProperties</value>
-  </data>
-  <data name="&gt;&gt;lbxListModeCardProperties.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbxListModeCardProperties.Parent" xml:space="preserve">
-    <value>gbxListModeStructure</value>
-  </data>
-  <data name="&gt;&gt;lbxListModeCardProperties.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="gbxListModeStructure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 6</value>
-  </data>
-  <data name="gbxListModeStructure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 281</value>
-  </data>
-  <data name="gbxListModeStructure.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="gbxListModeStructure.Text" xml:space="preserve">
-    <value>数据结构</value>
-  </data>
-  <data name="&gt;&gt;gbxListModeStructure.Name" xml:space="preserve">
-    <value>gbxListModeStructure</value>
-  </data>
-  <data name="&gt;&gt;gbxListModeStructure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbxListModeStructure.Parent" xml:space="preserve">
-    <value>tpgInfoList</value>
-  </data>
-  <data name="&gt;&gt;gbxListModeStructure.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
+  <metadata name="lbxListModeCardProperties.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="pictureBox1.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pictureBox1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="pictureBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 3</value>
-  </data>
-  <data name="pictureBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 135</value>
-  </data>
-  <data name="pictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pictureBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Name" xml:space="preserve">
-    <value>pictureBox1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.Parent" xml:space="preserve">
-    <value>tpgInfoList</value>
-  </data>
-  <data name="&gt;&gt;pictureBox1.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="tpgInfoList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 21</value>
-  </data>
-  <data name="tpgInfoList.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpgInfoList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>529, 294</value>
-  </data>
-  <data name="tpgInfoList.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="tpgInfoList.Text" xml:space="preserve">
-    <value>信息序列模式</value>
-  </data>
-  <data name="&gt;&gt;tpgInfoList.Name" xml:space="preserve">
-    <value>tpgInfoList</value>
-  </data>
-  <data name="&gt;&gt;tpgInfoList.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpgInfoList.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tpgInfoList.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
+  <metadata name="gbxTableModeStructure.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="gbxSplitType.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="pictureBox2.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="gbxTableModeStructure.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="btnSetDataModel.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnSetDataModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 89</value>
-  </data>
-  <data name="btnSetDataModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
-  </data>
-  <data name="btnSetDataModel.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;btnSetDataModel.Name" xml:space="preserve">
-    <value>btnSetDataModel</value>
-  </data>
-  <data name="&gt;&gt;btnSetDataModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnSetDataModel.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;btnSetDataModel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="tbxDataModel.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="tbxDataModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 91</value>
-  </data>
-  <data name="tbxDataModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 19</value>
-  </data>
-  <data name="tbxDataModel.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="&gt;&gt;tbxDataModel.Name" xml:space="preserve">
-    <value>tbxDataModel</value>
-  </data>
-  <data name="&gt;&gt;tbxDataModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxDataModel.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;tbxDataModel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="chkDataModel.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="chkDataModel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chkDataModel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 93</value>
-  </data>
-  <data name="chkDataModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 16</value>
-  </data>
-  <data name="chkDataModel.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="chkDataModel.Text" xml:space="preserve">
-    <value>包含多项属性</value>
-  </data>
-  <data name="&gt;&gt;chkDataModel.Name" xml:space="preserve">
-    <value>chkDataModel</value>
-  </data>
-  <data name="&gt;&gt;chkDataModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chkDataModel.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;chkDataModel.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <metadata name="lblFilterContent.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="lblFilterContent.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblFilterContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>336, 69</value>
-  </data>
-  <data name="lblFilterContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
-  </data>
-  <data name="lblFilterContent.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="lblFilterContent.Text" xml:space="preserve">
-    <value>内容</value>
-  </data>
-  <data name="&gt;&gt;lblFilterContent.Name" xml:space="preserve">
-    <value>lblFilterContent</value>
-  </data>
-  <data name="&gt;&gt;lblFilterContent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblFilterContent.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;lblFilterContent.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <metadata name="lblSample.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="lblSample.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblSample.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 69</value>
-  </data>
-  <data name="lblSample.Size" type="System.Drawing.Size, System.Drawing">
-    <value>29, 12</value>
-  </data>
-  <data name="lblSample.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="lblSample.Text" xml:space="preserve">
-    <value>内容</value>
-  </data>
-  <data name="&gt;&gt;lblSample.Name" xml:space="preserve">
-    <value>lblSample</value>
-  </data>
-  <data name="&gt;&gt;lblSample.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblSample.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;lblSample.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
   <metadata name="tbxSuffix.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="tbxSuffix.Location" type="System.Drawing.Point, System.Drawing">
-    <value>373, 66</value>
-  </data>
-  <data name="tbxSuffix.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 19</value>
-  </data>
-  <data name="tbxSuffix.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;tbxSuffix.Name" xml:space="preserve">
-    <value>tbxSuffix</value>
-  </data>
-  <data name="&gt;&gt;tbxSuffix.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxSuffix.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;tbxSuffix.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
   <metadata name="tbxFilterPrefix.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="tbxFilterPrefix.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 66</value>
-  </data>
-  <data name="tbxFilterPrefix.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 19</value>
-  </data>
-  <data name="tbxFilterPrefix.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;tbxFilterPrefix.Name" xml:space="preserve">
-    <value>tbxFilterPrefix</value>
-  </data>
-  <data name="&gt;&gt;tbxFilterPrefix.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxFilterPrefix.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;tbxFilterPrefix.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
   <metadata name="chkFilterContent.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="chkFilterContent.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="chkFilterContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>170, 68</value>
-  </data>
-  <data name="chkFilterContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>96, 16</value>
-  </data>
-  <data name="chkFilterContent.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="chkFilterContent.Text" xml:space="preserve">
-    <value>过滤如下内容</value>
-  </data>
-  <data name="&gt;&gt;chkFilterContent.Name" xml:space="preserve">
-    <value>chkFilterContent</value>
-  </data>
-  <data name="&gt;&gt;chkFilterContent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;chkFilterContent.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;chkFilterContent.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <metadata name="btnTableModeClose.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnTableModeClose.Location" type="System.Drawing.Point, System.Drawing">
-    <value>442, 119</value>
-  </data>
-  <data name="btnTableModeClose.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="btnTableModeClose.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="btnTableModeClose.Text" xml:space="preserve">
-    <value>关闭</value>
-  </data>
-  <data name="&gt;&gt;btnTableModeClose.Name" xml:space="preserve">
-    <value>btnTableModeClose</value>
-  </data>
-  <data name="&gt;&gt;btnTableModeClose.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnTableModeClose.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;btnTableModeClose.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <metadata name="btnTableModeSave.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="btnTableModeSave.Location" type="System.Drawing.Point, System.Drawing">
-    <value>361, 119</value>
-  </data>
-  <data name="btnTableModeSave.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 23</value>
-  </data>
-  <data name="btnTableModeSave.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="btnTableModeSave.Text" xml:space="preserve">
-    <value>保存</value>
-  </data>
-  <data name="&gt;&gt;btnTableModeSave.Name" xml:space="preserve">
-    <value>btnTableModeSave</value>
-  </data>
-  <data name="&gt;&gt;btnTableModeSave.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnTableModeSave.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;btnTableModeSave.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
   <metadata name="lbxTableModeCardProperties.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="lbxTableModeCardProperties.ItemHeight" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="lbxTableModeCardProperties.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 18</value>
-  </data>
-  <data name="lbxTableModeCardProperties.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 124</value>
-  </data>
-  <data name="lbxTableModeCardProperties.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;lbxTableModeCardProperties.Name" xml:space="preserve">
-    <value>lbxTableModeCardProperties</value>
-  </data>
-  <data name="&gt;&gt;lbxTableModeCardProperties.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lbxTableModeCardProperties.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;lbxTableModeCardProperties.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
   <metadata name="btnDelTableModeStructure.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnDelTableModeStructure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>450, 38</value>
-  </data>
-  <data name="btnDelTableModeStructure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
-  </data>
-  <data name="btnDelTableModeStructure.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;btnDelTableModeStructure.Name" xml:space="preserve">
-    <value>btnDelTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;btnDelTableModeStructure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnDelTableModeStructure.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;btnDelTableModeStructure.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
   <metadata name="btnAddTableModeStructure.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnAddTableModeStructure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>420, 38</value>
-  </data>
-  <data name="btnAddTableModeStructure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>24, 23</value>
-  </data>
-  <data name="btnAddTableModeStructure.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;btnAddTableModeStructure.Name" xml:space="preserve">
-    <value>btnAddTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;btnAddTableModeStructure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnAddTableModeStructure.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;btnAddTableModeStructure.ZOrder" xml:space="preserve">
-    <value>12</value>
-  </data>
-  <metadata name="cbxTableModePropertyName.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="cbxTableModeCardPropertyName.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="cbxTableModePropertyName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 40</value>
-  </data>
-  <data name="cbxTableModePropertyName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 20</value>
-  </data>
-  <data name="cbxTableModePropertyName.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;cbxTableModePropertyName.Name" xml:space="preserve">
-    <value>cbxTableModePropertyName</value>
-  </data>
-  <data name="&gt;&gt;cbxTableModePropertyName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbxTableModePropertyName.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;cbxTableModePropertyName.ZOrder" xml:space="preserve">
-    <value>13</value>
-  </data>
   <metadata name="lblTableModePropertyName.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="lblTableModePropertyName.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblTableModePropertyName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 43</value>
-  </data>
-  <data name="lblTableModePropertyName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>77, 12</value>
-  </data>
-  <data name="lblTableModePropertyName.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="lblTableModePropertyName.Text" xml:space="preserve">
-    <value>对应卡牌属性</value>
-  </data>
-  <data name="&gt;&gt;lblTableModePropertyName.Name" xml:space="preserve">
-    <value>lblTableModePropertyName</value>
-  </data>
-  <data name="&gt;&gt;lblTableModePropertyName.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblTableModePropertyName.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;lblTableModePropertyName.ZOrder" xml:space="preserve">
-    <value>14</value>
-  </data>
   <metadata name="lblStructureIndex.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="lblStructureIndex.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="lblStructureIndex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>168, 18</value>
-  </data>
-  <data name="lblStructureIndex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>115, 12</value>
-  </data>
-  <data name="lblStructureIndex.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="lblStructureIndex.Text" xml:space="preserve">
-    <value>数据列索引(从0开始)</value>
-  </data>
-  <data name="&gt;&gt;lblStructureIndex.Name" xml:space="preserve">
-    <value>lblStructureIndex</value>
-  </data>
-  <data name="&gt;&gt;lblStructureIndex.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;lblStructureIndex.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;lblStructureIndex.ZOrder" xml:space="preserve">
-    <value>15</value>
-  </data>
   <metadata name="tbxStructureIndex.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="tbxStructureIndex.Location" type="System.Drawing.Point, System.Drawing">
-    <value>289, 15</value>
-  </data>
-  <data name="tbxStructureIndex.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 19</value>
-  </data>
-  <data name="tbxStructureIndex.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;tbxStructureIndex.Name" xml:space="preserve">
-    <value>tbxStructureIndex</value>
-  </data>
-  <data name="&gt;&gt;tbxStructureIndex.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxStructureIndex.Parent" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;tbxStructureIndex.ZOrder" xml:space="preserve">
-    <value>16</value>
-  </data>
-  <data name="gbxTableModeStructure.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 144</value>
-  </data>
-  <data name="gbxTableModeStructure.Size" type="System.Drawing.Size, System.Drawing">
-    <value>523, 148</value>
-  </data>
-  <data name="gbxTableModeStructure.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="gbxTableModeStructure.Text" xml:space="preserve">
-    <value>定义数据结构</value>
-  </data>
-  <data name="&gt;&gt;gbxTableModeStructure.Name" xml:space="preserve">
-    <value>gbxTableModeStructure</value>
-  </data>
-  <data name="&gt;&gt;gbxTableModeStructure.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbxTableModeStructure.Parent" xml:space="preserve">
-    <value>tpgTable</value>
-  </data>
-  <data name="&gt;&gt;gbxTableModeStructure.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
+  <metadata name="btnSetDataModel.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tbxDataModel.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="chkDataModel.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblFilterContent.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblSample.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tbxSuffix.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tbxFilterPrefix.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="chkFilterContent.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lbxTableModeCardProperties.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnDelTableModeStructure.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnAddTableModeStructure.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="cbxTableModeCardPropertyName.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblTableModePropertyName.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="lblStructureIndex.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="tbxStructureIndex.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="gbxSplitType.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="tbxOtherSplitString.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="tbxOtherSplitString.Location" type="System.Drawing.Point, System.Drawing">
-    <value>107, 83</value>
-  </data>
-  <data name="tbxOtherSplitString.Size" type="System.Drawing.Size, System.Drawing">
-    <value>38, 19</value>
-  </data>
-  <data name="tbxOtherSplitString.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;tbxOtherSplitString.Name" xml:space="preserve">
-    <value>tbxOtherSplitString</value>
-  </data>
-  <data name="&gt;&gt;tbxOtherSplitString.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbxOtherSplitString.Parent" xml:space="preserve">
-    <value>gbxSplitType</value>
-  </data>
-  <data name="&gt;&gt;tbxOtherSplitString.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="tbtnOther.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="tbtnOther.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="tbtnOther.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 84</value>
-  </data>
-  <data name="tbtnOther.Size" type="System.Drawing.Size, System.Drawing">
-    <value>95, 16</value>
-  </data>
-  <data name="tbtnOther.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tbtnOther.Text" xml:space="preserve">
-    <value>其他字符分隔</value>
-  </data>
-  <data name="&gt;&gt;tbtnOther.Name" xml:space="preserve">
-    <value>tbtnOther</value>
-  </data>
-  <data name="&gt;&gt;tbtnOther.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tbtnOther.Parent" xml:space="preserve">
-    <value>gbxSplitType</value>
-  </data>
-  <data name="&gt;&gt;tbtnOther.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <metadata name="rbtnSpace.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="rbtnSpace.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbtnSpace.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 62</value>
-  </data>
-  <data name="rbtnSpace.Size" type="System.Drawing.Size, System.Drawing">
-    <value>139, 16</value>
-  </data>
-  <data name="rbtnSpace.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="rbtnSpace.Text" xml:space="preserve">
-    <value>空格(一个或多个)分隔</value>
-  </data>
-  <data name="&gt;&gt;rbtnSpace.Name" xml:space="preserve">
-    <value>rbtnSpace</value>
-  </data>
-  <data name="&gt;&gt;rbtnSpace.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbtnSpace.Parent" xml:space="preserve">
-    <value>gbxSplitType</value>
-  </data>
-  <data name="&gt;&gt;rbtnSpace.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
   <metadata name="rbtnTab.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="rbtnTab.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rbtnTab.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 40</value>
-  </data>
-  <data name="rbtnTab.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 16</value>
-  </data>
-  <data name="rbtnTab.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="rbtnTab.Text" xml:space="preserve">
-    <value>制表符(TAB)分隔</value>
-  </data>
-  <data name="&gt;&gt;rbtnTab.Name" xml:space="preserve">
-    <value>rbtnTab</value>
-  </data>
-  <data name="&gt;&gt;rbtnTab.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbtnTab.Parent" xml:space="preserve">
-    <value>gbxSplitType</value>
-  </data>
-  <data name="&gt;&gt;rbtnTab.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
   <metadata name="rbtnComma.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="rbtnComma.AutoSize" type="System.Boolean, mscorlib">
+  <metadata name="tbxOtherSplitString.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </data>
-  <data name="rbtnComma.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 18</value>
-  </data>
-  <data name="rbtnComma.Size" type="System.Drawing.Size, System.Drawing">
-    <value>71, 16</value>
-  </data>
-  <data name="rbtnComma.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="rbtnComma.Text" xml:space="preserve">
-    <value>逗号分隔</value>
-  </data>
-  <data name="&gt;&gt;rbtnComma.Name" xml:space="preserve">
-    <value>rbtnComma</value>
-  </data>
-  <data name="&gt;&gt;rbtnComma.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;rbtnComma.Parent" xml:space="preserve">
-    <value>gbxSplitType</value>
-  </data>
-  <data name="&gt;&gt;rbtnComma.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="gbxSplitType.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="gbxSplitType.Size" type="System.Drawing.Size, System.Drawing">
-    <value>162, 135</value>
-  </data>
-  <data name="gbxSplitType.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="gbxSplitType.Text" xml:space="preserve">
-    <value>数据分隔类型</value>
-  </data>
-  <data name="&gt;&gt;gbxSplitType.Name" xml:space="preserve">
-    <value>gbxSplitType</value>
-  </data>
-  <data name="&gt;&gt;gbxSplitType.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;gbxSplitType.Parent" xml:space="preserve">
-    <value>tpgTable</value>
-  </data>
-  <data name="&gt;&gt;gbxSplitType.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
+  </metadata>
+  <metadata name="tbtnOther.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="rbtnSpace.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="rbtnTab.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="rbtnComma.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="pictureBox2.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="pictureBox2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
-  <data name="pictureBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>171, 3</value>
-  </data>
-  <data name="pictureBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>355, 135</value>
-  </data>
-  <data name="pictureBox2.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>Zoom</value>
-  </data>
-  <data name="pictureBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Name" xml:space="preserve">
-    <value>pictureBox2</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.Parent" xml:space="preserve">
-    <value>tpgTable</value>
-  </data>
-  <data name="&gt;&gt;pictureBox2.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="tpgTable.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 21</value>
-  </data>
-  <data name="tpgTable.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="tpgTable.Size" type="System.Drawing.Size, System.Drawing">
-    <value>529, 294</value>
-  </data>
-  <data name="tpgTable.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="tpgTable.Text" xml:space="preserve">
-    <value>表格模式</value>
-  </data>
-  <data name="&gt;&gt;tpgTable.Name" xml:space="preserve">
-    <value>tpgTable</value>
-  </data>
-  <data name="&gt;&gt;tpgTable.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tpgTable.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tpgTable.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 24</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>537, 319</value>
-  </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <metadata name="mnuImportStracture.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="mnuImportStracture.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="mnuItemNewModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="mnuItemNewModel.Text" xml:space="preserve">
-    <value>新建</value>
-  </data>
-  <data name="mnuItemOpenModel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>152, 22</value>
-  </data>
-  <data name="mnuItemOpenModel.Text" xml:space="preserve">
-    <value>打开</value>
-  </data>
-  <data name="模板ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>41, 20</value>
-  </data>
-  <data name="模板ToolStripMenuItem.Text" xml:space="preserve">
-    <value>模板</value>
-  </data>
-  <data name="mnuImportStracture.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
-  </data>
-  <data name="mnuImportStracture.Size" type="System.Drawing.Size, System.Drawing">
-    <value>537, 24</value>
-  </data>
-  <data name="mnuImportStracture.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="mnuImportStracture.Text" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;mnuImportStracture.Name" xml:space="preserve">
-    <value>mnuImportStracture</value>
-  </data>
-  <data name="&gt;&gt;mnuImportStracture.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mnuImportStracture.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;mnuImportStracture.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  </metadata>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>177, 17</value>
+  </metadata>
+  <metadata name="lblModelName.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 12</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>537, 343</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>FormImportCardsSetting</value>
-  </data>
-  <data name="&gt;&gt;模板ToolStripMenuItem.Name" xml:space="preserve">
-    <value>模板ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;模板ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mnuItemNewModel.Name" xml:space="preserve">
-    <value>mnuItemNewModel</value>
-  </data>
-  <data name="&gt;&gt;mnuItemNewModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;mnuItemOpenModel.Name" xml:space="preserve">
-    <value>mnuItemOpenModel</value>
-  </data>
-  <data name="&gt;&gt;mnuItemOpenModel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>FormImportCardsSetting</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <metadata name="tbxModelName.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="label1.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="btnSaveAs.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAQAEBAQAAAAAAAoAQAARgAAABAQAAAAAAAAaAUAAG4BAAAgIBAAAAAAAOgCAADWBgAAICAAAAAA
+        AACoCAAAvgkAACgAAAAQAAAAIAAAAAEABAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAD///8ABfP8AAJk
+        /wAGCN0AhAjyAKUARgDUAAAA6qsCABS3HwARZAAABSxWADpxkADAwMAAgICAAEBAQAAAAAAA////////
+        ///8zMzMzMzMz/zMzMzMzMzP/MzMxfXMzM/8zFV8zHxVz//M/8zMzP/P/PwPzMzMD8/8v/DMzMzMz/u8
+        z/AAzMf/+8zMf////7/8vMzH8RH8v/y7u8fxEfy//Md3x/ER8M///Mx/EREfD/Ef//ERERH/////////
+        //+AAYABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AACAAYABKAAAABAAAAAgAAAAAQAIAAAAAABAAQAAAAAAAAAAAAAAAAAAAAAAAP///wDM//8Amf//AGb/
+        /wAz//8AAP//AP/M/wDMzP8Amcz/AGbM/wAzzP8AAMz/AP+Z/wDMmf8AmZn/AGaZ/wAzmf8AAJn/AP9m
+        /wDMZv8AmWb/AGZm/wAzZv8AAGb/AP8z/wDMM/8AmTP/AGYz/wAzM/8AADP/AP8A/wDMAP8AmQD/AGYA
+        /wAzAP8AAAD/AP//zADM/8wAmf/MAGb/zAAz/8wAAP/MAP/MzADMzMwAmczMAGbMzAAzzMwAAMzMAP+Z
+        zADMmcwAmZnMAGaZzAAzmcwAAJnMAP9mzADMZswAmWbMAGZmzAAzZswAAGbMAP8zzADMM8wAmTPMAGYz
+        zAAzM8wAADPMAP8AzADMAMwAmQDMAGYAzAAzAMwAAADMAP//mQDM/5kAmf+ZAGb/mQAz/5kAAP+ZAP/M
+        mQDMzJkAmcyZAGbMmQAzzJkAAMyZAP+ZmQDMmZkAmZmZAGaZmQAzmZkAAJmZAP9mmQDMZpkAmWaZAGZm
+        mQAzZpkAAGaZAP8zmQDMM5kAmTOZAGYzmQAzM5kAADOZAP8AmQDMAJkAmQCZAGYAmQAzAJkAAACZAP//
+        ZgDM/2YAmf9mAGb/ZgAz/2YAAP9mAP/MZgDMzGYAmcxmAGbMZgAzzGYAAMxmAP+ZZgDMmWYAmZlmAGaZ
+        ZgAzmWYAAJlmAP9mZgDMZmYAmWZmAGZmZgAzZmYAAGZmAP8zZgDMM2YAmTNmAGYzZgAzM2YAADNmAP8A
+        ZgDMAGYAmQBmAGYAZgAzAGYAAABmAP//MwDM/zMAmf8zAGb/MwAz/zMAAP8zAP/MMwDMzDMAmcwzAGbM
+        MwAzzDMAAMwzAP+ZMwDMmTMAmZkzAGaZMwAzmTMAAJkzAP9mMwDMZjMAmWYzAGZmMwAzZjMAAGYzAP8z
+        MwDMMzMAmTMzAGYzMwAzMzMAADMzAP8AMwDMADMAmQAzAGYAMwAzADMAAAAzAP//AADM/wAAmf8AAGb/
+        AAAz/wAAAP8AAP/MAADMzAAAmcwAAGbMAAAzzAAAAMwAAP+ZAADMmQAAmZkAAGaZAAAzmQAAAJkAAP9m
+        AADMZgAAmWYAAGZmAAAzZgAAAGYAAP8zAADMMwAAmTMAAGYzAAAzMwAAADMAAP8AAADMAAAAmQAAAGYA
+        AAAzAAAAAADuAAAA3QAAALsAAACqAAAAiAAAAHcAAABVAAAARAAAACIAAAARAADuAAAA3QAAALsAAACq
+        AAAAiAAAAHcAAABVAAAARAAAACIAAAARAADuAAAA3QAAALsAAACqAAAAiAAAAHcAAABVAAAARAAAACIA
+        AAARAAAA7u7uAN3d3QC7u7sAqqqqAIiIiAB3d3cAVVVVAERERAAiIiIAERERAAAAAAD/////////////
+        /////////05OTk5OTk5OTk5OTk5O//9OTk5OTk5OTk5OTk5OTv//Tk5OTk5OpP+kTk5OTk7//05OTqSk
+        eE5OTnhOpKRO////Tk7//05OTk5OTv//Tv//Tv9OAP9OTk5OTk4A/07//045//8kTk5OTk5OTk5O//85
+        OQ4H//8kJCROTk54////OQ4OBwd4/////////zn//045Dg4OTnj/CwsL/045//9OOTk5OU54/wsLC/9O
+        Of//Tk54eHhOeP8LCwv/JE7/////Tk5OeP8LCwsLC/8k//8LC/////8LCwsLCwsL////////////////
+        ////////gAGAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAgAGAASgAAAAgAAAAQAAAAAEABAAAAAAAgAIAAAAAAAAAAAAAAAAAAAAAAAD///8ABfP8AAJk
+        /wAGCN0AhAjyAKUARgDUAAAA6qsCABS3HwARZAAABSxWADpxkADAwMAAgICAAEBAQAAAAAAA////////
+        //////////////////DH////8Mz////////////8d/////fM/////////////3////9Xd///////////
+        ///8zMzM/1f///////////8AAAAAzMz////////////AAAAAAADMx//////////8AAAAAAAADMd/////
+        ////zAAAAAAAAADMd////////8AAAAAAAAAAzHf///////zAAAAAAAAAAMzHf//////8wAAAAAAAAADM
+        d3///////MAAAAAAAAAAx3d///////d8AAAAAAAAAP93f////////AAAAAAAAA9893///////H/AAAAA
+        AADHwPd///////DHzMAAAADMzA93f//////8DMzMzMzMzMzMx3///////8zMzMzMzMzMzHf//wAA///8
+        zMzF9czMzMx3//DMAA///MxVfMx8VczMf//wx8AP///M/8zMzP/MzH//8Ad8D//8/A/MzMwPzMf3//AA
+        zA//zL/wzMzMzMf/zH//AAD//8u8z/AAzMf/zMx////////LzMx/////vMzMf///////zLzMx////LvM
+        zH////////y7u8f///y7vMz////////8x3fH///wy7zH//////////zMf////wzM////////////////
+        ///////////////////////////////////+P4///B8H//wfB//+AAf//AAH//AAD//gAAZ/wAABf4AA
+        Ab+AAAGjAAAAmwAAAPcAAADvAAAA4wAAAPsAAAD7AAAA9wAAAMOAAAGBwAABAMAAAwDgAAMAwAABAIAA
+        AIGAAADDgAAA/4AcAP/AHAH/wBwB/+A+A//4fw///////ygAAAAgAAAAQAAAAAEACAAAAAAAgAQAAAAA
+        AAAAAAAAAAAAAAAAAAD///8AzP//AJn//wBm//8AM///AAD//wD/zP8AzMz/AJnM/wBmzP8AM8z/AADM
+        /wD/mf8AzJn/AJmZ/wBmmf8AM5n/AACZ/wD/Zv8AzGb/AJlm/wBmZv8AM2b/AABm/wD/M/8AzDP/AJkz
+        /wBmM/8AMzP/AAAz/wD/AP8AzAD/AJkA/wBmAP8AMwD/AAAA/wD//8wAzP/MAJn/zABm/8wAM//MAAD/
+        zAD/zMwAzMzMAJnMzABmzMwAM8zMAADMzAD/mcwAzJnMAJmZzABmmcwAM5nMAACZzAD/ZswAzGbMAJlm
+        zABmZswAM2bMAABmzAD/M8wAzDPMAJkzzABmM8wAMzPMAAAzzAD/AMwAzADMAJkAzABmAMwAMwDMAAAA
+        zAD//5kAzP+ZAJn/mQBm/5kAM/+ZAAD/mQD/zJkAzMyZAJnMmQBmzJkAM8yZAADMmQD/mZkAzJmZAJmZ
+        mQBmmZkAM5mZAACZmQD/ZpkAzGaZAJlmmQBmZpkAM2aZAABmmQD/M5kAzDOZAJkzmQBmM5kAMzOZAAAz
+        mQD/AJkAzACZAJkAmQBmAJkAMwCZAAAAmQD//2YAzP9mAJn/ZgBm/2YAM/9mAAD/ZgD/zGYAzMxmAJnM
+        ZgBmzGYAM8xmAADMZgD/mWYAzJlmAJmZZgBmmWYAM5lmAACZZgD/ZmYAzGZmAJlmZgBmZmYAM2ZmAABm
+        ZgD/M2YAzDNmAJkzZgBmM2YAMzNmAAAzZgD/AGYAzABmAJkAZgBmAGYAMwBmAAAAZgD//zMAzP8zAJn/
+        MwBm/zMAM/8zAAD/MwD/zDMAzMwzAJnMMwBmzDMAM8wzAADMMwD/mTMAzJkzAJmZMwBmmTMAM5kzAACZ
+        MwD/ZjMAzGYzAJlmMwBmZjMAM2YzAABmMwD/MzMAzDMzAJkzMwBmMzMAMzMzAAAzMwD/ADMAzAAzAJkA
+        MwBmADMAMwAzAAAAMwD//wAAzP8AAJn/AABm/wAAM/8AAAD/AAD/zAAAzMwAAJnMAABmzAAAM8wAAADM
+        AAD/mQAAzJkAAJmZAABmmQAAM5kAAACZAAD/ZgAAzGYAAJlmAABmZgAAM2YAAABmAAD/MwAAzDMAAJkz
+        AABmMwAAMzMAAAAzAAD/AAAAzAAAAJkAAABmAAAAMwAAAAAA7gAAAN0AAAC7AAAAqgAAAIgAAAB3AAAA
+        VQAAAEQAAAAiAAAAEQAA7gAAAN0AAAC7AAAAqgAAAIgAAAB3AAAAVQAAAEQAAAAiAAAAEQAA7gAAAN0A
+        AAC7AAAAqgAAAIgAAAB3AAAAVQAAAEQAAAAiAAAAEQAAAO7u7gDd3d0Au7u7AKqqqgCIiIgAd3d3AFVV
+        VQBEREQAIiIiABEREQAAAAAA////////////////////////////////////////////////////JE54
+        /////////yROTv////////////////////////9OeHj/////////eE5O////////////////////////
+        //94/////////6R4eHj///////////////////////////8ICAgICAhO//+keP//////////////////
+        /////wEBAQEBAQEBCAhOTv///////////////////////04kAAAAAAEBAQEBAQhOTnj/////////////
+        //////9OJAAAAAAAAAAAAQEBAQhOeHj/////////////////Tk4kAAAAAAAAAAAAAAEBAU5OeHj/////
+        //////////9OJAAAAAAAAAAAAAAAAAEBTk54eP//////////////Tk4kAAAAAAAAAAAAAAAAAAFOTk54
+        eP////////////9OTiQAAAAAAAAAAAAAAAAAAU5OeHh4/////////////05OJAAAAAAAAAAAAAAAAAAk
+        Tnh4eHj/////////////eHhOJAAAAAAAAAAAAAAAACT//3h4eP///////////////04kAAAAAAAAAAAA
+        AAAk/3hO/3h4/////////////054/04kJAAAAAAAAAAkJE54TiT/eHj/////////////JE54Tk5OJCQk
+        JCQkJE5OTk4k/3h4eP////////////9OJE5OTk5OTk5OTk5OTk5OTk5OTnh4//////////////9OTk5O
+        Tk5OTk5OTk5OTk5OTk54eP////8kJCQk//////9OTk5OTk6k/6ROTk5OTk5OTnh4////JE5OJAAk////
+        /05OTqSkeE5OTnhOpKROTk5OeP////8kTnhOJCT//////05O//9OTk5OTk7//05OTk54/////yQAeHhO
+        JP////9O/04A/05OTk5OTgD/Tk5OeP94////JAAATk4k////Tk45//8kTk5OTk5OTk5OeP//B054////
+        JCQkJP////9OOTkOB///JCQkTk5OeP//DgcHTnj//////////////045Dg4HB3j/////////OQ4ODgdO
+        eP//////////////Tk45Dg4OTnj//////045OQ4ODk54////////////////Tjk5OTlOeP//////Tjk5
+        OQ5OTv////////////////9OTnh4eE54//////8kTjk5Tk54////////////////////Tk5OeP//////
+        //8kTk5O////////////////////////////////////////////////////////////////////////
+        //////////////////////////////4/j//8Hwf//B8H//4AB//8AAf/8AAP/+AABn/AAAF/gAABv4AA
+        AaMAAACbAAAA9wAAAO8AAADjAAAA+wAAAPsAAAD3AAAAw4AAAYHAAAEAwAADAOAAAwDAAAEAgAAAgYAA
+        AMOAAAD/gBwA/8AcAf/AHAH/4D4D//h/D///////
+</value>
   </data>
 </root>
