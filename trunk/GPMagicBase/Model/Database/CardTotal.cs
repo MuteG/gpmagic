@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
+using System.ComponentModel;
 using GPSoft.GPMagic.GPMagicBase.SQLite;
 
 namespace GPSoft.GPMagic.GPMagicBase.Model.Database
@@ -116,6 +117,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// 获取或者设置卡牌ID
         /// </summary>
         [ColumnInfo(IsAutoIncrement = true, IsPrimaryKey = true)]
+        [Description("卡牌ID")]
         public int CardID
         {
             get
@@ -144,6 +146,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置收藏编号
         /// </summary>
+        [Description("收藏编号")]
         public int CollectorNumber
         {
             get
@@ -159,6 +162,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// 获取或者设置卡牌名称
         /// </summary>
         [ColumnInfo(IsDisplayKeyWord = true)]
+        [Description("卡牌名称")]
         public string CardName
         {
             get
@@ -173,6 +177,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌英文名称
         /// </summary>
+        [Description("卡牌英文名称")]
         public string CardEnglishName
         {
             get
@@ -187,6 +192,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌异能全文
         /// </summary>
+        [Description("异能全文")]
         public string Abilities
         {
             get
@@ -201,6 +207,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌背景描述
         /// </summary>
+        [Description("背景描述")]
         public string FlavorText
         {
             get
@@ -215,6 +222,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置法术力费用
         /// </summary>
+        [Description("法术力费用")]
         public string ManaCost
         {
             get
@@ -229,6 +237,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌子类型
         /// </summary>
+        [Description("子类型")]
         public string SubTypeName
         {
             get
@@ -243,6 +252,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌类型
         /// </summary>
+        [Description("卡牌类型")]
         public string TypeName
         {
             get
@@ -257,6 +267,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌攻击力
         /// </summary>
+        [Description("攻击力")]
         public int Power
         {
             get
@@ -271,6 +282,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌防御力
         /// </summary>
+        [Description("防御力")]
         public int Toughness
         {
             get
@@ -285,6 +297,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌稀有度
         /// </summary>
+        [Description("稀有度")]
         public int Rarity
         {
             get
@@ -299,6 +312,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌图片路径
         /// </summary>
+        [Description("图片路径")]
         public string CardImage
         {
             get
@@ -313,6 +327,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌画家
         /// </summary>
+        [Description("画家")]
         public string PainterName
         {
             get
@@ -327,6 +342,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌价格
         /// </summary>
+        [Description("价格")]
         public double CardPrice
         {
             get
@@ -341,6 +357,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌FAQ
         /// </summary>
+        [Description("FAQ")]
         public string FAQ
         {
             get
