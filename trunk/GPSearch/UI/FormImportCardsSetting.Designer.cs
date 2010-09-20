@@ -32,8 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormImportCardsSetting));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpgInfoList = new System.Windows.Forms.TabPage();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblPropertyDisplayText = new System.Windows.Forms.Label();
             this.tbxPropertyDisplayText = new System.Windows.Forms.TextBox();
             this.btnDelListModeStructure = new System.Windows.Forms.Button();
@@ -67,6 +66,8 @@
             this.rbtnTab = new System.Windows.Forms.RadioButton();
             this.rbtnComma = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.mnuImportStracture = new System.Windows.Forms.MenuStrip();
             this.模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemNewModel = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,7 +76,6 @@
             this.lblModelName = new System.Windows.Forms.Label();
             this.tbxModelName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.btnSaveAs = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tpgInfoList.SuspendLayout();
@@ -120,28 +120,16 @@
             this.tpgInfoList.Text = "信息序列模式";
             this.tpgInfoList.UseVisualStyleBackColor = true;
             // 
-            // btnClose
+            // label2
             // 
-            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClose.AutoSize = true;
-            this.btnClose.Location = new System.Drawing.Point(450, 352);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 18;
-            this.btnClose.Text = "关闭";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnListModeClose_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.AutoSize = true;
-            this.btnSave.Location = new System.Drawing.Point(369, 352);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
-            this.btnSave.TabIndex = 17;
-            this.btnSave.Text = "保存";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.label2.Location = new System.Drawing.Point(389, 147);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 12);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "（必填）";
             // 
             // lblPropertyDisplayText
             // 
@@ -470,6 +458,30 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.AutoSize = true;
+            this.btnClose.Location = new System.Drawing.Point(450, 352);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 18;
+            this.btnClose.Text = "关闭";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnListModeClose_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.AutoSize = true;
+            this.btnSave.Location = new System.Drawing.Point(369, 352);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 17;
+            this.btnSave.Text = "保存";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // mnuImportStracture
             // 
             this.mnuImportStracture.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -493,13 +505,13 @@
             // mnuItemNewModel
             // 
             this.mnuItemNewModel.Name = "mnuItemNewModel";
-            this.mnuItemNewModel.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemNewModel.Size = new System.Drawing.Size(94, 22);
             this.mnuItemNewModel.Text = "新建";
             // 
             // mnuItemOpenModel
             // 
             this.mnuItemOpenModel.Name = "mnuItemOpenModel";
-            this.mnuItemOpenModel.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemOpenModel.Size = new System.Drawing.Size(94, 22);
             this.mnuItemOpenModel.Text = "打开";
             // 
             // lblModelName
@@ -530,17 +542,6 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "（必填）";
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(389, 147);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 12);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "（必填）";
-            // 
             // btnSaveAs
             // 
             this.btnSaveAs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -552,6 +553,7 @@
             this.btnSaveAs.TabIndex = 23;
             this.btnSaveAs.Text = "另存为...";
             this.btnSaveAs.UseVisualStyleBackColor = true;
+            this.btnSaveAs.Click += new System.EventHandler(this.btnSaveAs_Click);
             // 
             // FormImportCardsSetting
             // 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImportExportModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>信息序列模式测试</Name>
+  <PropertyList>
+    <CardProperty>
+      <Name>卡牌编号：</Name>
+      <PropertyName>CollectorNumber</PropertyName>
+    </CardProperty>
+    <CardProperty>
+      <Name>英文牌名：</Name>
+      <PropertyName>CardEnglishName</PropertyName>
+    </CardProperty>
+  </PropertyList>
+</ImportExportModel>
