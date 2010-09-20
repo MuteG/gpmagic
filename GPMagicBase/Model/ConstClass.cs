@@ -100,7 +100,18 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 卡牌数据导入/导出模板文件夹
         /// </summary>
-        public static readonly string ImportModel = "Imp";
+        public static readonly string ImportExport = "Imp";
+    }
+    public struct DialogInformation
+    {
+        /// <summary>
+        /// 对话框标题“警告”
+        /// </summary>
+        public static readonly string TitleWarning = "警告";
+    }
+    public struct DefaultExtention
+    {
+        public static readonly string ImportExport = "iem";
     }
     /// <summary>
     /// 表示稀有度的颜色
