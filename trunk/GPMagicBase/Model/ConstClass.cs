@@ -101,6 +101,10 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// 卡牌数据导入/导出模板文件夹
         /// </summary>
         public static readonly string ImportExport = "Imp";
+        /// <summary>
+        /// 配置文件保存文件夹
+        /// </summary>
+        public static readonly string Config = "Set";
     }
     public struct DialogInformation
     {

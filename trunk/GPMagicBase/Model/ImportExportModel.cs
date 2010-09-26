@@ -18,6 +18,16 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             get { return _Path; }
             set { _Path = value; }
         }
+        private ImportModelType _Type = ImportModelType.None;
+        /// <summary>
+        /// 获取或者设置模板类型
+        /// </summary>
+        [XmlElement]
+        public ImportModelType Type
+        {
+            get { return _Type; }
+            set { _Type = value; }
+        }
         private string _Name = string.Empty;
         /// <summary>
         /// 获取或者设置模板名称
@@ -28,6 +38,16 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             get { return _Name; }
             set { _Name = value; }
         }
+        private string _Description = string.Empty;
+        /// <summary>
+        /// 获取或者设置模板说明
+        /// </summary>
+        [XmlElement]
+        public string Description
+        {
+            get { return _Description; }
+            set { _Description = value; }
+        }
         private List<CardProperty> _CardProperties = new List<CardProperty>();
         /// <summary>
         /// 获取或者设置卡牌属性列表
@@ -37,6 +57,15 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         {
             get { return _CardProperties; }
             set { _CardProperties = value; }
+        }
+        public void Assign(ImportExportModel another)
+        {
+            this.Name = another.Name;
+            this.Path = another.Path;
+            this.Description = another.Description;
+            this.Type = another.Type;
+            this.CardProperties.Clear();
+            this.CardProperties.AddRange(another.CardProperties.ToArray());
         }
         public override int GetHashCode()
         {
@@ -79,5 +108,24 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
             return (obj as CardProperty).Name.Equals(this.Name) ||
                 (obj as CardProperty).PropertyName.Equals(this.PropertyName);
         }
+    }
+    /// <summary>
+    /// 导入导出模板类型
+    /// </summary>
+    [Serializable]
+    public enum ImportModelType
+    {
+        /// <summary>
+        /// 未指定
+        /// </summary>
+        None = 0,
+        /// <summary>
+        /// 信息列表型
+        /// </summary>
+        List = 1,
+        /// <summary>
+        /// 表格型
+        /// </summary>
+        Table = 2
     }
 }

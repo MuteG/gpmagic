@@ -72,11 +72,14 @@
             this.模板ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemNewModel = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemOpenModel = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemOpenModelFromFile = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.lblModelName = new System.Windows.Forms.Label();
             this.tbxModelName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSaveAs = new System.Windows.Forms.Button();
+            this.lblModelDescription = new System.Windows.Forms.Label();
+            this.tbxModelDescription = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tpgInfoList.SuspendLayout();
             this.gbxListModeStructure.SuspendLayout();
@@ -98,7 +101,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 24);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(537, 322);
+            this.tabControl1.Size = new System.Drawing.Size(537, 320);
             this.tabControl1.TabIndex = 0;
             // 
             // tpgInfoList
@@ -115,7 +118,7 @@
             this.tpgInfoList.Location = new System.Drawing.Point(4, 21);
             this.tpgInfoList.Name = "tpgInfoList";
             this.tpgInfoList.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgInfoList.Size = new System.Drawing.Size(529, 297);
+            this.tpgInfoList.Size = new System.Drawing.Size(529, 295);
             this.tpgInfoList.TabIndex = 0;
             this.tpgInfoList.Text = "信息序列模式";
             this.tpgInfoList.UseVisualStyleBackColor = true;
@@ -203,6 +206,7 @@
             this.lbxListModeCardProperties.Name = "lbxListModeCardProperties";
             this.lbxListModeCardProperties.Size = new System.Drawing.Size(145, 256);
             this.lbxListModeCardProperties.TabIndex = 0;
+            this.lbxListModeCardProperties.SelectedIndexChanged += new System.EventHandler(this.lbxListModeCardProperties_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -223,7 +227,7 @@
             this.tpgTable.Location = new System.Drawing.Point(4, 21);
             this.tpgTable.Name = "tpgTable";
             this.tpgTable.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgTable.Size = new System.Drawing.Size(529, 297);
+            this.tpgTable.Size = new System.Drawing.Size(529, 295);
             this.tpgTable.TabIndex = 1;
             this.tpgTable.Text = "表格模式";
             this.tpgTable.UseVisualStyleBackColor = true;
@@ -462,7 +466,7 @@
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.AutoSize = true;
-            this.btnClose.Location = new System.Drawing.Point(450, 352);
+            this.btnClose.Location = new System.Drawing.Point(450, 382);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 18;
@@ -474,7 +478,7 @@
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.AutoSize = true;
-            this.btnSave.Location = new System.Drawing.Point(369, 352);
+            this.btnSave.Location = new System.Drawing.Point(369, 382);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 17;
@@ -497,7 +501,8 @@
             // 
             this.模板ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuItemNewModel,
-            this.mnuItemOpenModel});
+            this.mnuItemOpenModel,
+            this.mnuItemOpenModelFromFile});
             this.模板ToolStripMenuItem.Name = "模板ToolStripMenuItem";
             this.模板ToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
             this.模板ToolStripMenuItem.Text = "模板";
@@ -505,20 +510,28 @@
             // mnuItemNewModel
             // 
             this.mnuItemNewModel.Name = "mnuItemNewModel";
-            this.mnuItemNewModel.Size = new System.Drawing.Size(94, 22);
-            this.mnuItemNewModel.Text = "新建";
+            this.mnuItemNewModel.Size = new System.Drawing.Size(154, 22);
+            this.mnuItemNewModel.Text = "新建模板";
             // 
             // mnuItemOpenModel
             // 
             this.mnuItemOpenModel.Name = "mnuItemOpenModel";
-            this.mnuItemOpenModel.Size = new System.Drawing.Size(94, 22);
-            this.mnuItemOpenModel.Text = "打开";
+            this.mnuItemOpenModel.Size = new System.Drawing.Size(154, 22);
+            this.mnuItemOpenModel.Text = "打开现有模板";
+            this.mnuItemOpenModel.Click += new System.EventHandler(this.mnuItemOpenModel_Click);
+            // 
+            // mnuItemOpenModelFromFile
+            // 
+            this.mnuItemOpenModelFromFile.Name = "mnuItemOpenModelFromFile";
+            this.mnuItemOpenModelFromFile.Size = new System.Drawing.Size(154, 22);
+            this.mnuItemOpenModelFromFile.Text = "从文件读入模板";
             // 
             // lblModelName
             // 
+            this.lblModelName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblModelName.AutoSize = true;
             this.lblModelName.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblModelName.Location = new System.Drawing.Point(12, 357);
+            this.lblModelName.Location = new System.Drawing.Point(297, 353);
             this.lblModelName.Name = "lblModelName";
             this.lblModelName.Size = new System.Drawing.Size(53, 12);
             this.lblModelName.TabIndex = 19;
@@ -526,17 +539,19 @@
             // 
             // tbxModelName
             // 
-            this.tbxModelName.Location = new System.Drawing.Point(71, 354);
+            this.tbxModelName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbxModelName.Location = new System.Drawing.Point(356, 350);
             this.tbxModelName.Name = "tbxModelName";
             this.tbxModelName.Size = new System.Drawing.Size(125, 19);
             this.tbxModelName.TabIndex = 20;
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.Red;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(202, 357);
+            this.label1.Location = new System.Drawing.Point(487, 353);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 21;
@@ -547,7 +562,7 @@
             this.btnSaveAs.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAs.AutoSize = true;
             this.btnSaveAs.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnSaveAs.Location = new System.Drawing.Point(288, 352);
+            this.btnSaveAs.Location = new System.Drawing.Point(288, 382);
             this.btnSaveAs.Name = "btnSaveAs";
             this.btnSaveAs.Size = new System.Drawing.Size(75, 23);
             this.btnSaveAs.TabIndex = 23;
@@ -555,11 +570,32 @@
             this.btnSaveAs.UseVisualStyleBackColor = true;
             this.btnSaveAs.Click += new System.EventHandler(this.btnSaveAs_Click);
             // 
+            // lblModelDescription
+            // 
+            this.lblModelDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblModelDescription.AutoSize = true;
+            this.lblModelDescription.Location = new System.Drawing.Point(10, 353);
+            this.lblModelDescription.Name = "lblModelDescription";
+            this.lblModelDescription.Size = new System.Drawing.Size(53, 12);
+            this.lblModelDescription.TabIndex = 24;
+            this.lblModelDescription.Text = "模板说明";
+            // 
+            // tbxModelDescription
+            // 
+            this.tbxModelDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.tbxModelDescription.Location = new System.Drawing.Point(69, 350);
+            this.tbxModelDescription.Multiline = true;
+            this.tbxModelDescription.Name = "tbxModelDescription";
+            this.tbxModelDescription.Size = new System.Drawing.Size(213, 55);
+            this.tbxModelDescription.TabIndex = 25;
+            // 
             // FormImportCardsSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(537, 387);
+            this.ClientSize = new System.Drawing.Size(537, 417);
+            this.Controls.Add(this.tbxModelDescription);
+            this.Controls.Add(this.lblModelDescription);
             this.Controls.Add(this.btnSaveAs);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl1);
@@ -574,7 +610,7 @@
             this.MaximizeBox = false;
             this.Name = "FormImportCardsSetting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "FormImportCardsSetting";
+            this.Text = "牌库导入导出模板设定";
             this.tabControl1.ResumeLayout(false);
             this.tpgInfoList.ResumeLayout(false);
             this.tpgInfoList.PerformLayout();
@@ -642,5 +678,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSaveAs;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemOpenModelFromFile;
+        private System.Windows.Forms.Label lblModelDescription;
+        private System.Windows.Forms.TextBox tbxModelDescription;
     }
 }
