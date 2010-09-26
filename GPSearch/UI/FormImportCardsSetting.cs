@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
+using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
 using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.Model.Database;
 using GPSoft.Helper.FileOperate;
 using GPSoft.Helper.FunctionHelper;
-using System.IO;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
@@ -63,13 +60,25 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void btnAddListModeStructure_Click(object sender, EventArgs e)
         {
-            lbxListModeCardProperties.Items.Add(
-                string.Format("{0}({1})", 
-                    tbxPropertyDisplayText.Text, 
-                    cbxListModeCardPropertyName.Text));
+            SaveCurrentCardProperty();
+        }
+
+        private void SaveCurrentCardProperty()
+        {
             CardProperty newCardProperty = GenerateCardProperty();
-            if(!currentModel.CardProperties.Contains(newCardProperty))
+            if (currentModel.CardProperties.Contains(newCardProperty))
+            {
+                int index = currentModel.CardProperties.IndexOf(newCardProperty);
+                currentModel.CardProperties[index] = newCardProperty;
+            }
+            else
+            {
+                lbxListModeCardProperties.Items.Add(
+                    string.Format("{0}({1})",
+                        tbxPropertyDisplayText.Text,
+                        cbxListModeCardPropertyName.Text));
                 currentModel.CardProperties.Add(newCardProperty);
+            }
         }
 
         private CardProperty GenerateCardProperty()
@@ -95,11 +104,12 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void LoadModel()
         {
-            ObjectXMLSerialize<ImportExportModel>.Load(currentModel, currentModel.Path);
+            currentModel = ObjectXMLSerialize<ImportExportModel>.Load(currentModel, currentModel.Path);
         }
 
         private void SaveModel()
         {
+            SaveCurrentCardProperty();
             FileHelper.CreateDirectory(Path.GetDirectoryName(currentModel.Path));
             ObjectXMLSerialize<ImportExportModel>.Save(currentModel, currentModel.Path);
         }
@@ -144,6 +154,54 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private void btnSaveAs_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void mnuItemOpenModel_Click(object sender, EventArgs e)
+        {
+            FormImportCardsModelList frmSelectModel = new FormImportCardsModelList();
+            ImportExportModel model = frmSelectModel.ShowDialog();
+            if (null != model)
+            {
+                FillCardPropertiesList(model);
+            }
+        }
+
+        private void FillCardPropertiesList(ImportExportModel model)
+        {
+            switch (model.Type)
+            {
+                case ImportModelType.List:
+                    FillListModeCardProperties(model);
+                    break;
+                case ImportModelType.Table:
+                    break;
+            }
+        }
+
+        private void FillListModeCardProperties(ImportExportModel model)
+        {
+            lbxListModeCardProperties.Items.Clear();
+            this.currentModel.Assign(model);
+            tbxModelDescription.Text = currentModel.Description;
+            tbxModelName.Text = currentModel.Name;
+            foreach (CardProperty property in model.CardProperties)
+            {
+                lbxListModeCardProperties.Items.Add(string.Format("{0}({1})", property.Name, property.PropertyName));
+            }
+        }
+
+        private void lbxListModeCardProperties_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (lbxListModeCardProperties.SelectedIndex > -1)
+            {
+                DisplayCardPropertyInformation(this.currentModel.CardProperties[lbxListModeCardProperties.SelectedIndex]);
+            }
+        }
+
+        private void DisplayCardPropertyInformation(CardProperty property)
+        {
+            tbxPropertyDisplayText.Text = property.Name;
+            cbxListModeCardPropertyName.SelectedValue = property.PropertyName;
         }
     }
 }

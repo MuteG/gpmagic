@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ImportExportModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Type>List</Type>
   <Name>信息序列模式测试</Name>
+  <Description />
   <PropertyList>
     <CardProperty>
       <Name>卡牌编号：</Name>
