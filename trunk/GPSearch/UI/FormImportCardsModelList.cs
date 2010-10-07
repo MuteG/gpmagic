@@ -58,6 +58,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 {
                     ImportExportModel model = new ImportExportModel();
                     model = ObjectXMLSerialize<ImportExportModel>.Load(model, modelPath);
+                    model.Path = modelPath;
                     modelList.Add(model);
                     lbxModelList.Items.Add(model.Name);
                     if (lbxModelList.Items.Count > 0)
@@ -77,16 +78,18 @@ namespace GPSoft.GPMagic.GPSearch.UI
             if (lbxModelList.SelectedIndex > -1)
             {
                 DisplayModelInformation(modelList[lbxModelList.SelectedIndex]);
+                btnDelete.Enabled = true;
             }
         }
 
         private void DisplayModelInformation(ImportExportModel model)
         {
-            rtbModelInfo.Clear();
-            rtbModelInfo.AppendText(string.Format("模板名称：{0}\n", model.Name));
-            rtbModelInfo.AppendText(string.Format("模板类型：{0}\n", TranslateModelTypeToString(model.Type)));
-            rtbModelInfo.AppendText(string.Format("信息种类：{0}\n", model.CardProperties.Count));
-            rtbModelInfo.AppendText(string.Format("模板说明：{0}\n", model.Description));
+            StringBuilder info = new StringBuilder();
+            info.AppendLine(string.Format("模板名称：{0}", model.Name));
+            info.AppendLine(string.Format("模板类型：{0}", TranslateModelTypeToString(model.Type)));
+            info.AppendLine(string.Format("信息种类：{0}", model.CardProperties.Count));
+            info.AppendLine(string.Format("模板说明：{0}", model.Description));
+            lblModelInfo.Text = info.ToString();
         }
 
         private string TranslateModelTypeToString(ImportModelType type)
@@ -105,6 +108,24 @@ namespace GPSoft.GPMagic.GPSearch.UI
                     break;
             }
             return result;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (lbxModelList.SelectedIndex > -1 &&
+                MessageBox.Show("确认要删除这个模板么？",
+                    "删除确认",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Information) == DialogResult.Yes)
+            {
+                FileHelper.DeleteFileSafely(modelList[lbxModelList.SelectedIndex].Path);
+                modelList.RemoveAt(lbxModelList.SelectedIndex);
+                lbxModelList.Items.RemoveAt(lbxModelList.SelectedIndex);
+                if (lbxModelList.Items.Count > 0)
+                {
+                    lbxModelList.SelectedIndex = 0;
+                }
+            }
         }
     }
 }
