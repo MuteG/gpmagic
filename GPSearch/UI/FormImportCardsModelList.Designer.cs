@@ -29,33 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormImportCardsModelList));
-            this.rtbModelInfo = new System.Windows.Forms.RichTextBox();
-            this.lbxModelList = new System.Windows.Forms.ListBox();
             this.btnAccept = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.lblModelInfo = new System.Windows.Forms.Label();
+            this.lbxModelList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
-            // 
-            // rtbModelInfo
-            // 
-            this.rtbModelInfo.BackColor = System.Drawing.SystemColors.Control;
-            this.rtbModelInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.rtbModelInfo.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rtbModelInfo.Location = new System.Drawing.Point(188, 12);
-            this.rtbModelInfo.Name = "rtbModelInfo";
-            this.rtbModelInfo.ReadOnly = true;
-            this.rtbModelInfo.Size = new System.Drawing.Size(180, 220);
-            this.rtbModelInfo.TabIndex = 1;
-            this.rtbModelInfo.Text = "";
-            // 
-            // lbxModelList
-            // 
-            this.lbxModelList.FormattingEnabled = true;
-            this.lbxModelList.ItemHeight = 12;
-            this.lbxModelList.Location = new System.Drawing.Point(12, 12);
-            this.lbxModelList.Name = "lbxModelList";
-            this.lbxModelList.Size = new System.Drawing.Size(170, 220);
-            this.lbxModelList.TabIndex = 2;
-            this.lbxModelList.SelectedIndexChanged += new System.EventHandler(this.lbxModelList_SelectedIndexChanged);
             // 
             // btnAccept
             // 
@@ -78,6 +57,33 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(131, 238);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 5;
+            this.btnDelete.Text = "删除";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // lblModelInfo
+            // 
+            this.lblModelInfo.Location = new System.Drawing.Point(188, 12);
+            this.lblModelInfo.Name = "lblModelInfo";
+            this.lblModelInfo.Size = new System.Drawing.Size(180, 220);
+            this.lblModelInfo.TabIndex = 6;
+            // 
+            // lbxModelList
+            // 
+            this.lbxModelList.FormattingEnabled = true;
+            this.lbxModelList.ItemHeight = 12;
+            this.lbxModelList.Location = new System.Drawing.Point(12, 12);
+            this.lbxModelList.Name = "lbxModelList";
+            this.lbxModelList.Size = new System.Drawing.Size(170, 220);
+            this.lbxModelList.TabIndex = 2;
+            this.lbxModelList.SelectedIndexChanged += new System.EventHandler(this.lbxModelList_SelectedIndexChanged);
+            // 
             // FormImportCardsModelList
             // 
             this.AcceptButton = this.btnAccept;
@@ -85,10 +91,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(380, 273);
+            this.Controls.Add(this.lblModelInfo);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.lbxModelList);
-            this.Controls.Add(this.rtbModelInfo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -103,10 +110,11 @@
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox rtbModelInfo;
-        private System.Windows.Forms.ListBox lbxModelList;
         private System.Windows.Forms.Button btnAccept;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label lblModelInfo;
+        private System.Windows.Forms.ListBox lbxModelList;
 
     }
 }

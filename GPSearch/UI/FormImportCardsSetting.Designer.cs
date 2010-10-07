@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormImportCardsSetting));
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tpgInfoList = new System.Windows.Forms.TabPage();
+            this.tclModelMode = new System.Windows.Forms.TabControl();
+            this.tpgList = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
             this.lblPropertyDisplayText = new System.Windows.Forms.Label();
             this.tbxPropertyDisplayText = new System.Windows.Forms.TextBox();
@@ -80,8 +80,8 @@
             this.btnSaveAs = new System.Windows.Forms.Button();
             this.lblModelDescription = new System.Windows.Forms.Label();
             this.tbxModelDescription = new System.Windows.Forms.TextBox();
-            this.tabControl1.SuspendLayout();
-            this.tpgInfoList.SuspendLayout();
+            this.tclModelMode.SuspendLayout();
+            this.tpgList.SuspendLayout();
             this.gbxListModeStructure.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tpgTable.SuspendLayout();
@@ -91,37 +91,38 @@
             this.mnuImportStracture.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControl1
+            // tclModelMode
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            this.tclModelMode.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                         | System.Windows.Forms.AnchorStyles.Left)
                         | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tpgInfoList);
-            this.tabControl1.Controls.Add(this.tpgTable);
-            this.tabControl1.Location = new System.Drawing.Point(0, 24);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(537, 320);
-            this.tabControl1.TabIndex = 0;
+            this.tclModelMode.Controls.Add(this.tpgList);
+            this.tclModelMode.Controls.Add(this.tpgTable);
+            this.tclModelMode.Location = new System.Drawing.Point(0, 24);
+            this.tclModelMode.Multiline = true;
+            this.tclModelMode.Name = "tclModelMode";
+            this.tclModelMode.SelectedIndex = 0;
+            this.tclModelMode.Size = new System.Drawing.Size(537, 320);
+            this.tclModelMode.TabIndex = 0;
             // 
-            // tpgInfoList
+            // tpgList
             // 
-            this.tpgInfoList.Controls.Add(this.label2);
-            this.tpgInfoList.Controls.Add(this.lblPropertyDisplayText);
-            this.tpgInfoList.Controls.Add(this.tbxPropertyDisplayText);
-            this.tpgInfoList.Controls.Add(this.btnDelListModeStructure);
-            this.tpgInfoList.Controls.Add(this.btnAddListModeStructure);
-            this.tpgInfoList.Controls.Add(this.cbxListModeCardPropertyName);
-            this.tpgInfoList.Controls.Add(this.lblListModeCardPropertyName);
-            this.tpgInfoList.Controls.Add(this.gbxListModeStructure);
-            this.tpgInfoList.Controls.Add(this.pictureBox1);
-            this.tpgInfoList.Location = new System.Drawing.Point(4, 21);
-            this.tpgInfoList.Name = "tpgInfoList";
-            this.tpgInfoList.Padding = new System.Windows.Forms.Padding(3);
-            this.tpgInfoList.Size = new System.Drawing.Size(529, 295);
-            this.tpgInfoList.TabIndex = 0;
-            this.tpgInfoList.Text = "信息序列模式";
-            this.tpgInfoList.UseVisualStyleBackColor = true;
+            this.tpgList.Controls.Add(this.label2);
+            this.tpgList.Controls.Add(this.lblPropertyDisplayText);
+            this.tpgList.Controls.Add(this.tbxPropertyDisplayText);
+            this.tpgList.Controls.Add(this.btnDelListModeStructure);
+            this.tpgList.Controls.Add(this.btnAddListModeStructure);
+            this.tpgList.Controls.Add(this.cbxListModeCardPropertyName);
+            this.tpgList.Controls.Add(this.lblListModeCardPropertyName);
+            this.tpgList.Controls.Add(this.gbxListModeStructure);
+            this.tpgList.Controls.Add(this.pictureBox1);
+            this.tpgList.Location = new System.Drawing.Point(4, 21);
+            this.tpgList.Name = "tpgList";
+            this.tpgList.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgList.Size = new System.Drawing.Size(529, 295);
+            this.tpgList.TabIndex = 0;
+            this.tpgList.Text = "信息序列模式";
+            this.tpgList.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -598,7 +599,7 @@
             this.Controls.Add(this.lblModelDescription);
             this.Controls.Add(this.btnSaveAs);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tclModelMode);
             this.Controls.Add(this.lblModelName);
             this.Controls.Add(this.mnuImportStracture);
             this.Controls.Add(this.tbxModelName);
@@ -611,9 +612,9 @@
             this.Name = "FormImportCardsSetting";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "牌库导入导出模板设定";
-            this.tabControl1.ResumeLayout(false);
-            this.tpgInfoList.ResumeLayout(false);
-            this.tpgInfoList.PerformLayout();
+            this.tclModelMode.ResumeLayout(false);
+            this.tpgList.ResumeLayout(false);
+            this.tpgList.PerformLayout();
             this.gbxListModeStructure.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tpgTable.ResumeLayout(false);
@@ -631,8 +632,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tpgInfoList;
+        private System.Windows.Forms.TabControl tclModelMode;
+        private System.Windows.Forms.TabPage tpgList;
         private System.Windows.Forms.TabPage tpgTable;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;

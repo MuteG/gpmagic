@@ -18,6 +18,12 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private const string MESSAGE_MODELNAMENOTALLOWEMPTY = "模板名称不允许为空";
         private const string MESSAGE_DISPLAYNAMENOTALLOWEMPTY = "标签文字不允许为空";
         private ImportExportModel currentModel = new ImportExportModel();
+        private enum ModelEditStatus
+        {
+            Create,
+            Modify
+        }
+        private ModelEditStatus editStatus = ModelEditStatus.Create;
         public FormImportCardsSetting()
         {
             InitializeComponent();
@@ -73,12 +79,26 @@ namespace GPSoft.GPMagic.GPSearch.UI
             }
             else
             {
-                lbxListModeCardProperties.Items.Add(
-                    string.Format("{0}({1})",
-                        tbxPropertyDisplayText.Text,
-                        cbxListModeCardPropertyName.Text));
+                lbxListModeCardProperties.Items.Add(GenerateListModeCardPropertyText(newCardProperty));
                 currentModel.CardProperties.Add(newCardProperty);
             }
+        }
+
+        private string GenerateListModeCardPropertyText(CardProperty property)
+        {
+            string result = string.Empty;
+            DataTable tblProperty = (DataTable)cbxListModeCardPropertyName.DataSource;
+            foreach (DataRow aRow in tblProperty.Rows)
+            {
+                if (aRow[cbxListModeCardPropertyName.ValueMember].Equals(property.PropertyName))
+                {
+                    result = string.Format("{0}({1})",
+                        property.Name,
+                        aRow[cbxListModeCardPropertyName.DisplayMember].ToString());
+                    break;
+                }
+            }
+            return result;
         }
 
         private CardProperty GenerateCardProperty()
@@ -162,6 +182,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             ImportExportModel model = frmSelectModel.ShowDialog();
             if (null != model)
             {
+                this.editStatus = ModelEditStatus.Modify;
                 FillCardPropertiesList(model);
             }
         }
@@ -186,7 +207,11 @@ namespace GPSoft.GPMagic.GPSearch.UI
             tbxModelName.Text = currentModel.Name;
             foreach (CardProperty property in model.CardProperties)
             {
-                lbxListModeCardProperties.Items.Add(string.Format("{0}({1})", property.Name, property.PropertyName));
+                lbxListModeCardProperties.Items.Add(GenerateListModeCardPropertyText(property));
+            }
+            if (lbxListModeCardProperties.Items.Count > 0)
+            {
+                lbxListModeCardProperties.SelectedIndex = 0;
             }
         }
 
