@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="GPSoft.GPMagic.GPSearch.Common.CommonHelper" Collapsed="true">
+    <Position X="4.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAEAAAABAAACAIAAAAAAIAAAA=</HashCode>
+      <FileName>Common\CommonHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.Common.ComponentFiller" Collapsed="true">
+    <Position X="4.5" Y="6.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Common\ComponentFiller.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.Common.TotalCardFilter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AYAAAAAAAAAgAAAAAAAAAAAAABEAABAAAAAAAAAAIAA=</HashCode>
+      <FileName>Common\TotalCardFilter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.Program" Collapsed="true">
+    <Position X="9.75" Y="2" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.Properties.Resources" Collapsed="true">
+    <Position X="9.75" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AGIGRECDiMARAABhSCFVGwQowUGAIhAoDAgSISAhQaw=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.Properties.Settings" Collapsed="true">
+    <Position X="9.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.AboutBox" Collapsed="true">
+    <Position X="2.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>kIAAAAgAACAACBUAAACAAIADABACEIAAAAAAAAAABgA=</HashCode>
+      <FileName>UI\AboutBox.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormCardImage" Collapsed="true">
+    <Position X="6.75" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAIACAAAACAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>UI\FormCardImage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormCardInfo" Collapsed="true">
+    <Position X="6.75" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>QAEQxwUAKaEUM3uIMCDgCLDziDIFQCs+AKgAEUIiAZA=</HashCode>
+      <FileName>UI\FormCardInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormEditColor" Collapsed="true">
+    <Position X="2.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABACAAAAAAAACAASACAACRk1AAAAAAAAAAAAQ=</HashCode>
+      <FileName>UI\FormEditColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormEditDeckFilter" Collapsed="true">
+    <Position X="2.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAMAIAjECAoAEDIAAKAIAEGQBCAUBEAAIAACAKgDAE=</HashCode>
+      <FileName>UI\FormEditDeckFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormEditExpansions" Collapsed="true">
+    <Position X="2.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAACQABACgAAAARAACAAAACBAAEAEAAACAAAAAAAAA=</HashCode>
+      <FileName>UI\FormEditExpansions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormEditPlayFormats" Collapsed="true">
+    <Position X="2.5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>ACAAyAABACAAABABAACAAAACAAAAAAgAUAQCAAAAAAA=</HashCode>
+      <FileName>UI\FormEditPlayFormats.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormFilterCardType" Collapsed="true">
+    <Position X="0.5" Y="4" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAESAAAAASEAAxEAIhCAEMATFAACAEAQAIAQAAAAASA=</HashCode>
+      <FileName>UI\FormFilterCardType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormFilterColor" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\FormFilterColor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormFilterExpansions" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAACAAAAAAAACAAABCAAAEAEgAACAAAAAAAAA=</HashCode>
+      <FileName>UI\FormFilterExpansions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormFilterKeyWord" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAAAMAAACAAAACAAAAAMAAAAAIAAAAAAA=</HashCode>
+      <FileName>UI\FormFilterKeyWord.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormImportCards" Collapsed="true">
+    <Position X="4.5" Y="1.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAIBAQACAAEBAQAACAQAACAAAIAAAAECAAAEEAAAA=</HashCode>
+      <FileName>UI\FormImportCards.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormImportCardsModelList" Collapsed="true">
+    <Position X="4.5" Y="3.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAACgAAACAEAQkAAADAAEMCAAAgAAAAAAAABAAAAQQ=</HashCode>
+      <FileName>UI\FormImportCardsModelList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormImportCardsSetting" Collapsed="true">
+    <Position X="4.5" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>IEAJSNIBaGAAADAA+AKcZFBCUgBiejOpBcEAABtYYAA=</HashCode>
+      <FileName>UI\FormImportCardsSetting.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormMain" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>D3GjQV99AKw0AuMSHGncNiyakUOyGQjkRGTCSGeKBhQ=</HashCode>
+      <FileName>UI\FormMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="GPSoft.GPMagic.GPSearch.Model.IFilterable" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\IFilterable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="MS UI Gothic" Size="9" />
+</ClassDiagram>

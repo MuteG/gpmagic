@@ -1,201 +1,392 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="GPSoft.GPMagic.GPMagicBase.MagicCardConst" Collapsed="true">
-    <Position X="9.5" Y="1.25" Width="1.5" />
+    <Position X="23" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MagicCardConst.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.CardLibrary" Collapsed="true">
-    <Position X="3" Y="0.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAEAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\CardLibrary.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.CardRarity" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="3" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>CAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\CardRarity.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="GPSoft.GPMagic.GPMagicBase.Model.RarityColor" Collapsed="true">
-    <Position X="8.75" Y="4" Width="1.5" />
+    <Position X="26.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAAQAAAAAAAAAQAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\ConstClass.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GPSoft.GPMagic.GPMagicBase.Model.ConstClass" Collapsed="true">
-    <Position X="7.75" Y="0.5" Width="1.5" />
+    <Position X="19.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\ConstClass.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.ListCardTotal" Collapsed="true">
-    <Position X="7.75" Y="1.25" Width="1.5" />
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.ImportExportModel" Collapsed="true">
+    <Position X="24.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAgAAIAgAAAIAQBAAAAAIAEAQAAAAIABAA=</HashCode>
+      <FileName>Model\ImportExportModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.CardProperty" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAIAQAAAAQAIAAAAAAAABAAAA=</HashCode>
+      <FileName>Model\ImportExportModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.AbstractTableInstance" Collapsed="true">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAIQBIAAACAAAAAAAAeABQBAAACAAAAJCAAAASBAIAA=</HashCode>
+      <FileName>Model\Database\AbstractTableInstance.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.CardAbilitie" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Model\Database\CardAbilitie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.ListAbilities" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAMAAAABAAAAAAAAAAAAAAAAAAQAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Database\CardAbilitie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.CardExpansions" Collapsed="true">
+    <Position X="1.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Model\Database\CardExpansions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.ListExpansions" Collapsed="true">
+    <Position X="23" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAgAAAAIAEAAAABIAAAACEAAAABAACAA=</HashCode>
+      <FileName>Model\Database\CardExpansions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.CardImageType" Collapsed="true">
+    <Position X="5.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Model\Database\CardImageType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.ListCardImageType" Collapsed="true">
+    <Position X="21.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Model\Database\CardImageType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.CardPainter" Collapsed="true">
+    <Position X="10.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Model\Database\CardPainter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.ListPainter" Collapsed="true">
+    <Position X="24.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAA=</HashCode>
+      <FileName>Model\Database\CardPainter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.CardRarity" Collapsed="true">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Model\Database\CardRarity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.ListRarity" Collapsed="true">
+    <Position X="26.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAgAAEAAAAAAAAAAAAg=</HashCode>
+      <FileName>Model\Database\CardRarity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.CardSubType" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Model\Database\CardSubType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.ListSubType" Collapsed="true">
+    <Position X="19.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAIAAEAA=</HashCode>
+      <FileName>Model\Database\CardSubType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.CardTotal" Collapsed="true">
+    <Position X="8" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIQAAAAAAAAAAAAAAAAAAQAAAAACAAAAAAgAABAAAA=</HashCode>
+      <FileName>Model\Database\CardTotal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.ListCardTotal" Collapsed="true">
+    <Position X="0.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>DAiYAQQCAAEEAAARAAAAEAAAAIEAQBCDAEAwBgwIOAU=</HashCode>
-      <FileName>Model\CardLibrary.cs</FileName>
+      <FileName>Model\Database\CardTotal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.CardType" Collapsed="true">
+    <Position X="12.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Model\Database\CardType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.ListType" Collapsed="true">
+    <Position X="21.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAFAgAABQIAAAAAA=</HashCode>
+      <FileName>Model\Database\CardType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Database.ColumnInfoAttribute" Collapsed="true">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAAAAAAAAAAAAAAAAAAAAABAABIAAAAAAAAAAgBA=</HashCode>
+      <FileName>Model\Database\ColumnInfoAttribute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Deck.ConfigDeckFilter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAkAAAAJAAAAAAgAAAAIAACIDAAIiAQAAAAAAAAAA=</HashCode>
+      <FileName>Model\Deck\ConfigDeckFilter.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Deck.ConfigDeckFilterList" Collapsed="true">
+    <Position X="26.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQIAAAEAAgAACAAAAAgAABAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Model\Deck\ConfigDeckFilter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Deck.DeckFile" Collapsed="true">
+    <Position X="23" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAQBAAAAgAAEAIAAAAAQIAAAEAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Model\Deck\DeckFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.Deck.DeckCard" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAhAAAAAQAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Deck\DeckFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Module.Deck.AbstractDeck" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAIAIAAAAAAAAAAAAAAAEAAAABBAAAAAAA=</HashCode>
+      <FileName>Module\Deck\AbstractDeck.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Module.Deck.CNDeck" Collapsed="true">
+    <Position X="3" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Module\Deck\CNDeck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Module.Deck.GPMagicDeck" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Module\Deck\GPMagicDeck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GPSoft.GPMagic.GPMagicBase.Module.Deck.MWSDeck" Collapsed="true">
+    <Position X="0.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Module\Deck\MWSDeck.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GPSoft.GPMagic.GPMagicBase.Properties.Resources" Collapsed="true">
-    <Position X="8.75" Y="2.25" Width="1.5" />
+    <Position X="19.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+      <HashCode>AEAGQQGCCYARBABACBAVGQQawUCyIgAoDEgSASgQQYg=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="GPSoft.GPMagic.GPMagicBase.SQLite.DatabaseOperator" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="9.5" Y="0.5" Width="1.5" />
+    <Position X="21.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>wgAAAAACACAEAABAAQAEAAAAAAAIAAAAAICQAAAAAEA=</HashCode>
+      <HashCode>wAAIAAACACCEAABAAQAEAEAAAAAIAAAAAICQAAAAAEA=</HashCode>
       <FileName>SQLite\DatabaseOperator.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="GPSoft.GPMagic.GPMagicBase.UI.CheckValuesDialog" Collapsed="true">
-    <Position X="6" Y="0.5" Width="1.5" />
+    <Position X="21.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAgQJCCgACAEgAIDAgMACAgAMAEgAAAEAAAAAAKI=</HashCode>
+      <HashCode>AAAAAgQICCgASAEgAIDAgNgDEgAMAEgAAAEAAAAACCI=</HashCode>
       <FileName>UI\CheckValuesDialog.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="GPSoft.GPMagic.GPMagicBase.UI.InputTextDialog" Collapsed="true">
-    <Position X="8.75" Y="3" Width="1.5" />
+    <Position X="26.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAEAAACAAMACAAAEAEAIAAAAAAAAAAA=</HashCode>
       <FileName>UI\InputTextDialog.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.AbstractTableInstance" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
+  <Class Name="GPSoft.GPMagic.GPMagicBase.UI.RadioButtonDialog" Collapsed="true">
+    <Position X="24.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAQEIAEACAAAAAAAACABAAAAAAAAQABCAAAASAAgAA=</HashCode>
-      <FileName>Model\AbstractTableInstance.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.CardSubType" Collapsed="true">
-    <Position X="3" Y="2.5" Width="1.5" />
-    <InheritanceLine Type="GPSoft.GPMagic.GPMagicBase.Model.AbstractTableInstance" FixedToPoint="true">
-      <Path>
-        <Point X="1.25" Y="1.017" />
-        <Point X="1.25" Y="2.75" />
-        <Point X="3" Y="2.75" />
-      </Path>
-    </InheritanceLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\CardSubType.cs</FileName>
+      <HashCode>AAAAAAAAACAAAAEAAACAAMACACAEAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>UI\RadioButtonDialog.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPMagicBase.Model.CardAbilitie" Collapsed="true">
-    <Position X="3" Y="3.5" Width="1.5" />
-    <InheritanceLine Type="GPSoft.GPMagic.GPMagicBase.Model.AbstractTableInstance" FixedToPoint="true">
-      <Path>
-        <Point X="1.25" Y="1.017" />
-        <Point X="1.25" Y="3.75" />
-        <Point X="3" Y="3.75" />
-      </Path>
-    </InheritanceLine>
+  <Struct Name="GPSoft.GPMagic.GPMagicBase.Model.DataOperateTypeDisplayWrods" Collapsed="true">
+    <Position X="21.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\CardAbilitie.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Struct Name="GPSoft.GPMagic.GPMagicBase.Model.ListRarity" Collapsed="true">
-    <Position X="5.75" Y="2.25" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAg=</HashCode>
-      <FileName>Model\CardRarity.cs</FileName>
+      <HashCode>AAQAAEAAAAAAACAAAAAAAAAAAAEAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Model\ConstClass.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Struct Name="GPSoft.GPMagic.GPMagicBase.Model.DataOperateTypeDisplayWrods" Collapsed="true">
-    <Position X="5.75" Y="3.75" Width="2.25" />
+  <Struct Name="GPSoft.GPMagic.GPMagicBase.Model.DeckSaveFormat" Collapsed="true">
+    <Position X="23" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAQAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAARAAAAAAAAAA=</HashCode>
       <FileName>Model\ConstClass.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="GPSoft.GPMagic.GPMagicBase.Model.DatabaseTableNames" Collapsed="true">
-    <Position X="5.75" Y="4.5" Width="2.25" />
+    <Position X="19.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\ConstClass.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Struct Name="GPSoft.GPMagic.GPMagicBase.Model.SQLiteDatabaseInformation" Collapsed="true">
-    <Position X="5.75" Y="3" Width="2.25" />
+    <Position X="21.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\ConstClass.cs</FileName>
     </TypeIdentifier>
   </Struct>
-  <Interface Name="GPSoft.GPMagic.GPMagicBase.IMagicCardAction" Collapsed="true">
-    <Position X="0.5" Y="6.5" Width="1.5" />
+  <Struct Name="GPSoft.GPMagic.GPMagicBase.Model.DefaultDirectoryName" Collapsed="true">
+    <Position X="24.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAIQAAAAAAAAAAAABAAAAAAACAAAAIAAQACAAAAABA=</HashCode>
-      <FileName>IMagicCard.cs</FileName>
+      <HashCode>gAAAAAAAAgAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ConstClass.cs</FileName>
     </TypeIdentifier>
-  </Interface>
+  </Struct>
+  <Struct Name="GPSoft.GPMagic.GPMagicBase.Model.DialogInformation" Collapsed="true">
+    <Position X="19.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ConstClass.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="GPSoft.GPMagic.GPMagicBase.Model.DefaultExtention" Collapsed="true">
+    <Position X="26.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ConstClass.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
   <Interface Name="GPSoft.GPMagic.GPMagicBase.ICanTrigger" Collapsed="true">
-    <Position X="2.75" Y="5" Width="1.5" />
+    <Position X="23" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>ICanTrigger.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="GPSoft.GPMagic.GPMagicBase.ICanRotate" Collapsed="true">
-    <Position X="2.25" Y="5.75" Width="1.5" />
+    <Position X="21.25" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAACAAAAAAAAEAAAAAAAAAAAAAIAAAA=</HashCode>
       <FileName>IMagicAction.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="GPSoft.GPMagic.GPMagicBase.IMagicCardAction" Collapsed="true">
+    <Position X="19.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAIQAAAAAAAAAAAABAAAAAAACAAAAIAAQACAAAAABA=</HashCode>
+      <FileName>IMagicCard.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Interface Name="GPSoft.GPMagic.GPMagicBase.ICanFight" Collapsed="true">
-    <Position X="0.5" Y="5.75" Width="1.5" />
+    <Position X="19.5" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IOrganismCardAction.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="GPSoft.GPMagic.GPMagicBase.IUpgradeSite" Collapsed="true">
-    <Position X="2.25" Y="6.5" Width="1.5" />
+    <Position X="23" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IUpgradeSite.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="GPSoft.GPMagic.GPMagicBase.SQLite.IDBOperate" Collapsed="true">
-    <Position X="0.5" Y="5" Width="2" />
+  <Interface Name="GPSoft.GPMagic.GPMagicBase.Model.Database.ITableIntanceAction" Collapsed="true">
+    <Position X="21.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>wgAAAAACACAEAAAAAAAAAAAAAAAIAAAAAIAQAAAAAAA=</HashCode>
+      <HashCode>AAIAAIAAAAAAAAAAAAAABAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Model\Database\ITableIntanceAction.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GPSoft.GPMagic.GPMagicBase.Module.Deck.IDeck" Collapsed="true">
+    <Position X="26.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAIAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Module\Deck\IDeck.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="GPSoft.GPMagic.GPMagicBase.SQLite.IDBOperate" Collapsed="true">
+    <Position X="24.75" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>wAAAAAACACCEAAAAAAAAAAAAAAAIAAAAAIAQAAAAAAA=</HashCode>
       <FileName>SQLite\IDBOperate.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="GPSoft.GPMagic.GPMagicBase.Model.ITableIntanceAction" Collapsed="true">
-    <Position X="0.5" Y="4.25" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAIAAAAAAAAAAAACABAAAAAAAAQAACAAAAAAAgAA=</HashCode>
-      <FileName>Model\ITableIntanceAction.cs</FileName>
-    </TypeIdentifier>
-  </Interface>
   <Enum Name="GPSoft.GPMagic.GPMagicBase.CardStatus" Collapsed="true">
-    <Position X="5.75" Y="6.75" Width="1.5" />
+    <Position X="19.5" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAIAAAAAAAAAAIAAAA=</HashCode>
       <FileName>MagicCardConst.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="GPSoft.GPMagic.GPMagicBase.Model.DataOperateType" Collapsed="true">
-    <Position X="5.75" Y="6" Width="1.5" />
+    <Position X="21.25" Y="9.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAQAAAAAA=</HashCode>
       <FileName>Model\ConstClass.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Font Name="宋体" Size="9" />
+  <Enum Name="GPSoft.GPMagic.GPMagicBase.Model.ImageDisplayType" Collapsed="true">
+    <Position X="23" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAgAAAAAAAABAAAAAIAAAAAgAQAAAAAAA=</HashCode>
+      <FileName>Model\ConstClass.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="GPSoft.GPMagic.GPMagicBase.Model.ImportModelType" Collapsed="true">
+    <Position X="24.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAEAAAI=</HashCode>
+      <FileName>Model\ImportExportModel.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="MS UI Gothic" Size="9" />
 </ClassDiagram>
