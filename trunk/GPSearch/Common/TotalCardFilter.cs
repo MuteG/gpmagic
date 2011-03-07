@@ -34,7 +34,9 @@ namespace GPSoft.GPMagic.GPSearch.Common
             result = Common.CommonHelper.JoinFilterStrings(this.cardTypeFilter);
             return result;
         }
+
         private string cardTypeFilter = string.Empty;
+
         public void SetCardType()
         {
             cardTypeFilter = UI.FormFilterCardType.CreateSingleInstance().GetFilter();

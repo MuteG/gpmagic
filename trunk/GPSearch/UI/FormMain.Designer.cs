@@ -85,6 +85,7 @@
             this.mnuItemText = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemInfoImage = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemFAQ = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsbtnShowDeckList = new System.Windows.Forms.ToolStripButton();
             this.dgxDeck = new System.Windows.Forms.GroupBox();
             this.tspDeckList = new System.Windows.Forms.ToolStrip();
             this.tsbtnNewDeck = new System.Windows.Forms.ToolStripButton();
@@ -120,6 +121,10 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.ofdDeck = new System.Windows.Forms.OpenFileDialog();
+            this.pnlCardInformation = new System.Windows.Forms.Panel();
+            this.pnlCardList = new System.Windows.Forms.Panel();
+            this.gbxCardImage = new System.Windows.Forms.GroupBox();
+            this.pbxCardImage = new System.Windows.Forms.PictureBox();
             this.mnuStpMain.SuspendLayout();
             this.gbxCardLibrary.SuspendLayout();
             this.tspCardLibrary.SuspendLayout();
@@ -130,6 +135,10 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.pnlCardInformation.SuspendLayout();
+            this.pnlCardList.SuspendLayout();
+            this.gbxCardImage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCardImage)).BeginInit();
             this.SuspendLayout();
             // 
             // mnuStpMain
@@ -143,7 +152,7 @@
             this.mnuStpMain.Location = new System.Drawing.Point(0, 0);
             this.mnuStpMain.Name = "mnuStpMain";
             this.mnuStpMain.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.mnuStpMain.Size = new System.Drawing.Size(871, 24);
+            this.mnuStpMain.Size = new System.Drawing.Size(1015, 24);
             this.mnuStpMain.TabIndex = 0;
             this.mnuStpMain.Text = "menuStrip1";
             // 
@@ -164,42 +173,42 @@
             // mnuItemNewDeck
             // 
             this.mnuItemNewDeck.Name = "mnuItemNewDeck";
-            this.mnuItemNewDeck.Size = new System.Drawing.Size(118, 22);
+            this.mnuItemNewDeck.Size = new System.Drawing.Size(152, 22);
             this.mnuItemNewDeck.Text = "新建套牌";
             this.mnuItemNewDeck.Click += new System.EventHandler(this.mnuNewDeck_Click);
             // 
             // mnuItemNewBase
             // 
             this.mnuItemNewBase.Name = "mnuItemNewBase";
-            this.mnuItemNewBase.Size = new System.Drawing.Size(118, 22);
+            this.mnuItemNewBase.Size = new System.Drawing.Size(152, 22);
             this.mnuItemNewBase.Text = "新建牌库";
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(115, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
             // 
             // mnuItemImportData
             // 
             this.mnuItemImportData.Name = "mnuItemImportData";
-            this.mnuItemImportData.Size = new System.Drawing.Size(118, 22);
+            this.mnuItemImportData.Size = new System.Drawing.Size(152, 22);
             this.mnuItemImportData.Text = "导入数据";
             // 
             // mnuItemExportData
             // 
             this.mnuItemExportData.Name = "mnuItemExportData";
-            this.mnuItemExportData.Size = new System.Drawing.Size(118, 22);
+            this.mnuItemExportData.Size = new System.Drawing.Size(152, 22);
             this.mnuItemExportData.Text = "导出数据";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(115, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(149, 6);
             // 
             // mnuItemExit
             // 
             this.mnuItemExit.Name = "mnuItemExit";
-            this.mnuItemExit.Size = new System.Drawing.Size(118, 22);
+            this.mnuItemExit.Size = new System.Drawing.Size(152, 22);
             this.mnuItemExit.Text = "退出";
             this.mnuItemExit.Click += new System.EventHandler(this.mnuExit_Click);
             // 
@@ -218,7 +227,7 @@
             this.mnuItemEditCard,
             this.mnuItemDeleteCard});
             this.mnuItemCardEdit.Name = "mnuItemCardEdit";
-            this.mnuItemCardEdit.Size = new System.Drawing.Size(94, 22);
+            this.mnuItemCardEdit.Size = new System.Drawing.Size(152, 22);
             this.mnuItemCardEdit.Text = "卡牌";
             // 
             // mnuItemAddCard
@@ -226,6 +235,7 @@
             this.mnuItemAddCard.Name = "mnuItemAddCard";
             this.mnuItemAddCard.Size = new System.Drawing.Size(118, 22);
             this.mnuItemAddCard.Text = "添加卡牌";
+            this.mnuItemAddCard.Click += new System.EventHandler(this.mnuItemAddCard_Click);
             // 
             // mnuItemEditCard
             // 
@@ -256,7 +266,7 @@
             this.mnuItemCardTypeSetting,
             this.mnuItemCardAbilitiesSetting});
             this.mnuItemCardSetting.Name = "mnuItemCardSetting";
-            this.mnuItemCardSetting.Size = new System.Drawing.Size(148, 22);
+            this.mnuItemCardSetting.Size = new System.Drawing.Size(152, 22);
             this.mnuItemCardSetting.Text = "卡牌";
             // 
             // mnuItemCardTypeSetting
@@ -264,6 +274,7 @@
             this.mnuItemCardTypeSetting.Name = "mnuItemCardTypeSetting";
             this.mnuItemCardTypeSetting.Size = new System.Drawing.Size(118, 22);
             this.mnuItemCardTypeSetting.Text = "卡牌类别";
+            this.mnuItemCardTypeSetting.Click += new System.EventHandler(this.mnuItemCardTypeSetting_Click);
             // 
             // mnuItemCardAbilitiesSetting
             // 
@@ -278,7 +289,7 @@
             this.mnuItemGridHeaderSetting,
             this.mnuItemDefaultSavePathSetting});
             this.mnuItemDeckSetting.Name = "mnuItemDeckSetting";
-            this.mnuItemDeckSetting.Size = new System.Drawing.Size(148, 22);
+            this.mnuItemDeckSetting.Size = new System.Drawing.Size(152, 22);
             this.mnuItemDeckSetting.Text = "套牌";
             // 
             // mnuItemDeckFilterSetting
@@ -303,7 +314,7 @@
             // mnuItemImportModel
             // 
             this.mnuItemImportModel.Name = "mnuItemImportModel";
-            this.mnuItemImportModel.Size = new System.Drawing.Size(148, 22);
+            this.mnuItemImportModel.Size = new System.Drawing.Size(152, 22);
             this.mnuItemImportModel.Text = "导入/导出模板";
             this.mnuItemImportModel.Click += new System.EventHandler(this.mnuItemImportModel_Click);
             // 
@@ -324,7 +335,7 @@
             // mnuItemAbout
             // 
             this.mnuItemAbout.Name = "mnuItemAbout";
-            this.mnuItemAbout.Size = new System.Drawing.Size(94, 22);
+            this.mnuItemAbout.Size = new System.Drawing.Size(152, 22);
             this.mnuItemAbout.Text = "关于";
             this.mnuItemAbout.Click += new System.EventHandler(this.mnuItemAbout_Click);
             // 
@@ -334,7 +345,7 @@
             this.gbxCardLibrary.Dock = System.Windows.Forms.DockStyle.Top;
             this.gbxCardLibrary.Location = new System.Drawing.Point(0, 0);
             this.gbxCardLibrary.Name = "gbxCardLibrary";
-            this.gbxCardLibrary.Size = new System.Drawing.Size(550, 40);
+            this.gbxCardLibrary.Size = new System.Drawing.Size(412, 40);
             this.gbxCardLibrary.TabIndex = 1;
             this.gbxCardLibrary.TabStop = false;
             this.gbxCardLibrary.Text = "牌库：0张牌";
@@ -360,11 +371,12 @@
             this.tsbtnClear,
             this.toolStripSeparator2,
             this.tsbtnRefresh,
-            this.tsbtnShowImage});
+            this.tsbtnShowImage,
+            this.tsbtnShowDeckList});
             this.tspCardLibrary.Location = new System.Drawing.Point(6, 13);
             this.tspCardLibrary.Name = "tspCardLibrary";
             this.tspCardLibrary.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.tspCardLibrary.Size = new System.Drawing.Size(541, 25);
+            this.tspCardLibrary.Size = new System.Drawing.Size(403, 25);
             this.tspCardLibrary.TabIndex = 4;
             this.tspCardLibrary.Text = "toolStrip1";
             // 
@@ -458,7 +470,7 @@
             this.tsbtnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("tsbtnRefresh.Image")));
             this.tsbtnRefresh.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnRefresh.Name = "tsbtnRefresh";
-            this.tsbtnRefresh.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnRefresh.Size = new System.Drawing.Size(23, 20);
             this.tsbtnRefresh.Text = "刷新列表";
             this.tsbtnRefresh.Click += new System.EventHandler(this.tsbtnRefresh_Click);
             // 
@@ -473,7 +485,7 @@
             this.tsbtnShowImage.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.ShowCardPicture;
             this.tsbtnShowImage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnShowImage.Name = "tsbtnShowImage";
-            this.tsbtnShowImage.Size = new System.Drawing.Size(32, 22);
+            this.tsbtnShowImage.Size = new System.Drawing.Size(32, 20);
             this.tsbtnShowImage.Text = "显示卡牌图片";
             this.tsbtnShowImage.ToolTipText = "显示卡牌图片";
             // 
@@ -502,6 +514,20 @@
             this.mnuItemFAQ.Name = "mnuItemFAQ";
             this.mnuItemFAQ.Size = new System.Drawing.Size(166, 22);
             this.mnuItemFAQ.Text = "FAQ";
+            // 
+            // tsbtnShowDeckList
+            // 
+            this.tsbtnShowDeckList.Checked = true;
+            this.tsbtnShowDeckList.CheckOnClick = true;
+            this.tsbtnShowDeckList.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.tsbtnShowDeckList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnShowDeckList.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources._37_07_;
+            this.tsbtnShowDeckList.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnShowDeckList.Name = "tsbtnShowDeckList";
+            this.tsbtnShowDeckList.Size = new System.Drawing.Size(23, 20);
+            this.tsbtnShowDeckList.Text = "toolStripButton1";
+            this.tsbtnShowDeckList.ToolTipText = "显示/隐藏套牌列表";
+            this.tsbtnShowDeckList.Click += new System.EventHandler(this.tsbtnShowDeckList_Click);
             // 
             // dgxDeck
             // 
@@ -670,10 +696,11 @@
             this.dgvCardList.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCardList.RowTemplate.Height = 20;
             this.dgvCardList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCardList.Size = new System.Drawing.Size(550, 460);
+            this.dgvCardList.Size = new System.Drawing.Size(412, 460);
             this.dgvCardList.TabIndex = 2;
             this.dgvCardList.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCardList_CellMouseDown);
             this.dgvCardList.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCardList_CellMouseDoubleClick);
+            this.dgvCardList.CurrentCellChanged += new System.EventHandler(this.dgvCardList_CurrentCellChanged);
             // 
             // dgvColExpansions
             // 
@@ -858,16 +885,16 @@
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.AutoScrollMinSize = new System.Drawing.Size(450, 0);
-            this.splitContainer1.Panel1.Controls.Add(this.gbxCardLibrary);
-            this.splitContainer1.Panel1.Controls.Add(this.dgvCardList);
+            this.splitContainer1.Panel1.Controls.Add(this.pnlCardList);
+            this.splitContainer1.Panel1.Controls.Add(this.pnlCardInformation);
             this.splitContainer1.Panel1MinSize = 450;
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgxDeck);
             this.splitContainer1.Panel2.Controls.Add(this.dgvDeckList);
-            this.splitContainer1.Size = new System.Drawing.Size(871, 501);
-            this.splitContainer1.SplitterDistance = 550;
+            this.splitContainer1.Size = new System.Drawing.Size(1015, 501);
+            this.splitContainer1.SplitterDistance = 694;
             this.splitContainer1.TabIndex = 1;
             // 
             // ofdDeck
@@ -875,13 +902,56 @@
             this.ofdDeck.Filter = "中文牌表|*.txt|MWS牌表格式|*.mwDeck";
             this.ofdDeck.InitialDirectory = ".";
             // 
+            // pnlCardInformation
+            // 
+            this.pnlCardInformation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlCardInformation.Controls.Add(this.gbxCardImage);
+            this.pnlCardInformation.Location = new System.Drawing.Point(0, 0);
+            this.pnlCardInformation.Name = "pnlCardInformation";
+            this.pnlCardInformation.Size = new System.Drawing.Size(278, 501);
+            this.pnlCardInformation.TabIndex = 3;
+            // 
+            // pnlCardList
+            // 
+            this.pnlCardList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlCardList.Controls.Add(this.gbxCardLibrary);
+            this.pnlCardList.Controls.Add(this.dgvCardList);
+            this.pnlCardList.Location = new System.Drawing.Point(280, 0);
+            this.pnlCardList.Name = "pnlCardList";
+            this.pnlCardList.Size = new System.Drawing.Size(412, 501);
+            this.pnlCardList.TabIndex = 4;
+            // 
+            // gbxCardImage
+            // 
+            this.gbxCardImage.Controls.Add(this.pbxCardImage);
+            this.gbxCardImage.Location = new System.Drawing.Point(3, 0);
+            this.gbxCardImage.Name = "gbxCardImage";
+            this.gbxCardImage.Size = new System.Drawing.Size(271, 390);
+            this.gbxCardImage.TabIndex = 0;
+            this.gbxCardImage.TabStop = false;
+            this.gbxCardImage.Text = "卡牌信息";
+            // 
+            // pbxCardImage
+            // 
+            this.pbxCardImage.BackColor = System.Drawing.Color.White;
+            this.pbxCardImage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pbxCardImage.Location = new System.Drawing.Point(3, 17);
+            this.pbxCardImage.Name = "pbxCardImage";
+            this.pbxCardImage.Size = new System.Drawing.Size(265, 370);
+            this.pbxCardImage.TabIndex = 0;
+            this.pbxCardImage.TabStop = false;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(871, 525);
+            this.ClientSize = new System.Drawing.Size(1015, 525);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.mnuStpMain);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("新宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.mnuStpMain;
@@ -904,6 +974,10 @@
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.ResumeLayout(false);
+            this.pnlCardInformation.ResumeLayout(false);
+            this.pnlCardList.ResumeLayout(false);
+            this.gbxCardImage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxCardImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -990,6 +1064,11 @@
         private System.Windows.Forms.ToolStripMenuItem mnuItemImportData;
         private System.Windows.Forms.ToolStripMenuItem mnuItemExportData;
         private System.Windows.Forms.ToolStripMenuItem mnuItemImportModel;
+        private System.Windows.Forms.ToolStripButton tsbtnShowDeckList;
+        private System.Windows.Forms.Panel pnlCardList;
+        private System.Windows.Forms.Panel pnlCardInformation;
+        private System.Windows.Forms.GroupBox gbxCardImage;
+        private System.Windows.Forms.PictureBox pbxCardImage;
     }
 }
 
