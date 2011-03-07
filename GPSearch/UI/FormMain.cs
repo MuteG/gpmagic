@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Data;
 using System.IO;
 using System.Windows.Forms;
+using System.Drawing;
 using GPSoft.GPMagic.GPMagicBase.Model;
 using GPSoft.GPMagic.GPMagicBase.Model.Database;
 using GPSoft.GPMagic.GPMagicBase.UI;
 using GPSoft.GPMagic.GPSearch.Common;
 using GPSoft.GPMagic.GPMagicBase.Model.Deck;
 using GPSoft.GPMagic.GPMagicBase.Module.Deck;
+using GPSoft.Helper.FunctionHelper;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
@@ -245,11 +247,11 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             foreach (DataGridViewRow row in dgvCardList.SelectedRows)
             {
-                row.Selected = false;
+                if (row.Selected) row.Selected = false;
             }
             if (index < 0) index = 0;
-            dgvCardList.Rows[index].Selected = true;
-        } 
+            if (dgvCardList.Rows.Count > 0) dgvCardList.Rows[index].Selected = true;
+        }
         #endregion
 
         private void tsbtnType_Click(object sender, EventArgs e)
@@ -267,5 +269,44 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             new FormImportCardsSetting().ShowDialog();
         }
+
+        private void mnuItemCardTypeSetting_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mnuItemAddCard_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tsbtnShowDeckList_Click(object sender, EventArgs e)
+        {
+            splitContainer1.Panel2Collapsed = !splitContainer1.Panel2Collapsed;
+        }
+
+        private void dgvCardList_CurrentCellChanged(object sender, EventArgs e)
+        {
+            if (null != dgvCardList.CurrentCell)
+            {
+                int index = dgvCardList.CurrentCell.RowIndex;
+                int cardID = Convert.ToInt32(dgvCardList.Rows[index].Cells[dgvCardList.Columns.Count - 1].Value);
+                ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
+                string imagePath = Path.Combine(FunctionHelper.ApplicationPath,
+                                                string.Format("{2}\\{0}\\{1}",
+                                                              card.Symbol,
+                                                              card.CardImage,
+                                                              DefaultDirectoryName.CardPictures));
+                if (File.Exists(imagePath))
+                {
+                    pbxCardImage.Image = Image.FromFile(imagePath);
+                }
+                else
+                {
+                    // 这里还需要加入根据卡牌信息生成自定义画像
+                }
+            }
+        }
+
     }
 }
