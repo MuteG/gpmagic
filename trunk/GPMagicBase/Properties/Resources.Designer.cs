@@ -465,5 +465,19 @@ namespace GPSoft.GPMagic.GPMagicBase.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        internal static System.Drawing.Bitmap TriangleBottom {
+            get {
+                object obj = ResourceManager.GetObject("TriangleBottom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        internal static System.Drawing.Bitmap TriangleRight {
+            get {
+                object obj = ResourceManager.GetObject("TriangleRight", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

@@ -292,4 +292,10 @@
   <data name="stop_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stop-2.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="TriangleBottom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TriangleBottom.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TriangleRight" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TriangleRight.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
