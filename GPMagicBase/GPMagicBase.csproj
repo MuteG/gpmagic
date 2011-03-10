@@ -79,6 +79,12 @@
     <Compile Include="UI\CheckValuesDialog.Designer.cs">
       <DependentUpon>CheckValuesDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\CollapsiblePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\CollapsiblePanel.Designer.cs">
+      <DependentUpon>CollapsiblePanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\InputTextDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,9 @@
     <EmbeddedResource Include="UI\CheckValuesDialog.resx">
       <DependentUpon>CheckValuesDialog.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\CollapsiblePanel.resx">
+      <DependentUpon>CollapsiblePanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\InputTextDialog.resx">
       <DependentUpon>InputTextDialog.cs</DependentUpon>
@@ -289,6 +298,12 @@
   <ItemGroup>
     <None Include="ClassDiagramGPMagicBase.cd" />
     <None Include="Resources\stop-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TriangleRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TriangleBottom.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

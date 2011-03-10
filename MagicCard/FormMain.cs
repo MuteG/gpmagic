@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using GPSoft.Helper.FileOperate;
 using GPSoft.GPMagic.GPMagic.UI;
+using GPSoft.GPMagic.GPMagicBase.UI;
 
 namespace GPSoft.GPMagic.MagicDemo
 {
@@ -115,6 +116,15 @@ namespace GPSoft.GPMagic.MagicDemo
             //countPanel1.Image = img;
             //countPanel1.Tip = "tip";
             //countPanel1.Count = 10;
+            collapsiblePanel1.Items.Clear();
+            for (int i = 1; i < 10; i++)
+            {
+                CollapsiblePanel.Item item = new CollapsiblePanel.Item();
+                item.Key = new string('k', i);
+                item.Value = new string('v', i);
+                collapsiblePanel1.Items.Add(item);
+            }
+            collapsiblePanel1.Refresh();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

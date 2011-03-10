@@ -31,6 +31,8 @@
             this.btnLoadCard = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.collapsiblePanel1 = new GPSoft.GPMagic.GPMagicBase.UI.CollapsiblePanel();
             this.countPanel1 = new GPSoft.GPMagic.GPMagic.UI.CountPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -47,7 +49,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(50, 84);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 41);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(275, 383);
             this.pictureBox1.TabIndex = 1;
@@ -63,11 +65,26 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(401, 333);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(179, 79);
+            this.panel1.TabIndex = 5;
+            // 
+            // collapsiblePanel1
+            // 
+            this.collapsiblePanel1.Collapsed = false;
+            this.collapsiblePanel1.Location = new System.Drawing.Point(372, 56);
+            this.collapsiblePanel1.Name = "collapsiblePanel1";
+            this.collapsiblePanel1.Size = new System.Drawing.Size(262, 176);
+            this.collapsiblePanel1.TabIndex = 4;
+            // 
             // countPanel1
             // 
             this.countPanel1.Count = 0;
             this.countPanel1.Image = null;
-            this.countPanel1.Location = new System.Drawing.Point(379, 167);
+            this.countPanel1.Location = new System.Drawing.Point(314, 13);
             this.countPanel1.Name = "countPanel1";
             this.countPanel1.Size = new System.Drawing.Size(109, 22);
             this.countPanel1.TabIndex = 3;
@@ -79,6 +96,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(769, 590);
+            this.Controls.Add(this.collapsiblePanel1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.countPanel1);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLoadCard);
@@ -96,6 +115,8 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnClose;
         private GPMagic.UI.CountPanel countPanel1;
+        private GPSoft.GPMagic.GPMagicBase.UI.CollapsiblePanel collapsiblePanel1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
