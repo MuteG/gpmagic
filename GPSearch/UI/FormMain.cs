@@ -68,10 +68,10 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void FormMain_Load(object sender, EventArgs e)
         {
-            RefreshDataGridView();
+            FillDataGridView();
         }
 
-        public void RefreshDataGridView()
+        public void FillDataGridView()
         {
             if (cards.Count > 0)
             {
@@ -101,14 +101,18 @@ namespace GPSoft.GPMagic.GPSearch.UI
             }
         }
 
-        private void mnuAddCard_Click(object sender, EventArgs e)
-        {
-            ShowCardInfoForm(DataOperateType.Insert);
-        }
+        
 
         private void mnuItemEditCard_Click(object sender, EventArgs e)
         {
-            ShowCardInfoForm(DataOperateType.Update);
+            if (dgvCardList.SelectedRows.Count > 0)
+            {
+                int cardID = Convert.ToInt32(dgvCardList.SelectedRows[0].Cells[dgvCardList.Columns.Count - 1].Value);
+                ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
+                FrmInfo.Owner = this;
+                FrmInfo.ShowCardInfo(card);
+                ShowCardInfoForm(DataOperateType.Update);
+            }
         }
 
         private void ShowCardInfoForm(DataOperateType editStatus)
@@ -164,7 +168,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void tsbtnRefresh_Click(object sender, EventArgs e)
         {
-            RefreshDataGridView();
+            FillDataGridView();
         }
 
         private void dgvCardList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -197,8 +201,28 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 int cardID = Convert.ToInt32(dgvCardList.Rows[index].Cells[dgvCardList.Columns.Count - 1].Value);
                 ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
                 FrmInfo.ShowCardInfo(card);
+
+                ShowDardImage(card);
             }
         }
+
+        private void ShowDardImage(ListCardTotal card)
+        {
+            string imagePath = Path.Combine(FunctionHelper.ApplicationPath,
+                                                string.Format("{2}\\{0}\\{1}",
+                                                              card.Symbol,
+                                                              card.CardImage,
+                                                              DefaultDirectoryName.CardPictures));
+            if (File.Exists(imagePath))
+            {
+                pbxCardImage.Image = Image.FromFile(imagePath);
+            }
+            else
+            {
+                // 这里还需要加入根据卡牌信息生成自定义画像
+            }
+        }
+
         /// <summary>
         /// 选择下一行
         /// </summary>
@@ -219,6 +243,8 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 int cardID = Convert.ToInt32(dgvCardList.Rows[index].Cells[dgvCardList.Columns.Count - 1].Value);
                 ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
                 FrmInfo.ShowCardInfo(card);
+
+                ShowDardImage(card);
             }
         }
 
@@ -257,7 +283,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private void tsbtnType_Click(object sender, EventArgs e)
         {
             this.totalCardsFilter.SetCardType();
-            RefreshDataGridView();
+            FillDataGridView();
         }
 
         private void FormMain_KeyDown(object sender, KeyEventArgs e)
@@ -277,7 +303,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void mnuItemAddCard_Click(object sender, EventArgs e)
         {
-
+            ShowCardInfoForm(DataOperateType.Insert);
         }
 
         private void tsbtnShowDeckList_Click(object sender, EventArgs e)
@@ -292,19 +318,26 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 int index = dgvCardList.CurrentCell.RowIndex;
                 int cardID = Convert.ToInt32(dgvCardList.Rows[index].Cells[dgvCardList.Columns.Count - 1].Value);
                 ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
-                string imagePath = Path.Combine(FunctionHelper.ApplicationPath,
-                                                string.Format("{2}\\{0}\\{1}",
-                                                              card.Symbol,
-                                                              card.CardImage,
-                                                              DefaultDirectoryName.CardPictures));
-                if (File.Exists(imagePath))
+                ShowDardImage(card);
+            }
+        }
+
+        private void mnuItemDeleteCard_Click(object sender, EventArgs e)
+        {
+            DeleteSelectedTotalCardsRecord();
+        }
+
+        private void DeleteSelectedTotalCardsRecord()
+        {
+            if (dgvCardList.SelectedRows.Count > 0 &&
+                MessageBox.Show(string.Format("是否确认删除选择的{0}张卡牌？", dgvCardList.SelectedRows.Count), "确认删除",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                foreach (DataGridViewRow row in dgvCardList.SelectedRows)
                 {
-                    pbxCardImage.Image = Image.FromFile(imagePath);
+                    Cards.Remove(Cards.GetDataInstance(row.Cells["dgvColCardID"].Value));
                 }
-                else
-                {
-                    // 这里还需要加入根据卡牌信息生成自定义画像
-                }
+                FillDataGridView();
             }
         }
 
