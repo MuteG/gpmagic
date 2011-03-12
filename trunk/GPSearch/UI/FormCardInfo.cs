@@ -72,6 +72,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                         btnSubmit.Text = DataOperateTypeDisplayWrods.Insert;
                         btnPrevious.Enabled = false;
                         btnNext.Enabled = false;
+                        btnDelete.Visible = false;
                         break;
                     }
                 case DataOperateType.Update:
@@ -81,6 +82,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                         btnSubmit.Text = DataOperateTypeDisplayWrods.Update;
                         btnPrevious.Enabled = true;
                         btnNext.Enabled = true;
+                        btnDelete.Visible = true;
                         break;
                     }
             }
@@ -184,6 +186,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         }
         private void LoadCardImage(string cardImageName)
         {
+            pbxCardImage.Image = null;
             string imagePath = GetSavedImagePath(this.ActiveCard.Symbol, cardImageName);
             if (File.Exists(imagePath))
             {
@@ -370,7 +373,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 {
                     frmMain.Cards.Save(this.ActiveCard);
                 }
-                frmMain.RefreshDataGridView();
+                frmMain.FillDataGridView();
             }
         }
         // 选择子类别
@@ -448,5 +451,16 @@ namespace GPSoft.GPMagic.GPSearch.UI
             Dispose();
         }
         #endregion
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("是否确认删除此卡牌？", "确认删除",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                FormMain frmMain = (FormMain)this.Owner;
+                frmMain.Cards.Remove(ActiveCard);
+                frmMain.FillDataGridView();
+            }
+        }
     }
 }

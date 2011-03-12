@@ -79,6 +79,7 @@
             this.lblCardEnglishName = new System.Windows.Forms.Label();
             this.tbxCardEnglishName = new System.Windows.Forms.TextBox();
             this.cbxPainterName = new System.Windows.Forms.ComboBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.gbxCardImage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxCardImage)).BeginInit();
             this.SuspendLayout();
@@ -486,7 +487,7 @@
             // 
             // btnPrevious
             // 
-            this.btnPrevious.Location = new System.Drawing.Point(316, 406);
+            this.btnPrevious.Location = new System.Drawing.Point(373, 406);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(23, 23);
             this.btnPrevious.TabIndex = 32;
@@ -497,7 +498,7 @@
             // 
             // btnNext
             // 
-            this.btnNext.Location = new System.Drawing.Point(345, 406);
+            this.btnNext.Location = new System.Drawing.Point(402, 406);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(23, 23);
             this.btnNext.TabIndex = 32;
@@ -527,7 +528,7 @@
             // 
             this.btnSubmit.Location = new System.Drawing.Point(235, 406);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(75, 23);
+            this.btnSubmit.Size = new System.Drawing.Size(59, 23);
             this.btnSubmit.TabIndex = 19;
             this.btnSubmit.Text = "确认";
             this.btnSubmit.UseVisualStyleBackColor = true;
@@ -535,9 +536,9 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(431, 406);
+            this.btnClose.Location = new System.Drawing.Point(439, 406);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.Size = new System.Drawing.Size(59, 23);
             this.btnClose.TabIndex = 20;
             this.btnClose.Text = "关闭";
             this.btnClose.UseVisualStyleBackColor = true;
@@ -571,11 +572,22 @@
             this.cbxPainterName.TabIndex = 14;
             this.cbxPainterName.SelectionChangeCommitted += new System.EventHandler(this.cbxPainterName_SelectionChangeCommitted);
             // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(300, 406);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(59, 23);
+            this.btnDelete.TabIndex = 33;
+            this.btnDelete.Text = "删除";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // FormCardInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(510, 434);
+            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.btnClose);
@@ -689,5 +701,6 @@
         private System.Windows.Forms.ComboBox cbxPainterName;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
