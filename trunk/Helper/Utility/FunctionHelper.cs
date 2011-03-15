@@ -19,9 +19,9 @@ using System.Diagnostics;
 using System.Drawing;
 using System.Reflection;
 
-namespace GPSoft.Helper.FunctionHelper
+namespace GPSoft.Helper.Utility
 {
-    public class FunctionHelper
+    public class UtilityHelper
     {
         #region 属性
         /// <summary>

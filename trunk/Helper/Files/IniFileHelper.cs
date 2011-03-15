@@ -16,7 +16,7 @@ using System.Runtime.InteropServices;
 using System.Globalization;
 using System.Collections.Generic;
 
-namespace GPSoft.Helper.FileOperate
+namespace GPSoft.Helper.Files
 {
     /// <summary>
     /// Provides methods for reading and writing to an INI file.

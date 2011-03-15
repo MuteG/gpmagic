@@ -1,4 +1,4 @@
-﻿namespace GPSoft.Helper.Component
+﻿namespace GPSoft.Helper.UI
 {
     partial class RadioGroupBox
     {

@@ -7,7 +7,7 @@ using System.Text;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 using System.IO;
-using GPSoft.Helper.FileOperate;
+using GPSoft.Helper.Files;
 
 namespace GPMagicToolKit
 {

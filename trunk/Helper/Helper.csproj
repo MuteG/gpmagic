@@ -43,27 +43,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\APIConst.cs" />
-    <Compile Include="Component\RadioGroup.cs">
+    <Compile Include="UI\RadioGroup.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Component\RadioGroup.Designer.cs">
+    <Compile Include="UI\RadioGroup.Designer.cs">
       <DependentUpon>RadioGroup.cs</DependentUpon>
     </Compile>
-    <Compile Include="FileOperate\FileHelper.cs" />
-    <Compile Include="FileOperate\ObjectXMLSerializer.cs" />
-    <Compile Include="FunctionHelper\FunctionHelper.cs" />
-    <Compile Include="FileOperate\ImageHelper.cs" />
-    <Compile Include="FileOperate\IniFileHelper.cs" />
+    <Compile Include="Files\FileHelper.cs" />
+    <Compile Include="Files\ObjectXMLSerializer.cs" />
+    <Compile Include="Utility\FunctionHelper.cs" />
+    <Compile Include="Files\ImageHelper.cs" />
+    <Compile Include="Files\IniFileHelper.cs" />
     <Compile Include="API\GDI32.cs" />
-    <Compile Include="HotKey.cs" />
-    <Compile Include="LogHelper\LogHelper.cs" />
+    <Compile Include="API\HotKey.cs" />
+    <Compile Include="Log\LogHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlServer\SQLHelper.cs" />
-    <Compile Include="FileOperate\XMLHelper.cs" />
+    <Compile Include="Data\SQLHelper.cs" />
+    <Compile Include="Files\XMLHelper.cs" />
     <Compile Include="API\User32.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Component\RadioGroup.resx">
+    <EmbeddedResource Include="UI\RadioGroup.resx">
       <DependentUpon>RadioGroup.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

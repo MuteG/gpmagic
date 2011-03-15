@@ -44,6 +44,15 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
             get { return abilitiesName; }
             set { abilitiesName = value; }
         }
+        private string m_EnglishName = string.Empty;
+        /// <summary>
+        /// 获取或者设置异能英文名称
+        /// </summary>
+        public string EnglishName
+        {
+            get { return m_EnglishName; }
+            set { m_EnglishName = value; }
+        }
         /// <summary>
         /// 获取或者设置异能编号（主键、自增）
         /// </summary>

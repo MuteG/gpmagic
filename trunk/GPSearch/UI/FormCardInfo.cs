@@ -9,8 +9,8 @@ using GPSoft.GPMagic.GPMagicBase.Model.Database;
 using GPSoft.GPMagic.GPMagicBase.SQLite;
 using GPSoft.GPMagic.GPMagicBase.UI;
 using GPSoft.GPMagic.GPSearch.Common;
-using GPSoft.Helper.FileOperate;
-using GPSoft.Helper.FunctionHelper;
+using GPSoft.Helper.Files;
+using GPSoft.Helper.Utility;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
@@ -181,7 +181,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         }
         private string GetSavedImagePath(string symbol, string imageName)
         {
-            return Path.Combine(FunctionHelper.ApplicationPath,
+            return Path.Combine(UtilityHelper.ApplicationPath,
                                 string.Format("{2}\\{0}\\{1}", symbol, imageName, DefaultDirectoryName.CardPictures));
         }
         private void LoadCardImage(string cardImageName)

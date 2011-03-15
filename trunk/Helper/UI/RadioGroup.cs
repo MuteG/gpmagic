@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using System.ComponentModel;
 
-namespace GPSoft.Helper.Component
+namespace GPSoft.Helper.UI
 {
     public partial class RadioGroupBox : UserControl
     {

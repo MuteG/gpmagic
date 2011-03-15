@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using GPSoft.Helper.FileOperate;
+using GPSoft.Helper.Files;
 using GPSoft.GPMagic.GPMagic.UI;
 using GPSoft.GPMagic.GPMagicBase.UI;
 

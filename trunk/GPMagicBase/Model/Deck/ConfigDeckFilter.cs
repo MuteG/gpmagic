@@ -4,8 +4,8 @@ using System.Text;
 using System.Xml.Serialization;
 using System.Reflection;
 using System.Drawing;
-using GPSoft.Helper.FileOperate;
-using GPSoft.Helper.FunctionHelper;
+using GPSoft.Helper.Files;
+using GPSoft.Helper.Utility;
 using System.IO;
 
 namespace GPSoft.GPMagic.GPMagicBase.Model.Deck
@@ -107,7 +107,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Deck
     [XmlRoot("DeckFilterConfig")]
     public sealed class ConfigDeckFilterList
     {
-        private string configPath = Path.Combine(FunctionHelper.ApplicationPath,
+        private string configPath = Path.Combine(UtilityHelper.ApplicationPath,
             string.Format("{0}\\DeckFilter.set", DefaultDirectoryName.Config));
         /// <summary>
         /// 获取或者设置配置文件保存路径

@@ -1,12 +1,13 @@
-﻿DROP TABLE IF EXISTS ListPlayFormats;
+﻿--赛制
+DROP TABLE IF EXISTS ListPlayFormats;
 CREATE TABLE IF NOT EXISTS ListPlayFormats(
-    FormatID   INTEGER PRIMARY KEY AUTOINCREMENT,
-    FormatName NVARCHAR(50),
-    MinPlayers INTEGER,
-    MaxPlayers INTEGER, --0表示无上限    
-    MinCards   INTEGER,    
-    MaxCards   INTEGER, --0表示无上限
-    Comment    NVARCHAR(500)
+    FormatID   INTEGER PRIMARY KEY AUTOINCREMENT,  --赛制编号
+    FormatName NVARCHAR(50),                       --赛制名称
+    MinPlayers INTEGER,                            --最少人数
+    MaxPlayers INTEGER,                            --最大人数，0表示无上限
+    MinCards   INTEGER,                            --套牌包含最少卡牌数
+    MaxCards   INTEGER,                            --套牌包含最大卡牌数，0表示无上限
+    Comment    NVARCHAR(500)                       --说明
 );
 INSERT INTO ListPlayFormats (FormatName, MinPlayers, MaxPlayers, MinCards, MaxCards, Comment) VALUES('现开', 2, 0, 40, 0, '在这种限制赛制中，你得利用全新的补充包来构组套牌。每位牌手各打开五或六包15 张的补充包，并利用自己从补充包中得到的牌，加上任意数量的基本地，来构组至少40 张的套牌。');
 INSERT INTO ListPlayFormats (FormatName, MinPlayers, MaxPlayers, MinCards, MaxCards, Comment) VALUES('补充包轮抽', 4, 8, 40, 0, '在这种限制赛制中，你能选择要用哪些牌来构组套牌。牌手围桌而坐，每人有三包未开封的15 张补充包。每位牌手打开第一包补充包，选一张牌，然后将剩下的牌传给左手边的人。别让其他人看到你选了什么或是补充包的内容！然后从别人传给你的牌里面选一张，再将剩下的牌向左传，直到所有的牌都如此选完。第二包补充包也如法泡制，但要向右边传。而最后一包补充包则再度向左传。用你所选的牌与任意数量的基本地来构组至少40 张的套牌。');

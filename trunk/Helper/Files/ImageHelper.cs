@@ -22,7 +22,7 @@ using System.Collections;
 using System.Drawing.Drawing2D; 
 using System.Net; 
 
-namespace GPSoft.Helper.FileOperate
+namespace GPSoft.Helper.Files
 {
     public class ImageHelper
     {
