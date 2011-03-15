@@ -41,7 +41,7 @@ using System.Xml;
 using System.Data.SqlClient;
 using System.Collections;
 
-namespace GPSoft.Helper.SqlServer
+namespace GPSoft.Helper.Data
 {
     /// <summary>
     /// SqlHelper类的目的是封装高性能，是共同使用SqlClient可扩展的最佳做法

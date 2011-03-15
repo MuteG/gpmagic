@@ -51,6 +51,15 @@
             get { return expansionsName; }
             set { expansionsName = value; }
         }
+        private string m_EnglishName = string.Empty;
+        /// <summary>
+        /// 获取或者设置系列英文名称
+        /// </summary>
+        public string EnglishName
+        {
+            get { return m_EnglishName; }
+            set { m_EnglishName = value; }
+        }
         private string symbol = string.Empty;
         /// <summary>
         /// 获取或者设置系列简称

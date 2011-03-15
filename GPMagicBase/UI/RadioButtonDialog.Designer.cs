@@ -30,7 +30,7 @@
         {
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
-            this.rgbMain = new GPSoft.Helper.Component.RadioGroupBox();
+            this.rgbMain = new GPSoft.Helper.UI.RadioGroupBox();
             this.SuspendLayout();
             // 
             // btnCancel
@@ -90,6 +90,6 @@
 
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnOK;
-        private GPSoft.Helper.Component.RadioGroupBox rgbMain;
+        private GPSoft.Helper.UI.RadioGroupBox rgbMain;
     }
 }

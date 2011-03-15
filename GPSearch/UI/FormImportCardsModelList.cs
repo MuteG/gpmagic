@@ -6,15 +6,15 @@ using System.Drawing;
 using System.Text;
 using System.IO;
 using System.Windows.Forms;
-using GPSoft.Helper.FileOperate;
-using GPSoft.Helper.FunctionHelper;
+using GPSoft.Helper.Files;
+using GPSoft.Helper.Utility;
 using GPSoft.GPMagic.GPMagicBase.Model;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormImportCardsModelList : Form
     {
-        private readonly string modelDir = Path.Combine(FunctionHelper.ApplicationPath, DefaultDirectoryName.ImportExport);
+        private readonly string modelDir = Path.Combine(UtilityHelper.ApplicationPath, DefaultDirectoryName.ImportExport);
         private List<ImportExportModel> modelList = new List<ImportExportModel>();
         public FormImportCardsModelList()
         {

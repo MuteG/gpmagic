@@ -62,7 +62,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
     {
         private int rarityID;
         /// <summary>
-        /// 稀有度编号
+        /// 获取或者设置稀有度编号
         /// </summary>
         [ColumnInfo(IsPrimaryKey = true, IsAutoIncrement = true)]
         public int RarityID
@@ -72,13 +72,22 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         }
         private string rarityName = string.Empty;
         /// <summary>
-        /// 稀有度名称
+        /// 获取或者设置稀有度名称
         /// </summary>
         [ColumnInfo(IsDisplayKeyWord = true)]
         public string RarityName
         {
             set { this.rarityName = value; }
             get { return this.rarityName; }
+        }
+        private string m_EnglishName = string.Empty;
+        /// <summary>
+        /// 获取或者设置稀有度英文名称
+        /// </summary>
+        public string EnglishName
+        {
+            get { return m_EnglishName; }
+            set { m_EnglishName = value; }
         }
     }
 }

@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Drawing;
 using System.Reflection;
 using System.Windows.Forms;
+using GPSoft.Helper.Utility;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {

@@ -86,7 +86,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
     public struct SQLiteDatabaseInformation
     {
         public static readonly string Connection = string.Format("Data Source={0}",
-            Path.Combine(GPSoft.Helper.FunctionHelper.FunctionHelper.ApplicationPath, "GPMagic.db3"));
+            Path.Combine(GPSoft.Helper.Utility.UtilityHelper.ApplicationPath, "GPMagic.db3"));
     }
     /// <summary>
     /// 系统各个文件夹的默认路径（相对路径）

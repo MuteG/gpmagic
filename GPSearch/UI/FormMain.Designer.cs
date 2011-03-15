@@ -63,7 +63,10 @@
             this.mnuItemDeckFilterSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemGridHeaderSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemDefaultSavePathSetting = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuItemImportModel = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemTotalCardsSetting = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemTotalCarsGridHeaderSetting = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemModelSetting = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuItemModelImportSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemStatistics = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
@@ -257,7 +260,8 @@
             this.mnuItemSetting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuItemCardSetting,
             this.mnuItemDeckSetting,
-            this.mnuItemImportModel});
+            this.mnuItemTotalCardsSetting,
+            this.mnuItemModelSetting});
             this.mnuItemSetting.Name = "mnuItemSetting";
             this.mnuItemSetting.Size = new System.Drawing.Size(41, 20);
             this.mnuItemSetting.Text = "设置";
@@ -268,21 +272,22 @@
             this.mnuItemCardTypeSetting,
             this.mnuItemCardAbilitiesSetting});
             this.mnuItemCardSetting.Name = "mnuItemCardSetting";
-            this.mnuItemCardSetting.Size = new System.Drawing.Size(148, 22);
+            this.mnuItemCardSetting.Size = new System.Drawing.Size(152, 22);
             this.mnuItemCardSetting.Text = "卡牌";
             // 
             // mnuItemCardTypeSetting
             // 
             this.mnuItemCardTypeSetting.Name = "mnuItemCardTypeSetting";
-            this.mnuItemCardTypeSetting.Size = new System.Drawing.Size(118, 22);
+            this.mnuItemCardTypeSetting.Size = new System.Drawing.Size(152, 22);
             this.mnuItemCardTypeSetting.Text = "卡牌类别";
             this.mnuItemCardTypeSetting.Click += new System.EventHandler(this.mnuItemCardTypeSetting_Click);
             // 
             // mnuItemCardAbilitiesSetting
             // 
             this.mnuItemCardAbilitiesSetting.Name = "mnuItemCardAbilitiesSetting";
-            this.mnuItemCardAbilitiesSetting.Size = new System.Drawing.Size(118, 22);
+            this.mnuItemCardAbilitiesSetting.Size = new System.Drawing.Size(152, 22);
             this.mnuItemCardAbilitiesSetting.Text = "卡牌异能";
+            this.mnuItemCardAbilitiesSetting.Click += new System.EventHandler(this.mnuItemCardAbilitiesSetting_Click);
             // 
             // mnuItemDeckSetting
             // 
@@ -291,7 +296,7 @@
             this.mnuItemGridHeaderSetting,
             this.mnuItemDefaultSavePathSetting});
             this.mnuItemDeckSetting.Name = "mnuItemDeckSetting";
-            this.mnuItemDeckSetting.Size = new System.Drawing.Size(148, 22);
+            this.mnuItemDeckSetting.Size = new System.Drawing.Size(152, 22);
             this.mnuItemDeckSetting.Text = "套牌";
             // 
             // mnuItemDeckFilterSetting
@@ -313,12 +318,35 @@
             this.mnuItemDefaultSavePathSetting.Size = new System.Drawing.Size(166, 22);
             this.mnuItemDefaultSavePathSetting.Text = "牌表默认保存路径";
             // 
-            // mnuItemImportModel
+            // mnuItemTotalCardsSetting
             // 
-            this.mnuItemImportModel.Name = "mnuItemImportModel";
-            this.mnuItemImportModel.Size = new System.Drawing.Size(148, 22);
-            this.mnuItemImportModel.Text = "导入/导出模板";
-            this.mnuItemImportModel.Click += new System.EventHandler(this.mnuItemImportModel_Click);
+            this.mnuItemTotalCardsSetting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuItemTotalCarsGridHeaderSetting});
+            this.mnuItemTotalCardsSetting.Name = "mnuItemTotalCardsSetting";
+            this.mnuItemTotalCardsSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemTotalCardsSetting.Text = "牌库";
+            // 
+            // mnuItemTotalCarsGridHeaderSetting
+            // 
+            this.mnuItemTotalCarsGridHeaderSetting.Name = "mnuItemTotalCarsGridHeaderSetting";
+            this.mnuItemTotalCarsGridHeaderSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemTotalCarsGridHeaderSetting.Text = "牌库列表表头";
+            this.mnuItemTotalCarsGridHeaderSetting.Click += new System.EventHandler(this.mnuItemTotalCarsGridHeaderSetting_Click);
+            // 
+            // mnuItemModelSetting
+            // 
+            this.mnuItemModelSetting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuItemModelImportSetting});
+            this.mnuItemModelSetting.Name = "mnuItemModelSetting";
+            this.mnuItemModelSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemModelSetting.Text = "模板";
+            // 
+            // mnuItemModelImportSetting
+            // 
+            this.mnuItemModelImportSetting.Name = "mnuItemModelImportSetting";
+            this.mnuItemModelImportSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemModelImportSetting.Text = "导入/导出";
+            this.mnuItemModelImportSetting.Click += new System.EventHandler(this.mnuItemModelImportSetting_Click);
             // 
             // mnuItemStatistics
             // 
@@ -1077,13 +1105,16 @@
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem mnuItemImportData;
         private System.Windows.Forms.ToolStripMenuItem mnuItemExportData;
-        private System.Windows.Forms.ToolStripMenuItem mnuItemImportModel;
         private System.Windows.Forms.ToolStripButton tsbtnShowDeckList;
         private System.Windows.Forms.Panel pnlCardList;
         private System.Windows.Forms.Panel pnlCardInformation;
         private System.Windows.Forms.GroupBox gbxCardImage;
         private System.Windows.Forms.PictureBox pbxCardImage;
         private GPSoft.GPMagic.GPMagicBase.UI.CollapsiblePanel cplInformation;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemTotalCardsSetting;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemTotalCarsGridHeaderSetting;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemModelSetting;
+        private System.Windows.Forms.ToolStripMenuItem mnuItemModelImportSetting;
     }
 }
 

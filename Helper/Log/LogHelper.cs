@@ -20,7 +20,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
-namespace GPSoft.Helper.LogHelper
+namespace GPSoft.Helper.Log
 {
     public enum LogInstance
     {
@@ -187,7 +187,7 @@ namespace GPSoft.Helper.LogHelper
 
     public class TxtLogHelper : ILogHelper
     {
-        #region 写文本日志（ログを書きます）
+        #region 写文本日志
 
         /// <summary>
         /// 向日志文件中输出一个空行
@@ -198,12 +198,12 @@ namespace GPSoft.Helper.LogHelper
         }
 
         /// <summary>
-        /// 写日志（ログを書きます）
+        /// 写日志
         /// </summary>
-        /// <param name="logType">日志类型（ログのタイプ）、LogType参照</param>
-        /// <param name="message">日志信息（ログの情報）</param>
-        /// /// <param name="logPath">日志路径（ログのパス）</param>
-        /// <param name="logName">日志文件名（ログの名）</param>
+        /// <param name="logType">日志类型</param>
+        /// <param name="message">日志信息</param>
+        /// /// <param name="logPath">日志路径</param>
+        /// <param name="logName">日志文件名</param>
         public void WriteLog(LogType logType, string message, string logPath, string logName)
         {
             string logMsg = DateTime.Now.ToString("HH:mm:ss fff\t");
@@ -285,21 +285,21 @@ namespace GPSoft.Helper.LogHelper
         }
 
         /// <summary>
-        /// 写日志（ログを書きます）
+        /// 写日志
         /// </summary>
-        /// <param name="logType">日志类型（ログのタイプ）、LogType参照</param>
-        /// <param name="message">日志信息（ログの情報）</param>
-        /// /// <param name="logPath">日志路径（ログのパス）</param>
+        /// <param name="logType">日志类型</param>
+        /// <param name="message">日志信息</param>
+        /// /// <param name="logPath">日志路径</param>
         public void WriteLog(LogType logType, string message, string logPath)
         {
             WriteLog(logType, message, logPath, DateTime.Now.ToString("yyyy-MM-dd.LOG"));
         }
 
         /// <summary>
-        /// 写日志（ログを書きます）
+        /// 写日志
         /// </summary>
-        /// <param name="logType">日志类型（ログのタイプ）、LogType参照</param>
-        /// <param name="sMessage">日志信息（ログの情報）</param>
+        /// <param name="logType">日志类型</param>
+        /// <param name="sMessage">日志信息</param>
         public void WriteLog(LogType logType, string message)
         {
             WriteLog(logType, message, AppDomain.CurrentDomain.BaseDirectory + "\\LOG");

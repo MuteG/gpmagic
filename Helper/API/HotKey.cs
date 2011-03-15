@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace GPSoft.Helper.HotKey
+namespace GPSoft.Helper.API
 {
     public delegate void HotkeyEventHandler(int HotKeyID);
 

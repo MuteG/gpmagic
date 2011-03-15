@@ -24,7 +24,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Collections.Generic;
 
-namespace GPSoft.Helper.FileOperate
+namespace GPSoft.Helper.Files
 {
     public class FileHelper
     {

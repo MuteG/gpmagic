@@ -6,8 +6,8 @@ using System.Reflection;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
 using GPSoft.GPMagic.GPMagicBase.Model.Database;
-using GPSoft.Helper.FileOperate;
-using GPSoft.Helper.FunctionHelper;
+using GPSoft.Helper.Files;
+using GPSoft.Helper.Utility;
 
 namespace GPSoft.GPMagic.GPSearch.UI
 {
@@ -154,7 +154,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             {
                 if (0 == currentModel.Path.Length)
                 {
-                    currentModel.Path = Path.Combine(FunctionHelper.ApplicationPath,
+                    currentModel.Path = Path.Combine(UtilityHelper.ApplicationPath,
                         string.Format("{0}\\{1}.{2}",
                             DefaultDirectoryName.ImportExport,
                             currentModel.Name,
