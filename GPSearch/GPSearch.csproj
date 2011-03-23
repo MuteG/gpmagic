@@ -43,6 +43,7 @@
     <Compile Include="Common\CommonHelper.cs" />
     <Compile Include="Common\ComponentFiller.cs" />
     <Compile Include="Common\TotalCardFilter.cs" />
+    <Compile Include="Model\HeaderField.cs" />
     <Compile Include="Model\IFilterable.cs" />
     <Compile Include="UI\AboutBox.cs">
       <SubType>Form</SubType>
@@ -185,6 +186,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormSetHeader.resx">
+      <DependentUpon>FormSetHeader.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
@@ -198,6 +202,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="UI\FormSetHeader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormSetHeader.Designer.cs">
+      <DependentUpon>FormSetHeader.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

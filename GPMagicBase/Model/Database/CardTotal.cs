@@ -132,6 +132,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌所属系列缩写
         /// </summary>
+        [Description("系列")]
         public string Symbol
         {
             get
@@ -192,7 +193,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Database
         /// <summary>
         /// 获取或者设置卡牌异能全文
         /// </summary>
-        [Description("异能全文")]
+        [Description("异能")]
         public string Abilities
         {
             get

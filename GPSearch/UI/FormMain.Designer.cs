@@ -33,12 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.mnuStpMain = new System.Windows.Forms.MenuStrip();
@@ -103,6 +103,16 @@
             this.mnuItemFilterLand = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuItemFilterSpell = new System.Windows.Forms.ToolStripMenuItem();
             this.dgvCardList = new System.Windows.Forms.DataGridView();
+            this.dgvDeckList = new System.Windows.Forms.DataGridView();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pnlCardList = new System.Windows.Forms.Panel();
+            this.pnlCardInformation = new System.Windows.Forms.Panel();
+            this.cplInformation = new GPSoft.GPMagic.GPMagicBase.UI.CollapsiblePanel();
+            this.gbxCardImage = new System.Windows.Forms.GroupBox();
+            this.pbxCardImage = new System.Windows.Forms.PictureBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.ofdDeck = new System.Windows.Forms.OpenFileDialog();
             this.dgvColExpansions = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColCNName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColENName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -113,22 +123,10 @@
             this.dgvColPower = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColToughness = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvColPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvColCardID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgvDeckList = new System.Windows.Forms.DataGridView();
             this.colDCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDSymbol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDCardName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDCardID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.pnlCardList = new System.Windows.Forms.Panel();
-            this.pnlCardInformation = new System.Windows.Forms.Panel();
-            this.cplInformation = new GPSoft.GPMagic.GPMagicBase.UI.CollapsiblePanel();
-            this.gbxCardImage = new System.Windows.Forms.GroupBox();
-            this.pbxCardImage = new System.Windows.Forms.PictureBox();
-            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.ofdDeck = new System.Windows.Forms.OpenFileDialog();
             this.mnuStpMain.SuspendLayout();
             this.gbxCardLibrary.SuspendLayout();
             this.tspCardLibrary.SuspendLayout();
@@ -231,27 +229,27 @@
             this.mnuItemEditCard,
             this.mnuItemDeleteCard});
             this.mnuItemCardEdit.Name = "mnuItemCardEdit";
-            this.mnuItemCardEdit.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemCardEdit.Size = new System.Drawing.Size(94, 22);
             this.mnuItemCardEdit.Text = "卡牌";
             // 
             // mnuItemAddCard
             // 
             this.mnuItemAddCard.Name = "mnuItemAddCard";
-            this.mnuItemAddCard.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemAddCard.Size = new System.Drawing.Size(118, 22);
             this.mnuItemAddCard.Text = "添加卡牌";
             this.mnuItemAddCard.Click += new System.EventHandler(this.mnuItemAddCard_Click);
             // 
             // mnuItemEditCard
             // 
             this.mnuItemEditCard.Name = "mnuItemEditCard";
-            this.mnuItemEditCard.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemEditCard.Size = new System.Drawing.Size(118, 22);
             this.mnuItemEditCard.Text = "编辑卡牌";
             this.mnuItemEditCard.Click += new System.EventHandler(this.mnuItemEditCard_Click);
             // 
             // mnuItemDeleteCard
             // 
             this.mnuItemDeleteCard.Name = "mnuItemDeleteCard";
-            this.mnuItemDeleteCard.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemDeleteCard.Size = new System.Drawing.Size(118, 22);
             this.mnuItemDeleteCard.Text = "删除卡牌";
             this.mnuItemDeleteCard.Click += new System.EventHandler(this.mnuItemDeleteCard_Click);
             // 
@@ -272,20 +270,20 @@
             this.mnuItemCardTypeSetting,
             this.mnuItemCardAbilitiesSetting});
             this.mnuItemCardSetting.Name = "mnuItemCardSetting";
-            this.mnuItemCardSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemCardSetting.Size = new System.Drawing.Size(94, 22);
             this.mnuItemCardSetting.Text = "卡牌";
             // 
             // mnuItemCardTypeSetting
             // 
             this.mnuItemCardTypeSetting.Name = "mnuItemCardTypeSetting";
-            this.mnuItemCardTypeSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemCardTypeSetting.Size = new System.Drawing.Size(118, 22);
             this.mnuItemCardTypeSetting.Text = "卡牌类别";
             this.mnuItemCardTypeSetting.Click += new System.EventHandler(this.mnuItemCardTypeSetting_Click);
             // 
             // mnuItemCardAbilitiesSetting
             // 
             this.mnuItemCardAbilitiesSetting.Name = "mnuItemCardAbilitiesSetting";
-            this.mnuItemCardAbilitiesSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemCardAbilitiesSetting.Size = new System.Drawing.Size(118, 22);
             this.mnuItemCardAbilitiesSetting.Text = "卡牌异能";
             this.mnuItemCardAbilitiesSetting.Click += new System.EventHandler(this.mnuItemCardAbilitiesSetting_Click);
             // 
@@ -296,7 +294,7 @@
             this.mnuItemGridHeaderSetting,
             this.mnuItemDefaultSavePathSetting});
             this.mnuItemDeckSetting.Name = "mnuItemDeckSetting";
-            this.mnuItemDeckSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemDeckSetting.Size = new System.Drawing.Size(94, 22);
             this.mnuItemDeckSetting.Text = "套牌";
             // 
             // mnuItemDeckFilterSetting
@@ -323,13 +321,13 @@
             this.mnuItemTotalCardsSetting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuItemTotalCarsGridHeaderSetting});
             this.mnuItemTotalCardsSetting.Name = "mnuItemTotalCardsSetting";
-            this.mnuItemTotalCardsSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemTotalCardsSetting.Size = new System.Drawing.Size(94, 22);
             this.mnuItemTotalCardsSetting.Text = "牌库";
             // 
             // mnuItemTotalCarsGridHeaderSetting
             // 
             this.mnuItemTotalCarsGridHeaderSetting.Name = "mnuItemTotalCarsGridHeaderSetting";
-            this.mnuItemTotalCarsGridHeaderSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemTotalCarsGridHeaderSetting.Size = new System.Drawing.Size(142, 22);
             this.mnuItemTotalCarsGridHeaderSetting.Text = "牌库列表表头";
             this.mnuItemTotalCarsGridHeaderSetting.Click += new System.EventHandler(this.mnuItemTotalCarsGridHeaderSetting_Click);
             // 
@@ -338,13 +336,13 @@
             this.mnuItemModelSetting.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuItemModelImportSetting});
             this.mnuItemModelSetting.Name = "mnuItemModelSetting";
-            this.mnuItemModelSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemModelSetting.Size = new System.Drawing.Size(94, 22);
             this.mnuItemModelSetting.Text = "模板";
             // 
             // mnuItemModelImportSetting
             // 
             this.mnuItemModelImportSetting.Name = "mnuItemModelImportSetting";
-            this.mnuItemModelImportSetting.Size = new System.Drawing.Size(152, 22);
+            this.mnuItemModelImportSetting.Size = new System.Drawing.Size(124, 22);
             this.mnuItemModelImportSetting.Text = "导入/导出";
             this.mnuItemModelImportSetting.Click += new System.EventHandler(this.mnuItemModelImportSetting_Click);
             // 
@@ -714,8 +712,7 @@
             this.dgvColCost,
             this.dgvColPower,
             this.dgvColToughness,
-            this.dgvColPrice,
-            this.dgvColCardID});
+            this.dgvColPrice});
             this.dgvCardList.Location = new System.Drawing.Point(0, 41);
             this.dgvCardList.Name = "dgvCardList";
             this.dgvCardList.ReadOnly = true;
@@ -731,89 +728,6 @@
             this.dgvCardList.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCardList_CellMouseDown);
             this.dgvCardList.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCardList_CellMouseDoubleClick);
             this.dgvCardList.CurrentCellChanged += new System.EventHandler(this.dgvCardList_CurrentCellChanged);
-            // 
-            // dgvColExpansions
-            // 
-            this.dgvColExpansions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColExpansions.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvColExpansions.Frozen = true;
-            this.dgvColExpansions.HeaderText = "系列";
-            this.dgvColExpansions.Name = "dgvColExpansions";
-            this.dgvColExpansions.ReadOnly = true;
-            this.dgvColExpansions.Width = 40;
-            // 
-            // dgvColCNName
-            // 
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColCNName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvColCNName.HeaderText = "中文名";
-            this.dgvColCNName.Name = "dgvColCNName";
-            this.dgvColCNName.ReadOnly = true;
-            this.dgvColCNName.Width = 120;
-            // 
-            // dgvColENName
-            // 
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvColENName.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvColENName.HeaderText = "英文名";
-            this.dgvColENName.Name = "dgvColENName";
-            this.dgvColENName.ReadOnly = true;
-            this.dgvColENName.Width = 150;
-            // 
-            // dgvColType
-            // 
-            this.dgvColType.HeaderText = "类别";
-            this.dgvColType.Name = "dgvColType";
-            this.dgvColType.ReadOnly = true;
-            this.dgvColType.Width = 80;
-            // 
-            // dgvColSubType
-            // 
-            this.dgvColSubType.HeaderText = "子类别";
-            this.dgvColSubType.Name = "dgvColSubType";
-            this.dgvColSubType.ReadOnly = true;
-            // 
-            // dgvColAbilities
-            // 
-            this.dgvColAbilities.HeaderText = "异能";
-            this.dgvColAbilities.Name = "dgvColAbilities";
-            this.dgvColAbilities.ReadOnly = true;
-            // 
-            // dgvColCost
-            // 
-            this.dgvColCost.HeaderText = "费用";
-            this.dgvColCost.Name = "dgvColCost";
-            this.dgvColCost.ReadOnly = true;
-            // 
-            // dgvColPower
-            // 
-            this.dgvColPower.HeaderText = "攻击";
-            this.dgvColPower.Name = "dgvColPower";
-            this.dgvColPower.ReadOnly = true;
-            this.dgvColPower.Width = 40;
-            // 
-            // dgvColToughness
-            // 
-            this.dgvColToughness.HeaderText = "防御";
-            this.dgvColToughness.Name = "dgvColToughness";
-            this.dgvColToughness.ReadOnly = true;
-            this.dgvColToughness.Width = 40;
-            // 
-            // dgvColPrice
-            // 
-            this.dgvColPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dgvColPrice.HeaderText = "参考价格";
-            this.dgvColPrice.MinimumWidth = 70;
-            this.dgvColPrice.Name = "dgvColPrice";
-            this.dgvColPrice.ReadOnly = true;
-            // 
-            // dgvColCardID
-            // 
-            this.dgvColCardID.HeaderText = "CardID";
-            this.dgvColCardID.Name = "dgvColCardID";
-            this.dgvColCardID.ReadOnly = true;
-            this.dgvColCardID.Visible = false;
             // 
             // dgvDeckList
             // 
@@ -840,8 +754,7 @@
             this.colDCount,
             this.colDSymbol,
             this.colDCardName,
-            this.colDCost,
-            this.colDCardID});
+            this.colDCost});
             this.dgvDeckList.Location = new System.Drawing.Point(0, 41);
             this.dgvDeckList.Name = "dgvDeckList";
             this.dgvDeckList.ReadOnly = true;
@@ -856,53 +769,6 @@
             this.dgvDeckList.DragEnter += new System.Windows.Forms.DragEventHandler(this.dgvDeckList_DragEnter);
             this.dgvDeckList.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dgvDeckList_KeyDown);
             this.dgvDeckList.DragDrop += new System.Windows.Forms.DragEventHandler(this.dgvDeckList_DragDrop);
-            // 
-            // colDCount
-            // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.colDCount.DefaultCellStyle = dataGridViewCellStyle9;
-            this.colDCount.HeaderText = "数量";
-            this.colDCount.Name = "colDCount";
-            this.colDCount.ReadOnly = true;
-            this.colDCount.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colDCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colDCount.Width = 40;
-            // 
-            // colDSymbol
-            // 
-            this.colDSymbol.HeaderText = "系列";
-            this.colDSymbol.Name = "colDSymbol";
-            this.colDSymbol.ReadOnly = true;
-            this.colDSymbol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colDSymbol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colDSymbol.Width = 40;
-            // 
-            // colDCardName
-            // 
-            this.colDCardName.HeaderText = "卡牌名";
-            this.colDCardName.Name = "colDCardName";
-            this.colDCardName.ReadOnly = true;
-            this.colDCardName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colDCardName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colDCardName.Width = 120;
-            // 
-            // colDCost
-            // 
-            this.colDCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.colDCost.DefaultCellStyle = dataGridViewCellStyle10;
-            this.colDCost.HeaderText = "费用";
-            this.colDCost.Name = "colDCost";
-            this.colDCost.ReadOnly = true;
-            this.colDCost.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colDCost.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colDCardID
-            // 
-            this.colDCardID.HeaderText = "CardID";
-            this.colDCardID.Name = "colDCardID";
-            this.colDCardID.ReadOnly = true;
-            this.colDCardID.Visible = false;
             // 
             // splitContainer1
             // 
@@ -986,6 +852,122 @@
             this.ofdDeck.Filter = "中文牌表|*.txt|MWS牌表格式|*.mwDeck";
             this.ofdDeck.InitialDirectory = ".";
             // 
+            // dgvColExpansions
+            // 
+            this.dgvColExpansions.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColExpansions.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvColExpansions.Frozen = true;
+            this.dgvColExpansions.HeaderText = "系列";
+            this.dgvColExpansions.Name = "dgvColExpansions";
+            this.dgvColExpansions.ReadOnly = true;
+            this.dgvColExpansions.Width = 40;
+            // 
+            // dgvColCNName
+            // 
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColCNName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvColCNName.HeaderText = "中文名";
+            this.dgvColCNName.Name = "dgvColCNName";
+            this.dgvColCNName.ReadOnly = true;
+            this.dgvColCNName.Width = 120;
+            // 
+            // dgvColENName
+            // 
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvColENName.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvColENName.HeaderText = "英文名";
+            this.dgvColENName.Name = "dgvColENName";
+            this.dgvColENName.ReadOnly = true;
+            this.dgvColENName.Width = 150;
+            // 
+            // dgvColType
+            // 
+            this.dgvColType.HeaderText = "类别";
+            this.dgvColType.Name = "dgvColType";
+            this.dgvColType.ReadOnly = true;
+            this.dgvColType.Width = 80;
+            // 
+            // dgvColSubType
+            // 
+            this.dgvColSubType.HeaderText = "子类别";
+            this.dgvColSubType.Name = "dgvColSubType";
+            this.dgvColSubType.ReadOnly = true;
+            // 
+            // dgvColAbilities
+            // 
+            this.dgvColAbilities.HeaderText = "异能";
+            this.dgvColAbilities.Name = "dgvColAbilities";
+            this.dgvColAbilities.ReadOnly = true;
+            // 
+            // dgvColCost
+            // 
+            this.dgvColCost.HeaderText = "费用";
+            this.dgvColCost.Name = "dgvColCost";
+            this.dgvColCost.ReadOnly = true;
+            // 
+            // dgvColPower
+            // 
+            this.dgvColPower.HeaderText = "攻击";
+            this.dgvColPower.Name = "dgvColPower";
+            this.dgvColPower.ReadOnly = true;
+            this.dgvColPower.Width = 40;
+            // 
+            // dgvColToughness
+            // 
+            this.dgvColToughness.HeaderText = "防御";
+            this.dgvColToughness.Name = "dgvColToughness";
+            this.dgvColToughness.ReadOnly = true;
+            this.dgvColToughness.Width = 40;
+            // 
+            // dgvColPrice
+            // 
+            this.dgvColPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dgvColPrice.HeaderText = "参考价格";
+            this.dgvColPrice.MinimumWidth = 70;
+            this.dgvColPrice.Name = "dgvColPrice";
+            this.dgvColPrice.ReadOnly = true;
+            // 
+            // colDCount
+            // 
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.colDCount.DefaultCellStyle = dataGridViewCellStyle9;
+            this.colDCount.HeaderText = "数量";
+            this.colDCount.Name = "colDCount";
+            this.colDCount.ReadOnly = true;
+            this.colDCount.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDCount.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colDCount.Width = 40;
+            // 
+            // colDSymbol
+            // 
+            this.colDSymbol.HeaderText = "系列";
+            this.colDSymbol.Name = "colDSymbol";
+            this.colDSymbol.ReadOnly = true;
+            this.colDSymbol.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDSymbol.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colDSymbol.Width = 40;
+            // 
+            // colDCardName
+            // 
+            this.colDCardName.HeaderText = "卡牌名";
+            this.colDCardName.Name = "colDCardName";
+            this.colDCardName.ReadOnly = true;
+            this.colDCardName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDCardName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colDCardName.Width = 120;
+            // 
+            // colDCost
+            // 
+            this.colDCost.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.colDCost.DefaultCellStyle = dataGridViewCellStyle10;
+            this.colDCost.HeaderText = "费用";
+            this.colDCost.Name = "colDCost";
+            this.colDCost.ReadOnly = true;
+            this.colDCost.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDCost.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1060,22 +1042,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuItemCardSetting;
         private System.Windows.Forms.ToolStripButton tsbtnSearch;
         private System.Windows.Forms.ToolStripButton tsbtnColor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColExpansions;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCNName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColENName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColSubType;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColAbilities;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColPower;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColToughness;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColPrice;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCardID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDCount;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDSymbol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDCardName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDCardID;
         private System.Windows.Forms.ToolStrip tspDeckList;
         private System.Windows.Forms.ToolStripButton tsbtnLockDeck;
         private System.Windows.Forms.ToolTip toolTip1;
@@ -1115,6 +1081,20 @@
         private System.Windows.Forms.ToolStripMenuItem mnuItemTotalCarsGridHeaderSetting;
         private System.Windows.Forms.ToolStripMenuItem mnuItemModelSetting;
         private System.Windows.Forms.ToolStripMenuItem mnuItemModelImportSetting;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColExpansions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCNName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColENName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColSubType;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColAbilities;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColPower;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColToughness;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgvColPrice;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDCount;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDSymbol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDCardName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDCost;
     }
 }
 

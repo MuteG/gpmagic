@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Drawing;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
 using GPSoft.GPMagic.GPMagicBase.Model.Database;
@@ -10,6 +11,7 @@ using GPSoft.GPMagic.GPMagicBase.Model.Deck;
 using GPSoft.GPMagic.GPMagicBase.Module.Deck;
 using GPSoft.GPMagic.GPMagicBase.UI;
 using GPSoft.GPMagic.GPSearch.Common;
+using GPSoft.GPMagic.GPSearch.Model;
 using GPSoft.Helper.Utility;
 
 namespace GPSoft.GPMagic.GPSearch.UI
@@ -89,9 +91,9 @@ namespace GPSoft.GPMagic.GPSearch.UI
                         cardRow["ManaCost"].ToString(),
                         cardRow["Power"].ToString(),
                         cardRow["Toughness"].ToString(),
-                        cardRow["CardPrice"].ToString(),
-                        cardRow["CardID"]
+                        cardRow["CardPrice"].ToString()
                         );
+                    dgvCardList.Rows[newRowIndex].Tag = cardRow["CardID"];
                     dgvCardList.Rows[newRowIndex].DefaultCellStyle.ForeColor = CommonHelper.CardRarity.GetRarityColor(rarity);
                 }
                 if (frmInfo != null && frmInfo.EditStatus == DataOperateType.Update)
@@ -107,7 +109,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             if (dgvCardList.SelectedRows.Count > 0)
             {
-                int cardID = Convert.ToInt32(dgvCardList.SelectedRows[0].Cells[dgvCardList.Columns.Count - 1].Value);
+                int cardID = Convert.ToInt32(dgvCardList.SelectedRows[0].Tag);
                 ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
                 FrmInfo.Owner = this;
                 FrmInfo.ShowCardInfo(card);
@@ -159,7 +161,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 (DataGridViewRow[])e.Data.GetData(typeof(DataGridViewRow[]));
             foreach (DataGridViewRow row in selectedRows)
             {
-                int cardID = Convert.ToInt32(row.Cells["dgvColCardID"].Value);
+                int cardID = Convert.ToInt32(row.Tag);
                 DeckCard card = (DeckCard)this.Cards.GetDataInstance(cardID, typeof(DeckCard));
                 AddDeckList(card);
             }
@@ -173,7 +175,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void dgvCardList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int cardID = Convert.ToInt32(dgvCardList.Rows[e.RowIndex].Cells[dgvCardList.Columns.Count - 1].Value);
+            int cardID = Convert.ToInt32(dgvCardList.Rows[e.RowIndex].Tag);
             ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
             FrmInfo.Owner = this;
             FrmInfo.ShowCardInfo(card);
@@ -198,7 +200,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                     index--;
                 }
                 SelectRowAtIndex(index);
-                int cardID = Convert.ToInt32(dgvCardList.Rows[index].Cells[dgvCardList.Columns.Count - 1].Value);
+                int cardID = Convert.ToInt32(dgvCardList.Rows[index].Tag);
                 ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
                 FrmInfo.ShowCardInfo(card);
 
@@ -240,7 +242,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
                     index++;
                 }
                 SelectRowAtIndex(index);
-                int cardID = Convert.ToInt32(dgvCardList.Rows[index].Cells[dgvCardList.Columns.Count - 1].Value);
+                int cardID = Convert.ToInt32(dgvCardList.Rows[index].Tag);
                 ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
                 FrmInfo.ShowCardInfo(card);
 
@@ -260,7 +262,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             //这里要改为二分法搜索
             foreach (DataGridViewRow row in dgvCardList.Rows)
             {
-                if (cardID == Convert.ToInt32(row.Cells["dgvColCardID"].Value))
+                if (cardID == Convert.ToInt32(row.Tag))
                 {
                     result = row.Index;
                     break;
@@ -311,9 +313,12 @@ namespace GPSoft.GPMagic.GPSearch.UI
             if (null != dgvCardList.CurrentCell)
             {
                 int index = dgvCardList.CurrentCell.RowIndex;
-                int cardID = Convert.ToInt32(dgvCardList.Rows[index].Cells[dgvCardList.Columns.Count - 1].Value);
-                ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
-                ShowDardImage(card);
+                int cardID = Convert.ToInt32(dgvCardList.Rows[index].Tag);
+                if (cardID > 0)
+                {
+                    ListCardTotal card = (ListCardTotal)cards.GetDataInstance(cardID);
+                    ShowDardImage(card);
+                }
             }
         }
 
@@ -330,7 +335,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             {
                 foreach (DataGridViewRow row in dgvCardList.SelectedRows)
                 {
-                    Cards.Remove(Cards.GetDataInstance(row.Cells["dgvColCardID"].Value));
+                    Cards.Remove(Cards.GetDataInstance(row.Tag));
                 }
                 FillDataGridView();
             }
@@ -382,9 +387,9 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 int rowIndex = dgvDeckList.Rows.Add(1,
                                                     card.Symbol,
                                                     card.CardName,
-                                                    card.ManaCost,
-                                                    card.CardID);
+                                                    card.ManaCost);
                 DataRow deckRow = this.Cards.Records.Select(string.Format("CardID={0}", card.CardID))[0];
+                dgvDeckList.Rows[rowIndex].Tag = card.CardID;
                 dgvDeckList.Rows[rowIndex].DefaultCellStyle.ForeColor =
                     CommonHelper.CardRarity.GetRarityColor(card.Rarity);
                 this.workDeck.Deck.CardRecords.Rows.Add(deckRow.ItemArray);
@@ -399,7 +404,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             int count = Convert.ToInt32(dgvDeckList.Rows[index].Cells["colDCount"].Value);
             dgvDeckList.Rows[index].Cells["colDCount"].Value = count + 1;
-            DeckCard card = GetDeckCardFromWorkDeck((int)dgvDeckList.Rows[index].Cells["colDCardID"].Value);
+            DeckCard card = GetDeckCardFromWorkDeck((int)dgvDeckList.Rows[index].Tag);
             card.Count++;
         }
 
@@ -422,7 +427,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             int result = -1;
             foreach (DataGridViewRow row in dgvDeckList.Rows)
             {
-                if (cardID == Convert.ToInt32(row.Cells["colDCardID"].Value))
+                if (cardID == Convert.ToInt32(row.Tag))
                 {
                     result = row.Index;
                     break;
@@ -469,7 +474,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private void RemoveDeckCard(int deckGridViewIndex)
         {
             dgvDeckList.Rows.RemoveAt(deckGridViewIndex);
-            DeckCard card = GetDeckCardFromWorkDeck((int)dgvDeckList.Rows[deckGridViewIndex].Cells["colDCardID"].Value);
+            DeckCard card = GetDeckCardFromWorkDeck((int)dgvDeckList.Rows[deckGridViewIndex].Tag);
             this.workDeck.Deck.Cards.Remove(card);
             foreach (DataRow deckRow in this.workDeck.Deck.CardRecords.Rows)
             {
@@ -583,7 +588,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
             int result = 0;
             foreach (DataGridViewRow row in dgvDeckList.Rows)
             {
-                if (cardID == Convert.ToInt32(row.Cells["colDCardID"].Value))
+                if (cardID == Convert.ToInt32(row.Tag))
                 {
                     result = Convert.ToInt32(row.Cells["colDCount"].Value);
                     break;
@@ -651,7 +656,21 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void mnuItemTotalCarsGridHeaderSetting_Click(object sender, EventArgs e)
         {
-            
+            List<HeaderField> headerFields = new List<HeaderField>();
+            using (FormSetHeader frmSetHeader = new FormSetHeader())
+            {
+                if (frmSetHeader.ShowDialog(headerFields) == DialogResult.OK)
+                {
+                    //测试用代码
+                    StringBuilder message = new StringBuilder();
+                    foreach (HeaderField header in headerFields)
+                    {
+                        message.AppendLine(string.Format("Field={0}, Display={1}", header.FieldName, header.Description));
+                    }
+
+                    MessageBox.Show(message.ToString());
+                }
+            }
         }
 
         private void mnuItemCardAbilitiesSetting_Click(object sender, EventArgs e)
