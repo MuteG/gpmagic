@@ -108,7 +108,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model.Deck
     public sealed class ConfigDeckFilterList
     {
         private string configPath = Path.Combine(UtilityHelper.ApplicationPath,
-            string.Format("{0}\\DeckFilter.set", DefaultDirectoryName.Config));
+            string.Format("{0}\\DeckFilter.set", DefaultDirectoryName.Setting));
         /// <summary>
         /// 获取或者设置配置文件保存路径
         /// </summary>
