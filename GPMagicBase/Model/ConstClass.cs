@@ -104,7 +104,7 @@ namespace GPSoft.GPMagic.GPMagicBase.Model
         /// <summary>
         /// 配置文件保存文件夹
         /// </summary>
-        public static readonly string Config = "Set";
+        public static readonly string Setting = "Set";
     }
     public struct DialogInformation
     {

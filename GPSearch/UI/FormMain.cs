@@ -6,6 +6,7 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.GPMagic.GPMagicBase.Model.Setting;
 using GPSoft.GPMagic.GPMagicBase.Model.Database;
 using GPSoft.GPMagic.GPMagicBase.Model.Deck;
 using GPSoft.GPMagic.GPMagicBase.Module.Deck;
@@ -18,8 +19,9 @@ namespace GPSoft.GPMagic.GPSearch.UI
 {
     public partial class FormMain : Form
     {
-        private TotalCardFilter totalCardsFilter = new TotalCardFilter();
-        private FormCardInfo frmInfo = null;
+        private TotalCardFilter m_TotalCardsFilter = new TotalCardFilter();
+        private HeaderFieldsSetting m_LibraryHeaderSetting = new HeaderFieldsSetting();
+        private FormCardInfo m_FormCardInfo = null;
         /// <summary>
         /// 获取卡牌详细信息窗口实例
         /// </summary>
@@ -27,15 +29,15 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             get
             {
-                if (null == frmInfo || frmInfo.IsDisposed || frmInfo.Disposing)
+                if (null == m_FormCardInfo || m_FormCardInfo.IsDisposed || m_FormCardInfo.Disposing)
                 {
-                    frmInfo = new FormCardInfo();
+                    m_FormCardInfo = new FormCardInfo();
                 }
                 else
                 {
 
                 }
-                return frmInfo;
+                return m_FormCardInfo;
             }
         }
         
@@ -75,30 +77,41 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         public void FillDataGridView()
         {
+            dgvCardList.Rows.Clear();
+            ResetDataGridViewHeaders();
             if (cards.Count > 0)
             {
-                dgvCardList.Rows.Clear();
-                foreach (DataRow cardRow in this.totalCardsFilter.Filter(cards.Records))
+                foreach (DataRow cardRow in this.m_TotalCardsFilter.Filter(cards.Records))
                 {
                     int rarity = Convert.ToInt32(cardRow["Rarity"]);
+                    List<object> rowValueList = new List<object>();
+                    foreach (HeaderAttrabute header in m_LibraryHeaderSetting.LibraryHeadersSetting)
+                    {
+                        if (header.IsShow) rowValueList.Add(cardRow[header.Name]);
+                    }
                     int newRowIndex = dgvCardList.Rows.Add(
-                        cardRow["Symbol"].ToString(),
-                        cardRow["CardName"].ToString(),
-                        cardRow["CardEnglishName"].ToString(),
-                        cardRow["TypeName"].ToString(),
-                        cardRow["SubTypeName"].ToString(),
-                        cardRow["Abilities"].ToString(),
-                        cardRow["ManaCost"].ToString(),
-                        cardRow["Power"].ToString(),
-                        cardRow["Toughness"].ToString(),
-                        cardRow["CardPrice"].ToString()
+                        rowValueList.ToArray()
                         );
                     dgvCardList.Rows[newRowIndex].Tag = cardRow["CardID"];
                     dgvCardList.Rows[newRowIndex].DefaultCellStyle.ForeColor = CommonHelper.CardRarity.GetRarityColor(rarity);
                 }
-                if (frmInfo != null && frmInfo.EditStatus == DataOperateType.Update)
+                dgvCardList.AutoResizeColumns();
+                if (m_FormCardInfo != null && m_FormCardInfo.EditStatus == DataOperateType.Update)
                 {
-                    SelectCard(frmInfo.ActiveCard);
+                    SelectCard(m_FormCardInfo.ActiveCard);
+                }
+            }
+        }
+
+        private void ResetDataGridViewHeaders()
+        {
+            dgvCardList.Columns.Clear();
+            m_LibraryHeaderSetting.Reload();
+            foreach (HeaderAttrabute header in m_LibraryHeaderSetting.LibraryHeadersSetting)
+            {
+                if (header.IsShow)
+                {
+                    dgvCardList.Columns.Add(string.Format("col{0}", header.Name), header.Text);
                 }
             }
         }
@@ -284,7 +297,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void tsbtnType_Click(object sender, EventArgs e)
         {
-            this.totalCardsFilter.SetCardType();
+            this.m_TotalCardsFilter.SetCardType();
             FillDataGridView();
         }
 
@@ -656,19 +669,14 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void mnuItemTotalCarsGridHeaderSetting_Click(object sender, EventArgs e)
         {
-            List<HeaderField> headerFields = new List<HeaderField>();
+            m_LibraryHeaderSetting.Reload();
+            List<HeaderAttrabute> headerFields = m_LibraryHeaderSetting.LibraryHeadersSetting;
             using (FormSetHeader frmSetHeader = new FormSetHeader())
             {
                 if (frmSetHeader.ShowDialog(headerFields) == DialogResult.OK)
                 {
-                    //测试用代码
-                    StringBuilder message = new StringBuilder();
-                    foreach (HeaderField header in headerFields)
-                    {
-                        message.AppendLine(string.Format("Field={0}, Display={1}", header.FieldName, header.Description));
-                    }
-
-                    MessageBox.Show(message.ToString());
+                    m_LibraryHeaderSetting.Save();
+                    FillDataGridView();
                 }
             }
         }

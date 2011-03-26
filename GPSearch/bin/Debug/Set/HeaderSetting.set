@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HeaderSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <LibHeaders>
+    <Header Name="Symbol" Text="系列" Width="80" IsShow="true" />
+    <Header Name="CardName" Text="卡牌名称" Width="80" IsShow="true" />
+    <Header Name="CardEnglishName" Text="卡牌英文名称" Width="80" IsShow="true" />
+    <Header Name="CollectorNumber" Text="收藏编号" Width="80" IsShow="true" />
+    <Header Name="TypeName" Text="卡牌类型" Width="80" IsShow="true" />
+    <Header Name="SubTypeName" Text="子类型" Width="80" IsShow="true" />
+    <Header Name="Power" Text="攻击力" Width="80" IsShow="true" />
+    <Header Name="Toughness" Text="防御力" Width="80" IsShow="true" />
+    <Header Name="Rarity" Text="稀有度" Width="80" IsShow="true" />
+    <Header Name="CardID" Text="卡牌ID" Width="80" IsShow="false" />
+    <Header Name="ManaCost" Text="法术力费用" Width="80" IsShow="false" />
+    <Header Name="Abilities" Text="异能" Width="80" IsShow="false" />
+    <Header Name="FlavorText" Text="背景描述" Width="80" IsShow="false" />
+    <Header Name="CardImage" Text="图片路径" Width="80" IsShow="false" />
+    <Header Name="PainterName" Text="画家" Width="80" IsShow="false" />
+    <Header Name="CardPrice" Text="价格" Width="80" IsShow="false" />
+    <Header Name="FAQ" Text="FAQ" Width="80" IsShow="false" />
+  </LibHeaders>
+  <DeckHeaders>
+    <Header Name="CardID" Text="卡牌ID" Width="80" IsShow="true" />
+    <Header Name="Symbol" Text="系列" Width="80" IsShow="true" />
+    <Header Name="CollectorNumber" Text="收藏编号" Width="80" IsShow="true" />
+    <Header Name="CardName" Text="卡牌名称" Width="80" IsShow="true" />
+    <Header Name="CardEnglishName" Text="卡牌英文名称" Width="80" IsShow="true" />
+    <Header Name="Abilities" Text="异能" Width="80" IsShow="true" />
+    <Header Name="FlavorText" Text="背景描述" Width="80" IsShow="true" />
+    <Header Name="ManaCost" Text="法术力费用" Width="80" IsShow="true" />
+    <Header Name="SubTypeName" Text="子类型" Width="80" IsShow="true" />
+    <Header Name="TypeName" Text="卡牌类型" Width="80" IsShow="true" />
+    <Header Name="Power" Text="攻击力" Width="80" IsShow="true" />
+    <Header Name="Toughness" Text="防御力" Width="80" IsShow="true" />
+    <Header Name="Rarity" Text="稀有度" Width="80" IsShow="true" />
+    <Header Name="CardImage" Text="图片路径" Width="80" IsShow="true" />
+    <Header Name="PainterName" Text="画家" Width="80" IsShow="true" />
+    <Header Name="CardPrice" Text="价格" Width="80" IsShow="true" />
+    <Header Name="FAQ" Text="FAQ" Width="80" IsShow="true" />
+  </DeckHeaders>
+</HeaderSetting>

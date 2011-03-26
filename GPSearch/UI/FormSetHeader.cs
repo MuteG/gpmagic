@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Reflection;
 using System.Windows.Forms;
 using GPSoft.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.GPMagic.GPMagicBase.Model.Setting;
 using GPSoft.GPMagic.GPSearch.Model;
 
 namespace GPSoft.GPMagic.GPSearch.UI
@@ -18,7 +19,7 @@ namespace GPSoft.GPMagic.GPSearch.UI
         private void FormSetHeader_Load(object sender, EventArgs e)
         {
             PropertyInfo[] properties = typeof(ListCardTotal).GetProperties();
-            List<HeaderField> totalFields = new List<HeaderField>();
+            List<HeaderAttrabute> totalHeaders = new List<HeaderAttrabute>();
             foreach (PropertyInfo property in properties)
             {
                 object[] attributes = property.GetCustomAttributes(typeof(DescriptionAttribute), false);
@@ -27,33 +28,71 @@ namespace GPSoft.GPMagic.GPSearch.UI
                     DescriptionAttribute description = (DescriptionAttribute)attributes[0];
                     if (description != null)
                     {
-                        HeaderField header = new HeaderField();
-                        header.FieldName = property.Name;
-                        header.Description = description.Description;
-                        totalFields.Add(header);
+                        HeaderAttrabute header = new HeaderAttrabute();
+                        header.Name = property.Name;
+                        header.Text = description.Description;
+                        header.Width = 80;
+                        header.IsShow = true;
+                        totalHeaders.Add(header);
                     }
                 }
             }
-            lbxTotalField.DataSource = totalFields;
-            lbxTotalField.ValueMember = "FieldName";
-            lbxTotalField.DisplayMember = "Description";
+            BindTotalHeaders(totalHeaders);
         }
 
-        public DialogResult ShowDialog(List<HeaderField> currentHeaders)
+        private void BindTotalHeaders(List<HeaderAttrabute> headers)
         {
-            lbxDisplayField.DataSource = currentHeaders;
-            lbxDisplayField.ValueMember = "FieldName";
-            lbxDisplayField.DisplayMember = "Description";
-            return this.ShowDialog();
+            BindHeadersData(lbxTotalField, headers);
+        }
+
+        public DialogResult ShowDialog(List<HeaderAttrabute> currentHeaders)
+        {
+            List<HeaderAttrabute> displayHeaders = new List<HeaderAttrabute>();
+            foreach (HeaderAttrabute header in currentHeaders)
+            {
+                if (header.IsShow)
+                {
+                    HeaderAttrabute displayHeader = new HeaderAttrabute();
+                    displayHeader.Assign(header);
+                    displayHeaders.Add(displayHeader);
+                }
+            }
+            BindDisplayHeaders(displayHeaders);
+            if (ShowDialog() == DialogResult.OK)
+            {
+                foreach (HeaderAttrabute header in currentHeaders)
+                {
+                    header.IsShow = displayHeaders.Contains(header);
+                    if (!header.IsShow)
+                    {
+                        displayHeaders.Add(header);
+                    }
+                }
+                currentHeaders.Clear();
+                currentHeaders.AddRange(displayHeaders);
+            }
+            return this.DialogResult;
+        }
+
+        private void BindDisplayHeaders(List<HeaderAttrabute> headers)
+        {
+            BindHeadersData(lbxDisplayField, headers);
+        }
+
+        private void BindHeadersData(ListBox list, List<HeaderAttrabute> headers)
+        {
+            list.DataSource = headers;
+            list.ValueMember = "Name";
+            list.DisplayMember = "Text";
         }
 
         private void lbxTotalField_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Clicks == 1 && e.Button == MouseButtons.Left && lbxTotalField.SelectedIndices.Count > 0)
             {
-                HeaderField header = new HeaderField();
-                header.FieldName = lbxTotalField.SelectedValue.ToString();
-                header.Description = lbxTotalField.Text;
+                HeaderAttrabute header = new HeaderAttrabute();
+                header.Name = lbxTotalField.SelectedValue.ToString();
+                header.Text = lbxTotalField.Text;
                 lbxTotalField.AllowDrop = false;
                 lbxDisplayField.AllowDrop = true;
                 lbxDisplayField.DoDragDrop(header, DragDropEffects.Copy);
@@ -67,15 +106,13 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void lbxDisplayField_DragDrop(object sender, DragEventArgs e)
         {
-            List<HeaderField> source = lbxDisplayField.DataSource as List<HeaderField>;
-            HeaderField newHeader = (HeaderField)e.Data.GetData(typeof(HeaderField));
+            List<HeaderAttrabute> source = lbxDisplayField.DataSource as List<HeaderAttrabute>;
+            HeaderAttrabute newHeader = (HeaderAttrabute)e.Data.GetData(typeof(HeaderAttrabute));
             if (!source.Contains(newHeader))
             {
                 source.Add(newHeader);
                 lbxDisplayField.DataSource = null;
-                lbxDisplayField.DataSource = source;
-                lbxDisplayField.ValueMember = "FieldName";
-                lbxDisplayField.DisplayMember = "Description";
+                BindDisplayHeaders(source);
             }
         }
 
@@ -83,9 +120,9 @@ namespace GPSoft.GPMagic.GPSearch.UI
         {
             if (e.Clicks == 1 && e.Button == MouseButtons.Left && lbxDisplayField.SelectedIndices.Count > 0)
             {
-                HeaderField header = new HeaderField();
-                header.FieldName = lbxDisplayField.SelectedValue.ToString();
-                header.Description = lbxDisplayField.Text;
+                HeaderAttrabute header = new HeaderAttrabute();
+                header.Name = lbxDisplayField.SelectedValue.ToString();
+                header.Text = lbxDisplayField.Text;
                 lbxTotalField.AllowDrop = true;
                 lbxDisplayField.AllowDrop = false;
                 lbxTotalField.DoDragDrop(header, DragDropEffects.Copy);
@@ -94,15 +131,13 @@ namespace GPSoft.GPMagic.GPSearch.UI
 
         private void lbxTotalField_DragDrop(object sender, DragEventArgs e)
         {
-            HeaderField dropHeader = (HeaderField)e.Data.GetData(typeof(HeaderField));
-            List<HeaderField> source = lbxDisplayField.DataSource as List<HeaderField>;
+            HeaderAttrabute dropHeader = (HeaderAttrabute)e.Data.GetData(typeof(HeaderAttrabute));
+            List<HeaderAttrabute> source = lbxDisplayField.DataSource as List<HeaderAttrabute>;
             if (source.Contains(dropHeader))
             {
                 source.Remove(dropHeader);
                 lbxDisplayField.DataSource = null;
-                lbxDisplayField.DataSource = source;
-                lbxDisplayField.ValueMember = "FieldName";
-                lbxDisplayField.DisplayMember = "Description";
+                BindDisplayHeaders(source);
             }
         }
 
@@ -136,16 +171,14 @@ namespace GPSoft.GPMagic.GPSearch.UI
                 bool canWork = isMoveUp ? selectedIndex > 0 : selectedIndex < lbxDisplayField.Items.Count - 1;
                 if (canWork)
                 {
-                    HeaderField temp = new HeaderField();
-                    temp.Assign(lbxDisplayField.SelectedItem as HeaderField);
-                    List<HeaderField> source = lbxDisplayField.DataSource as List<HeaderField>;
+                    HeaderAttrabute temp = new HeaderAttrabute();
+                    temp.Assign(lbxDisplayField.SelectedItem as HeaderAttrabute);
+                    List<HeaderAttrabute> source = lbxDisplayField.DataSource as List<HeaderAttrabute>;
                     source.RemoveAt(selectedIndex);
                     if (isMoveUp) selectedIndex--; else selectedIndex++;
                     source.Insert(selectedIndex, temp);
                     lbxDisplayField.DataSource = null;
-                    lbxDisplayField.DataSource = source;
-                    lbxDisplayField.ValueMember = "FieldName";
-                    lbxDisplayField.DisplayMember = "Description";
+                    BindDisplayHeaders(source);
                     lbxDisplayField.SelectedIndex = selectedIndex;
                 }
             }

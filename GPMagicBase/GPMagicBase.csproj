@@ -59,6 +59,10 @@
     <Compile Include="Model\Database\CardRarity.cs" />
     <Compile Include="Model\ConstClass.cs" />
     <Compile Include="Model\ImportExportModel.cs" />
+    <Compile Include="Model\Setting\AbstractSetting.cs" />
+    <Compile Include="Model\Setting\ISetting.cs" />
+    <Compile Include="Model\Setting\HeaderFieldsSetting.cs" />
+    <Compile Include="Model\Setting\SettingManager.cs" />
     <Compile Include="Module\Deck\AbstractDeck.cs" />
     <Compile Include="Module\Deck\CNDeck.cs" />
     <Compile Include="Module\Deck\GPMagicDeck.cs" />
