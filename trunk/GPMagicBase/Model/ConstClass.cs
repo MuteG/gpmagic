@@ -4,7 +4,7 @@ using System.Text;
 using System.Drawing;
 using System.IO;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model
+namespace GPSoft.Games.GPMagic.GPMagicBase.Model
 {
     /// <summary>
     /// 数据操作类型

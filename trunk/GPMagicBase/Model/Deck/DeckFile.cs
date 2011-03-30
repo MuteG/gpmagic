@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Xml.Serialization;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Database;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model.Deck
+namespace GPSoft.Games.GPMagic.GPMagicBase.Model.Deck
 {
     /// <summary>
     /// 套牌信息

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GPSoft.GPMagic.GPMagicBase
+namespace GPSoft.Games.GPMagic.GPMagicBase
 {
     public interface IUpgradeSite
     {

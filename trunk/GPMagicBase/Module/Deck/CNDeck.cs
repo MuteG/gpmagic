@@ -4,11 +4,11 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPMagicBase.Model.Deck;
-using GPSoft.GPMagic.GPMagicBase.SQLite;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Deck;
+using GPSoft.Games.GPMagic.GPMagicBase.SQLite;
 using GPSoft.Helper.Files;
 
-namespace GPSoft.GPMagic.GPMagicBase.Module.Deck
+namespace GPSoft.Games.GPMagic.GPMagicBase.Module.Deck
 {
     public class CNDeck : AbstractDeck
     {

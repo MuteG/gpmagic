@@ -8,9 +8,9 @@ using System.IO;
 using System.Windows.Forms;
 using GPSoft.Helper.Files;
 using GPSoft.Helper.Utility;
-using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.Games.GPMagic.GPMagicBase.Model;
 
-namespace GPSoft.GPMagic.GPSearch.UI
+namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     public partial class FormImportCardsModelList : Form
     {

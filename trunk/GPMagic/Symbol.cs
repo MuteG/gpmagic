@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Drawing;
 
-namespace GPSoft.GPMagic.GPMagic
+namespace GPSoft.Games.GPMagic.GPMagic
 {
     public class Symbol
     {

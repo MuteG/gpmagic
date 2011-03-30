@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPSearch.UI
+﻿namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     partial class FormFilterExpansions
     {
@@ -39,7 +39,7 @@
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.ok;
+            this.btnOK.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.ok;
             this.btnOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOK.Location = new System.Drawing.Point(324, 223);
             this.btnOK.Name = "btnOK";
@@ -51,7 +51,7 @@
             // 
             // btnEdit
             // 
-            this.btnEdit.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.pencil_tool1;
+            this.btnEdit.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.pencil_tool1;
             this.btnEdit.Location = new System.Drawing.Point(203, 11);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(24, 23);
@@ -60,7 +60,7 @@
             // 
             // btnNew
             // 
-            this.btnNew.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.plus1;
+            this.btnNew.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.plus1;
             this.btnNew.Location = new System.Drawing.Point(173, 11);
             this.btnNew.Name = "btnNew";
             this.btnNew.Size = new System.Drawing.Size(24, 23);

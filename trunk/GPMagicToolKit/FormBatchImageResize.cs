@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.IO;
 using GPSoft.Helper.Files;
 
-namespace GPMagicToolKit
+namespace GPSoft.Games.GPMagic.GPMagicToolKit
 {
     public partial class FormBatchImageResize : Form
     {

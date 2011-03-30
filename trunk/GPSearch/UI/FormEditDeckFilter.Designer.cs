@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPSearch.UI
+﻿namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     partial class FormEditDeckFilter
     {
@@ -109,7 +109,7 @@
             // 
             // btnFieldValue
             // 
-            this.btnFieldValue.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.config;
+            this.btnFieldValue.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.config;
             this.btnFieldValue.Location = new System.Drawing.Point(162, 39);
             this.btnFieldValue.Name = "btnFieldValue";
             this.btnFieldValue.Size = new System.Drawing.Size(24, 24);
@@ -167,7 +167,7 @@
             // 
             // btnBackgroundColor
             // 
-            this.btnBackgroundColor.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.select_color;
+            this.btnBackgroundColor.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.select_color;
             this.btnBackgroundColor.Location = new System.Drawing.Point(291, 134);
             this.btnBackgroundColor.Name = "btnBackgroundColor";
             this.btnBackgroundColor.Size = new System.Drawing.Size(24, 24);

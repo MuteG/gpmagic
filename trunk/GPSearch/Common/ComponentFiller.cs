@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPMagicBase.Model;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.Games.GPMagic.GPMagicBase.Model;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Database;
 using System.Data;
 
-namespace GPSoft.GPMagic.GPSearch.Common
+namespace GPSoft.Games.GPMagic.GPSearch.Common
 {
     internal class ComponentFiller
     {

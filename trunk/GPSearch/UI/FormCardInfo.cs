@@ -4,15 +4,15 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPMagicBase.Model;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
-using GPSoft.GPMagic.GPMagicBase.SQLite;
-using GPSoft.GPMagic.GPMagicBase.UI;
-using GPSoft.GPMagic.GPSearch.Common;
+using GPSoft.Games.GPMagic.GPMagicBase.Model;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.Games.GPMagic.GPMagicBase.SQLite;
+using GPSoft.Games.GPMagic.GPMagicBase.UI;
+using GPSoft.Games.GPMagic.GPSearch.Common;
 using GPSoft.Helper.Files;
 using GPSoft.Helper.Utility;
 
-namespace GPSoft.GPMagic.GPSearch.UI
+namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     public partial class FormCardInfo : Form
     {

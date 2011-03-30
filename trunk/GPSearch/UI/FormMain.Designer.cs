@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPSearch.UI
+﻿namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     partial class FormMain
     {
@@ -107,7 +107,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pnlCardList = new System.Windows.Forms.Panel();
             this.pnlCardInformation = new System.Windows.Forms.Panel();
-            this.cplInformation = new GPSoft.GPMagic.GPMagicBase.UI.CollapsiblePanel();
+            this.cplInformation = new GPSoft.Games.GPMagic.GPMagicBase.UI.CollapsiblePanel();
             this.gbxCardImage = new System.Windows.Forms.GroupBox();
             this.pbxCardImage = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -425,7 +425,7 @@
             // tsbtnSearch
             // 
             this.tsbtnSearch.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnSearch.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Search;
+            this.tsbtnSearch.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.Search;
             this.tsbtnSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnSearch.Name = "tsbtnSearch";
             this.tsbtnSearch.Size = new System.Drawing.Size(23, 22);
@@ -440,7 +440,7 @@
             // tsbtnType
             // 
             this.tsbtnType.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnType.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Filter_Type;
+            this.tsbtnType.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.Filter_Type;
             this.tsbtnType.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnType.Name = "tsbtnType";
             this.tsbtnType.Size = new System.Drawing.Size(23, 22);
@@ -461,7 +461,7 @@
             // tsbtnExpansions
             // 
             this.tsbtnExpansions.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnExpansions.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Filter_Expansions;
+            this.tsbtnExpansions.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.Filter_Expansions;
             this.tsbtnExpansions.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnExpansions.Name = "tsbtnExpansions";
             this.tsbtnExpansions.Size = new System.Drawing.Size(23, 22);
@@ -471,7 +471,7 @@
             // tsbtnColor
             // 
             this.tsbtnColor.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnColor.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Filter_Color;
+            this.tsbtnColor.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.Filter_Color;
             this.tsbtnColor.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnColor.Name = "tsbtnColor";
             this.tsbtnColor.Size = new System.Drawing.Size(23, 22);
@@ -510,7 +510,7 @@
             this.mnuItemText,
             this.mnuItemInfoImage,
             this.mnuItemFAQ});
-            this.tsbtnShowImage.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.ShowCardPicture;
+            this.tsbtnShowImage.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.ShowCardPicture;
             this.tsbtnShowImage.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnShowImage.Name = "tsbtnShowImage";
             this.tsbtnShowImage.Size = new System.Drawing.Size(32, 20);
@@ -549,7 +549,7 @@
             this.tsbtnShowDeckList.CheckOnClick = true;
             this.tsbtnShowDeckList.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsbtnShowDeckList.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnShowDeckList.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources._37_07_;
+            this.tsbtnShowDeckList.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources._37_07_;
             this.tsbtnShowDeckList.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnShowDeckList.Name = "tsbtnShowDeckList";
             this.tsbtnShowDeckList.Size = new System.Drawing.Size(23, 20);
@@ -594,7 +594,7 @@
             // tsbtnNewDeck
             // 
             this.tsbtnNewDeck.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnNewDeck.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.file_new_2;
+            this.tsbtnNewDeck.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.file_new_2;
             this.tsbtnNewDeck.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnNewDeck.Name = "tsbtnNewDeck";
             this.tsbtnNewDeck.Size = new System.Drawing.Size(23, 22);
@@ -603,7 +603,7 @@
             // tsbtnOpenDeck
             // 
             this.tsbtnOpenDeck.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnOpenDeck.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.open;
+            this.tsbtnOpenDeck.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.open;
             this.tsbtnOpenDeck.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnOpenDeck.Name = "tsbtnOpenDeck";
             this.tsbtnOpenDeck.Size = new System.Drawing.Size(23, 22);
@@ -613,7 +613,7 @@
             // tsbtnSaveDeck
             // 
             this.tsbtnSaveDeck.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnSaveDeck.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.SaveDeck;
+            this.tsbtnSaveDeck.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.SaveDeck;
             this.tsbtnSaveDeck.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnSaveDeck.Name = "tsbtnSaveDeck";
             this.tsbtnSaveDeck.Size = new System.Drawing.Size(23, 22);
@@ -631,7 +631,7 @@
             this.tsbtnLockDeck.CheckOnClick = true;
             this.tsbtnLockDeck.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsbtnLockDeck.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tsbtnLockDeck.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.LockDeck;
+            this.tsbtnLockDeck.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.LockDeck;
             this.tsbtnLockDeck.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnLockDeck.Name = "tsbtnLockDeck";
             this.tsbtnLockDeck.Size = new System.Drawing.Size(23, 22);
@@ -650,7 +650,7 @@
             this.mnuItemFilterCreature,
             this.mnuItemFilterLand,
             this.mnuItemFilterSpell});
-            this.tsbtnDeckFilterType.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.filter_2;
+            this.tsbtnDeckFilterType.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.filter_2;
             this.tsbtnDeckFilterType.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.tsbtnDeckFilterType.Name = "tsbtnDeckFilterType";
             this.tsbtnDeckFilterType.Size = new System.Drawing.Size(29, 22);
@@ -1076,7 +1076,7 @@
         private System.Windows.Forms.Panel pnlCardInformation;
         private System.Windows.Forms.GroupBox gbxCardImage;
         private System.Windows.Forms.PictureBox pbxCardImage;
-        private GPSoft.GPMagic.GPMagicBase.UI.CollapsiblePanel cplInformation;
+        private GPSoft.Games.GPMagic.GPMagicBase.UI.CollapsiblePanel cplInformation;
         private System.Windows.Forms.ToolStripMenuItem mnuItemTotalCardsSetting;
         private System.Windows.Forms.ToolStripMenuItem mnuItemTotalCarsGridHeaderSetting;
         private System.Windows.Forms.ToolStripMenuItem mnuItemModelSetting;

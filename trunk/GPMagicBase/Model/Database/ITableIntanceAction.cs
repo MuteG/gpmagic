@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model.Database
+namespace GPSoft.Games.GPMagic.GPMagicBase.Model.Database
 {
     public interface ITableIntanceAction
     {

@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPSearch.UI
+﻿namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     partial class FormEditExpansions
     {
@@ -72,7 +72,7 @@
             // 
             // btnEditExpansions
             // 
-            this.btnEditExpansions.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.pencil_tool1;
+            this.btnEditExpansions.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.pencil_tool1;
             this.btnEditExpansions.Location = new System.Drawing.Point(204, 37);
             this.btnEditExpansions.Name = "btnEditExpansions";
             this.btnEditExpansions.Size = new System.Drawing.Size(24, 23);
@@ -82,7 +82,7 @@
             // 
             // btnNewExpansions
             // 
-            this.btnNewExpansions.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.plus1;
+            this.btnNewExpansions.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.plus1;
             this.btnNewExpansions.Location = new System.Drawing.Point(174, 37);
             this.btnNewExpansions.Name = "btnNewExpansions";
             this.btnNewExpansions.Size = new System.Drawing.Size(24, 23);
@@ -92,7 +92,7 @@
             // 
             // btnEditPlayFormats
             // 
-            this.btnEditPlayFormats.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.pencil_tool1;
+            this.btnEditPlayFormats.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.pencil_tool1;
             this.btnEditPlayFormats.Location = new System.Drawing.Point(174, 11);
             this.btnEditPlayFormats.Name = "btnEditPlayFormats";
             this.btnEditPlayFormats.Size = new System.Drawing.Size(24, 23);
@@ -103,7 +103,7 @@
             // btnOK
             // 
             this.btnOK.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOK.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.ok;
+            this.btnOK.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.ok;
             this.btnOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOK.Location = new System.Drawing.Point(456, 366);
             this.btnOK.Name = "btnOK";

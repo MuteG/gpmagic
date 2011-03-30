@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPMagicBase.Model.Setting
+﻿namespace GPSoft.Games.GPMagic.GPMagicBase.Model.Setting
 {
     public interface ISetting
     {

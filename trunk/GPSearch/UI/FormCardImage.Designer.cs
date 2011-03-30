@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPSearch.UI
+﻿namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     partial class FormCardImage
     {

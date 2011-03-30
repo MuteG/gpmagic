@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model.Setting
+namespace GPSoft.Games.GPMagic.GPMagicBase.Model.Setting
 {
     public class SettingManager : ISetting
     {

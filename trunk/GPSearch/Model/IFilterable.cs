@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 
-namespace GPSoft.GPMagic.GPSearch.Model
+namespace GPSoft.Games.GPMagic.GPSearch.Model
 {
     public interface IFilterable
     {

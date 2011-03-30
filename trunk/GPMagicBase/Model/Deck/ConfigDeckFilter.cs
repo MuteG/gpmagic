@@ -8,7 +8,7 @@ using GPSoft.Helper.Files;
 using GPSoft.Helper.Utility;
 using System.IO;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model.Deck
+namespace GPSoft.Games.GPMagic.GPMagicBase.Model.Deck
 {
     /// <summary>
     /// 套牌列表中卡牌类型过滤统计设定

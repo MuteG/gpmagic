@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GPSoft.GPMagic.GPMagic.Model
+namespace GPSoft.Games.GPMagic.GPMagic.Model
 {
     public abstract class Abilities
     {

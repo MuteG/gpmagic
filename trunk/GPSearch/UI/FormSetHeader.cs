@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Reflection;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
-using GPSoft.GPMagic.GPMagicBase.Model.Setting;
-using GPSoft.GPMagic.GPSearch.Model;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Setting;
+using GPSoft.Games.GPMagic.GPSearch.Model;
 
-namespace GPSoft.GPMagic.GPSearch.UI
+namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     public partial class FormSetHeader : Form
     {

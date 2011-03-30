@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.MagicDemo
+﻿namespace GPSoft.Games.GPMagic.MagicDemo
 {
     partial class FormMain
     {
@@ -32,8 +32,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.collapsiblePanel1 = new GPSoft.GPMagic.GPMagicBase.UI.CollapsiblePanel();
-            this.countPanel1 = new GPSoft.GPMagic.GPMagic.UI.CountPanel();
+            this.collapsiblePanel1 = new GPSoft.Games.GPMagic.GPMagicBase.UI.CollapsiblePanel();
+            this.countPanel1 = new GPSoft.Games.GPMagic.GPMagic.UI.CountPanel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -115,7 +115,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnClose;
         private GPMagic.UI.CountPanel countPanel1;
-        private GPSoft.GPMagic.GPMagicBase.UI.CollapsiblePanel collapsiblePanel1;
+        private GPSoft.Games.GPMagic.GPMagicBase.UI.CollapsiblePanel collapsiblePanel1;
         private System.Windows.Forms.Panel panel1;
     }
 }

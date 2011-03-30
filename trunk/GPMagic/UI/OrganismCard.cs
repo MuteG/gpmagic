@@ -5,9 +5,9 @@ using System.Drawing;
 using System.Data;
 using System.Text;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPMagic.Model;
+using GPSoft.Games.GPMagic.GPMagic.Model;
 
-namespace GPSoft.GPMagic.GPMagic.UI
+namespace GPSoft.Games.GPMagic.GPMagic.UI
 {
     public partial class OrganismCard : MagicCardBase, ICanRotate
     {

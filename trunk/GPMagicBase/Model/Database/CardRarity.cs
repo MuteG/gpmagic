@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data;
 using System.Drawing;
-using GPSoft.GPMagic.GPMagicBase.SQLite;
+using GPSoft.Games.GPMagic.GPMagicBase.SQLite;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model.Database
+namespace GPSoft.Games.GPMagic.GPMagicBase.Model.Database
 {
     public sealed class CardRarity : AbstractTableInstance
     {

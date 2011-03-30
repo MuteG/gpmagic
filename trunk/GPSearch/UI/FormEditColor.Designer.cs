@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPSearch.UI
+﻿namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     partial class FormEditColor
     {
@@ -92,7 +92,7 @@
             // 
             // btnColorImageBrowser
             // 
-            this.btnColorImageBrowser.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.find;
+            this.btnColorImageBrowser.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.find;
             this.btnColorImageBrowser.Location = new System.Drawing.Point(273, 37);
             this.btnColorImageBrowser.Name = "btnColorImageBrowser";
             this.btnColorImageBrowser.Size = new System.Drawing.Size(23, 23);
@@ -120,7 +120,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Add;
+            this.btnAdd.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.Add;
             this.btnAdd.Location = new System.Drawing.Point(153, 173);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(23, 23);
@@ -130,7 +130,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Delete;
+            this.btnDelete.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.Delete;
             this.btnDelete.Location = new System.Drawing.Point(182, 173);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(23, 23);
@@ -140,7 +140,7 @@
             // 
             // btnOK
             // 
-            this.btnOK.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.ok;
+            this.btnOK.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.ok;
             this.btnOK.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOK.Location = new System.Drawing.Point(240, 173);
             this.btnOK.Name = "btnOK";

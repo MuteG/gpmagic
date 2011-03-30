@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPSearch.UI;
+using GPSoft.Games.GPMagic.GPSearch.UI;
 
-namespace GPSoft.GPMagic.GPSearch
+namespace GPSoft.Games.GPMagic.GPSearch
 {
     static class Program
     {

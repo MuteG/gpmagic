@@ -4,12 +4,12 @@ using System.Data;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPMagicBase.Model;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.Games.GPMagic.GPMagicBase.Model;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Database;
 using GPSoft.Helper.Files;
 using GPSoft.Helper.Utility;
 
-namespace GPSoft.GPMagic.GPSearch.UI
+namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     public partial class FormImportCardsSetting : Form
     {

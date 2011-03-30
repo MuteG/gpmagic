@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPSearch.UI
+﻿namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     partial class FormCardInfo
     {
@@ -161,7 +161,7 @@
             // btnCardImage
             // 
             this.btnCardImage.AutoSize = true;
-            this.btnCardImage.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.open;
+            this.btnCardImage.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.open;
             this.btnCardImage.Location = new System.Drawing.Point(196, 86);
             this.btnCardImage.Name = "btnCardImage";
             this.btnCardImage.Size = new System.Drawing.Size(33, 23);
@@ -236,7 +236,7 @@
             // btnCardSubType
             // 
             this.btnCardSubType.AutoSize = true;
-            this.btnCardSubType.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.config;
+            this.btnCardSubType.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.config;
             this.btnCardSubType.Location = new System.Drawing.Point(196, 165);
             this.btnCardSubType.Name = "btnCardSubType";
             this.btnCardSubType.Size = new System.Drawing.Size(33, 23);
@@ -268,7 +268,7 @@
             // btnAbilities
             // 
             this.btnAbilities.AutoSize = true;
-            this.btnAbilities.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.config;
+            this.btnAbilities.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.config;
             this.btnAbilities.Location = new System.Drawing.Point(196, 218);
             this.btnAbilities.Name = "btnAbilities";
             this.btnAbilities.Size = new System.Drawing.Size(33, 23);
@@ -324,7 +324,7 @@
             // btnAbilitiesText
             // 
             this.btnAbilitiesText.AutoSize = true;
-            this.btnAbilitiesText.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.input;
+            this.btnAbilitiesText.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.input;
             this.btnAbilitiesText.Location = new System.Drawing.Point(196, 245);
             this.btnAbilitiesText.Name = "btnAbilitiesText";
             this.btnAbilitiesText.Size = new System.Drawing.Size(33, 23);
@@ -335,7 +335,7 @@
             // btnFlavorText
             // 
             this.btnFlavorText.AutoSize = true;
-            this.btnFlavorText.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.input;
+            this.btnFlavorText.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.input;
             this.btnFlavorText.Location = new System.Drawing.Point(196, 272);
             this.btnFlavorText.Name = "btnFlavorText";
             this.btnFlavorText.Size = new System.Drawing.Size(33, 23);
@@ -470,7 +470,7 @@
             // btnFAQ
             // 
             this.btnFAQ.AutoSize = true;
-            this.btnFAQ.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.input;
+            this.btnFAQ.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.input;
             this.btnFAQ.Location = new System.Drawing.Point(196, 406);
             this.btnFAQ.Name = "btnFAQ";
             this.btnFAQ.Size = new System.Drawing.Size(33, 23);

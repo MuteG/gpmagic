@@ -7,7 +7,7 @@ using System.Data;
 using System.Text;
 using System.Windows.Forms;
 
-namespace GPSoft.GPMagic.GPMagic.UI
+namespace GPSoft.Games.GPMagic.GPMagic.UI
 {
     public partial class WindowPanel : UserControl
     {

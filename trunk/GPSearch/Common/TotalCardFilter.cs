@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Data;
-using GPSoft.GPMagic.GPSearch.Model;
+using GPSoft.Games.GPMagic.GPSearch.Model;
 
-namespace GPSoft.GPMagic.GPSearch.Common
+namespace GPSoft.Games.GPMagic.GPSearch.Common
 {
     public class TotalCardFilter : IFilterable
     {

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GPSoft.GPMagic.GPMagic.Properties {
+namespace GPSoft.Games.GPMagic.GPMagic.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
