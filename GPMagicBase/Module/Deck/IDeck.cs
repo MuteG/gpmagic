@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using GPSoft.GPMagic.GPMagicBase.Model.Deck;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Deck;
 
-namespace GPSoft.GPMagic.GPMagicBase.Module.Deck
+namespace GPSoft.Games.GPMagic.GPMagicBase.Module.Deck
 {
     public interface IDeck
     {

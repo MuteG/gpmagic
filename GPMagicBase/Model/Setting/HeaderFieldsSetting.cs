@@ -5,10 +5,10 @@ using System.Reflection;
 using System.IO;
 using System.Xml.Serialization;
 using System.ComponentModel;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Database;
 using GPSoft.Helper.Files;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model.Setting
+namespace GPSoft.Games.GPMagic.GPMagicBase.Model.Setting
 {
     [Serializable]
     [XmlRoot("HeaderSetting")]

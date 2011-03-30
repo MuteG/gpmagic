@@ -8,7 +8,7 @@
     <ProjectGuid>{7AB4B931-0802-4FA2-9ABD-368E89B81D17}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GPSoft.GPMagic.GPSearch</RootNamespace>
+    <RootNamespace>GPSoft.Games.GPMagic.GPSearch</RootNamespace>
     <AssemblyName>GPSearch</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

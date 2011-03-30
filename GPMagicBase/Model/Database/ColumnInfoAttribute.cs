@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model.Database
+namespace GPSoft.Games.GPMagic.GPMagicBase.Model.Database
 {
     [AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
     public class ColumnInfoAttribute : Attribute

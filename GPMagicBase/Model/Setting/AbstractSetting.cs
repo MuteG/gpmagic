@@ -8,7 +8,7 @@ using System.Reflection;
 using System.ComponentModel;
 using GPSoft.Helper.Files;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model.Setting
+namespace GPSoft.Games.GPMagic.GPMagicBase.Model.Setting
 {
     [Serializable]
     public abstract class AbstractSetting : ISetting

@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPSearch.UI
+﻿namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     partial class FormImportCards
     {
@@ -93,7 +93,7 @@
             // 
             // button1
             // 
-            this.button1.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.find;
+            this.button1.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.find;
             this.button1.Location = new System.Drawing.Point(348, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(24, 23);
@@ -241,7 +241,7 @@
             // 
             // btnNewModel
             // 
-            this.btnNewModel.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.plus1;
+            this.btnNewModel.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.plus1;
             this.btnNewModel.Location = new System.Drawing.Point(195, 11);
             this.btnNewModel.Name = "btnNewModel";
             this.btnNewModel.Size = new System.Drawing.Size(24, 23);
@@ -250,7 +250,7 @@
             // 
             // btnEditModel
             // 
-            this.btnEditModel.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.pencil_tool1;
+            this.btnEditModel.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.pencil_tool1;
             this.btnEditModel.Location = new System.Drawing.Point(225, 11);
             this.btnEditModel.Name = "btnEditModel";
             this.btnEditModel.Size = new System.Drawing.Size(24, 23);

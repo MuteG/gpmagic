@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPMagicBase.UI
+﻿namespace GPSoft.Games.GPMagic.GPMagicBase.UI
 {
     partial class CollapsiblePanel
     {
@@ -37,7 +37,7 @@
             // pbxTitle
             // 
             this.pbxTitle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pbxTitle.Image = global::GPSoft.GPMagic.GPMagicBase.Properties.Resources.TriangleRight;
+            this.pbxTitle.Image = global::GPSoft.Games.GPMagic.GPMagicBase.Properties.Resources.TriangleRight;
             this.pbxTitle.Location = new System.Drawing.Point(3, 3);
             this.pbxTitle.Name = "pbxTitle";
             this.pbxTitle.Size = new System.Drawing.Size(16, 16);

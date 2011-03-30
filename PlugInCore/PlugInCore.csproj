@@ -8,7 +8,7 @@
     <ProjectGuid>{B8BFA7CA-1F22-4658-A600-762A4EC8AA58}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GPSoft.GPMagic.PlugInCore</RootNamespace>
+    <RootNamespace>GPSoft.Games.GPMagic.PlugInCore</RootNamespace>
     <AssemblyName>PlugInCore</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

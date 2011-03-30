@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPSearch.UI
+﻿namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     partial class FormImportCardsSetting
     {
@@ -153,7 +153,7 @@
             // 
             // btnDelListModeStructure
             // 
-            this.btnDelListModeStructure.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Delete;
+            this.btnDelListModeStructure.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.Delete;
             this.btnDelListModeStructure.Location = new System.Drawing.Point(419, 168);
             this.btnDelListModeStructure.Name = "btnDelListModeStructure";
             this.btnDelListModeStructure.Size = new System.Drawing.Size(24, 23);
@@ -163,7 +163,7 @@
             // 
             // btnAddListModeStructure
             // 
-            this.btnAddListModeStructure.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Add;
+            this.btnAddListModeStructure.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.Add;
             this.btnAddListModeStructure.Location = new System.Drawing.Point(389, 168);
             this.btnAddListModeStructure.Name = "btnAddListModeStructure";
             this.btnAddListModeStructure.Size = new System.Drawing.Size(24, 23);
@@ -212,7 +212,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.ImportInfoListDemo;
+            this.pictureBox1.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.ImportInfoListDemo;
             this.pictureBox1.Location = new System.Drawing.Point(171, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(355, 135);
@@ -259,7 +259,7 @@
             // 
             // btnSetDataModel
             // 
-            this.btnSetDataModel.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.hammer;
+            this.btnSetDataModel.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.hammer;
             this.btnSetDataModel.Location = new System.Drawing.Point(420, 89);
             this.btnSetDataModel.Name = "btnSetDataModel";
             this.btnSetDataModel.Size = new System.Drawing.Size(24, 23);
@@ -337,7 +337,7 @@
             // 
             // btnDelTableModeStructure
             // 
-            this.btnDelTableModeStructure.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Delete;
+            this.btnDelTableModeStructure.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.Delete;
             this.btnDelTableModeStructure.Location = new System.Drawing.Point(450, 38);
             this.btnDelTableModeStructure.Name = "btnDelTableModeStructure";
             this.btnDelTableModeStructure.Size = new System.Drawing.Size(24, 23);
@@ -346,7 +346,7 @@
             // 
             // btnAddTableModeStructure
             // 
-            this.btnAddTableModeStructure.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.Add;
+            this.btnAddTableModeStructure.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.Add;
             this.btnAddTableModeStructure.Location = new System.Drawing.Point(420, 38);
             this.btnAddTableModeStructure.Name = "btnAddTableModeStructure";
             this.btnAddTableModeStructure.Size = new System.Drawing.Size(24, 23);
@@ -455,7 +455,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.ImportTableDemo;
+            this.pictureBox2.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.ImportTableDemo;
             this.pictureBox2.Location = new System.Drawing.Point(171, 3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(355, 135);

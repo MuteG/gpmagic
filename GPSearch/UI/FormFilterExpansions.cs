@@ -6,7 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace GPSoft.GPMagic.GPSearch.UI
+namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     public partial class FormFilterExpansions : Form
     {

@@ -5,9 +5,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPMagic.UI;
+using GPSoft.Games.GPMagic.GPMagic.UI;
 
-namespace GPSoft.GPMagic.GPMagic
+namespace GPSoft.Games.GPMagic.GPMagic
 {
     public partial class FormMain : Form
     {

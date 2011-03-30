@@ -8,7 +8,7 @@
     <ProjectGuid>{A41D661F-76B7-47E4-B9FF-8D3D9042B7DE}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GPMagicToolKit</RootNamespace>
+    <RootNamespace>GPSoft.Games.GPMagic.GPMagicToolKit</RootNamespace>
     <AssemblyName>GPMagicToolKit</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -67,6 +67,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

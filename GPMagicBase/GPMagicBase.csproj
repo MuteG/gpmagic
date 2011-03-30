@@ -8,7 +8,7 @@
     <ProjectGuid>{743CD5A4-33EA-4425-8C25-353505E515BD}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GPSoft.GPMagic.GPMagicBase</RootNamespace>
+    <RootNamespace>GPSoft.Games.GPMagic.GPMagicBase</RootNamespace>
     <AssemblyName>GPMagicBase</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

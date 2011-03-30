@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Windows.Forms;
 using GPSoft.Helper.Utility;
 
-namespace GPSoft.GPMagic.GPSearch.UI
+namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     partial class AboutBox : Form
     {

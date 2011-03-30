@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPMagicBase.Model.Database
+﻿namespace GPSoft.Games.GPMagic.GPMagicBase.Model.Database
 {
     /// <summary>
     /// 卡牌所属小系列

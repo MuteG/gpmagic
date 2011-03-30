@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPMagicBase.Model;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
-using GPSoft.GPMagic.GPMagicBase.UI;
-using GPSoft.GPMagic.GPSearch.Common;
+using GPSoft.Games.GPMagic.GPMagicBase.Model;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.Games.GPMagic.GPMagicBase.UI;
+using GPSoft.Games.GPMagic.GPSearch.Common;
 
-namespace GPSoft.GPMagic.GPSearch.UI
+namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     public partial class FormFilterCardType : Form
     {

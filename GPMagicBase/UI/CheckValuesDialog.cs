@@ -6,10 +6,10 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPMagicBase.Model;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.Games.GPMagic.GPMagicBase.Model;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Database;
 
-namespace GPSoft.GPMagic.GPMagicBase.UI
+namespace GPSoft.Games.GPMagic.GPMagicBase.UI
 {
     public partial class CheckValuesDialog : Form
     {

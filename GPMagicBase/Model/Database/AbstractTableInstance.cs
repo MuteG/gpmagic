@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
-using GPSoft.GPMagic.GPMagicBase.SQLite;
-using GPSoft.GPMagic.GPMagicBase.Model;
+using GPSoft.Games.GPMagic.GPMagicBase.SQLite;
+using GPSoft.Games.GPMagic.GPMagicBase.Model;
 using System.Data;
 using System.ComponentModel;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model.Database
+namespace GPSoft.Games.GPMagic.GPMagicBase.Model.Database
 {
     public abstract class AbstractTableInstance : ITableIntanceAction, IDisposable
     {

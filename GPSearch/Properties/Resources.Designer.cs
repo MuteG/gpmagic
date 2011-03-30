@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace GPSoft.GPMagic.GPSearch.Properties {
+namespace GPSoft.Games.GPMagic.GPSearch.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace GPSoft.GPMagic.GPSearch.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GPSoft.GPMagic.GPSearch.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("GPSoft.Games.GPMagic.GPSearch.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GPSoft.GPMagic.GPMagic
+namespace GPSoft.Games.GPMagic.GPMagic
 {
     public enum ModelType
     {

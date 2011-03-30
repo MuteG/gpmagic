@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPMagic.UI
+﻿namespace GPSoft.Games.GPMagic.GPMagic.UI
 {
     partial class OrganismCard
     {

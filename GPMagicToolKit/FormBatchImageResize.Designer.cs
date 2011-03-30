@@ -1,4 +1,4 @@
-﻿namespace GPMagicToolKit
+﻿namespace GPSoft.Games.GPMagic.GPMagicToolKit
 {
     partial class FormBatchImageResize
     {

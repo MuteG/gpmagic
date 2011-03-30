@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <ClassDiagram Zoom="1" MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
-  <Class Name="GPSoft.GPMagic.GPSearch.Common.TotalCardFilter" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.Common.TotalCardFilter" Collapsed="True">
     <Position X="0.5" Y="6.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="False" />
@@ -8,13 +8,13 @@
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.Program" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.Program" Collapsed="True">
     <Position X="9.75" Y="2" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.Properties.Resources" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.Properties.Resources" Collapsed="True">
     <Position X="9.75" Y="1.25" Width="1.75" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="False" />
@@ -22,14 +22,14 @@
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.Properties.Settings" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.Properties.Settings" Collapsed="True">
     <Position X="9.75" Y="0.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="False" />
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.AboutBox" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.AboutBox" Collapsed="True">
     <Position X="2.5" Y="0.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="False" />
@@ -37,7 +37,7 @@
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormCardImage" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormCardImage" Collapsed="True">
     <Position X="6.75" Y="1.75" Width="1.75" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="False" />
@@ -45,7 +45,7 @@
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormCardInfo" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormCardInfo" Collapsed="True">
     <Position X="6.75" Y="2.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="False" />
@@ -53,77 +53,77 @@
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormEditColor" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormEditColor" Collapsed="True">
     <Position X="2.5" Y="3.25" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormEditDeckFilter" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormEditDeckFilter" Collapsed="True">
     <Position X="2.5" Y="2.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormEditExpansions" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormEditExpansions" Collapsed="True">
     <Position X="2.5" Y="1.75" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormEditPlayFormats" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormEditPlayFormats" Collapsed="True">
     <Position X="2.5" Y="4" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormFilterCardType" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormFilterCardType" Collapsed="True">
     <Position X="0.5" Y="4" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormFilterColor" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormFilterColor" Collapsed="True">
     <Position X="0.5" Y="1.75" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormFilterExpansions" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormFilterExpansions" Collapsed="True">
     <Position X="0.5" Y="2.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormFilterKeyWord" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormFilterKeyWord" Collapsed="True">
     <Position X="0.5" Y="3.25" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormImportCards" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormImportCards" Collapsed="True">
     <Position X="4.5" Y="1.75" Width="2" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormImportCardsModelList" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormImportCardsModelList" Collapsed="True">
     <Position X="4.5" Y="3.25" Width="2" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormImportCardsSetting" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormImportCardsSetting" Collapsed="True">
     <Position X="4.5" Y="2.5" Width="2" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />
@@ -131,7 +131,7 @@
       <Compartment Name="Nested Types" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.UI.FormMain" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.UI.FormMain" Collapsed="True">
     <Position X="0.5" Y="0.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="True" />
@@ -139,14 +139,14 @@
       <Compartment Name="Fields" Collapsed="True" />
     </Compartments>
   </Class>
-  <Interface Name="GPSoft.GPMagic.GPSearch.Model.IFilterable" Collapsed="True">
+  <Interface Name="GPSoft.Games.GPMagic.GPSearch.Model.IFilterable" Collapsed="True">
     <Position X="0.5" Y="5.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="False" />
       <Compartment Name="Methods" Collapsed="False" />
     </Compartments>
   </Interface>
-  <Class Name="GPSoft.GPMagic.GPSearch.Common.CommonHelper" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.Common.CommonHelper" Collapsed="True">
     <Position X="2.8" Y="5.6" Width="1.75" />
     <Compartments>
       <Compartment Name="Properties" Collapsed="False" />
@@ -154,7 +154,7 @@
       <Compartment Name="Fields" Collapsed="False" />
     </Compartments>
   </Class>
-  <Class Name="GPSoft.GPMagic.GPSearch.Common.ComponentFiller" Collapsed="True">
+  <Class Name="GPSoft.Games.GPMagic.GPSearch.Common.ComponentFiller" Collapsed="True">
     <Position X="2.8" Y="6.5" Width="1.75" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="False" />

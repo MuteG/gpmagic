@@ -6,10 +6,10 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using GPSoft.Helper.Files;
-using GPSoft.GPMagic.GPMagic.UI;
-using GPSoft.GPMagic.GPMagicBase.UI;
+using GPSoft.Games.GPMagic.GPMagic.UI;
+using GPSoft.Games.GPMagic.GPMagicBase.UI;
 
-namespace GPSoft.GPMagic.MagicDemo
+namespace GPSoft.Games.GPMagic.MagicDemo
 {
     public partial class FormMain : Form
     {

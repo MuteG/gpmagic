@@ -1,4 +1,4 @@
-﻿namespace GPSoft.GPMagic.GPSearch.UI
+﻿namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     partial class FormFilterCardType
     {
@@ -83,7 +83,7 @@
             // 
             // btnCardSubType
             // 
-            this.btnCardSubType.Image = global::GPSoft.GPMagic.GPSearch.Properties.Resources.config;
+            this.btnCardSubType.Image = global::GPSoft.Games.GPMagic.GPSearch.Properties.Resources.config;
             this.btnCardSubType.Location = new System.Drawing.Point(209, 30);
             this.btnCardSubType.Name = "btnCardSubType";
             this.btnCardSubType.Size = new System.Drawing.Size(31, 23);

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using GPSoft.GPMagic.GPMagicBase.Model;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
-using GPSoft.GPMagic.GPMagicBase.Model.Deck;
+using GPSoft.Games.GPMagic.GPMagicBase.Model;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Deck;
 
-namespace GPSoft.GPMagic.GPSearch.Common
+namespace GPSoft.Games.GPMagic.GPSearch.Common
 {
     internal class CommonHelper
     {

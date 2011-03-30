@@ -4,10 +4,10 @@ using System.Text;
 using System.Data.SQLite;
 using System.Reflection;
 using System.Data;
-using GPSoft.GPMagic.GPMagicBase.Model;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.Games.GPMagic.GPMagicBase.Model;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Database;
 
-namespace GPSoft.GPMagic.GPMagicBase.SQLite
+namespace GPSoft.Games.GPMagic.GPMagicBase.SQLite
 {
     public class DatabaseOperator : IDBOperate, IDisposable
     {
@@ -172,7 +172,7 @@ namespace GPSoft.GPMagic.GPMagicBase.SQLite
 
         private object GetTableInstance(string tableName, DataRow dataRow)
         {
-            string classFullName = "GPSoft.GPMagic.GPMagicBase.Model." + tableName;
+            string classFullName = "GPSoft.Games.GPMagic.GPMagicBase.Model." + tableName;
             object tableInstance = Activator.CreateInstance("GPMagicBase", classFullName);
             EncapsulateDataRowToObject(ref tableInstance, dataRow);
             return tableInstance;

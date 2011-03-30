@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml.Serialization;
 
-namespace GPSoft.GPMagic.GPMagicBase.Model
+namespace GPSoft.Games.GPMagic.GPMagicBase.Model
 {
     [Serializable]
     public sealed class ImportExportModel

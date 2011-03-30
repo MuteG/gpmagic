@@ -5,13 +5,13 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using GPSoft.GPMagic.GPSearch.Common;
-using GPSoft.GPMagic.GPMagicBase.Model;
-using GPSoft.GPMagic.GPMagicBase.Model.Database;
-using GPSoft.GPMagic.GPMagicBase.Model.Deck;
-using GPSoft.GPMagic.GPMagicBase.UI;
+using GPSoft.Games.GPMagic.GPSearch.Common;
+using GPSoft.Games.GPMagic.GPMagicBase.Model;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Database;
+using GPSoft.Games.GPMagic.GPMagicBase.Model.Deck;
+using GPSoft.Games.GPMagic.GPMagicBase.UI;
 
-namespace GPSoft.GPMagic.GPSearch.UI
+namespace GPSoft.Games.GPMagic.GPSearch.UI
 {
     public partial class FormEditDeckFilter : Form
     {
